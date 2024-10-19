@@ -68,3 +68,62 @@ dictionary['["seriously"],["RB"]'] = [
             ["SAOER/KWRAOE/KWRULS", "SAO*ERD/KWRULS","SAOER/KWRULS","SAOERLS","SHRAOERLS"]]
 
 """
+
+
+with (open("smol.txt", "r", encoding="utf-8")) as txt_dictionary:
+
+    print("\n\n"+   #doesn't do anything, just the headers
+          f"{'word':15}"+
+          " || "
+          +f"{'type':<5}"
+          +" | "
+          +f"{'pronunciation':<45}"
+          +" | "
+          +f"{'word boundaries':20}"
+          +" | "
+          +"commonness\n")
+    
+    something={}
+    for outline in txt_dictionary:
+        something.update(make_input_into_dictionary_entry(outline))
+        print("\n")
+
+
+
+    for entry in something:
+        print(
+                f"{something[entry]['word']:15}"
+                +"\n      pronunciation:  "
+                +f"{str(something[entry]['pronunciation']):<45}"
+                +"\n      word boundaries:"
+                +f"{str(something[entry]['word_boundaries']):20}"
+                +"\n      full write outs:"
+                +str(something[entry]['full write outs'])
+                )
+        print("")
+
+
+
+
+
+
+
+
+dictionary['["seriously"],["RB"]'] = [
+            
+            #phonetics
+            [[[["s"] ["*"] ["ir"] ["."] ["r"] ["ii"] ["@"] ["s"]],["root"]],[["l iy"],["suffix"]]],
+
+            #orthography
+            [[["serious"],["root"]],          [["ly"],["suffix"]]],
+
+            #write outs
+            ["SAOER/KWRAOE/KWRUS/HREU" 1],
+
+            #briefing within word boundaries
+            ["SAOER/KWHUS/HREU" 1, "SAO*ERD/KWRUS/HREU" 2,"SAOERS/HREU" 3],
+
+            #briefing between word boundaries
+            ["SAOER/KWRAOE/KWRULS" 2, "SAOER/KWHULS" 3, "SAO*ERD/KWRULS" 3,"SAOER/KWRULS" 4,"SAO*ERLSZ" 5, "SAOERLS" 5,"SHRAOERLS" 6]]
+
+"""
