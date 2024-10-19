@@ -21,6 +21,20 @@ steno_chords_and_their_meanings={
            ["t[aeiou]",         "t[aeiou]",     3]],
 
     "TK": [["d",                "d",            0],
-           ["d[aeiou]",         "d[aeiou]",     3]]
+           ["d[aeiou]",         "d[aeiou]",     3]],
+
+
+    "A" : [["a",        "a",    0]],
+
+    "AOe": [["ee",     "ii", 0],
+            ["e(consonant)?(vowel)", "ii", 1]], #but for something like adhesive, um, just read it
+
+    "e" : [["e",    "e",    0],
+           ["e",    "E",    1]], #alphabEtise
+
+    "eu": [["i",    "i",    0],
+           ["y",    "i",    1]]
+
+
 }
 
