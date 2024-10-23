@@ -62,11 +62,11 @@ steno_chords_and_their_meanings={
 
 
 
-    "e" : [["e",    "e",    0],
-           ["e",    "E",    1]], #alphabEtise
+    "e" : [["e",    "e",    0, "WSI"],
+           ["e",    "E",    1, "WSI"]], #alphabEtise
 
-    "eu": [["i",    "i",    0],
-           ["y",    "i",    1]]
+    "eu": [["i",    "i",    0, "WSI"],
+           ["y",    "i",    1, "WSI"]]
 
     "pb":[["n",                 "n",            0,  "WSI"]],
 
