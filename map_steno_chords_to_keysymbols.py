@@ -60,6 +60,9 @@ steno_chords_and_their_meanings={
     "Ou":[["ou",                "ow",           0,  "WSI"],
           ["ow",                "ow",           1,  "WSI"]],
 
+   #steno   spelling            pronunciation
+    "Oe":[["ow",                "ou",           0,  "WSI"],
+
 
 
     "e" : [["e",    "e",    0, "WSI"],
