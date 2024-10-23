@@ -1,5 +1,9 @@
-from regex_patterns import full_entry_pattern, pronunciation_pattern, make_boundaries_into_list
-from generate_steno import generate_write_outs
+from convert_unilex_into_readable_lists import (
+    full_entry_pattern,
+    pronunciation_pattern,
+    make_boundaries_into_list)
+
+from map_steno_chords_to_keysymbols import generate_write_outs
 
 
 
@@ -10,8 +14,7 @@ def make_input_into_dictionary_entry(input):
 
     word['pronunciation'           ] = make_boundaries_into_list(word['pronunciation'])
     word['word_boundaries'         ] = make_boundaries_into_list(word['word_boundaries'])
-    print(word)
-    word['full write outs'         ] = generate_write_outs(word['pronunciation'])#, word['word_boundaries'])
+    word['full write outs'         ] = generate_write_outs(word)
     word['briefs within boundaries'] = "still need to code this"
     word['briefs across boundaries'] = "still need to code this"
 
@@ -35,42 +38,6 @@ dictionary={}
 
 
 with (open("smol.txt", "r", encoding="utf-8")) as txt_dictionary:
-    print ("\n\n"+f"{'word':15}"+" || "+f"{'type':<5}"+" | "+f"{'pronunciation':<45}"+" | "+f"{'word boundaries':20}"+" | "+"commonness\n")
-    something={}
-    for outline in txt_dictionary:
-        something.update(make_input_into_dictionary_entry(outline))
-        print("\n\n\n\n")
-        for entry in something:
-            print(f"{something[entry]['word']:15}"+" || "+f"{str(something[entry]['pronunciation']):<45}"+" | "+f"{str(something[entry]['word_boundaries']):20}"+" | "+"commonness\n"+str(something[entry]['full write outs'])+"\n")
-        print(something)
-
-
-
-"""
-
-
-
-dictionary['["seriously"],["RB"]'] = [
-            
-            #phonetics
-            [[[["s"] ["*"] ["ir"] ["."] ["r"] ["ii"] ["@"] ["s"]],["root"]],[["l iy"],["suffix"]]],
-
-            #orthography
-            [[["serious"],["root"]],          [["ly"],["suffix"]]],
-
-            #write outs
-            ["SAOER/KWRAOE/KWRUS/HREU"],
-
-            #briefing within word boundaries
-            ["SAO*ERD/KWRUS/HREU","SAOER/KWRUS/HREU","SAOERS/HREU"],
-
-            #briefing between word boundaries
-            ["SAOER/KWRAOE/KWRULS", "SAO*ERD/KWRULS","SAOER/KWRULS","SAOERLS","SHRAOERLS"]]
-
-"""
-
-
-with (open("smol.txt", "r", encoding="utf-8")) as txt_dictionary:
 
     print("\n\n"+   #doesn't do anything, just the headers
           f"{'word':15}"+
@@ -82,7 +49,7 @@ with (open("smol.txt", "r", encoding="utf-8")) as txt_dictionary:
           +f"{'word boundaries':20}"
           +" | "
           +"commonness\n")
-    
+
     something={}
     for outline in txt_dictionary:
         something.update(make_input_into_dictionary_entry(outline))
@@ -104,13 +71,10 @@ with (open("smol.txt", "r", encoding="utf-8")) as txt_dictionary:
 
 
 
-
-
-
-
+"""
 
 dictionary['["seriously"],["RB"]'] = [
-            
+
             #phonetics
             [[[["s"] ["*"] ["ir"] ["."] ["r"] ["ii"] ["@"] ["s"]],["root"]],[["l iy"],["suffix"]]],
 
@@ -125,5 +89,6 @@ dictionary['["seriously"],["RB"]'] = [
 
             #briefing between word boundaries
             ["SAOER/KWRAOE/KWRULS" 2, "SAOER/KWHULS" 3, "SAO*ERD/KWRULS" 3,"SAOER/KWRULS" 4,"SAO*ERLSZ" 5, "SAOERLS" 5,"SHRAOERLS" 6]]
+
 
 """
