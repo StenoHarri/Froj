@@ -80,3 +80,43 @@ steno_chords_and_their_meanings={
 
 }
 
+
+pronunciation_dictionary={
+    #word   :  pronunciation spelling incomplete:[steno pronunciation spelling], complete:
+    "clown" : {
+        "pronunciation":"k l ow n",
+        "spelling":"clown",
+        "incomplete steno":[
+            {
+                'built-up':{
+                    "chord":"K", 
+                    "pronunciation":" k ",
+                    "spelling":"c"},
+                'breakdown':{
+                    "chord":"K",
+                    "pronunciation":" k ",
+                    "spelling":"c"}
+            }
+            ,
+            {
+                'built-up':{
+                    "chord":"KHR",
+                    "pronunciation":" k l ",
+                    "spelling":"cl"},
+                'breakdown':[
+                    {
+                        "chord":"K",
+                        "pronunciation":" k ",
+                        "spelling":"c"},
+                    {
+                        "chord":"HR",
+                        "pronunciation":" l ",
+                        "spelling":"l"}]
+            }
+            ],
+        "steno":[]}
+
+
+    "cloud" : [["k l ow d"],["cloud"],[[],[],[]],[]]
+}
+
