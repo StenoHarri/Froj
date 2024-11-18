@@ -39,7 +39,7 @@ steno_chords_and_their_meanings = {
          "spelling": "e",
          "pronunciation": "",
          "ambiguity": 0,
-         "what must come before": ".*[/STKPWHR]((Aoe)|(AOeu)|(AOu)|(Ae)|(Aeu)|(Oe)|(Oeu))[*frpblgtsdz]+",
+         "what must come before": ".*[/STKPWHR]\*?((Aoe)|(AOeu)|(AOu)|(Ae)|(Aeu)|(O)|(Oe)|(Oeu))[*frpblgtsdz]+",
          "what does it affect": ['root', 'suffix', 'prefix'],
          "steno theory": "WSI"}],
 
