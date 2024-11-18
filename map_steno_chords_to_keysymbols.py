@@ -34,6 +34,15 @@ Chord: [[spelling,          sound,          briefiness, theory]]
 """
 steno_chords_and_their_meanings = {
 
+    "": [
+        {"description": "silent e",
+         "spelling": "e",
+         "pronunciation": "",
+         "ambiguity": 0,
+         "what must come before": ".*[/STKPWHR]((Aoe)|(AOeu)|(AOu)|(Ae)|(Aeu)|(Oe)|(Oeu))[*frpblgtsdz]+",
+         "what does it affect": ['root', 'suffix', 'prefix'],
+         "steno theory": "WSI"}],
+
 
     "/S": [
         {"description": "S for initial s",
