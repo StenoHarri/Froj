@@ -1,18 +1,25 @@
 """
 questions for professor
 why is pancake pang+cake
-but suncream sun+cream not sung+cream?
-or ingcorporate
+but suncream sun+cream not sung+cream
 
-If the unilex is meant to be used for natural speech, how does it deal with when neighbouring words in a sentence do this?
-"I think my son g could do that. (and if it's not noticeable, then why do it for pang cake?)
+huh? why is it "sh == n" and not "== sh n"?
+starting_root  l  i  .  k  w  I2  =.=  f  a  k  .  sh  ==  n ",
+  "word_boundaries": "lique==fact==ion",
 """
+import multiprocessing
+import json
 
 from convert_unilex_into_readable_lists import (
     full_entry_pattern,
-    make_boundaries_into_list)
+    make_boundaries_into_list,
+    make_target_pronunciation_into_string,
+    make_target_spelling_into_string)
 
 from map_steno_chords_to_keysymbols import generate_write_outs
+
+
+
 
 
 
@@ -21,58 +28,44 @@ from map_steno_chords_to_keysymbols import generate_write_outs
 def make_input_into_dictionary_entry(input):
     word = full_entry_pattern.fullmatch(input).groupdict()
 
-    word['pronunciation'           ] = make_boundaries_into_list(word['pronunciation'])
-    word['word_boundaries'         ] = make_boundaries_into_list(word['word_boundaries'])
+    word['pronunciation'           ] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
+    word['word_boundaries'         ] = make_target_spelling_into_string(make_boundaries_into_list(word['word_boundaries']))
     #print(word)
-    word['full write outs'         ] = generate_write_outs(word)
-    word['briefs within boundaries'] = "still need to code this"
-    word['briefs across boundaries'] = "still need to code this"
+    word['steno stuff'         ] = generate_write_outs(word)
 
     #print(word)
+
+
+
+    word['pronunciation'           ] = str(word['pronunciation'])
+    word['word_boundaries'           ] = str(word['word_boundaries'])
+    return word
+    return {word['word']: (word)}
     return {word['word']:word}
 
 
-
-
-
-
-#do everything simultaneously, however it's quiet if it doesn't find anything.
-#with (open("Smol.txt", "r", encoding="utf-8")) as txt_dictionary:
-#    result = list(map(lambda x: full_entry_pattern.fullmatch(x).groupdict(), txt_dictionary.readlines()))
-
-    #matches = full_entry_pattern.findall(txt_dictionary.readlines())
-
-#print(result)
-dictionary={}
-
-
-
 with (open("big.txt", "r", encoding="utf-8")) as txt_dictionary:
-
-
-    something={}
-    for outline in txt_dictionary:
-        something.update(make_input_into_dictionary_entry(outline))
-        #print("\n")
-
-
-    """
-    for entry in something:
-        print(
-                f"{something[entry]['word']:15}"
-                +"\n      pronunciation:  "
-                +f"{str(something[entry]['pronunciation']):<45}"
-                +"\n      word boundaries:"
-                +f"{str(something[entry]['word_boundaries']):20}"
-                +"\n      full write outs:"
-                +str(something[entry]['full write outs'])
-                )
-        print("")
-    """
-
+    outlines = txt_dictionary.readlines()
 
 
 """
+for outline in outlines:
+    results = make_input_into_dictionary_entry(outline)
+"""
+
+
+with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+
+    results = pool.map(make_input_into_dictionary_entry, outlines)
+
+with open("Egg_output.json", "w") as outfile:
+    json.dump(results, outfile, indent=1)
+
+#print(results)
+
+
+"""
+Example of an entry:
 
 dictionary['["seriously"],["RB"]'] = [
 
@@ -90,6 +83,4 @@ dictionary['["seriously"],["RB"]'] = [
 
             #briefing between word boundaries
             ["SAOER/KWRAOE/KWRULS" 2, "SAOER/KWHULS" 3, "SAO*ERD/KWRULS" 3,"SAOER/KWRULS" 4,"SAO*ERLSZ" 5, "SAOERLS" 5,"SHRAOERLS" 6]]
-
-
 """
