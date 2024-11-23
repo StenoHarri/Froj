@@ -1,6 +1,15 @@
+"""
+questions for professor
+why is pancake pang+cake
+but suncream sun+cream not sung+cream?
+or ingcorporate
+
+If the unilex is meant to be used for natural speech, how does it deal with when neighbouring words in a sentence do this?
+"I think my son g could do that. (and if it's not noticeable, then why do it for pang cake?)
+"""
+
 from convert_unilex_into_readable_lists import (
     full_entry_pattern,
-    pronunciation_pattern,
     make_boundaries_into_list)
 
 from map_steno_chords_to_keysymbols import generate_write_outs
@@ -14,6 +23,7 @@ def make_input_into_dictionary_entry(input):
 
     word['pronunciation'           ] = make_boundaries_into_list(word['pronunciation'])
     word['word_boundaries'         ] = make_boundaries_into_list(word['word_boundaries'])
+    #print(word)
     word['full write outs'         ] = generate_write_outs(word)
     word['briefs within boundaries'] = "still need to code this"
     word['briefs across boundaries'] = "still need to code this"
@@ -37,26 +47,16 @@ dictionary={}
 
 
 
-with (open("smol.txt", "r", encoding="utf-8")) as txt_dictionary:
+with (open("big.txt", "r", encoding="utf-8")) as txt_dictionary:
 
-    print("\n\n"+   #doesn't do anything, just the headers
-          f"{'word':15}"+
-          " || "
-          +f"{'type':<5}"
-          +" | "
-          +f"{'pronunciation':<45}"
-          +" | "
-          +f"{'word boundaries':20}"
-          +" | "
-          +"commonness\n")
 
     something={}
     for outline in txt_dictionary:
         something.update(make_input_into_dictionary_entry(outline))
-        print("\n")
+        #print("\n")
 
 
-
+    """
     for entry in something:
         print(
                 f"{something[entry]['word']:15}"
@@ -68,6 +68,7 @@ with (open("smol.txt", "r", encoding="utf-8")) as txt_dictionary:
                 +str(something[entry]['full write outs'])
                 )
         print("")
+    """
 
 
 
