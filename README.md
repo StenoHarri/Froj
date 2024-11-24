@@ -5,4 +5,5 @@ Creates a list of possible write-outs by combining your theory and a list of wor
 
 
 23/11/24 = 3 words have at least one outline
-24/11/24 = 51 words have at least one outline
+
+24/11/24 = 51 entries between 22 words have at least one outline
