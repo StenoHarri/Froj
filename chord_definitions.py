@@ -11,7 +11,8 @@ keysymbol_shorthands = {
     """
     "long a": "a i",
     "schwa": "@",
-    "any vowel": "(a|@)"
+    "any vowel": "(a|@)",
+    "pasta vowel": " ao "
 }
 
 spelling_shorthands = {
@@ -187,6 +188,33 @@ steno_chords_and_their_meanings = {
          "what must come before": ".*[/STKPW]\*?",
          "steno theory": "WSI"}],
 
+    "/A": [
+
+
+        {"description": "A for initial a",
+         "spelling": "a",
+         "pronunciation": " (starting_)?((root)|(prefix))  a ",
+         "ambiguity": 0,
+         "what must come before": ".*",
+         "steno theory": "WSI"},
+
+        {"description": "A for initial schwa",
+         "spelling": "a",
+         "pronunciation": " (starting_)?((root)|(prefix))  @ ",
+         "ambiguity": 0,
+         "what must come before": ".*",
+         "steno theory": "WSI"},
+
+         {"description": "A for the initial pasta vowel",
+         "spelling": "a",
+         "pronunciation": " (starting_)?((root)|(prefix)) " + keysymbol_shorthands["pasta vowel"],
+         "ambiguity": 0,
+         "what must come before": ".*",
+         "steno theory": "WSI"}],
+
+
+         
+
     "/Aeu": [
         {"description": "AEU for initial long a",
          "spelling": "a",
@@ -298,7 +326,7 @@ steno_chords_and_their_meanings = {
     "z":[
         {"description": "folded -Z for plurals",
          "spelling": "s",
-         "pronunciation": "( (suffix) )? z ",
+         "pronunciation": "( (suffix) ) z ",
          "ambiguity": 1,
          "what must come before": ".*[AOeufrpblgtsd]+\*?",
          "steno theory": "WSI"}],
@@ -306,7 +334,7 @@ steno_chords_and_their_meanings = {
     "/-z":[
         {"description": "-Z for plurals",
          "spelling": "s",
-         "pronunciation": "( (suffix) )? z ",
+         "pronunciation": "( (suffix) ) z ",
          "ambiguity": 0,
          "what must come before": ".*[AOeufrpblgtsdz]+\*?",
          "steno theory": "WSI"}],
