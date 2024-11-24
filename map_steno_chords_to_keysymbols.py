@@ -8,240 +8,8 @@ Making the right hand lowercase so I don't have to worry about left P vs right P
 
 import re
 
+from chord_definitions import y_chord,silent_linker,keysymbol_shorthands,spelling_shorthands,steno_chords_and_their_meanings
 
-y_chord = "KWH" # the 'y' in yet or the 'i' in genius
-silent_linker = "KWR" # the 'linker' in genus
-
-
-keysymbol_shorthands = {
-    """
-    There will be groups of keysymbols that come up again and again,
-    so I'll define them once here
-    """
-    "long a": "a i",
-    "schwa": "@",
-    "any vowel": "(a|@)"
-}
-
-spelling_shorthands = {
-    """
-    There will be groups of letters that come up again and again,
-    so I'll define them once here
-    """
-    "": "a i",
-    "schwa": "@",
-    "": ""
-}
-
-"""
-Chord: [[spelling,          sound,          briefiness, theory]]
-"""
-steno_chords_and_their_meanings = {
-
-    "": [
-        {"description": "silent e",
-         "spelling": "e",
-         "pronunciation": "",
-         "ambiguity": 0,
-         "what must come before": ".*[/STKPWHR]\*?((Aoe)|(AOeu)|(AOu)|(Ae)|(Aeu)|(O)|(Oe)|(Oeu))[*frpblgtsdz]+",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"}],
-
-
-    "/S": [
-        {"description": "S for initial s",
-         "spelling": "ss?",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "what must come before": "",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-        {"description": "S for linking s",
-         "spelling": "ss?",
-         "pronunciation": " s ",
-         "ambiguity": 1,
-         "what must come before": "(.*[AOEUFRPBLGTSDZ]\*?)",
-         "what does it affect": ['root', 'suffix', 'prefix','compound'],
-         "steno theory": "WSI"},
-
-        {"description": "S for linking vowel + s",
-         "spelling": "[aeiouy]ss?",
-         "pronunciation": keysymbol_shorthands["any vowel"] + " s ",
-         "ambiguity": 1,
-         "what must come before": "(.*[AOEUFRPBLGTSDZ]\*?)",
-         "what does it affect": ['root', 'suffix', 'prefix','compound'],
-         "steno theory": "WSI"}],
-
-    "/S*": [
-        {"description": "S* for initial s of a compound word",
-         "spelling": "ss?",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "what must come before": "(.*[AOEUFRPBLGTSDZ])*",
-         "what does it affect": ['compound'],
-         "steno theory": "WSI"}],
-
-
-    "S": [
-
-         {"description": "S for s",
-         "spelling": "ss?",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "what must come before": "(.*/)*[TKPWHR]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-        {"description": "S for s",
-         "spelling": "ss?",
-         "pronunciation": " s ",
-         "ambiguity": 1,
-         "what must come before": ".*[/TKPWHR]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-        {"description": "S for soft c",
-         "spelling": "c",
-         "pronunciation": " s ",
-         "ambiguity": 1,
-         "what must come before": ".*[/TKPWHR]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-        {"description": "S for sc",
-         "spelling": "sc",
-         "pronunciation": " s ",
-         "ambiguity": 2,
-         "what must come before": ".*[/TKPWHR]+",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-        {"description": "S for s+vowel+consonant",
-         "spelling": "sc",
-         "pronunciation": " s "+keysymbol_shorthands["any vowel"]+ "( s )|( b )",
-         "ambiguity": 3,
-         "what must come before": ".*[/TKPWHR]+",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"}],
-
-
-    "/K": [
-        {"description": "K for initial/linking k",
-         "spelling": "k",
-         "pronunciation": " (starting_)?((root)|(prefix)|(suffix))  k ",
-         "ambiguity": 0,
-         "what must come before": "",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-         {"description": "K for initial/linking hard c",
-         "spelling": "c",
-         "pronunciation": " (starting_)?((root)|(prefix)|(suffix))  k ",
-         "ambiguity": 1,
-         "what must come before": "",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"}],
-
-    "K": [
-        {"description": "K for k",
-         "spelling": "k",
-         "pronunciation": " k ",
-         "ambiguity": 0,
-         "what must come before": ".*[/S]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-        {"description": "K for hard c",
-         "spelling": "c",
-         "pronunciation": " k ",
-         "ambiguity": 1,
-         "what must come before": ".*[/S]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"}],
-
-
-    "/"+silent_linker: [
-        {"description": silent_linker + " for silent linker",
-         "spelling": "",
-         "pronunciation": " ((root)|(prefix)|(suffix)) ",
-         "ambiguity": 0,
-         "what must come before": ".*[frpblgtsdz]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "User preference"},
-
-         {"description": silent_linker + " for silent linker that ignores word boundaries",
-         "spelling": "",
-         "pronunciation": "",
-         "ambiguity": 1,
-         "what must come before": ".*[frpblgtsdz]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "User preference"}],
-
-    "/"+y_chord: [
-        {"description": y_chord + " for initial/linking y",
-         "spelling": "y",
-         "pronunciation": " ((root)|(prefix)|(suffix))?  iy ",
-         "ambiguity": 0,
-         "what must come before": ".*",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "User preference"}],
-
-    "HR": [
-        {"description": "HR for l",
-         "spelling": "l",
-         "pronunciation": " l ",
-         "ambiguity": 0,
-         "what must come before": ".*[/STKPW]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-
-        {"description": "HR for ll",
-         "spelling": "ll",
-         "pronunciation": " l ",
-         "ambiguity": 1, #Alan Allan
-         "what must come before": ".*[/STKPW]\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"}],
-
-    "Ou": [
-        {"description": "OU for ow said like ow",
-         "spelling": "ow",
-         "pronunciation": " ow ",
-         "ambiguity": 0,
-         "what must come before": ".*[STKPWHR]+\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"},
-
-        {"description": "OU for ou said like ow",
-         "spelling": "ou",
-         "pronunciation": " ow ",
-         "ambiguity": 1,
-         "what must come before": ".*[STKPWHR]+\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"}],
-
-    "eu": [
-        {"description": "EU for y said like long e",
-         "spelling": "y",
-         "pronunciation": " iy ",
-         "ambiguity": 0,
-         "what must come before": ".*[STKPWHR]+\*?",
-         "what does it affected": ['root', 'suffix', 'prefix'],
-         "steno theory": "I think StenEd?"}],
-
-
-    "d": [
-        {"description": "-D for d",
-         "spelling": "d",
-         "pronunciation": " d ",
-         "ambiguity": 0,
-         "what must come before": ".*[STKPWHRAOeu]+\*?",
-         "what does it affect": ['root', 'suffix', 'prefix'],
-         "steno theory": "WSI"}]
-
-}
 
 pronunciation_dictionary={
     #word   :  pronunciation spelling incomplete:[steno pronunciation spelling], complete:
@@ -296,6 +64,8 @@ pronunciation_dictionary={
 
 
 def add_chord_to_chords(old_chords, new_chord, criteria):
+    #if old_chords == "/KHROud":
+    #    print("here")
     criteria = re.compile(criteria)
     if criteria.fullmatch(old_chords):
         return old_chords + new_chord
@@ -354,7 +124,8 @@ def is_entry_complete(entry, pronunciation_target, spelling_target):
 
         
         return {"steno outline": entry["built-up"]["steno outline"],
-                "ambiguity":entry["built-up"]["ambiguity"]},
+                "ambiguity":entry["built-up"]["ambiguity"],
+                "explanation":entry["explanation of each chord"]},
 
     return False
 
@@ -363,17 +134,31 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
     dictionary_with_a_chord_added_to_each_entry =[]
     for entry in initial_dictionary:
+
+        #if entry['built-up']["steno outline"] == "/KHROu":
+        #    print("here")
+
         for chord in steno_chords_and_their_meanings:
             
             #Um actually it's fine to break steno order
             #if not is_steno_order.match(entry["built-up"]["steno outline"] + chord):
             #    next
 
+
             for chord_interpretation in steno_chords_and_their_meanings[chord]:
+
+                #if chord_interpretation["description"] == "*D for dy":
+                #    print("here")
+                #if chord_interpretation["description"] == "folded -G for -ing":
+                #    print("here")
+
 
                 chords = add_chord_to_chords(entry["built-up"]["steno outline"], chord, chord_interpretation["what must come before"])
                 if not chords:
                     continue
+
+                #if chord_interpretation["description"] == "folded -G for -ing":
+                #    print("here")
 
                 pronunciation = add_pronunciation_to_pronunciation(entry["built-up"]["pronunciation"], chord_interpretation["pronunciation"], target_pronunciation)
                 if not pronunciation:
@@ -385,6 +170,13 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
                 ambiguity = entry["built-up"]["ambiguity"] + chord_interpretation["ambiguity"]
 
+                #if entry["built-up"]["steno outline"] == "/KHROud":
+                #    print("here")
+
+                explanation=[]
+                #I can't just assign this because of deep copies or something
+                explanation += (entry["explanation of each chord"])
+                explanation.append([chord_interpretation["description"],"steno theory: "+chord_interpretation["steno theory"],"How arbitrary: "+str(chord_interpretation["ambiguity"])])
 
 
                 dictionary_with_a_chord_added_to_each_entry+=[{
@@ -393,7 +185,7 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
                         "pronunciation":pronunciation,
                         "spelling":spelling,
                         "ambiguity":ambiguity,},
-                    "explanation of each chord":[]
+                    "explanation of each chord":explanation
                 }]
 
     new_never_seen_before_entries = []
@@ -434,7 +226,8 @@ def generate_write_outs(input_word):
     #print(input_word['word'])
     last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated=[])
 
-    #if not list_of_incomplete_entries==[]:
+    if list_of_incomplete_entries==[]:
+        return["###########################################################################"]
     
     return(list_of_incomplete_entries)
 
