@@ -6,6 +6,23 @@ but suncream sun+cream not sung+cream
 huh? why is it "sh == n" and not "== sh n"?
 starting_root  l  i  .  k  w  I2  =.=  f  a  k  .  sh  ==  n ",
   "word_boundaries": "lique==fact==ion",
+
+
+
+  
+I've found missing pronunciations for "lithe"
+HRAO*EUT seems to be the most common
+HR*EUT https://youtu.be/CTgk5pGOe1g?si=MwXHGoLloZJcPXFq&t=517
+(8:37)
+HRAO*ET https://youtu.be/-5FEgL-BkIk?si=1XSGHabJnnN6g-fg&t=10239
+(2:50:40)
+
+I've also found voiced and unvoiced versions for "lithe", but I don't know of any steno theory that makes a distinction so that doesn't interest me
+
+
+
+
+Going based off word boundaries instead of the spelling means there's no difference between downy and downie
 """
 import multiprocessing
 import json
@@ -31,7 +48,9 @@ def make_input_into_dictionary_entry(input):
     word['pronunciation'           ] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
     word['word_boundaries'         ] = make_target_spelling_into_string(make_boundaries_into_list(word['word_boundaries']))
     #print(word)
+    word['number of entries'   ] = (0)
     word['steno stuff'         ] = generate_write_outs(word)
+    word['number of entries'   ] = len(word['steno stuff'])
 
     #print(word)
 
@@ -48,10 +67,10 @@ with (open("big.txt", "r", encoding="utf-8")) as txt_dictionary:
     outlines = txt_dictionary.readlines()
 
 
-"""
-for outline in outlines:
-    results = make_input_into_dictionary_entry(outline)
-"""
+
+#for outline in outlines:
+#    results = make_input_into_dictionary_entry(outline)
+
 
 
 with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
