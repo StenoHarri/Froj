@@ -692,7 +692,7 @@ steno_chords_and_their_meanings = {
     "/-d": [
         {"description": "-D for -ed",
          "spelling": "ed",
-         "pronunciation": " suffix  I7  d ",
+         "pronunciation": " suffix ( I7 )? d ",
          "ambiguity": 1,
          "what must come before": ".*[AOeufrpblgtsdz]+\*?",
          "steno theory": "WSI"}],
@@ -707,7 +707,7 @@ steno_chords_and_their_meanings = {
 
         {"description": "folding -D for -ed",
          "spelling": "ed",
-         "pronunciation": " suffix  I7  d ",
+         "pronunciation": " suffix ( I7 )? d ",
          "ambiguity": 1,
          "what must come before": ".*[AOeufrpblgts]+\*?",
          "steno theory": "WSI"}],
@@ -726,6 +726,8 @@ steno_chords_and_their_meanings = {
          "ambiguity": 4,
          "what must come before": ".*[AOeufrpblgt]+\*?",
          "steno theory": "HelloChap? I can't remember"}],
+
+
 
     "/-z":[
         {"description": "-Z for plurals",
