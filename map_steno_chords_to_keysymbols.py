@@ -130,12 +130,14 @@ def is_entry_complete(entry, pronunciation_target, spelling_target):
     return False
 
 
-def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated=[]):
+def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}):
 
     dictionary_with_a_chord_added_to_each_entry =[]
     for entry in initial_dictionary:
 
-        #if entry['built-up']["steno outline"] == "/KHROu":
+        #if entry['built-up']["steno outline"] == "/KHROu/TKeu/KWR":
+        #    print("here")
+        #if entry['built-up']["steno outline"] == "/KHROu/TKeu":
         #    print("here")
 
         for chord in steno_chords_and_their_meanings:
@@ -147,22 +149,31 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
             for chord_interpretation in steno_chords_and_their_meanings[chord]:
 
-                #if chord_interpretation["description"] == "*D for dy":
+                #if chord_interpretation["description"] == "folding ER for suffix er":
+                #    print("here")
+                #if chord_interpretation["description"] == "folding ER for suffix er":
+                #    print("here")
+                #if chord_interpretation["spelling"] == "e":
                 #    print("here")
                 #if chord_interpretation["description"] == "folded -G for -ing":
                 #    print("here")
 
+                #if entry["built-up"]["steno outline"] == "/KHROupb/KWReurb":
+                #    print("here")
 
                 chords = add_chord_to_chords(entry["built-up"]["steno outline"], chord, chord_interpretation["what must come before"])
                 if not chords:
                     continue
 
-                #if chord_interpretation["description"] == "folded -G for -ing":
+                #if chord_interpretation["spelling"] == "s":
                 #    print("here")
 
                 pronunciation = add_pronunciation_to_pronunciation(entry["built-up"]["pronunciation"], chord_interpretation["pronunciation"], target_pronunciation)
                 if not pronunciation:
                     continue
+
+                #if chord_interpretation["description"] == "K for linking ch that sounds like k":
+                #    print("here")
 
                 spelling = add_spelling_to_spelling(entry["built-up"]["spelling"], chord_interpretation["spelling"], target_spelling)
                 if not spelling:
@@ -170,7 +181,7 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
                 ambiguity = entry["built-up"]["ambiguity"] + chord_interpretation["ambiguity"]
 
-                #if entry["built-up"]["steno outline"] == "/KHROud":
+                #if entry["built-up"]["steno outline"] == "/KHROupb/KWReurb":
                 #    print("here")
 
                 explanation=[]
@@ -198,7 +209,17 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
             #actually yeah it can't, because /K and /K can be different chords
             is_entry_complete_answer = is_entry_complete(entry, target_pronunciation, target_spelling)
             if is_entry_complete_answer:
-                every_complete_entry_generated.append(is_entry_complete_answer)
+
+
+                #now I'm just gonna check to see if the entry we're adding is the least briefy for that entry
+                if every_complete_entry_generated == {}:
+                    every_complete_entry_generated[is_entry_complete_answer[0]["steno outline"]] = is_entry_complete_answer[0]
+                elif not is_entry_complete_answer[0]["steno outline"] in every_complete_entry_generated:
+                        every_complete_entry_generated[is_entry_complete_answer[0]["steno outline"]] = is_entry_complete_answer[0]
+
+
+                        #So far it seems the least briefy entry is ALWAYS added to the stroke first... why? Whatever, it means I can just say "if it's not in there, it's the best, if it's in there, it's already been beaten
+
             else:
                 new_never_seen_before_entries.append(entry)
 
@@ -224,7 +245,7 @@ def generate_write_outs(input_word):
     ]
 
     #print(input_word['word'])
-    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated=[])
+    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={})
 
     if list_of_incomplete_entries==[]:
         return["###########################################################################"]
