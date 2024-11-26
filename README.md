@@ -1,8 +1,8 @@
-# Egg 
+# Froj 
 !!!largely incomplete
 Creates a list of possible write-outs by combining your theory and a list of words, and their pronunciation/morphology
 
-
+![image](images/froj.png)
 
 23/11/24 = 3 words , 4 entries
 
