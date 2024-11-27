@@ -10,4 +10,6 @@ Creates a list of possible write-outs by combining your theory and a list of wor
 
 25/11/24 = 636 words, 1802 entries
 
-26/11/24 = 1474 words,  3902 entries
+26/11/24 = 1474 words,  3,902 entries
+
+27/11/24 = 2,939 words, 10,239
