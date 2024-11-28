@@ -13,3 +13,9 @@ Creates a list of possible write-outs by combining your theory and a list of wor
 26/11/24 = 1,474 words   3,902 entries
 
 27/11/24 = 3,736 words  13,430 entries
+
+28/11/24 = 6,696 words   27,258 entries
+
+
+
+grep -c 'steno outline' Egg_output.json
