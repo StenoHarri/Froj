@@ -11,6 +11,7 @@ import re
 from chord_definitions import y_chord,silent_linker,keysymbol_shorthands,spelling_shorthands,steno_chords_and_their_meanings
 
 
+
 pronunciation_dictionary={
     #word   :  pronunciation spelling incomplete:[steno pronunciation spelling], complete:
     "cloudiness:" : {
@@ -153,7 +154,7 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
                 #    print("here")
                 #if chord_interpretation["description"] == "folding ER for suffix er":
                 #    print("here")
-                #if chord_interpretation["spelling"] == "e":
+                #if entry["built-up"]["spelling"] == "clown":
                 #    print("here")
                 #if chord_interpretation["description"] == "folded -G for -ing":
                 #    print("here")
@@ -168,9 +169,6 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
                 #if chord_interpretation["spelling"] == "s":
                 #    print("here")
 
-                pronunciation = add_pronunciation_to_pronunciation(entry["built-up"]["pronunciation"], chord_interpretation["pronunciation"], target_pronunciation)
-                if not pronunciation:
-                    continue
 
                 #if chord_interpretation["description"] == "K for linking ch that sounds like k":
                 #    print("here")
@@ -178,6 +176,14 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
                 spelling = add_spelling_to_spelling(entry["built-up"]["spelling"], chord_interpretation["spelling"], target_spelling)
                 if not spelling:
                     continue
+
+                pronunciation = add_pronunciation_to_pronunciation(entry["built-up"]["pronunciation"], chord_interpretation["pronunciation"], target_pronunciation)
+                if not pronunciation:
+                    continue
+
+
+
+
 
                 ambiguity = entry["built-up"]["ambiguity"] + chord_interpretation["ambiguity"]
 
@@ -224,7 +230,17 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
                 new_never_seen_before_entries.append(entry)
 
     if new_never_seen_before_entries:
+
+
+
         never_seen_before_entries, every_complete_entry_generated = (add_a_chord_onto_each_incomplete_entry(new_never_seen_before_entries, target_pronunciation, target_spelling, new_never_seen_before_entries, every_complete_entry_generated))
+
+        #this is where I should put more multiprocessing
+
+        #with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+
+        #    never_seen_before_entries, every_complete_entry_generated = pool.map(add_a_chord_onto_each_incomplete_entry, (new_never_seen_before_entries, target_pronunciation, target_spelling, new_never_seen_before_entries, every_complete_entry_generated))
+
     
     return never_seen_before_entries, every_complete_entry_generated
 
