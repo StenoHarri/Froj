@@ -18,4 +18,8 @@ Creates a list of possible write-outs by combining your theory and a list of wor
 
 29/11/24 = 21,828 words 115,396 entries
 
-grep -c 'steno outline' Egg_output.json
+efficiency update & removed plurals on another stroke. got from 11 minute runtime to 2
+
+10/12/24 = 21,734 words  98,281 entries
+
+grep -c 'number of entries": [1-9]' Froj_output.json
