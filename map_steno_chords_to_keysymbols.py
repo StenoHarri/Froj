@@ -8,68 +8,34 @@ Making the right hand lowercase so I don't have to worry about left P vs right P
 
 import re
 
-from chord_definitions import y_chord,silent_linker,keysymbol_shorthands,spelling_shorthands,steno_chords_and_their_meanings
+from chord_definitions import custom_alphabet
 
 
 
-pronunciation_dictionary={
-    #word   :  pronunciation spelling incomplete:[steno pronunciation spelling], complete:
-    "cloudiness:" : {
-        "pronunciation":[[['k', 'l', 'ow', 'd'], ['root']], [['iy'], ['suffix']], [['n', 'E5', 's'], ['suffix']]],
-        "word_boundaries":[[['cloud'], ['root']], [['y'], ['suffix']], [['ness'], ['suffix']]],
-        "incomplete steno":[
-            {
-                'built-up':{
-                    "steno outline":"K", 
-                    "pronunciation":" k ",
-                    "spelling":"c",
-                    "ambiguity": 0,
-                    "steno theories": ["WSI"]},
-                'explanation of each chord':[
-                    {
-                        "chord":"K",
-                        "pronunciation":" k ",
-                        "spelling":"c",
-                        "ambiguity": 0,
-                        "steno theory": "WSI"
-                    }
-                    ]
-            }
-            ,
-            {
-                'built-up':{
-                    "steno outline":"KHR",
-                    "pronunciation":" k l ",
-                    "spelling":"cl",
-                    "ambiguity": 0,
-                    "steno theories": ["WSI"]},
-                'explanation of each chord':[
-                    {
-                        "chord":"K",
-                        "pronunciation":" k ",
-                        "spelling":"c",
-                        "ambiguity": 0,
-                        "steno theory": "WSI"},
-                    {
-                        "chord":"HR",
-                        "pronunciation":" l ",
-                        "spelling":"l",
-                        "ambiguity": 0,
-                        "steno theory": "WSI"}]
-            }
-            ],
-        "steno":[]},
 
-}
+
+
+
+
+order_map = {char: index for index, char in enumerate(custom_alphabet)}
+def custom_sort_key(word):
+    return [order_map[char] for char in word]
 
 
 
 def add_chord_to_chords(old_chords, new_chord, criteria):
     #if old_chords == "/KHROud":
     #    print("here")
-    criteria = re.compile(criteria)
     if criteria.fullmatch(old_chords):
-        return old_chords + new_chord
+
+        unalphabetical_entry = (old_chords + new_chord).split("/")
+        alphabetical_entry = ""
+
+        # Check and sort the last part if necessary
+        if sorted(unalphabetical_entry[-1], key=lambda x: order_map[x]) != list(unalphabetical_entry[-1]):
+            unalphabetical_entry[-1] = ''.join(sorted(unalphabetical_entry[-1], key=lambda x: order_map[x]))
+
+        return "/".join(unalphabetical_entry)
     return False
 
 def add_pronunciation_to_pronunciation(old_pronunciation, new_pronunciation, criteria):
@@ -131,7 +97,9 @@ def is_entry_complete(entry, pronunciation_target, spelling_target):
     return False
 
 
-def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}):
+def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, steno_chords_and_their_meanings={}):
+
+    
 
     dictionary_with_a_chord_added_to_each_entry =[]
     for entry in initial_dictionary:
@@ -162,6 +130,8 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
                 #if entry["built-up"]["steno outline"] == "/KHROupb/KWReurb":
                 #    print("here")
 
+
+
                 chords = add_chord_to_chords(entry["built-up"]["steno outline"], chord, chord_interpretation["what must come before"])
                 if not chords:
                     continue
@@ -170,7 +140,7 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
                 #    print("here")
 
 
-                #if chord_interpretation["description"] == "K for linking ch that sounds like k":
+                #if chord_interpretation["description"] == "TPH for linking n":
                 #    print("here")
 
                 spelling = add_spelling_to_spelling(entry["built-up"]["spelling"], chord_interpretation["spelling"], target_spelling)
@@ -233,7 +203,7 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
 
 
-        never_seen_before_entries, every_complete_entry_generated = (add_a_chord_onto_each_incomplete_entry(new_never_seen_before_entries, target_pronunciation, target_spelling, new_never_seen_before_entries, every_complete_entry_generated))
+        never_seen_before_entries, every_complete_entry_generated = (add_a_chord_onto_each_incomplete_entry(new_never_seen_before_entries, target_pronunciation, target_spelling, new_never_seen_before_entries, every_complete_entry_generated, steno_chords_and_their_meanings=steno_chords_and_their_meanings))
 
         #this is where I should put more multiprocessing
 
@@ -245,9 +215,29 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
     return never_seen_before_entries, every_complete_entry_generated
 
 
+def filter_user_chords_to_only_the_chords_that_feasibly_can_come_up(input_word, user_chords):
+    filtered_user_chords = {}
+    for user_chord in user_chords:
+
+        chord_interpretations = []
+        for chord_interpretation in user_chords[user_chord]:
 
 
-def generate_write_outs(input_word):
+            if re.search(chord_interpretation["pronunciation"], input_word["pronunciation"]) and re.search(chord_interpretation["spelling"], input_word["word_boundaries"]):
+
+
+                chord_interpretations.append(chord_interpretation)
+
+        if chord_interpretations:
+            filtered_user_chords[user_chord]=chord_interpretations
+    
+    return filtered_user_chords
+
+
+
+
+
+def generate_write_outs(input_word, user_chords):
 
     list_of_incomplete_entries = [
         {
@@ -260,8 +250,10 @@ def generate_write_outs(input_word):
         }
     ]
 
+    user_chords = filter_user_chords_to_only_the_chords_that_feasibly_can_come_up(input_word, user_chords)
+
     #print(input_word['word'])
-    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={})
+    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={}, steno_chords_and_their_meanings=user_chords)
 
     if list_of_incomplete_entries==[]:
         return["###########################################################################"]
