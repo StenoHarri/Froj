@@ -4,7 +4,7 @@ y_chord = "KWH" # the 'y' in yet or the 'i' in genius
 silent_linker = "KWR" # the 'linker' in genus
 
 
-custom_alphabet = "*QSTKPWHRAO-eufrpblgtsdz"
+custom_alphabet = "*QSTKPWHRAO-eufrpblgtsdz_"
 
 keysymbol_shorthands = {
     """
@@ -12,10 +12,11 @@ keysymbol_shorthands = {
     so I'll define them once here
     """
     "long a": "a i",
-    "short vowels": " \[?(@|e5|I2|i7|e05|a|o|a5|e|@r)\]? ",
-    "long vowels": " \[?(aa|y  uu|iy)\]? ",
-    "any vowel": " \[?(a|ao|@|e5|i2|i7|e05|eir|o|a5)\]? ",
+    "short vowels": " \[?(a4|u|@|e5|i2|i7|i|e05|uh|a|o|a5|e|@r|a5/i2)\]? ",
+    "long vowels": " \[?(aa|ei|y  uu|iy)\]? ",
+    "any vowel": " \[?(a4|a|ao|@|e5|i2|i7|e05|eir|o|a5)\]? ",
     "pasta vowel": " ao "
+
 }
 
 spelling_shorthands = {
@@ -34,7 +35,7 @@ spelling_shorthands = {
 NothingRegex = re.compile(r'')
 AtLeastOneCharacterRegex = re.compile(r'.+')
 skipsAnEUInTheVowels = re.compile(r'[AO][frpblgtsdz]+')
-unavailable_e_no_r = re.compile(r'.*[QSTKPWHR][AO]*[eu]+fpblgtsdz]*')
+unavailable_e_no_r = re.compile(r'.*[QSTKPWHR][AO]*[eu]+[fpblgtsdz]*')
 
 A_to_s_yes_b_or_g = re.compile(r'.*[\-AOeufrp][bg][lgts]*')
 
@@ -65,6 +66,23 @@ A_to_z = re.compile(r'.*[\-AOeufrpblgtsdz]')
 
 A_to_z_no_pbs = re.compile(r'.*[\-AOeufr][lgtdz]+')
 A_to_z_no_plt = re.compile(r'.*[\-AOeufr][bgsdz]+')
+
+
+A_to_u_ = re.compile(r'.*[\-AOeu]_?')
+A_to_u_ = re.compile(r'.*[\-AOeuf]_?')
+A_to_r_ = re.compile(r'.*[\-AOeufr]_?')
+A_to_p_ = re.compile(r'.*[\-AOeufrp]_?')
+A_to_b_ = re.compile(r'.*[\-AOeufrpb]_?')
+A_to_l_ = re.compile(r'.*[\-AOeufrpbl]_?')
+A_to_g_ = re.compile(r'.*[\-AOeufrpblg]_?')
+A_to_t_ = re.compile(r'.*[\-AOeufrpblgt]_?')
+A_to_s_ = re.compile(r'.*[\-AOeufrpblgts]_?')
+A_to_d_ = re.compile(r'.*[\-AOeufrpblgtsd]_?')
+A_to_z_ = re.compile(r'.*[\-AOeufrpblgtsdz]_?')
+
+
+A_to_z_no_pbs_ = re.compile(r'.*[\-AOeufr][lgtdz]+_?')
+A_to_z_no_plt_ = re.compile(r'.*[\-AOeufr][bgsdz]+_?')
 
 
 A_to_z_no_r = re.compile(r'.*[\-AOeuf][pblgtsdz]+')
@@ -127,16 +145,30 @@ steno_chords_and_their_meanings = {
         # "steno theory": "I don't know"},
 
         {"description": "drop short vowel",
-         "spelling": "[aeiou]",
+         "spelling": "[aeiouy]",
          "pronunciation": keysymbol_shorthands["short vowels"],
+         "ambiguity": 2,
+         "what must come before": AtLeastOneCharacterRegex,
+         "steno theory": "I don't know"},
+
+        {"description": "drop i that historically didn't exist anyway",
+         "spelling": "",
+         "pronunciation": " i ",
          "ambiguity": 2,
          "what must come before": AtLeastOneCharacterRegex,
          "steno theory": "I don't know"},
 
 
         {"description": "drop long vowel",
-         "spelling": "[aeiou]",
+         "spelling": "[aeiouy]",
          "pronunciation": keysymbol_shorthands["long vowels"],
+         "ambiguity": 3,
+         "what must come before": AtLeastOneCharacterRegex,
+         "steno theory": "I don't know"},
+
+        {"description": "drop the middle vowel in banana",
+         "spelling": "a",
+         "pronunciation": " oa ",
          "ambiguity": 3,
          "what must come before": AtLeastOneCharacterRegex,
          "steno theory": "I don't know"},
@@ -199,6 +231,38 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "what must come before": upToQ,
+         "steno theory": "WSI"}],
+
+
+    "/SKWR*": [
+        {"description": "SKWR* for joining a compound word with j",
+         "spelling": "j",
+         "pronunciation": " compound  jh ",
+         "ambiguity": 0,
+         "what must come before": A_to_z,
+         "steno theory": "Lapwing"}],
+
+    "/SKWR": [
+        {"description": "SKWR for initial j",
+         "spelling": "j",
+         "pronunciation": " (starting_)((root)|(prefix))  jh ",
+         "ambiguity": 0,
+         "what must come before": NothingRegex,
+         "steno theory": "WSI"},
+
+        {"description": "SKWR for linking j",
+         "spelling": "(j|dj|dge?)",
+         "pronunciation": "( (root)|(prefix) )* jh ",
+         "ambiguity": 0,
+         "what must come before": A_to_z,
+         "steno theory": "WSI"}],
+
+    "SKWR": [
+        {"description": "SKWR for j",
+         "spelling": "(j|dj|dge?)",
+         "pronunciation": " jh ",
+         "ambiguity": 0,
+         "what must come before": upToK,
          "steno theory": "WSI"}],
 
     "/SR": [
@@ -519,30 +583,69 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_z,
          "steno theory": "Lapwing"}],
 
-
     "/PW": [
         {"description": "PW for initial b",
          "spelling": "b",
          "pronunciation": " (starting_)((root)|(prefix))  b ",
          "ambiguity": 0,
          "what must come before": NothingRegex,
-         "steno theory": "Lapwing"},
+         "steno theory": "WSI"},
 
         {"description": "PW for linking b",
          "spelling": "bb?",
          "pronunciation": "( (root)|(prefix) )* b ",
          "ambiguity": 0,
          "what must come before": A_to_z,
-         "steno theory": "Lapwing"}],
+         "steno theory": "WSI"}],
 
     "PW": [
         {"description": "PW for b",
          "spelling": "bb?",
          "pronunciation": " b ",
          "ambiguity": 0,
-         "what must come before": upToS,
+         "what must come before": upToK,
          "steno theory": "WSI"}],
 
+    "/PH*": [
+        {"description": "PH* for joining a compound word with m",
+         "spelling": "m",
+         "pronunciation": " compound  m ",
+         "ambiguity": 0,
+         "what must come before": A_to_z,
+         "steno theory": "Lapwing"}],
+
+    "/PH": [
+        {"description": "PH for initial m",
+         "spelling": "m",
+         "pronunciation": " (starting_)((root)|(prefix))  m ",
+         "ambiguity": 0,
+         "what must come before": NothingRegex,
+         "steno theory": "WSI"},
+
+        {"description": "PH for linking m",
+         "spelling": "mm?",
+         "pronunciation": "( (root)|(prefix) )* m ",
+         "ambiguity": 0,
+         "what must come before": A_to_z,
+         "steno theory": "WSI"}],
+
+    "PH": [
+        {"description": "PH for m",
+         "spelling": "mm?",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "what must come before": upToK,
+         "steno theory": "WSI"}],
+
+
+
+    "/W*": [
+        {"description": "W for compound linker w",
+         "spelling": "w",
+         "pronunciation": " compound  w ",
+         "ambiguity": 0,
+         "what must come before": A_to_z,
+         "steno theory": "Lapwing"}],
 
     "/W": [
         {"description": "W for initial w",
@@ -558,14 +661,6 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": A_to_z,
          "steno theory": "WSI"}],
-
-    "/W*": [
-        {"description": "W for compound linker w",
-         "spelling": "w",
-         "pronunciation": " compound  w ",
-         "ambiguity": 0,
-         "what must come before": A_to_z,
-         "steno theory": "Lapwing"}],
 
     "W": [
         {"description": "W for w",
@@ -602,20 +697,35 @@ steno_chords_and_their_meanings = {
 
 
 
+    "/H*": [
+        {"description": "H* for joining a compound word with h",
+         "spelling": "h",
+         "pronunciation": " compound  h ",
+         "ambiguity": 0,
+         "what must come before": A_to_z,
+         "steno theory": "Lapwing"}],
+
     "/H": [
+        {"description": "H for initial h",
+         "spelling": "h",
+         "pronunciation": " (starting_)((root)|(prefix))  h ",
+         "ambiguity": 0,
+         "what must come before": NothingRegex,
+         "steno theory": "WSI"},
+
         {"description": "H for linking h",
          "spelling": "h",
-         "pronunciation": "( (root)|(prefix) )* h ",
+         "pronunciation": "( (root)|(prefix) )* m ",
          "ambiguity": 0,
          "what must come before": A_to_z,
          "steno theory": "WSI"}],
 
     "H": [
-        {"description": "H for h",
-         "spelling": "h",
-         "pronunciation": " h ",
+        {"description": "PH for m",
+         "spelling": "mm?",
+         "pronunciation": " m ",
          "ambiguity": 0,
-         "what must come before": upToW,
+         "what must come before": upToK,
          "steno theory": "WSI"}],
 
     "/HR*": [
@@ -725,7 +835,15 @@ steno_chords_and_their_meanings = {
          "pronunciation": " (starting_)?((root)|(prefix))  aa ",
          "ambiguity": 1,
          "what must come before": NothingRegex,
-         "steno theory": "drama is a short vowel"}],
+         "steno theory": "drama is a short vowel"},
+
+        {"description": "A for the initial middle a in banana",
+         "spelling": "aa?",
+         "pronunciation": " (starting_)?((root)|(prefix))  oa ",
+         "ambiguity": 0,
+         "what must come before": NothingRegex,
+         "steno theory": "banana is all short vowels"}],
+
 
     "A": [
         {"description": "A for short a",
@@ -733,7 +851,18 @@ steno_chords_and_their_meanings = {
          "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 0,
          "what must come before": upToR,
-         "steno theory": "WSI"}],
+         "steno theory": "WSI"},
+
+
+        {"description": "A for the middle a in banana",
+         "spelling": "aa?",
+         "pronunciation": " oa ",
+         "ambiguity": 0,
+         "what must come before": upToR,
+         "steno theory": "banana is all short vowels"}],
+
+
+
 
 
 
@@ -763,7 +892,7 @@ steno_chords_and_their_meanings = {
     "AOeu": [
         {"description": "AOEU for long i",
          "spelling": "i",
-         "pronunciation": " ae ",
+         "pronunciation": " (ae|ai) ",
          "ambiguity": 0,
          "what must come before": upToR,
          "steno theory": "WSI"}],
@@ -795,7 +924,7 @@ steno_chords_and_their_meanings = {
 
     "/Aeu": [
         {"description": "AEU for initial long a",
-         "spelling": "aa?",
+         "spelling": "aa?y?",
          "pronunciation": " (starting_)?((root)|(prefix))  (ee|ei|eir) ",
          "ambiguity": 0,
          "what must come before": NothingRegex,
@@ -803,11 +932,18 @@ steno_chords_and_their_meanings = {
 
     "Aeu": [
         {"description": "AEU for long a",
-         "spelling": "aa?",
+         "spelling": "a(a|y|i)?",
          "pronunciation": " (ee|ei|eir) ",
          "ambiguity": 0,
          "what must come before": upToR,
-         "steno theory": "WSI"}],
+         "steno theory": "WSI"},
+
+        {"description": "AEU for long a written with an e",
+         "spelling": "ey?",
+         "pronunciation": " (ee|ei|eir) ",
+         "ambiguity": 1,
+         "what must come before": upToR,
+         "steno theory": "I don't know"}],
 
 
     "/Au": [
@@ -866,6 +1002,15 @@ steno_chords_and_their_meanings = {
          "steno theory": "Lapwing"}],
 
 
+    "Al": [
+        {"description": "AL for al (despite the silent a)",
+         "spelling": "al",
+         "pronunciation": " l ",
+         "ambiguity": 0,
+         "what must come before": upToR,
+         "steno theory": "WSI?"}],
+
+
     "Oe": [
         {"description": "OU for o said like owe",
          "spelling": "o",
@@ -880,7 +1025,14 @@ steno_chords_and_their_meanings = {
          "pronunciation": " (O|o|@|@r) ",
          "ambiguity": 0,
          "what must come before": upToR,
-         "steno theory": "WSI"}],
+         "steno theory": "WSI"},
+
+        {"description": "O for o in Harri's accent",
+         "spelling": "o",
+         "pronunciation": " (au) ",
+         "ambiguity": 0,
+         "what must come before": upToR,
+         "steno theory": "Harri's accent"}],
 
         #{"description": "O for o, even though it's not pronounced",
         # "spelling": "o",
@@ -938,14 +1090,21 @@ steno_chords_and_their_meanings = {
 
         {"description": "EU for i",
          "spelling": "i",
-         "pronunciation": " i ",
+         "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 0,
          "what must come before": upToR,
          "steno theory": "I think StenEd?"},
+
+        {"description": "EU for i sound",
+         "spelling": "",
+         "pronunciation": keysymbol_shorthands["short vowels"],
+         "ambiguity": 0,
+         "what must come before": upToR,
+         "steno theory": "I don't know"},
         
         {"description": "EU for y said like uh",
          "spelling": "y",
-         "pronunciation": " I2 ",
+         "pronunciation": " i2 ",
          "ambiguity": 0,
          "what must come before": upToR,
          "steno theory": "I think StenEd?"}],
@@ -989,6 +1148,8 @@ steno_chords_and_their_meanings = {
          "what must come before": upToR,
          "steno theory": "WSI"}],
 
+    
+
     "f":[
         {"description": "-F for f",
          "spelling": "ff?e?",
@@ -996,34 +1157,6 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": A_to_u,
          "steno theory": "WSI"},
-         
-        {"description": "-F for v",
-         "spelling": "f",
-         "pronunciation": " v ",
-         "ambiguity": 0,
-         "what must come before": A_to_u,
-         "steno theory": "WSI"},
-
-        #{"description": "-F for s",
-        # "spelling": "s",
-        # "pronunciation": " (s|z) ",
-        # "ambiguity": 1,
-        # "what must come before": A_to_u,
-        # "steno theory": "I think StenEd?"},
-
-        {"description": "-F for v",
-         "spelling": "v",
-         "pronunciation": " v ",
-         "ambiguity": 1,
-         "what must come before": A_to_u,
-         "steno theory": "I think StenEd?"},
-
-        #{"description": "folding -F for s",
-        # "spelling": "s",
-        # "pronunciation": " s ",
-        # "ambiguity": 2,
-        # "what must come before": ".*[AOeu]r?p?b?l?g?t?s?d?z?#\*?",
-        # "steno theory": "I think StenEd?"},
 
          {"description": "-F for gh",
          "spelling": "gh",
@@ -1031,6 +1164,24 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "what must come before": A_to_u,
          "steno theory": "I don't know"}],
+
+
+    "f_":[ #there's logic where anything ending in a _ cannot be followed by a new stroke
+
+        {"description": "-F for s",
+         "spelling": "s",
+         "pronunciation": " (s|z) ",
+         "ambiguity": 1,
+         "what must come before": A_to_u,
+         "steno theory": "I think StenEd?"},
+
+        {"description": "-F for v",
+         "spelling": "v",
+         "pronunciation": " v ",
+         "ambiguity": 1,
+         "what must come before": A_to_u,
+         "steno theory": "I think StenEd?"}],
+
 
 
 
@@ -1089,14 +1240,14 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u,
          "steno theory": "WSI"}],
 
-    "plt":[
-        {"description": "-F for s then -PLT for suffix -ment",
-         "spelling": "sement",
-         "pronunciation": " s suffix  m  e5  n  t ",
-         "ambiguity": 1,
-         #"what must come before": ".*[AOeu]f?r?b?g?s?z\*?",
-         "what must come before": A_to_u,
-         "steno theory": "I don't know"}],
+    #"fplt":[
+    #    {"description": "-F for s then -PLT for suffix -ment",
+    #     "spelling": "sement",
+    #     "pronunciation": " s suffix  m  e5  n  t ",
+    #     "ambiguity": 1,
+    #     #"what must come before": ".*[AOeu]f?r?b?g?s?z\*?",
+    #     "what must come before": A_to_u,
+    #     "steno theory": "I don't know"}],
 
     "fb":[
         {"description": "-FB for v",
@@ -1154,6 +1305,41 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_r,
          "steno theory": "WSI"}],
 
+
+
+
+
+    "pbl": [
+        {"description": "-PBL for nal (despite the silent a)",
+         "spelling": "nall?", #abdominally
+         "pronunciation": " n  l ",
+         "ambiguity": 1,
+         "what must come before": A_to_r,
+         "steno theory": "WSI?"}],
+
+    "pblg": [
+        {"description": "-PBLG for j sound",
+         "spelling": "(j|dj|dge?)",
+         "pronunciation": " jh ",
+         "ambiguity": 1,
+         "what must come before": A_to_r,
+         "steno theory": "WSI?"}],
+
+    "pbg": [
+        {"description": "-PBG for ng",
+         "spelling": "ng?",
+         "pronunciation": " ng ",
+         "ambiguity": 0,
+         "what must come before": A_to_r,
+         "steno theory": "WSI"},
+
+        {"description": "-PBG for ng and g",
+         "spelling": "ng?",
+         "pronunciation": " ng  g ",
+         "ambiguity": 1,
+         "what must come before": A_to_r,
+         "steno theory": "WSI"}],
+
     "/-pbs": [
         {"description": "-PBS for suffix -ness",
          "spelling": "ness",
@@ -1164,7 +1350,7 @@ steno_chords_and_their_meanings = {
 
         {"description": "-PBS for suffix -y then suffix -ness",
          "spelling": "yness",
-         "pronunciation": " suffix  (iy|I2)  suffix  n  E5  s ",
+         "pronunciation": " suffix  (iy|i2)  suffix  n  E5  s ",
          "ambiguity": 1,
          "what must come before": A_to_z,
          "steno theory": "I think StenEd?"}],
@@ -1181,7 +1367,7 @@ steno_chords_and_their_meanings = {
 
          {"description": "-PBS for suffix -y then suffix -ness",
          "spelling": "yness",
-         "pronunciation": " suffix  (iy|I2)  suffix  n  E5  s ",
+         "pronunciation": " suffix  (iy|i2)  suffix  n  E5  s ",
          "ambiguity": 2,
          "what must come before": A_to_r,
          "steno theory": "I think StenEd?"},
@@ -1195,7 +1381,7 @@ steno_chords_and_their_meanings = {
 
         {"description": "folding -PBS for suffix -y then suffix -ness",
          "spelling": "yness",
-         "pronunciation": " suffix  (iy|I2)  suffix  n  E5  s ",
+         "pronunciation": " suffix  (iy|i2)  suffix  n  E5  s ",
          "ambiguity": 2,
          "what must come before": A_to_z_no_pbs,
          "steno theory": "I think StenEd?"}],
@@ -1218,7 +1404,7 @@ steno_chords_and_their_meanings = {
 
 
     "/-plt":[
-        {"description": "-PLT for suffix -ment",
+        {"description": "-PLT for suffix -ment", #maybe should make this only trigger if there's no space for a -PLT in the previous stroke?
          "spelling": "ment",
          "pronunciation": " suffix  m  e5  n  t ",
          "ambiguity": 0,
@@ -1230,6 +1416,14 @@ steno_chords_and_their_meanings = {
          "spelling": "ment",
          "pronunciation": " suffix  m  e5  n  t ",
          "ambiguity": 1,
+         #"what must come before": ".*[AOeu]f?r?b?g?s?z\*?",
+         "what must come before": A_to_r,
+         "steno theory": "I don't know"},
+
+         {"description": "-PLT for t then suffix -ment",
+         "spelling": "tment",
+         "pronunciation": " t  suffix  m  e5  n  t ",
+         "ambiguity": 2,
          #"what must come before": ".*[AOeu]f?r?b?g?s?z\*?",
          "what must come before": A_to_r,
          "steno theory": "I don't know"},
@@ -1271,7 +1465,22 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 0,
          "what must come before": A_to_p,
-         "steno theory": "WSI"}],
+         "steno theory": "WSI"},
+
+        {"description": "-BG for c", #do I make *BG? pick pic?
+         "spelling": "c",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "what must come before": A_to_p,
+         "steno theory": "WSI?"}],
+
+    "*bgs": [
+        {"description": "*BGS for ction",
+         "spelling": "ction",
+         "pronunciation": " k  sh  suffix  n ",
+         "ambiguity": 0,
+         "what must come before": A_to_p,
+         "steno theory": "Harri"}],
 
     "l":[
         {"description": "-L for l",
@@ -1410,12 +1619,12 @@ steno_chords_and_their_meanings = {
          "what must come before": slash_to_t,
          "steno theory": " Josiah"},
 
-        {"description": "*S for voiced s",
-         "spelling": "ss?e?",
-         "pronunciation": " z ",
-         "ambiguity": 0,
-         "what must come before": slash_to_t,
-         "steno theory": "Harri?"},
+        #{"description": "*S for voiced s",
+        # "spelling": "ss?e?",
+        # "pronunciation": " z ",
+        # "ambiguity": 0,
+        # "what must come before": slash_to_t,
+        # "steno theory": "Harri?"},
          
         {"description": "*S for suffix -ise",
          "spelling": "ise",
@@ -1424,13 +1633,13 @@ steno_chords_and_their_meanings = {
          "what must come before": slash_to_t,
          "steno theory": "Harri?"}],
 
-    "/-d": [
-        {"description": "-D for -ed",
-         "spelling": "ed",
-         "pronunciation": " suffix ( i7 )? (d|t) ",
-         "ambiguity": 1,
-         "what must come before": A_to_z,
-         "steno theory": "WSI"}],
+    #"/-d": [
+    #    {"description": "-D for -ed",
+    #     "spelling": "ed",
+    #     "pronunciation": " suffix ( i7 )? (d|t) ",
+    #     "ambiguity": 1,
+    #     "what must come before": A_to_z,
+    #     "steno theory": "WSI"}],
 
     "d": [
         {"description": "-D for d",
@@ -1456,7 +1665,7 @@ steno_chords_and_their_meanings = {
 
     "*d": [
         {"description": "*D for y",
-         "spelling": "y",
+         "spelling": "l?y",
          "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 2,
          "what must come before": slash_to_s,
@@ -1493,12 +1702,12 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_d,
          "steno theory": "WSI"},
 
-        #{"description": "-Z for voiced s",
-         #"spelling": "e?s",
-         #"pronunciation": " (z) ",
-         #"ambiguity": 1,
-         #"what must come before": A_to_d,
-         #"steno theory": "WSI"}
+        {"description": "-Z for voiced s",
+         "spelling": "e?s",
+         "pronunciation": " (z) ",
+         "ambiguity": 1,
+         "what must come before": A_to_d,
+         "steno theory": "WSI"}
          
          ],
     
