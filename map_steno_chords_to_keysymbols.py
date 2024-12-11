@@ -24,12 +24,18 @@ def custom_sort_key(word):
 
 
 def add_chord_to_chords(old_chords, new_chord, criteria):
+
+
+
+
     #if old_chords == "/KHROud":
     #    print("here")
     if criteria.fullmatch(old_chords):
 
+        if new_chord:
+            old_chords = old_chords.replace("_","")
+
         unalphabetical_entry = (old_chords + new_chord).split("/")
-        alphabetical_entry = ""
 
         # Check and sort the last part if necessary
         if sorted(unalphabetical_entry[-1], key=lambda x: order_map[x]) != list(unalphabetical_entry[-1]):
