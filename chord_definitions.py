@@ -208,7 +208,7 @@ steno_chords_and_their_meanings = {
     "/Q": [
         {"description": "^ for initial short a",
          "spelling": "aa?",
-         "pronunciation": " (starting_)?((root)|(prefix)) " + keysymbol_shorthands["any vowel"],
+         "pronunciation": " (starting_)?((root)|(prefix)) " + keysymbol_shorthands["short vowels"],
          "ambiguity": 0,
          "what must come before": NothingRegex,
          "steno theory": "Josiah"},
@@ -228,7 +228,6 @@ steno_chords_and_their_meanings = {
          "what must come before": NothingRegex,
          "steno theory": "WSI"},
 
-        
         {"description": "S for initial sc",
          "spelling": "sc",
          "pronunciation": " (starting_)?((root)|(prefix))  s ",
@@ -622,13 +621,6 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_z,
          "steno theory": "Harri"}],
 
-    "/KWReu/KWRe": [
-        {"description": "KWREU/KWRE for ie",
-         "spelling": "ie",
-         "pronunciation": "( suffix )? iy ",
-         "ambiguity": 0,
-         "what must come before": A_to_z,
-         "steno theory": "I think StenEd?"}],
 
     "/P": [
         {"description": "P for initial p",
@@ -1016,13 +1008,20 @@ steno_chords_and_their_meanings = {
          "what must come before": upToR,
          "steno theory": "I don't know"}],
 
-    "Ae": [
+    "Ae": [ #need to add "/Ae" at some point? No you don't, you got KWR
         {"description": "AE for long e spelt ea, but only if it's the first stroke",
          "spelling": "ea",
          "pronunciation": " ii ",
          "ambiguity": 1,
          "what must come before": first_stroke_upToR,
          "steno theory": " I don't know"},
+
+        {"description": "AE for long e spelt ae",
+         "spelling": "ae",
+         "pronunciation": " ii ",
+         "ambiguity": 2,
+         "what must come before": upToR,
+         "steno theory": "Lapwing?"},
 
         {"description": "AE for long a spelt a_e, but only if it's the first stroke",
          "spelling": "a",
@@ -1271,16 +1270,24 @@ steno_chords_and_their_meanings = {
          "what must come before": upToR,
          "steno theory": "I think StenEd?"},
 
-        #{"description": "EU for i sound",
-        # "spelling": "",
-        # "pronunciation": " i ", #sorry I forgot what this actually was don't be mad
-        # "ambiguity": 0,
-        # "what must come before": upToR,
-        # "steno theory": "I don't know"},
+        {"description": "EU for y said like short i",
+         "spelling": "y",
+         "pronunciation": " i ",
+         "ambiguity": 1, #honestly this might be 0
+         "what must come before": upToR,
+         "steno theory": "WSI"},
         
         {"description": "EU for y said like uh",
          "spelling": "y",
          "pronunciation": " i2 ",
+         "ambiguity": 0,
+         "what must come before": upToR,
+         "steno theory": "I think StenEd?"}],
+
+    "eu/KWRe": [
+        {"description": "EU/KWRE for ie",
+         "spelling": "ie",
+         "pronunciation": " iy ",
          "ambiguity": 0,
          "what must come before": upToR,
          "steno theory": "I think StenEd?"}],
@@ -1756,7 +1763,7 @@ steno_chords_and_their_meanings = {
 
     "gs":[
         {"description": "-GS for shion",
-         "spelling": "(ssh|te?)ion",
+         "spelling": "(sh|te?)ion",
          "pronunciation": " sh ( suffix )? n ",
          "ambiguity": 0,
          "what must come before": A_to_l_,
@@ -1773,6 +1780,13 @@ steno_chords_and_their_meanings = {
         {"description": "-T for t",
          "spelling": "tt?e?",
          "pronunciation": " t ",
+         "ambiguity": 0,
+         "what must come before": A_to_g_,
+         "steno theory": "WSI"},
+
+        {"description": "-T for t even though it's pronounced with an sh sound",
+         "spelling": "tt?e?",
+         "pronunciation": " sh ",
          "ambiguity": 0,
          "what must come before": A_to_g_,
          "steno theory": "WSI"}],
@@ -1880,6 +1894,13 @@ steno_chords_and_their_meanings = {
          "spelling": "l?y",
          "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 2,
+         "what must come before": slash_to_t,
+         "steno theory": "Harri"},
+
+        {"description": "*D for y (said like short i)",
+         "spelling": "l?y",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
+         "ambiguity": 3,
          "what must come before": slash_to_t,
          "steno theory": "Harri"},
 
