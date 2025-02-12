@@ -68,9 +68,28 @@ pronunciation_pattern = re.compile(r"""
                                     (?P<suffix>:?\>.*?\>)|\.
                                    """, re.X)
 
+
+def make_target_pronunciation_into_string(target_list):
+    string=" starting__"
+    for morpheme in target_list:
+        #print(morpheme[1][0]) would print stuff like root root root root
+        string+=' '+morpheme[1][0] + "  " + "  ".join(morpheme[0]) + " "
+    return string.replace('_ ','')
+
+
+
+def make_target_spelling_into_string(target_list):
+    #ended up removing a lot of the features, since you can just arse contain
+    string=""
+    for morpheme in target_list:
+        string+="Something went wrong".join(morpheme[0])
+    return string
+
 def make_boundaries_into_list(full_pronunciation):
     #print (pronunciation_pattern.split(full_pronunciation))
     morphemes = []
+
+    last_word_was_a_root=False
     for morpheme in pronunciation_pattern.split(full_pronunciation):
         if not morpheme:
             continue
@@ -82,40 +101,72 @@ def make_boundaries_into_list(full_pronunciation):
         if morpheme.startswith("<"):
             morpheme_type = "prefix"
             morpheme = morpheme.replace("<","")
+            last_word_was_a_root=False
         elif morpheme.startswith("{"):
-            morpheme_type = "root"
+            if last_word_was_a_root:
+                morpheme_type = "compound"
+            else:
+                morpheme_type = "root"
+                last_word_was_a_root =True
             morpheme = morpheme.replace("{","").replace("}","")
         elif morpheme.startswith(">"):
             morpheme_type = "suffix"
             morpheme = morpheme.replace(">","")
+            #last_word_was_a_root=False `TKULTS/O*EPBL` → `adult {^s} {^-only}` the `{^s}` doesn't stop it being a root
         else:
-            print("error")
+            #print("error")
+            "error"
 
         new_morpheme=""
+        
         for each_instance_of_two_vowels_together in two_vowels_together.split(morpheme.strip()):
-            if each_instance_of_two_vowels_together[-1] == " ":
-                new_morpheme+= each_instance_of_two_vowels_together+". "
+            #looking back on this a few months later, I think what this is doing is separating out the vowels because then I can start a new stroke cleanly
+            if each_instance_of_two_vowels_together=="":
+                "do nothing because you're now following after a diphthong at the end of a word, nothing comes after it"
             else:
-                new_morpheme+= each_instance_of_two_vowels_together
+                if each_instance_of_two_vowels_together[-1] == " ":
+                    new_morpheme+= each_instance_of_two_vowels_together+". "
+                    #print(each_instance_of_two_vowels_together)
+                else:
+                    new_morpheme+= each_instance_of_two_vowels_together
         
         morpheme = " "+new_morpheme+" " #I'll just remove this again after removing the replace stuff below
-            
 
-        
-        
+
+
         morphemes.append([morpheme
+                           .replace(" ~/*","")
+                           .replace(" */~","")
                            .replace(" *","") #remove stress marker
-                           .replace(" ~","") #I think this is stress too?•
+                           .replace("* ","")#[*  e]
+                           .replace(" ~","") #secondary stress (for compound words)
+                           .replace("~ ","") #[~ a]
                            .replace(" •","") #stress again
                            .replace(" /","")
                            .replace("/ ","")
                            .replace(" -","") #no idea what this does, but I don't want it
+                           .replace(" $","") #dunno what this is either
+                           #.replace(" . ","") #syllable
+                           .replace(". ","") #syllable boundaries
+                           .replace(" .1","")
+                           .replace(" ==","") #morpheme
+                           .replace(" =.=","")
+                           .replace("==","") #gotta do this since it's in the spelling section too
+                           #.replace("= ","") #morpheme he
+                           .replace(" [*]","")
+                           .replace(" [*1]","")
+                           .replace(" [~]","")
+                           .replace(" [~1]","") #accent dependent stress markers
+                           .lower()
                            .strip()
                            .split(" ")       # make it a list of sounds
                            ,
                           [morpheme_type]])
-    print(morphemes)
+    #print(morphemes)
+        
+
     return morphemes
+    return make_target_pronunciation_into_string(morphemes)
 
 
 
