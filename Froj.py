@@ -99,6 +99,11 @@ abdication, I think I say with an y... so should be d [y] ?
 
 I say "assume" with sh, but I don't say "pseudo" with a sh
 
+no way? With a sh ii??
+  "word": "appreciate:",
+  "word_class": "VB/VBP",
+  "pronunciation": " starting_root  @  p  r  ii  sh  ii  ee  t ",
+
 Going based off word boundaries instead of the spelling means there's no difference between downy and downie
 
 mum says fact with an unaspirated c, and dad hears it as "fat"
@@ -141,6 +146,54 @@ algorithm::NN: { * a l . g @r . r ~ i . dh @ m } ::250
   "steno stuff": {}
  },
 
+
+(ar r/a)
+arse::NN: { * (ar r/a) s } ::5203
+ass:2,bottom:NN: { * (ar r/a) s } ::1814
+
+clearly these are two separate words?
+
+
+
+
+
+
+for me:
+I want a y key for this to do lyer
+atelier::NN/FW: { [~1] a . t [* e] l . ii2 . [*1] ee } ::22
+
+
+aubergine::NN: { * ou . b @r r . zh ii n } ::122
+nah, that OE → au
+
+
+australasia::NNP: { ~ au . s t r @ . l * ee . zh @ } ::104
+don't wanna add a si chord cause then all those erosion becomes SHOPB or STKPWHOPB or something
+same with acacia?
+
+ayer::NNP: { * eir r } ::194
+anyone::NN: { * e . n iy }.{ w ~ uh n } ::40524
+asiatic::JJ/NN: { ~ ee . z/zh ii . * a =.= t i k } ::211
+antimissile::JJ: < ~ a n . t iy <.{ m * i . s [ai] l } ::30
+
+
+don't wanna add a rule that fixes it because then too many would be added:
+argumentative::JJ: { ~ ar r . g y UU $}.> m * e n t $>.> @ . t i v > ::375
+
+
+asterisk overreliance
+arclength::NN: { * ar r k }.{ l - e ng th } ::0
+
+I don't think ci → sh in these words
+antifascist::JJ/NN: < ~ a n . t iy <.{ f * a . sh == i s t } ::12
+appreciate::VB/VBP: { @ =.= p r * ii . sh ii =.= ee t } ::9941
+
+word conflicts:
+paper / pay per
+
+
+
+
 """
 import multiprocessing
 import json
@@ -171,7 +224,7 @@ def make_input_into_dictionary_entry(input, user_chords):
     return word
 
 
-with (open("most.txt", "r", encoding="utf-8")) as txt_dictionary:
+with (open("clown.txt", "r", encoding="utf-8")) as txt_dictionary:
     outlines = txt_dictionary.readlines()
 
 #for outline in outlines:
@@ -181,5 +234,5 @@ with (open("most.txt", "r", encoding="utf-8")) as txt_dictionary:
 with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
     results = pool.starmap(make_input_into_dictionary_entry, [(outline, steno_chords_and_their_meanings) for outline in outlines])
 
-with open("11_02_25 most Froj.json", "w") as outfile:
+with open("14_02_25 clown Froj.json", "w") as outfile:
     json.dump(results, outfile, indent=1)
