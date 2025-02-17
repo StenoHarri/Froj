@@ -36,4 +36,6 @@ efficiency update & removed plurals on another stroke. got from 11 minute runtim
 
 13/02/25 = 103,919 words 725,008 entries
 
+16/02/25 = 109,601 words 1,674,280 entries
+
 grep -c 'number of entries": [1-9]' Froj_output.json
