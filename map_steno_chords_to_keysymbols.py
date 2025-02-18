@@ -24,15 +24,20 @@ def add_chord_to_chords(old_chords, new_chord):
     unalphabetical_entry = (old_chords + new_chord).split("/")
 
     # Check and sort the last part if necessary
-    if sorted(unalphabetical_entry[-1], key=lambda x: order_map[x]) != list(unalphabetical_entry[-1]):
-        unalphabetical_entry[-1] = ''.join(sorted(unalphabetical_entry[-1], key=lambda x: order_map[x]))
+    #if sorted(unalphabetical_entry[-1], key=lambda x: order_map[x]) != list(unalphabetical_entry[-1]):
+    #    unalphabetical_entry[-1] = ''.join(sorted(unalphabetical_entry[-1], key=lambda x: order_map[x]))
+
+    #Chat's
+    last_part = unalphabetical_entry[-1]
+    if list(last_part) != sorted(last_part, key=lambda x: order_map[x]):
+        unalphabetical_entry[-1] = ''.join(sorted(last_part, key=lambda x: order_map[x]))
 
     return "/".join(unalphabetical_entry)
 
 
 def add_pronunciation_to_pronunciation(old_pronunciation, new_pronunciation, criteria):
-    criteria = re.compile("^"+criteria)
-    if criteria.search(old_pronunciation+new_pronunciation):
+    criteria = re.compile(f"^{criteria}")
+    if criteria.match(old_pronunciation+new_pronunciation):
         return  old_pronunciation+new_pronunciation
     return False
 
@@ -46,12 +51,12 @@ def make_target_pronunciation_into_string(target_list):
 """
 
 def add_pronunciation_to_pronunciation(old_pronunciation, new_pronunciation, target):
-    criteria = re.compile("^"+old_pronunciation + new_pronunciation)
+    criteria = re.compile(f"^{old_pronunciation}{new_pronunciation}")
 
     target
 
-    if criteria.search(target):
-        return old_pronunciation+new_pronunciation
+    if criteria.match(target):
+        return f"{old_pronunciation}{new_pronunciation}"
     return False
 
 """
@@ -63,10 +68,10 @@ def make_target_spelling_into_string(target_list):
 """
     
 def add_spelling_to_spelling(old_spelling, new_spelling, target):
-    criteria = re.compile("^"+old_spelling + new_spelling)
+    criteria = re.compile(f"^{old_spelling}{new_spelling}")
 
-    if criteria.search(target):
-        return old_spelling+new_spelling
+    if criteria.match(target):
+        return f"{old_spelling}{new_spelling}"
 
     return False
 
@@ -79,118 +84,111 @@ def is_entry_complete(entry, pronunciation_target, spelling_target):
     spelling_regex_attempt = re.compile(entry['spelling'])
     if pronunciation_regex_attempt.fullmatch(pronunciation_target) and spelling_regex_attempt.fullmatch(spelling_target):
 
-        
         return {"raw steno outline": entry["raw steno outline"],
                 "ambiguity":entry["ambiguity"],
                 "explanation":entry["explanation of each chord"]},
 
     return False
 
+def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target_spelling):
+    """
+    Adds a chord to the entry if it's valid.
+    Returns the updated entry or None if not valid.
+    """
+    # Add spelling if it's valid
+    spelling = add_spelling_to_spelling(entry["spelling"], preconditions_chord["spelling"], target_spelling)
+    if not spelling:
+        return None  # No valid spelling found
+
+    # Add pronunciation if it's valid
+    pronunciation = add_pronunciation_to_pronunciation(entry["pronunciation"], preconditions_chord["pronunciation"], target_pronunciation)
+    if not pronunciation:
+        return None  # No valid pronunciation found
+
+    # Update the raw steno outline
+    raw_steno_outline = add_chord_to_chords(entry["raw steno outline"], preconditions_chord["raw steno"])
+
+    # Update ambiguity and explanation
+    ambiguity = entry["ambiguity"] + preconditions_chord["ambiguity"]
+    explanation = entry["explanation of each chord"] + [preconditions_chord["description"]]
+
+    return {
+        "raw steno outline": raw_steno_outline,
+        "pronunciation": pronunciation,
+        "spelling": spelling,
+        "ambiguity": ambiguity,
+        "explanation of each chord": explanation
+    }
+
+
+def process_preconditions_and_chords(entry, preconditions_and_their_chords, target_pronunciation, target_spelling):
+    """
+    Processes the chords for a given entry and returns valid updates.
+    """
+    updated_entries = []
+
+    for precondition, preconditions_chords in preconditions_and_their_chords.items():
+        # If the precondition matches the entry, process the chords
+        if precondition.search(entry["raw steno outline"]):
+            for preconditions_chord in preconditions_chords:
+                # Try adding a chord for the entry
+                updated_entry = add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target_spelling)
+                if updated_entry:
+                    updated_entries.append(updated_entry)
+
+    return updated_entries
+
+
 
 def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, preconditions_and_their_chords={}):
 
-    
+    """
+    Adds a chord to each incomplete entry, with optimized logic.
+    """
+    # List to store entries with added chords
+    dictionary_with_a_chord_added_to_each_entry = []
 
-    dictionary_with_a_chord_added_to_each_entry =[]
     for entry in initial_dictionary:
+        updated_entries = process_preconditions_and_chords(entry, preconditions_and_their_chords, target_pronunciation, target_spelling)
 
-        for precondition in preconditions_and_their_chords:
+        # Add updated entries to the result list
+        dictionary_with_a_chord_added_to_each_entry.extend(updated_entries)
 
-            #many chords, like vowels, all share the same precondition, also it's a cheap check computationally
-            if not precondition.search(entry["raw steno outline"]):
-                continue
+    # Create a set of unique identifiers (e.g., 'raw steno outline') from initial_dictionary
+    initial_set = set(entry["raw steno outline"] for entry in initial_dictionary)
 
-            for preconditions_chord in preconditions_and_their_chords[precondition]:
 
-                #I don't know which of these is computationally cheaper, but on longwords, spelling being first is more than twice as fast as pronunciation being first
-
-                spelling = add_spelling_to_spelling(entry["spelling"], preconditions_chord["spelling"], target_spelling)
-                if not spelling:
-                    continue
-
-                pronunciation = add_pronunciation_to_pronunciation(entry["pronunciation"], preconditions_chord["pronunciation"], target_pronunciation)
-                if not pronunciation:
-                    continue
-
-                raw_steno_outline = add_chord_to_chords(entry["raw steno outline"] , preconditions_chord["raw steno"])
-
-                ambiguity = entry["ambiguity"] + preconditions_chord["ambiguity"]
-
-                #I can't just assign explanation=explanation because of deep copies or something
-                #apparently it's not though, but I still gotta create it empty first so I'll keep it
-                explanation=[]
-
-                #use the already built up explanation
-                explanation += (entry["explanation of each chord"])
-
-                #add this chord to the explanation
-                explanation.append([preconditions_chord["description"],
-                                    #"steno theory: "+preconditions_chord["steno theory"],
-                                    #"How arbitrary: "+str(preconditions_chord["ambiguity"])
-                                    ])
-
-                dictionary_with_a_chord_added_to_each_entry+=[{
-                    "raw steno outline":raw_steno_outline,
-                    "pronunciation":pronunciation,
-                    "spelling":spelling,
-                    "ambiguity":ambiguity,
-                    "explanation of each chord":explanation
-                }]
-
+    # Initialize the list for new entries
     new_never_seen_before_entries = []
+
     for entry in dictionary_with_a_chord_added_to_each_entry:
-        if not entry in initial_dictionary or never_seen_before_entries:
-
-            #remember that a valid entry can still be added to... maybe not?
-            #actually yeah it can't, because /K and /K can be different chords
+        raw_steno_outline = entry["raw steno outline"]
+        
+        # If the raw_steno_outline is not in initial_set or hasn't been processed yet, check it
+        if raw_steno_outline not in initial_set and raw_steno_outline not in every_complete_entry_generated:
             is_entry_complete_answer = is_entry_complete(entry, target_pronunciation, target_spelling)
+            
             if is_entry_complete_answer:
-
-
-                #now I'm just gonna check to see if the entry we're adding is the least briefy for that entry
-                if every_complete_entry_generated == {}:
-                    every_complete_entry_generated[is_entry_complete_answer[0]["raw steno outline"]] = is_entry_complete_answer[0]
-                elif not is_entry_complete_answer[0]["raw steno outline"] in every_complete_entry_generated:
-                        every_complete_entry_generated[is_entry_complete_answer[0]["raw steno outline"]] = is_entry_complete_answer[0]
-
-                        #So far it seems the least briefy entry is ALWAYS added to the stroke first... why? Whatever, it means I can just say "if it's not in there, it's the best, if it's in there, it's already been beaten
-
-                        #Since I made that comment, I've redone how the chords are stored so perhaps this is now broken
-
+                # Add the complete entry to the dictionary
+                every_complete_entry_generated[raw_steno_outline] = is_entry_complete_answer[0]
             else:
                 new_never_seen_before_entries.append(entry)
 
+
+
+    # Handle recursion if there are still new entries that haven't been seen before
     if new_never_seen_before_entries:
-
-        #this is where I would have put more multiprocessing
-        never_seen_before_entries, every_complete_entry_generated = (
-            add_a_chord_onto_each_incomplete_entry(
-                new_never_seen_before_entries,
-                target_pronunciation,
-                target_spelling,
-                new_never_seen_before_entries,
-                every_complete_entry_generated,
-                preconditions_and_their_chords=preconditions_and_their_chords))
-
+        never_seen_before_entries, every_complete_entry_generated = add_a_chord_onto_each_incomplete_entry(
+            new_never_seen_before_entries,
+            target_pronunciation,
+            target_spelling,
+            new_never_seen_before_entries,
+            every_complete_entry_generated,
+            preconditions_and_their_chords=preconditions_and_their_chords
+        )
 
     return never_seen_before_entries, every_complete_entry_generated
 
-
-def filter_user_chords_to_only_the_chords_that_feasibly_can_come_up(input_word, user_chords):
-    filtered_user_chords = {}
-    for user_chord in user_chords:
-
-        chord_interpretations = []
-        for chord_interpretation in user_chords[user_chord]:
-
-            if re.search(chord_interpretation["pronunciation"], input_word["pronunciation"]) and re.search(chord_interpretation["spelling"], input_word["word_boundaries"]):
-
-                chord_interpretations.append(chord_interpretation)
-
-        if chord_interpretations:
-            filtered_user_chords[user_chord]=chord_interpretations
-
-    return filtered_user_chords
 
 def filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(input_word, steno_chords_and_their_meanings):
 
