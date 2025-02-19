@@ -1,5 +1,5 @@
 # Froj 
-!!!largely incomplete
+!!!incomplete
 Creates a list of possible write-outs by combining your theory and a list of words, and their pronunciation/morphology
 
 ![image](images/froj.png)
@@ -37,5 +37,7 @@ efficiency update & removed plurals on another stroke. got from 11 minute runtim
 13/02/25 = 103,919 words 725,008 entries
 
 16/02/25 = 109,601 words 1,674,280 entries
+
+19/02/25 = 108,404 words 823,962 entries
 
 grep -c 'number of entries": [1-9]' Froj_output.json
