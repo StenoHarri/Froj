@@ -101,8 +101,12 @@ upToK_no_S = re.compile(r'[/QTK]\*?$')
 
 upToW_not_just_T_not_just_k_or_just_w = re.compile(r'([STKPW]{2,}|[/QSKP])\*?_?$') #clink    _? for baudelair
 
-upToW_not_just_s = re.compile(r'([/Q]|[TKPW])\*?_?$') #yes _ because actresses drops a boundary after t
-upToH_not_just_s = re.compile(r'([/Q]|[TKPWH])\*?_?$') #yes _ because actresses drops a boundary after t
+upToW_not_just_s = re.compile(r'([/QTKPW]S?|[/QTKP]H)\*?_?$') #yes _ because actresses drops a boundary after t
+upToH_not_just_s_or_sh_not_KWH = re.compile(r'([/QTKP]H?|W)\*?_?$') #yes _ because actresses drops a boundary after t          shh
+
+
+
+
 upToW_no_T = re.compile(r'[/QSKPW]\*?$')
 upToW_no_P = re.compile(r'[/QSTKW]\*?$')
 
@@ -999,7 +1003,7 @@ steno_chords_and_their_meanings = {
          "spelling": "h",
          "pronunciation": "",
          "ambiguity": 0,
-         "what must come before": upToW_no_P,
+         "what must come before": upToQ, # upToW_no_P
          "steno theory": "WSI"},
 
 
@@ -1049,7 +1053,7 @@ steno_chords_and_their_meanings = {
          "spelling": "rr?",
          "pronunciation": " r ",
          "ambiguity": 0,
-         "what must come before": upToH_not_just_s,  #added up to H since THRU
+         "what must come before": upToH_not_just_s_or_sh_not_KWH,  #added up to H since THRU
          #personal opinion, but SR → s + r is ugly
          "steno theory": "WSI"},
          
@@ -1057,7 +1061,7 @@ steno_chords_and_their_meanings = {
          "spelling": "rr?h?",
          "pronunciation": " r ",
          "ambiguity": 1,
-         "what must come before": upToH_not_just_s,  #added up to H since THRU
+         "what must come before": upToH_not_just_s_or_sh_not_KWH,  #added up to H since THRU
          #personal opinion, but SR → s + r is ugly
          "steno theory": ""}],
 
@@ -1357,12 +1361,12 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "steno theory": "Lapwing?"},
 
-        {"description": "AE for long a spelt a_e, but only if it's the first stroke",
-         "spelling": "a",
-         "pronunciation": " ee ",
-         "ambiguity": 2,
-         "what must come before": first_stroke_SToR_or_nothing,
-         "steno theory": " I don't know"},
+        #{"description": "AE for long a spelt a_e, but only if it's the first stroke",
+        # "spelling": "a",
+        # "pronunciation": " ee ",
+        # "ambiguity": 2,
+        # "what must come before": first_stroke_SToR_or_nothing,
+        # "steno theory": " I don't know"},
          ],
 
     "Aeu": [
