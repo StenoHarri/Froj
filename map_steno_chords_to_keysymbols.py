@@ -35,20 +35,7 @@ def add_chord_to_chords(old_chords, new_chord):
     return "/".join(unalphabetical_entry)
 
 
-def add_pronunciation_to_pronunciation(old_pronunciation, new_pronunciation, criteria):
-    criteria = re.compile(f"^{criteria}")
-    if criteria.match(old_pronunciation+new_pronunciation):
-        return  old_pronunciation+new_pronunciation
-    return False
 
-"""
-def make_target_pronunciation_into_string(target_list):
-    string=" starting__"
-    for morpheme in target_list:
-        #print(morpheme[1][0]) would print stuff like root root root root
-        string+=' '+morpheme[1][0] + "  " + "  ".join(morpheme[0]) + " "
-    return string.replace('_ ','')
-"""
 
 def add_pronunciation_to_pronunciation(old_pronunciation, new_pronunciation, target):
     criteria = re.compile(f"^{old_pronunciation}{new_pronunciation}")
@@ -59,14 +46,7 @@ def add_pronunciation_to_pronunciation(old_pronunciation, new_pronunciation, tar
         return f"{old_pronunciation}{new_pronunciation}"
     return False
 
-"""
-def make_target_spelling_into_string(target_list):
-    string=""
-    for morpheme in target_list:
-        string+="Something went wrong".join(morpheme[0])
-    return string
-"""
-    
+
 def add_spelling_to_spelling(old_spelling, new_spelling, target):
     criteria = re.compile(f"^{old_spelling}{new_spelling}")
 
@@ -89,6 +69,8 @@ def is_entry_complete(entry, pronunciation_target, spelling_target):
                 "explanation":entry["explanation of each chord"]},
 
     return False
+
+
 
 def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target_spelling):
     """
@@ -157,7 +139,6 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
     # Create a set of unique identifiers (e.g., 'raw steno outline') from initial_dictionary
     initial_set = set(entry["raw steno outline"] for entry in initial_dictionary)
 
-
     # Initialize the list for new entries
     new_never_seen_before_entries = []
 
@@ -189,10 +170,12 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
     return never_seen_before_entries, every_complete_entry_generated
 
+from collections import defaultdict
 
 def filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(input_word, steno_chords_and_their_meanings):
 
-    preconditions_and_their_chords = {}
+    #Use a defaultdict(list) from the collections module to avoid repeatedly checking and setting default values.
+    preconditions_and_their_chords = defaultdict(list)
 
     for chord in steno_chords_and_their_meanings:
 
@@ -204,7 +187,7 @@ def filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(
                 chord_interpretation["raw steno"] = chord
 
                 # Add value to the key, initializing it if it does not exist (thanks ChatGPT
-                preconditions_and_their_chords[chord_interpretation["what must come before"]] = preconditions_and_their_chords.setdefault(chord_interpretation["what must come before"], []) + [chord_interpretation]
+                preconditions_and_their_chords[chord_interpretation["what must come before"]].append(chord_interpretation)
 
 
             #chord_interpretation["raw steno"] = chord
