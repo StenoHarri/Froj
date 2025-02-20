@@ -202,37 +202,48 @@ from convert_unilex_into_readable_lists import (
     full_entry_pattern,
     make_boundaries_into_list,
     make_target_pronunciation_into_string,
-    make_target_spelling_into_string)
+)
 
 from map_steno_chords_to_keysymbols import generate_write_outs
 
 from chord_definitions import steno_chords_and_their_meanings
+import time
 
-def make_input_into_dictionary_entry(input, user_chords):
-    word = full_entry_pattern.fullmatch(input).groupdict()
-    #print(word)
+def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords):
+    word = full_entry_pattern.fullmatch(unilex_definition).groupdict()
 
-    word['pronunciation'    ] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
-    #word['word_boundaries'  ] = make_target_spelling_into_string(make_boundaries_into_list(word['word_boundaries']))
-    word['word_boundaries'  ] = word["word"].split(":")[0]
-    #print(word['word_boundaries'])
-    word['number of entries'] = (0)
-    word['steno stuff'      ] = generate_write_outs(word, user_chords)
+    word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
+    word['word_boundaries'] = word["word"].split(":")[0]
+    word['number of entries'] = 0
+    word['steno stuff'] = generate_write_outs(word, user_chords)
     word['number of entries'] = len(word['steno stuff'])
-    word['pronunciation'    ] = str(word['pronunciation'])
-    word['word_boundaries'  ] = str(word['word_boundaries'])
+    word['pronunciation'] = str(word['pronunciation'])
+    word['word_boundaries'] = str(word['word_boundaries'])
     return word
 
 
-with (open("clown.txt", "r", encoding="utf-8")) as txt_dictionary:
+with (open("most_c.txt", "r", encoding="utf-8")) as txt_dictionary:
     outlines = txt_dictionary.readlines()
 
-#for outline in outlines:
-#   results = make_input_into_dictionary_entry(outline, steno_chords_and_their_meanings)
+# for one at a time (not multiprocessing), uncomment the next two lines
+# for outline in outlines:
+#    results = make_unilex_definition_into_dictionary_entry(outline, steno_chords_and_their_meanings)
 
-#using multiple inputs
-with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-    results = pool.starmap(make_input_into_dictionary_entry, [(outline, steno_chords_and_their_meanings) for outline in outlines])
+if __name__ == '__main__':
 
-with open("14_02_25 clown Froj.json", "w") as outfile:
-    json.dump(results, outfile, indent=1)
+    start_time = time.time()
+    print(f"Start Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(start_time))}")
+
+
+    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+        results = pool.starmap(make_unilex_definition_into_dictionary_entry,
+                               [(outline, steno_chords_and_their_meanings) for outline in outlines])
+
+    end_time = time.time()
+    print(f"End Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(end_time))}")
+
+    runtime = end_time - start_time
+    print(f"Total Runtime: {runtime:.2f} seconds")
+
+    with open("19_02_25 clown Froj.json", "w") as outfile:
+        json.dump(results, outfile, indent=1)
