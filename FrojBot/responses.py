@@ -11,32 +11,37 @@ with open("../Froj_theories/Froj_Harri_theory/Froj_Plover_dictionary.json", "r")
 with open("../Froj_theories/Froj_Harri_theory/Froj_verbose_lookup.json", "r") as f:
     verbose_entries = json.load(f)
 
-is_raw_steno = re.compile(r'(S?T?K?P?W?H?R?A?O?\*?E?U?F?R?P?B?L?G?T?S?D?Z?)(/S?T?K?P?W?H?R?A?O?\*?E?U?F?R?P?B?L?G?T?S?D?Z?)*')
+is_raw_steno = re.compile(r'(S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)(/S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)*')
 
 
 def get_response( user_input:str) -> str:
     word_to_find = user_input
 
+    if 'crazy' in word_to_find:
+        return "I was crazy once"
 
-    if ":>>> " in word_to_find:
-        word_to_find=word_to_find.replace(":>>> ","")
+
+    if word_to_find.startswith(":>>> "):
+        word_to_find=word_to_find.replace(":>>> ","").strip()
         complexity = 'very complex'
-    elif ":>>> " in word_to_find:
-        word_to_find=word_to_find.replace(":>>> ","")
+    elif word_to_find.startswith(":>>>"):
+        word_to_find=word_to_find.replace(":>>> ","").strip()
         complexity = 'very complex'
 
-    elif ":>> " in word_to_find:
-        word_to_find=word_to_find.replace(":>> ","")
+
+    elif word_to_find.startswith(":>> "):
+        word_to_find=word_to_find.replace(":>> ","").strip()
         complexity = 'complex'
-    elif ":>>" in word_to_find:
-        word_to_find=word_to_find.replace(":>>","")
+    elif word_to_find.startswith(":>>"):
+        word_to_find=word_to_find.replace(":>>","").strip()
         complexity = 'complex'
 
-    elif ":> " in word_to_find:
-        word_to_find=word_to_find.replace(":> ","")
+
+    elif word_to_find.startswith(":>"):
+        word_to_find=word_to_find.replace(":> ","").strip()
         complexity = 'simple'
-    elif ":>" in word_to_find:
-        word_to_find=word_to_find.replace(":>","")
+    elif word_to_find.startswith(":>"):
+        word_to_find=word_to_find.replace(":>","").strip()
         complexity = 'simple'
     
     else:
@@ -47,15 +52,24 @@ def get_response( user_input:str) -> str:
         return 'you can do :> for lookup, :>> for complex lookup'
 
 
-    if is_raw_steno.match(user_input):
-        if user_input in entries:
+    if re.search(is_raw_steno, word_to_find):
+        if word_to_find in entries:
             if complexity == 'simple':
-                return entries[user_input]
+                return f"That is in my shorthand dictionary!\n`{word_to_find}` → `{entries[word_to_find]}`"
             else:
-                return verbose_entries[user_input]
+                output = f"That is in my shorthand dictionary!\n`{word_to_find}` → `{entries[word_to_find]}`"
+                output+= "\n```"
+                for chord in verbose_entries[word_to_find]['explanation']:
+                    output += f"\n\t{chord}"
+                output+="\n```"
+                return output
+        else:
+            return f"Nothing I have maps to {word_to_find}"
 
 
-    elif 'hello' in word_to_find:
+    word_to_find = word_to_find.lower()
+
+    if 'hello' in word_to_find:
         return f"Hi friend (ΘoΘ )"
     elif 'froj' in word_to_find:
         return f"That's me! How can I help?"
