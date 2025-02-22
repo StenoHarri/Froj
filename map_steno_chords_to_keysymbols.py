@@ -92,7 +92,7 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
 
     # Update ambiguity and explanation
     ambiguity = entry["ambiguity"] + preconditions_chord["ambiguity"]
-    explanation = entry["explanation of each chord"] + [preconditions_chord["description"]]
+    explanation = entry["explanation of each chord"] + [preconditions_chord["description"]+preconditions_chord["steno theory"]]
 
     return {
         "raw steno outline": raw_steno_outline,
@@ -123,7 +123,6 @@ def process_preconditions_and_chords(entry, preconditions_and_their_chords, targ
 
 
 def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, preconditions_and_their_chords={}):
-
     """
     Adds a chord to each incomplete entry, with optimized logic.
     """
@@ -144,11 +143,11 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
     for entry in dictionary_with_a_chord_added_to_each_entry:
         raw_steno_outline = entry["raw steno outline"]
-        
+
         # If the raw_steno_outline is not in initial_set or hasn't been processed yet, check it
         if raw_steno_outline not in initial_set and raw_steno_outline not in every_complete_entry_generated:
             is_entry_complete_answer = is_entry_complete(entry, target_pronunciation, target_spelling)
-            
+
             if is_entry_complete_answer:
                 # Add the complete entry to the dictionary
                 every_complete_entry_generated[raw_steno_outline] = is_entry_complete_answer[0]
@@ -221,7 +220,7 @@ def generate_write_outs(input_word, user_chords):
 
     if list_of_incomplete_entries==[]:
         return["###########################################################################"]
-    
+
     return(list_of_incomplete_entries)
 
 
