@@ -1,11 +1,8 @@
 import json
 
-with open("25_02_19 big Froj.json", 'r') as f:
+with open("Froj_Harri_theory/complete_output.json", 'r') as f:
     words = json.load(f)
 
-
-#flip it so point1 > point2
-words = {v: k for k, v in words.items()}
 
 sorted_words = {}
 
@@ -54,16 +51,24 @@ def order_outlines(sorted_outlines):
 
     return ordered_outlines
 
-word_lookup = {}
+best_word_lookup = {}
+all_word_lookup = {}
 plain_entry_lookup = {}
 verbose_entry_lookup = {}
 
-
+print('generating dictionaries')
 for word in words:
 
-    filtered_outlines = order_outlines(sort_word_outlines(word))
+    ordered_outlines = (sort_word_outlines(word))
 
-    word_lookup[word['word']] = {'text':
+    all_word_lookup[word['word']] = {'text':
+                            f"showing all {len(ordered_outlines)} out of {word['number of entries']} entries",
+                            'entries': ordered_outlines}
+
+
+    filtered_outlines = order_outlines(ordered_outlines)
+
+    best_word_lookup[word['word']] = {'text':
                            f"showing the best {len(filtered_outlines)} out of {word['number of entries']} entries",
                            'entries': filtered_outlines}
 
@@ -109,11 +114,19 @@ for word in words:
             plain_entry_lookup[outline] = translation
 
 
-print('end')
 
-with open("25_02_20 word_lookup Froj.json", "w") as outfile:
-        json.dump(word_lookup, outfile, indent=1)
-with open("25_02_20 plain_entry_lookup Froj.json", "w") as outfile:
+print('writing best lookups')
+with open("Froj_Harri_theory/best_of_word_to_entry_lookup.json", "w") as outfile:
+        json.dump(best_word_lookup, outfile, indent=1)
+
+print('writing all lookups')
+with open("Froj_Harri_theory/all_word_to_entry_lookup.json", "w") as outfile:
+        json.dump(all_word_lookup, outfile, indent=1)
+
+print('writing normal entries')
+with open("Froj_Harri_theory/Froj_Plover_dictionary.json", "w") as outfile:
         json.dump(plain_entry_lookup, outfile, indent=1)
-with open("25_02_20 verbose_entry_lookup Froj.json", "w") as outfile:
+
+print('writing verbose entry to word lookup')
+with open("Froj_Harri_theory/Froj_verbose_lookup.json", "w") as outfile:
         json.dump(verbose_entry_lookup, outfile, indent=1)
