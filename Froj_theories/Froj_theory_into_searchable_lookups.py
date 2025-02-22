@@ -120,7 +120,7 @@ with open("Froj_Harri_theory/best_of_word_to_entry_lookup.json", "w") as outfile
         json.dump(best_word_lookup, outfile, indent=1)
 
 print('writing all lookups')
-with open("Froj_Harri_theory/best_of_word_to_entry_lookup.json", "w") as outfile:
+with open("Froj_Harri_theory/all_word_to_entry_lookup.json", "w") as outfile:
         json.dump(all_word_lookup, outfile, indent=1)
 
 print('writing normal entries')
