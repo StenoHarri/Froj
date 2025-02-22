@@ -8,7 +8,7 @@ Making the right hand lowercase so I don't have to worry about left P vs right P
 
 import re
 
-from chord_definitions import custom_alphabet
+from froj_brains.chord_definitions import custom_alphabet
 
 order_map = {char: index for index, char in enumerate(custom_alphabet)}
 def custom_sort_key(word):
@@ -92,7 +92,19 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
 
     # Update ambiguity and explanation
     ambiguity = entry["ambiguity"] + preconditions_chord["ambiguity"]
-    explanation = entry["explanation of each chord"] + [preconditions_chord["description"]+preconditions_chord["steno theory"]]
+
+
+    try:
+        explanation = entry["explanation of each chord"] + [preconditions_chord["description"] + preconditions_chord["steno theory"]]
+
+    except KeyError:
+        explanation = entry["explanation of each chord"] + [
+            preconditions_chord["description"] + "hng"]
+
+
+
+
+
 
     return {
         "raw steno outline": raw_steno_outline,

@@ -198,34 +198,6 @@ steno_chords_and_their_meanings = {
          "what must come before": any_consonant_but_not_KWH,
          "steno theory": ""},
 
-        # {"description": "drop i that historically didn't exist anyway",
-        # "spelling": "",
-        # "pronunciation": " i ",
-        # "ambiguity": 2,
-        # "what must come before": any_consonant_but_not_KWH,
-        # "steno theory": ""},
-
-        # {"description": "drop short vowel that starts a suffix",
-        # "spelling": "[aeiouy]+",  #this may be a mistake adding the +, but my reasoning is ferrous, that `ou` is a short @
-        # "pronunciation": " suffix " + keysymbol_shorthands["short vowels"],
-        # "ambiguity": 3,
-        # "what must come before": any_consonant_but_not_KWH, #it was #just consonants, but then I saw: `PHER/SEUFL` → `merciful`
-        # "steno theory": ""},
-
-        # stuff like "awful" I'll just add
-        # {"description": "ignore suffix boundaries after vowels??",
-        # "spelling": "",
-        # "pronunciation": " suffix ",
-        # "ambiguity": 3,
-        # "what must come before": A_to_u,
-        # "steno theory": ""},
-
-        # {"description": "ignore suffix boundaries after anything???",
-        # "spelling": "",
-        # "pronunciation": " suffix ",
-        # "ambiguity": 3,
-        # "what must come before": any_letter_but_not_KWH,
-        # "steno theory": ""},
 
         {"description": "drop long vowel",
          "spelling": "[aeiouy]",
@@ -234,12 +206,7 @@ steno_chords_and_their_meanings = {
          "what must come before": any_consonant_but_not_KWH,
          "steno theory": ""},
 
-        # {"description": "drop long u",
-        # "spelling": "ue?",
-        # "pronunciation": keysymbol_shorthands["long u"],
-        # "ambiguity": 3,
-        # "what must come before": any_consonant_but_not_KWH,
-        # "steno theory": ""},
+
 
         {"description": "drop the middle vowel in banana",
          "spelling": "a",
@@ -256,21 +223,6 @@ steno_chords_and_their_meanings = {
          "steno theory": ""},
     ],
 
-    # "_": [
-
-    # {"description": "ignoring a suffix boundary",
-    # "spelling": "",
-    # "pronunciation": " suffix ",
-    # "ambiguity": 1,
-    # "what must come before": any_letter,
-    # "steno theory": ""},
-
-    # {"description": "ignoring a non-suffix word boundary",
-    # "spelling": "",
-    # "pronunciation": " (prefix|root) ",
-    # "ambiguity": 1,
-    # "what must come before": any_letter,
-    # "steno theory": ""}],
 
     "": [
         {"description": "ignore suffix boundaries after left hand consonants",
@@ -638,19 +590,6 @@ steno_chords_and_their_meanings = {
          "what must come before": upToS,
          "steno theory": ""}],
 
-    # "Teu": [
-    #    {"description": "TEU for suffix -ity",
-    #     "spelling": "t?ty",
-    #     "pronunciation": " suffix  @  t  iy ",
-    #     "ambiguity": 0,
-    #     "what must come before": upToS,
-
-    # "Teuz": [
-    #    {"description": "TEU for suffix -ity",
-    #     "spelling": "t?ty",
-    #     "pronunciation": " suffix  @  t  iy  suffix  z ",
-    #     "ambiguity": 0,
-    #     "what must come before": upToS
 
     "TK": [
         {"description": "TK for d",
@@ -995,8 +934,8 @@ steno_chords_and_their_meanings = {
          "what must come before": upToK,
          "steno theory": " (Theory: Harri's Accent)"}],
 
-    "WA": [
-        {"description": "WA for wuh sound spelt just o",
+    "WO": [
+        {"description": "WO for wuh sound spelt just o",
          "spelling": "o",
          "pronunciation": " w  uh ",
          "ambiguity": 0,
@@ -1035,27 +974,6 @@ steno_chords_and_their_meanings = {
          "what must come before": upToW_not_just_T_not_just_k_or_just_w,
          # I just... THR → tl feels wrong. Oh this is kinda long, I also don't like k + space for vowel + l like #KHREU/TPORPB/KWHA... but it makes sense for collateral college collegial
          "steno theory": ""},
-
-        # {"description": "HR for ll",
-        # "spelling": "ll",
-        # "pronunciation": " l ",
-        # "ambiguity": 1, #Alan Allan
-        # "what must come before": upToW_no_T_not_just_k,
-        # "steno theory": ""},
-
-        # {"description": "HR for suffix l",
-        # "spelling": "ll?",
-        # "pronunciation": " suffix  l ",
-        # "ambiguity": 0,
-        # "what must come before": slash, # ically is fine
-        # "steno theory": ""},
-
-        # {"description": "HR for al",
-        # "spelling": "all?",
-        # "pronunciation": " l ",
-        # "ambiguity": 0,
-        # "what must come before": slash, # ically is fine
-        # "steno theory": ""}
     ],
 
     "R": [
@@ -1525,7 +1443,6 @@ steno_chords_and_their_meanings = {
          "steno theory": " (Theory: brahms)"},
     ],
 
-
     "Au_": [
         {"description": "AU for a in false",
          "spelling": "a",
@@ -1628,21 +1545,8 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "steno theory": ""},
 
-        # {"description": "O for o even though it's pronounced with a schwa, discussion here: https://discord.com/channels/136953735426473984/1034561356361367683/1331201458279940178. However it's the same as almond, alopecia, and ameliorate, which I would do with a 'O'", #but   it's the same @ in "almond:", and alopecia, ameliorate
-        # "spelling": "o",
-        # "pronunciation": " @ ",
-        # "ambiguity": 0,
-        # "what must come before": SToR_or_nothing,
-        # "steno theory": " (Theory: Lapwing?)"},
-
     ],
 
-    # {"description": "O for o, even though it's not pronounced",
-    # "spelling": "o",
-    # "pronunciation": "",
-    # "ambiguity": 1,
-    # "what must come before": SToR_or_nothing,
-    # "steno theory": ""}],
     "O*e": [
         {"description": "O*E for long o spelt au, with some embellishments",
          "spelling": "e?aux?",  # baudelaire, aubergine beaux
@@ -1687,13 +1591,6 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "steno theory": ""},
 
-        # {"description": "OE for ough said like owe",
-        # "spelling": "ough",
-        # "pronunciation": " ouw ",
-        # "ambiguity": 0,
-        # "what must come before": SToR_or_nothing,
-        # "steno theory": ""},
-
         {"description": "OE for oa said like owe",
          "spelling": "oa",
          "pronunciation": keysymbol_shorthands["long o"],
@@ -1701,13 +1598,6 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "steno theory": ""},
 
-        # commenting out because of "tricotomy"?? # acrobatic?
-        # {"description": "OE for unstressed o",
-        # "spelling": "o",
-        # "pronunciation": " @ ",
-        # "ambiguity": 0,
-        # "what must come before": SToR_or_nothing,
-        # "steno is theory": "Lapwing?"}
     ],
 
     "Oeu": [
@@ -1987,13 +1877,6 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR,
          "steno theory": ""}],
 
-    # "eud": [
-    #    {"description": "EUd for -ied",
-    #     "spelling": "iedis",
-    #     "pronunciation": " iy  suffix  d ",
-    #     "ambiguity": 1,
-    #     "what must come before": SToR,
-    #     "steno theory": ""}],
 
     "eupbg": [
         {"description": "eupbg for -ing",
@@ -3050,8 +2933,7 @@ steno_chords_and_their_meanings = {
          "spelling": "gh",
          "pronunciation": "",
          "ambiguity": 1,
-         "what must come before":
-             A_to_p,
+         "what must come before": A_to_p,
          "steno theory": " (Theory: Harri?)"},
 
         {"description": "folded -G for -ing",
