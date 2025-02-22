@@ -198,15 +198,15 @@ paper / pay per
 import multiprocessing
 import json
 
-from convert_unilex_into_readable_lists import (
+from froj_brains.convert_unilex_into_readable_lists import (
     full_entry_pattern,
     make_boundaries_into_list,
     make_target_pronunciation_into_string,
 )
 
-from map_steno_chords_to_keysymbols import generate_write_outs
+from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
-from chord_definitions import steno_chords_and_their_meanings
+from froj_brains.chord_definitions import steno_chords_and_their_meanings
 import time
 
 def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords):
@@ -222,11 +222,11 @@ def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords)
     return word
 
 
-with (open("most_c.txt", "r", encoding="utf-8")) as txt_dictionary:
+with (open("big.txt", "r", encoding="utf-8")) as txt_dictionary:
     outlines = txt_dictionary.readlines()
 
 # for one at a time (not multiprocessing), uncomment the next two lines
-# for outline in outlines:
+#for outline in outlines:
 #    results = make_unilex_definition_into_dictionary_entry(outline, steno_chords_and_their_meanings)
 
 if __name__ == '__main__':
@@ -245,5 +245,5 @@ if __name__ == '__main__':
     runtime = end_time - start_time
     print(f"Total Runtime: {runtime:.2f} seconds")
 
-    with open("19_02_25 clown Froj.json", "w") as outfile:
+    with open("22_02_25 big Froj.json", "w") as outfile:
         json.dump(results, outfile, indent=1)
