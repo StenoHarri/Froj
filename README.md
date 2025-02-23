@@ -4,40 +4,17 @@ Creates a list of possible write-outs by combining your theory and a list of wor
 
 ![image](images/froj.png)
 
-23/11/24 = 3 words ,         4 entries
+# Word lookup
+## Unannotated
+![img.png](images/unannotated_word_lookup.png)
 
-24/11/24 = 22 words,        51 entries
+## Annotated
+![img.png](images/annotated_word_lookup.png)
 
-25/11/24 = 636 words      1802 entries
+# Entry lookup
 
-26/11/24 = 1,474 words   3,902 entries
+## Unannotated
+![img.png](unannotated_entry_lookup.png)
 
-27/11/24 = 3,736 words  13,430 entries
-
-28/11/24 = 6,696 words   27,258 entries
-
-29/11/24 = 21,828 words 115,396 entries
-
-efficiency update & removed plurals on another stroke. got from 11 minute runtime to 2
-
-10/12/24 = 21,734 words  98,281 entries
-
-11/12/24 = 34,157 words 202,816 entries
-
-12/12/24 = 45,181 words 309,175 entries
-
-18/12/24 = 45,926 words 341,076 entries
-
-19/12/24 = 68,178 words 484,592 entries
-
-12/01/15 = 82,160 words 856,215 entries
-
-22/01/25 = 87,091 words 944,065 entries
-
-13/02/25 = 103,919 words 725,008 entries
-
-16/02/25 = 109,601 words 1,674,280 entries
-
-19/02/25 = 108,404 words 823,962 entries
-
-grep -c 'number of entries": [1-9]' Froj_output.json
+##  Annotated
+![img.png](images/annotated_entry_lookup.png)
