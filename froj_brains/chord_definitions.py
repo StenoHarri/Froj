@@ -3403,7 +3403,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  h  u  d ",
          "ambiguity": 0,
          "what must come before": slash_no_asterisk,
-         "steno theory a": "StenEd"}],
+         "steno theory": "StenEd"}],
 
     "HA*pl": [
         {"description": "HA*PL for -ham (this feels like a suffix but it's actually not, also Americans overpronounce the  'ha' bit)",
