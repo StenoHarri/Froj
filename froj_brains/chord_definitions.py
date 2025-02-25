@@ -16,7 +16,7 @@ keysymbol_shorthands = {
     "long a": " \[?(ee|ei|eir|eir1|aa/ee|ii/ee)\]? ",
     # ii/ee → beta
 
-    "au": "((oa|aa|ah|ah2)|ao)",  # British oa, American AU ao
+    "au": "((oa|aa|ah|ah2)|ao|oo|(@|o/uh|o/oo)|au|(ow|our))",  # British oa, American AU ao     oo in daughter     because @|o/uh|o/oo   aura oo|ow|our
     "long e": " \[?(aa/ei|ae/ii|eir/ir|i/ii|ii|ii/ae|ii/e|ii/i|ii2|ir)\]? ",
     "long o": " \[?(ou|ou1|ouw)\]? ",
     "long i": " \[?(ae|ae/i|ae/ii|aer|ai|ai/ei|ai/ii|ai1|ii/ae)\]? ",
@@ -1310,213 +1310,167 @@ steno_chords_and_their_meanings = {
          "pronunciation": " our  r ",
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "steno theory": "StenEd?"}
+         "theory": "StenEd?"}
     ],
 
 
     "Ae": [
-        {"description": "AE for long e spelt ea, but only if it's the first stroke",
+        {"chord": "AE",
+         "description": "ea pronounced long e (first stroke only)",
          "spelling": "ea",
          "pronunciation": keysymbol_shorthands["long e"], #it was just ii before
          "ambiguity": 1,
          "what must come before": first_stroke_SToR_or_nothing,
-         "steno theory": ""},
+         "theory": "?"},
 
-        {"description": "AE for short e spelt ea, but only if it's the first stroke",
+        {"chord": "AE",
+         "description": "ea pronounced short e (first stroke only)",
          "spelling": "ea",
          "pronunciation": " e ", # earl?
          "ambiguity": 1,
          "what must come before": first_stroke_SToR_or_nothing,
-         "steno theory": ""},
+         "theory": "?"},
 
-        {"description": "AE for short e spelt ea, but only if it's the first stroke",
+        {"chord": "AE",
+         "description": "ea pronounced long a (first stroke only)",
          "spelling": "ea",
          "pronunciation": keysymbol_shorthands["long a"],
          "ambiguity": 1,
          "what must come before": first_stroke_SToR_or_nothing,
-         "steno theory": ""},
+         "theory": "?"},
 
-        {"description": "AE for ae, ignoring pronunciation somewhat",
+        {"chord": "AE",
+         "description": "ae pronounced long e",
          "spelling": "ae",
-         "pronunciation": " (ii|eir|ii/e) ",
+         "pronunciation": keysymbol_shorthands["long e"], # eir?
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: Lapwing?)"},
-
-        # {"description": "AE for long a spelt a_e, but only if it's the first stroke",
-        # "spelling": "a",
-        # "pronunciation": " ee ",
-        # "ambiguity": 2,
-        # "what must come before": first_stroke_SToR_or_nothing,
-        # "steno theory": " (Theory:  I don't know)"},
+         "theory": "Lapwing?"},
     ],
 
+
     "Aeu": [
-        {"description": "AEU for long a",
+        {"chord": "AEU",
+         "description": "long a",
          "spelling": "a(a|ye?|i)?",
          "pronunciation": keysymbol_shorthands["long a"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "AEU for the long a spelt with an e (I'm British)",
+        {"chord": "AEU",
+         "description": "e pronounced long a (I'm British)",
          "spelling": "e",
          "pronunciation": keysymbol_shorthands["long a"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "AEU for long a written et",
+        {"chord": "AEU",
+         "description": "et pronounced long a",
          "spelling": "ett?e?",
          "pronunciation": keysymbol_shorthands["long a"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "AEU for long a written with an e",
-         "spelling": "ey?",
+        {"chord": "AEU",
+         "description": "ey pronounced long a",
+         "spelling": "ey",
          "pronunciation": keysymbol_shorthands["long a"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "AEU for long a written with ei",
+        {"chord": "AEU",
+         "description": "ei pronounced long a",
          "spelling": "ei",
          "pronunciation": keysymbol_shorthands["long a"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "AEU for long a written ea",
+        {"chord": "AEU",
+         "description": "ea pronounced long a",
          "spelling": "ea",
          "pronunciation": keysymbol_shorthands["long a"],
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
     ],
 
-    # "Aer": [
-    #    {"description": "AER for -ary",
-    #     "spelling": "arr?(y|i)",
-    #     "pronunciation": " \((@r/~  e|@r/e)\)  r  iy ", #this looks like an error, 'cause it is, but if it ain't broke don't fitcecoc
-    #     "ambiguity": 1,
-    #     "what must come before": SToR,
-    #     "steno theory": " (Theory: I think StenEd?)"}],
 
     "Aer": [
-        {"description": "AER for ary",  # January actuary actuaries
+        {"chord": "AER",
+         "description": "AER for ary",  # January actuary actuaries
          "spelling": "ar(y|ie)",
          "pronunciation": " \(@r/e\)  r  iy ",
          "ambiguity": 0,
          "what must come before": SToR,
-         "steno theory": " (Theory: I think StenEd?)"}],
-
-    "Au": [
-        {"description": "AU for the vowel sound in daughter",
-         "spelling": "aa?",  # ??? just keep it I guess
-         "pronunciation": " oo ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "steno theory": ""},
-
-        {"description": "AU for the au in because",
-         "spelling": "au",  # ??? just keep it I guess
-         "pronunciation": " (@|o/uh|o/oo) ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "steno theory": ""},
-
-        {"description": "AU for the initial drama vowel",
-         "spelling": "aa?",
-         "pronunciation": " (starting_)?((root)|(prefix))  aa ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: drama is a long vowel)"},
-
-        {"description": "AU for a in alt",
-         "spelling": "a",
-         "pronunciation": " au ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: alt is AUL)"},
-
-        {"description": "AU for au spelling",
-         "spelling": "au",
-         "pronunciation": " (oo|ow|our) ",  # `AU/RA` → `aura`
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "steno theory": ""},
-
-        {"description": "AU for aw",
-         "spelling": "awe?",
-         "pronunciation": " (oo|ow|our) ",  # `AU/RA` → `aura`
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "steno theory": ""},
-
-        # {"description": "AU for al",
-        # "spelling": "al",
-        # "pronunciation": " aa ( \[l1\] )?",
-        # "ambiguity": 0,
-        # "what must come before": SToR_or_nothing,
-        # "steno theory": ""},
-
-        {"description": "AU for oa said like abroad",
-         "spelling": "oa",
-         "pronunciation": " oo ",
-         "ambiguity": 1,
-         "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: Harri's accent)"},
-
-        {"description": "AU for a in palm",
-         "spelling": "a",
-         "pronunciation": " aa ",
-         "ambiguity": 1,
-         "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: balm is AUL)"},
-
-        {"description": "AU for ah",
-         "spelling": "ah",
-         "pronunciation": " aa ",
-         "ambiguity": 1,
-         "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: brahms)"},
+         "theory": "StenEd?"}
     ],
 
-    "Au_": [
-        {"description": "AU for a in false",
-         "spelling": "a",
-         "pronunciation": " oo ",
-         "ambiguity": 0,
+
+    "Au": [
+        {"chord": "AU",
+         "description": "posh people ahhh sound",
+         "spelling": " o?a[auh]?",  # ??? just keep it I guess
+         "pronunciation": keysymbol_shorthands["au"],
+         "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: false is AUL)"}],
+         "theory": ""},
+
+        {"chord": "AU",
+         "description": "AU for aw",
+         "spelling": "awe?",
+         "pronunciation": keysymbol_shorthands["au"],
+         "ambiguity": 2,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+    ],
+
+    #"Au_": [
+    #    {"description": "AU for a in false",
+    #     "spelling": "a",
+    #     "pronunciation": " oo ",
+    #     "ambiguity": 0,
+    #     "what must come before": SToR_or_nothing,
+    #     "steno theory": " (Theory: false is AUL)"}],
 
     "Aurb": [
-
-        {"description": "AURB for arb",
+        {"chord": "AURB",
+         "description": "arb",
          "spelling": "arb",
          "pronunciation": "(" + keysymbol_shorthands["short vowels"] + "|" + keysymbol_shorthands[
              "long vowels"] + ")" + " r  b ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: Josiah)"}],
+         "steno theory": "Josiah"}
+    ],
+
 
     "Af": [
-        {"description": "AF for after",  # I think this spills into raster
+        {"chord": "AF",
+         "description": "after",  # I think this spills into rafter
          "spelling": "after",
          "pronunciation": " ah  f  t  @r  r ",
-         "ambiguity": 0,
+         "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: StenEd?)"}],
+         "steno theory": "StenEd?"}
+         ],
+
 
     "Afr/": [  # the / is there because of A*FRT/KWHOUGT → afterthought
-        {"description": "AFR for the prefix after-",
+        {"chord": "AFR/",
+         "description": "prefix after-",
          "spelling": "after",
          "pronunciation": " ah  f  t  @r  r  (compound|prefix) ",
          # starting_root  ah  f  t  @r  r  suffix  w  @r  r  d
-         "ambiguity": 0,
+         "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: StenEd?)"}],
+         "theory": "StenEd?"}
+    ],
+
 
     "Ar": [
         {"description": "AR for long a followed by r",
@@ -1524,7 +1478,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ar  r ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: Lapwing)"},
+         "steno theory": "Lapwing?"},
 
         {"description": "AR for long a followed by r, spelt aur",
          "spelling": "uarr?e?",
