@@ -2,13 +2,13 @@
 import json
 import re
 
-with open("../Froj_theories/Froj_Harri_theory/best_of_word_to_entry_lookup.json", "r") as f:
+with open("Froj_theories/Froj_Harri_theory/best_of_word_to_entry_lookup.json", "r") as f:
     best_words = json.load(f)
-with open("../Froj_theories/Froj_Harri_theory/all_word_to_entry_lookup.json", "r") as f:
+with open("Froj_theories/Froj_Harri_theory/all_word_to_entry_lookup.json", "r") as f:
     all_words = json.load(f)
-with open("../Froj_theories/Froj_Harri_theory/Froj_Plover_dictionary.json", "r") as f:
+with open("Froj_theories/Froj_Harri_theory/Froj_Plover_dictionary.json", "r") as f:
     entries = json.load(f)
-with open("../Froj_theories/Froj_Harri_theory/Froj_verbose_lookup.json", "r") as f:
+with open("Froj_theories/Froj_Harri_theory/Froj_verbose_lookup.json", "r") as f:
     verbose_entries = json.load(f)
 
 is_raw_steno = re.compile(r'^(S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)(/S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)*$')

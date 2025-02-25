@@ -1,6 +1,6 @@
 import json
 
-with open("Froj_Harri_theory/complete_output.json", 'r') as f:
+with open("Froj_theories/Froj_Harri_theory/complete_output.json", 'r') as f:
     words = json.load(f)
 
 
@@ -116,17 +116,17 @@ for word in words:
 
 
 print('writing best lookups')
-with open("Froj_Harri_theory/best_of_word_to_entry_lookup.json", "w") as outfile:
+with open("Froj_theories/Froj_Harri_theory/best_of_word_to_entry_lookup.json", "w") as outfile:
         json.dump(best_word_lookup, outfile, indent=1)
 
 print('writing all lookups')
-with open("Froj_Harri_theory/all_word_to_entry_lookup.json", "w") as outfile:
+with open("Froj_theories/Froj_Harri_theory/all_word_to_entry_lookup.json", "w") as outfile:
         json.dump(all_word_lookup, outfile, indent=1)
 
 print('writing normal entries')
-with open("Froj_Harri_theory/Froj_Plover_dictionary.json", "w") as outfile:
+with open("Froj_theories/Froj_Harri_theory/Froj_Plover_dictionary.json", "w") as outfile:
         json.dump(plain_entry_lookup, outfile, indent=1)
 
 print('writing verbose entry to word lookup')
-with open("Froj_Harri_theory/Froj_verbose_lookup.json", "w") as outfile:
+with open("Froj_theories/Froj_Harri_theory/Froj_verbose_lookup.json", "w") as outfile:
         json.dump(verbose_entry_lookup, outfile, indent=1)
