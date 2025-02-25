@@ -96,10 +96,11 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
 
     explanation = (entry["explanation of each chord"] +
                    [
-                       [
-                        preconditions_chord["theory"],
-                        preconditions_chord["chord"], preconditions_chord["description"]
-                       ]
+                       {
+                        'theory': preconditions_chord["theory"],
+                        'chord': preconditions_chord["chord"],
+                        'description': preconditions_chord["description"]
+                       }
                     ]
                    )
 
