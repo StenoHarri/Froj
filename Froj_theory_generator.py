@@ -12,7 +12,7 @@ from froj_brains.convert_unilex_into_readable_lists import (
 
 from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
-from froj_brains.chord_definitions import steno_chords_and_their_meanings
+from Froj_theories.Froj_Harri_theory.chord_definitions import steno_chords_and_their_meanings
 import time
 
 def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords):
