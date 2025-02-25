@@ -1,0 +1,3123 @@
+[
+ {
+  "word": "cloudburst:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ow  d  compound  b  @@r  r  s  t ",
+  "word_boundaries": "cloudburst",
+  "frequency": "7",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROud/PWufrt*": {
+    "raw steno outline": "/KHROud/PWufrt*",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "PW",
+      "b"
+     ],
+     [
+      "?",
+      "UR",
+      "ur"
+     ],
+     [
+      "",
+      "F fold",
+      "s"
+     ],
+     [
+      "",
+      "-T",
+      "t"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloudbursts:",
+  "word_class": "NNS",
+  "pronunciation": " starting_root  k  l  ow  d  compound  b  @@r  r  s  t  suffix  s ",
+  "word_boundaries": "cloudbursts",
+  "frequency": "4",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROud/PWufrts*": {
+    "raw steno outline": "/KHROud/PWufrts*",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "PW",
+      "b"
+     ],
+     [
+      "?",
+      "UR",
+      "ur"
+     ],
+     [
+      "",
+      "F fold",
+      "s"
+     ],
+     [
+      "",
+      "-T",
+      "t"
+     ],
+     [
+      "",
+      "-S",
+      "suffix -s"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clouded:",
+  "word_class": "VBN/VBD",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  i7  d ",
+  "word_boundaries": "clouded",
+  "frequency": "396",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROud/KWHed": {
+    "raw steno outline": "/KHROud/KWHed",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "?",
+      "E",
+      "e"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloudier:",
+  "word_class": "JJR",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  iy  suffix  @r  r ",
+  "word_boundaries": "cloudier",
+  "frequency": "6",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROud/KWHeur": {
+    "raw steno outline": "/KHROud/KWHeur",
+    "ambiguity": 6,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "",
+      "EU",
+      "i diphthong"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ]
+    ]
+   },
+   "/KHROud/KWHeu/KWHer": {
+    "raw steno outline": "/KHROud/KWHeu/KWHer",
+    "ambiguity": 6,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "",
+      "EU",
+      "i diphthong"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloudiest:",
+  "word_class": "JJS",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  iy  suffix  e05  s  t ",
+  "word_boundaries": "cloudiest",
+  "frequency": "0",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROud/KWHeu/KWHeft": {
+    "raw steno outline": "/KHROud/KWHeu/KWHeft",
+    "ambiguity": 8,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "",
+      "EU",
+      "i diphthong"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "?",
+      "E",
+      "e"
+     ],
+     [
+      "StenEd?",
+      "F",
+      "s"
+     ],
+     [
+      "",
+      "-T",
+      "t"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloudily:",
+  "word_class": "RB",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  i2  suffix  l  iy ",
+  "word_boundaries": "cloudily",
+  "frequency": "2",
+  "number of entries": 4,
+  "steno stuff": {
+   "/KHROud/HReu": {
+    "raw steno outline": "/KHROud/HReu",
+    "ambiguity": 4,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      "short vowel that starts a suffix"
+     ],
+     [
+      "StenEd",
+      "HREU",
+      "suffix -ly"
+     ]
+    ]
+   },
+   "/KHROud/KWHeu/HReu": {
+    "raw steno outline": "/KHROud/KWHeu/HReu",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "StenEd",
+      "HREU",
+      "suffix -ly"
+     ]
+    ]
+   },
+   "/KHROud/KWHeuld*": {
+    "raw steno outline": "/KHROud/KWHeuld*",
+    "ambiguity": 6,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "",
+      "-L",
+      "suffix -l"
+     ],
+     [
+      "Harri?",
+      "*D",
+      "y pronounced i diphthong"
+     ]
+    ]
+   },
+   "/KHROud/KWHeul/KWHeu": {
+    "raw steno outline": "/KHROud/KWHeul/KWHeu",
+    "ambiguity": 7,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "",
+      "-L",
+      "suffix -l"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "y pronounced i diphthong"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloudiness:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  iy  suffix  n  e5  s ",
+  "word_boundaries": "cloudiness",
+  "frequency": "17",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROud/KWHeupbs": {
+    "raw steno outline": "/KHROud/KWHeupbs",
+    "ambiguity": 7,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "",
+      "EU",
+      "i diphthong"
+     ],
+     [
+      "?",
+      "-PB",
+      "suffix -n"
+     ],
+     [
+      "",
+      "",
+      "drop short vowel"
+     ],
+     [
+      "",
+      "-S",
+      "ss"
+     ]
+    ]
+   },
+   "/KHROud/KWHeupb/KWHes": {
+    "raw steno outline": "/KHROud/KWHeupb/KWHes",
+    "ambiguity": 8,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "",
+      "EU",
+      "i diphthong"
+     ],
+     [
+      "?",
+      "-PB",
+      "suffix -n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "?",
+      "E",
+      "e"
+     ],
+     [
+      "",
+      "-S",
+      "ss"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clouding:",
+  "word_class": "VBG/NN",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  i  ng ",
+  "word_boundaries": "clouding",
+  "frequency": "87",
+  "number of entries": 3,
+  "steno stuff": {
+   "/KHROugd": {
+    "raw steno outline": "/KHROugd",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "-G fold",
+      "suffix -ing"
+     ]
+    ]
+   },
+   "/KHROu/TKeupbg": {
+    "raw steno outline": "/KHROu/TKeupbg",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "TK",
+      "d"
+     ],
+     [
+      "",
+      "EUPBG",
+      "suffix -ing"
+     ]
+    ]
+   },
+   "/KHROud/KWHeupbg": {
+    "raw steno outline": "/KHROud/KWHeupbg",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "",
+      "-PBG",
+      "ng"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloudless:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  l  e5  s ",
+  "word_boundaries": "cloudless",
+  "frequency": "205",
+  "number of entries": 0,
+  "steno stuff": {}
+ },
+ {
+  "word": "cloudlessly:",
+  "word_class": "RB",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  l  e5  s  suffix  l  iy ",
+  "word_boundaries": "cloudlessly",
+  "frequency": "1",
+  "number of entries": 0,
+  "steno stuff": {}
+ },
+ {
+  "word": "cloudlessness:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  l  e5  s  suffix  n  e5  s ",
+  "word_boundaries": "cloudlessness",
+  "frequency": "0",
+  "number of entries": 0,
+  "steno stuff": {}
+ },
+ {
+  "word": "cloud:",
+  "word_class": "NN/VBP/VB",
+  "pronunciation": " starting_root  k  l  ow  d ",
+  "word_boundaries": "cloud",
+  "frequency": "5978",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROud": {
+    "raw steno outline": "/KHROud",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clouds:",
+  "word_class": "NNS/VBZ",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  z ",
+  "word_boundaries": "clouds",
+  "frequency": "4102",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROudz": {
+    "raw steno outline": "/KHROudz",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloudy:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  k  l  ow  d  suffix  iy ",
+  "word_boundaries": "cloudy",
+  "frequency": "1823",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROud*": {
+    "raw steno outline": "/KHROud*",
+    "ambiguity": 5,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "HelloChap?",
+      "*D",
+      "dy"
+     ]
+    ]
+   },
+   "/KHROud/KWHeu": {
+    "raw steno outline": "/KHROud/KWHeu",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "y pronounced i diphthong"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clough:",
+  "word_class": "NNP",
+  "pronunciation": " starting_root  k  l  uh  f ",
+  "word_boundaries": "clough",
+  "frequency": "183",
+  "number of entries": 0,
+  "steno stuff": {}
+ },
+ {
+  "word": "clouted:",
+  "word_class": "VBD/VBN/JJ",
+  "pronunciation": " starting_root  k  l  ow  t  suffix  i7  d ",
+  "word_boundaries": "clouted",
+  "frequency": "189",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROutd": {
+    "raw steno outline": "/KHROutd",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-T",
+      "t"
+     ],
+     [
+      "",
+      "-D",
+      "suffix -ed"
+     ]
+    ]
+   },
+   "/KHROut/KWHed": {
+    "raw steno outline": "/KHROut/KWHed",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-T",
+      "t"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "?",
+      "E",
+      "e"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clout:",
+  "word_class": "NN/VB/VBP",
+  "pronunciation": " starting_root  k  l  ow  t ",
+  "word_boundaries": "clout",
+  "frequency": "969",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROut": {
+    "raw steno outline": "/KHROut",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-T",
+      "t"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clouts:",
+  "word_class": "NNS/VBZ",
+  "pronunciation": " starting_root  k  l  ow  t  suffix  s ",
+  "word_boundaries": "clouts",
+  "frequency": "17",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROuts": {
+    "raw steno outline": "/KHROuts",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ou pronounced ow"
+     ],
+     [
+      "",
+      "-T",
+      "t"
+     ],
+     [
+      "",
+      "-S",
+      "suffix -s"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloven:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  k  l  ou  v  [e5]  n ",
+  "word_boundaries": "cloven",
+  "frequency": "116",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROe/SRepb": {
+    "raw steno outline": "/KHROe/SRepb",
+    "ambiguity": 0,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "?",
+      "E",
+      "e"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ]
+    ]
+   },
+   "/KHROefb/KWHepb": {
+    "raw steno outline": "/KHROefb/KWHepb",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "?",
+      "E",
+      "e"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clove:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ou  v ",
+  "word_boundaries": "clove",
+  "frequency": "102",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROefb": {
+    "raw steno outline": "/KHROefb",
+    "ambiguity": 0,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloverleaf:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ou  v  @r  r  compound  l  ii  f ",
+  "word_boundaries": "cloverleaf",
+  "frequency": "3",
+  "number of entries": 6,
+  "steno stuff": {
+   "/KHROefrb/HRAOef*": {
+    "raw steno outline": "/KHROefrb/HRAOef*",
+    "ambiguity": 4,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "ea pronounce long e"
+     ],
+     [
+      "",
+      "F",
+      "f"
+     ]
+    ]
+   },
+   "/KHROe/SRer/HRAOef*": {
+    "raw steno outline": "/KHROe/SRer/HRAOef*",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "ea pronounce long e"
+     ],
+     [
+      "",
+      "F",
+      "f"
+     ]
+    ]
+   },
+   "/KHROefb/KWHer/HRAOef*": {
+    "raw steno outline": "/KHROefb/KWHer/HRAOef*",
+    "ambiguity": 5,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "ea pronounce long e"
+     ],
+     [
+      "",
+      "F",
+      "f"
+     ]
+    ]
+   },
+   "/KHROefrb/HRAOe*/KWHAf": {
+    "raw steno outline": "/KHROefrb/HRAOe*/KWHAf",
+    "ambiguity": 6,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "e pronounce long e"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "A",
+      "silent a"
+     ],
+     [
+      "",
+      "F",
+      "f"
+     ]
+    ]
+   },
+   "/KHROe/SRer/HRAOe*/KWHAf": {
+    "raw steno outline": "/KHROe/SRer/HRAOe*/KWHAf",
+    "ambiguity": 4,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "e pronounce long e"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "A",
+      "silent a"
+     ],
+     [
+      "",
+      "F",
+      "f"
+     ]
+    ]
+   },
+   "/KHROefb/KWHer/HRAOe*/KWHAf": {
+    "raw steno outline": "/KHROefb/KWHer/HRAOe*/KWHAf",
+    "ambiguity": 7,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "e pronounce long e"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "A",
+      "silent a"
+     ],
+     [
+      "",
+      "F",
+      "f"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloverleaves:",
+  "word_class": "NNS",
+  "pronunciation": " starting_root  k  l  ou  v  @r  r  compound  l  ii  v  suffix  z ",
+  "word_boundaries": "cloverleaves",
+  "frequency": "0",
+  "number of entries": 6,
+  "steno stuff": {
+   "/KHROefrb/HRAOefbz*": {
+    "raw steno outline": "/KHROefrb/HRAOefbz*",
+    "ambiguity": 5,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "ea pronounce long e"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROe/SRer/HRAOefbz*": {
+    "raw steno outline": "/KHROe/SRer/HRAOefbz*",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "ea pronounce long e"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROefb/KWHer/HRAOefbz*": {
+    "raw steno outline": "/KHROefb/KWHer/HRAOefbz*",
+    "ambiguity": 6,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "ea pronounce long e"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROefrb/HRAOe*/KWHAfbz": {
+    "raw steno outline": "/KHROefrb/HRAOe*/KWHAfbz",
+    "ambiguity": 7,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "e pronounce long e"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "A",
+      "silent a"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROe/SRer/HRAOe*/KWHAfbz": {
+    "raw steno outline": "/KHROe/SRer/HRAOe*/KWHAfbz",
+    "ambiguity": 5,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "e pronounce long e"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "A",
+      "silent a"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROefb/KWHer/HRAOe*/KWHAfbz": {
+    "raw steno outline": "/KHROefb/KWHer/HRAOe*/KWHAfbz",
+    "ambiguity": 8,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Lapwing",
+      "*",
+      "compound word"
+     ],
+     [
+      "",
+      "HR",
+      "l"
+     ],
+     [
+      "",
+      "AOE",
+      "e pronounce long e"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "A",
+      "silent a"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clover:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ou  v  @r  r ",
+  "word_boundaries": "clover",
+  "frequency": "680",
+  "number of entries": 3,
+  "steno stuff": {
+   "/KHROefrb": {
+    "raw steno outline": "/KHROefrb",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ]
+    ]
+   },
+   "/KHROe/SRer": {
+    "raw steno outline": "/KHROe/SRer",
+    "ambiguity": 0,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ]
+    ]
+   },
+   "/KHROefb/KWHer": {
+    "raw steno outline": "/KHROefb/KWHer",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clover's:",
+  "word_class": "NN|POS/NN|VBZ",
+  "pronunciation": " starting_root  k  l  ou  v  @r  r  suffix  z ",
+  "word_boundaries": "clover's",
+  "frequency": "4",
+  "number of entries": 6,
+  "steno stuff": {
+   "/KHROefrbs*": {
+    "raw steno outline": "/KHROefrbs*",
+    "ambiguity": 4,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ],
+     [
+      "Josiah",
+      "*S",
+      "suffix -'s"
+     ]
+    ]
+   },
+   "/KHROe/SRers*": {
+    "raw steno outline": "/KHROe/SRers*",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "Josiah",
+      "*S",
+      "suffix -'s"
+     ]
+    ]
+   },
+   "/KHROefrbz*": {
+    "raw steno outline": "/KHROefrbz*",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "Harri",
+      "-R fold",
+      "er (when E is unavailable)"
+     ],
+     [
+      "Field",
+      "*",
+      "apostrophe"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROe/SRerz*": {
+    "raw steno outline": "/KHROe/SRerz*",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "SR",
+      "v"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "Field",
+      "*",
+      "apostrophe"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROefb/KWHers*": {
+    "raw steno outline": "/KHROefb/KWHers*",
+    "ambiguity": 5,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "Josiah",
+      "*S",
+      "suffix -'s"
+     ]
+    ]
+   },
+   "/KHROefb/KWHerz*": {
+    "raw steno outline": "/KHROefb/KWHerz*",
+    "ambiguity": 4,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "",
+      "ER",
+      "er"
+     ],
+     [
+      "Field",
+      "*",
+      "apostrophe"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "cloves:",
+  "word_class": "NNS",
+  "pronunciation": " starting_root  k  l  ou  v  suffix  z ",
+  "word_boundaries": "cloves",
+  "frequency": "95",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROefbz": {
+    "raw steno outline": "/KHROefbz",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "Lapwing?",
+      "OE",
+      "long o"
+     ],
+     [
+      "Josiah?",
+      "-FB",
+      "v"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clowned:",
+  "word_class": "VBD/VBN/JJ",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  d ",
+  "word_boundaries": "clowned",
+  "frequency": "4",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROupbd": {
+    "raw steno outline": "/KHROupbd",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "-D",
+      "suffix -ed"
+     ]
+    ]
+   },
+   "/KHROupb/KWHed": {
+    "raw steno outline": "/KHROupb/KWHed",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "",
+      "E",
+      "silent e"
+     ],
+     [
+      "",
+      "-D",
+      "d"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clowning:",
+  "word_class": "NN/VBG",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  i  ng ",
+  "word_boundaries": "clowning",
+  "frequency": "56",
+  "number of entries": 3,
+  "steno stuff": {
+   "/KHROupbdz": {
+    "raw steno outline": "/KHROupbdz",
+    "ambiguity": 0,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "-DZ",
+      "suffix -ing (when G is unavailable)"
+     ]
+    ]
+   },
+   "/KHROu/TPHeupbg": {
+    "raw steno outline": "/KHROu/TPHeupbg",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "TPH",
+      "n"
+     ],
+     [
+      "",
+      "EUPBG",
+      "suffix -ing"
+     ]
+    ]
+   },
+   "/KHROupb/KWHeupbg": {
+    "raw steno outline": "/KHROupb/KWHeupbg",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "",
+      "-PBG",
+      "ng"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clownings:",
+  "word_class": "NNS",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  i  ng  suffix  z ",
+  "word_boundaries": "clownings",
+  "frequency": "1",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROu/TPHeupbgz": {
+    "raw steno outline": "/KHROu/TPHeupbgz",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "",
+      "TPH",
+      "n"
+     ],
+     [
+      "",
+      "EUPBG",
+      "suffix -ing"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   },
+   "/KHROupb/KWHeupbgz": {
+    "raw steno outline": "/KHROupb/KWHeupbgz",
+    "ambiguity": 3,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "",
+      "-PBG",
+      "ng"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clownish:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  i  sh ",
+  "word_boundaries": "clownish",
+  "frequency": "40",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROupb/KWHeurb": {
+    "raw steno outline": "/KHROupb/KWHeurb",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "StenEd?",
+      "-RB",
+      "sh"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clownishly:",
+  "word_class": "RB",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  i  sh  suffix  l  iy ",
+  "word_boundaries": "clownishly",
+  "frequency": "3",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROupb/KWHeurb/HReu": {
+    "raw steno outline": "/KHROupb/KWHeurb/HReu",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "StenEd?",
+      "-RB",
+      "sh"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "StenEd",
+      "HREU",
+      "suffix -ly"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clownishness:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  i  sh  suffix  n  e5  s ",
+  "word_boundaries": "clownishness",
+  "frequency": "4",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROupb/KWHeurb/-pbs": {
+    "raw steno outline": "/KHROupb/KWHeurb/-pbs",
+    "ambiguity": 5,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "StenEd?",
+      "-RB",
+      "sh"
+     ],
+     [
+      "",
+      "/-PB",
+      "suffix n"
+     ],
+     [
+      "",
+      "",
+      "drop short vowel"
+     ],
+     [
+      "",
+      "-S",
+      "ss"
+     ]
+    ]
+   },
+   "/KHROupb/KWHeurb/-pb/KWHes": {
+    "raw steno outline": "/KHROupb/KWHeurb/-pb/KWHes",
+    "ambiguity": 6,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "i"
+     ],
+     [
+      "StenEd?",
+      "-RB",
+      "sh"
+     ],
+     [
+      "",
+      "/-PB",
+      "suffix n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "pretend consonant"
+     ],
+     [
+      "?",
+      "E",
+      "e"
+     ],
+     [
+      "",
+      "-S",
+      "ss"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clown:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  k  l  ow  n ",
+  "word_boundaries": "clown",
+  "frequency": "1944",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROupb": {
+    "raw steno outline": "/KHROupb",
+    "ambiguity": 0,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clown's:",
+  "word_class": "NN|POS/NN|VBZ",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  z ",
+  "word_boundaries": "clown's",
+  "frequency": "6",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROupbs*": {
+    "raw steno outline": "/KHROupbs*",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "Josiah",
+      "*S",
+      "suffix -'s"
+     ]
+    ]
+   },
+   "/KHROupbz*": {
+    "raw steno outline": "/KHROupbz*",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "Field",
+      "*",
+      "apostrophe"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clowns:",
+  "word_class": "NNS",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  z ",
+  "word_boundaries": "clowns",
+  "frequency": "446",
+  "number of entries": 1,
+  "steno stuff": {
+   "/KHROupbz": {
+    "raw steno outline": "/KHROupbz",
+    "ambiguity": 1,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "?",
+      "-Z",
+      "plural"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "word": "clowny:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  k  l  ow  n  suffix  iy ",
+  "word_boundaries": "clowny",
+  "frequency": "0",
+  "number of entries": 2,
+  "steno stuff": {
+   "/KHROupbd*": {
+    "raw steno outline": "/KHROupbd*",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "Harri?",
+      "*D",
+      "y pronounced i diphthong"
+     ]
+    ]
+   },
+   "/KHROupb/KWHeu": {
+    "raw steno outline": "/KHROupb/KWHeu",
+    "ambiguity": 2,
+    "explanation": [
+     [
+      "",
+      "KHR",
+      "cl"
+     ],
+     [
+      "",
+      "OU",
+      "ow"
+     ],
+     [
+      "",
+      "-PB",
+      "n"
+     ],
+     [
+      "",
+      "/",
+      ""
+     ],
+     [
+      "Harri",
+      "KWH",
+      "suffix"
+     ],
+     [
+      "StenEd?",
+      "EU",
+      "y pronounced i diphthong"
+     ]
+    ]
+   }
+  }
+ }
+]
