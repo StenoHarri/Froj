@@ -304,7 +304,8 @@ steno_chords_and_their_meanings = {
         # "what must come before": any_consonant_but_not_KWH,
         # "theory": ""},
 
-        {"description": "/ for the middle vowel in banana",
+        {"chord": "/",
+         "description": "middle a in banana",
          "spelling": "a",
          "pronunciation": " oa ",
          "ambiguity": 3,
@@ -980,8 +981,8 @@ steno_chords_and_their_meanings = {
 
 
     "WO": [
-        {"chord": "WA",
-         "description": "WO for wuh sound spelt just o", # one
+        {"chord": "WO",
+         "description": "o pronounced wuh", # one
          "spelling": "o",
          "pronunciation": " w  uh ",
          "ambiguity": 0,
@@ -1305,7 +1306,7 @@ steno_chords_and_their_meanings = {
 
     "AOr": [
         {"chord": "AOR",
-         "description": "AOR for oar",
+         "description": "oar",
          "spelling": "oar",
          "pronunciation": " our  r ",
          "ambiguity": 1,
@@ -1402,7 +1403,7 @@ steno_chords_and_their_meanings = {
 
     "Aer": [
         {"chord": "AER",
-         "description": "AER for ary",  # January actuary actuaries
+         "description": "ary",  # January actuary actuaries
          "spelling": "ar(y|ie)",
          "pronunciation": " \(@r/e\)  r  iy ",
          "ambiguity": 0,
@@ -1421,7 +1422,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AU",
-         "description": "AU for aw",
+         "description": "aw",
          "spelling": "awe?",
          "pronunciation": keysymbol_shorthands["au"],
          "ambiguity": 2,
@@ -1487,7 +1488,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "O",
-         "description": "O for o in Harri's accent",
+         "description": "o with Harri's accent",
          "spelling": "o",
          "pronunciation": " (au|our|our/or|o/uh) ",
          "ambiguity": 0,
@@ -1495,7 +1496,7 @@ steno_chords_and_their_meanings = {
          "theory": "Harri"},
 
         {"chord": "O",
-         "description": "O for o (even though some people say owe)",
+         "description": "o (accent stuff)",
          "spelling": "o",
          "pronunciation": " oou ",
          "ambiguity": 0,
@@ -1503,7 +1504,7 @@ steno_chords_and_their_meanings = {
          "theory": "Harri"},
 
         {"chord": "O",
-         "description": "O for silent o",
+         "description": "silent o",
          "spelling": "o",
          "pronunciation": "",
          "ambiguity": 0,
@@ -1694,7 +1695,7 @@ steno_chords_and_their_meanings = {
          "theory": "Lapwing"},
 
         {"chord": "OR",
-         "description": "OR for oar",
+         "description": "oar",
          "spelling": "oar?r",
          "pronunciation": " our  r ",
          "ambiguity": 1,
@@ -1956,7 +1957,7 @@ steno_chords_and_their_meanings = {
          "theory": "Harri"},
 
         {"chord": "U",
-         "description": "U for ou",
+         "description": "ou",
          "spelling": "ou",
          "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 1,
@@ -1964,7 +1965,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "U",
-         "description": "U for silent u",
+         "description": "silent u",
          "spelling": "u",
          "pronunciation": "",
          "ambiguity": 1,
@@ -2162,7 +2163,7 @@ steno_chords_and_their_meanings = {
          "theory": "Harri"},
 
         {"chord": "-FRPBGS",
-         "description": "-FRPBGS for nx",
+         "description": "nx",
          "spelling": "nx",
          "pronunciation": " ng  k  s ",
          "ambiguity": 0,
@@ -2214,7 +2215,7 @@ steno_chords_and_their_meanings = {
 
     "fb": [
         {"chord": "-FB",
-         "description": "-FB for v",
+         "description": "v",
          "spelling": "ve?",
          "pronunciation": " v ",
          "ambiguity": 0,
@@ -2766,7 +2767,7 @@ steno_chords_and_their_meanings = {
 
     "bg/S": [
         {"chord": "-BG/S",
-         "description": "-BG/S for x",
+         "description": "x (hint: you can't end with your left hand)",
          "spelling": "x",
          "pronunciation": "( k  s | g  z )",
          "ambiguity": 0,
@@ -2849,8 +2850,8 @@ steno_chords_and_their_meanings = {
 
 
     "*l": [
-        {"chord": "*L",
-         "description": "*L for folding l",
+        {"chord": "*L fold",
+         "description": "l",
          "spelling": "ll?e?",
          "pronunciation": " l ",
          "ambiguity": 1,
@@ -3000,7 +3001,7 @@ steno_chords_and_their_meanings = {
 
     "t": [
         {"chord": "-T",
-         "description": "-T for t",
+         "description": "t",
          "spelling": "tt?e?",
          "pronunciation": " t ",
          "ambiguity": 0,
@@ -3200,7 +3201,7 @@ steno_chords_and_their_meanings = {
 
     "d": [
         {"chord": "-D",
-         "description": "-D for d",
+         "description": "d",
          "spelling": "dd?e?",
          "pronunciation": " d ",
          "ambiguity": 0,
@@ -3273,7 +3274,7 @@ steno_chords_and_their_meanings = {
 
     "z": [
         {"chord": "-Z",
-         "description": "-Z for solo s (following a consonant)",
+         "description": "solo s (following a consonant)",
          "spelling": "s",
          "pronunciation": " s ",
          "ambiguity": 0,

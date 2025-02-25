@@ -94,7 +94,14 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
     ambiguity = entry["ambiguity"] + preconditions_chord["ambiguity"]
 
 
-    explanation = entry["explanation of each chord"] + [preconditions_chord["description"] + preconditions_chord["steno theory"]]
+    explanation = (entry["explanation of each chord"] +
+                   [
+                       [
+                        preconditions_chord["theory"],
+                        preconditions_chord["chord"], preconditions_chord["description"]
+                       ]
+                    ]
+                   )
 
 
     return {
