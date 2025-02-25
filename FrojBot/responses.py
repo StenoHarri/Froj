@@ -34,7 +34,7 @@ def get_response( user_input:str) -> str:
         complexity = 'complex'
 
 
-    elif word_to_find.startswith(":>"):
+    elif word_to_find.startswith(":> "):
         word_to_find=word_to_find.replace(":> ","").strip()
         complexity = 'simple'
     elif word_to_find.startswith(":>"):
