@@ -1499,7 +1499,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
         {"chord": "O",
          "description": "ow pronounced short", # Knowledge
@@ -1507,7 +1507,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
         {"chord": "O",
          "description": "O for o in Harri's accent",
@@ -1515,7 +1515,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " (au|our|our/or|o/uh) ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: Harri's accent)"},
+         "theory": "Harri"},
 
         {"chord": "O",
          "description": "O for o (even though some people say owe)",
@@ -1523,7 +1523,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " oou ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": " (Theory: Harri's accent)"},
+         "theory": "Harri"},
 
         {"chord": "O",
          "description": "O for silent o",
@@ -1531,7 +1531,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
     ],
 
 
@@ -1604,7 +1604,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " oi ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "steno theory": ""},
+         "theory": ""},
 
         {"chord": "OEU",
          "description": "oy",
@@ -1612,7 +1612,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " oi ",
          "ambiguity": 1,  # feel free to change this prioritisation
          "what must come before": SToR_or_nothing,
-         "steno theory": ""}
+         "theory": ""}
     ],
 
 
@@ -2896,11 +2896,11 @@ steno_chords_and_their_meanings = {
     "/-l": [
         {"chord": "/-L",
          "description": "final le",
-         "spelling": "le$",
+         "spelling": "ll?e$",
          "pronunciation": " l ",
          "ambiguity": 0,
          "what must come before": p_or_l_to_z,
-         "steno theory": "Lapwing?"},
+         "theory": "Lapwing?"},
     ],
 
 
@@ -2911,303 +2911,321 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  i  ng ",
          "ambiguity": 0,
          "what must come before": g_and_dz,
-         "steno theory": ""}
+         "theory": ""}
     ],
 
 
     "*g": [
-        {"description": "*G for gue",  # mulch/mulk or something
+        {"chord": "*G",
+         "description": "gue", #analogue
          "spelling": "gue",
          "pronunciation": " g ",
          "ambiguity": 0,
          "what must come before": A_to_r_no_asterisk,  # picked to r... no particular reason
-         "steno theory": " (Theory: Harri)"},
+         "theory": "Harri"},
 
-        {"description": "*G for k",  # mulch/mulk or something
+        {"chord": "*G",
+         "description": "k (following an -L)",  # mulch/mulk or something
          "spelling": "k",
          "pronunciation": " k ",
          "ambiguity": 0,
          "what must come before": l_no_asterisk,
-         "steno theory": " (Theory: StenEd)"},
+         "theory": "StenEd"},
 
-        {"description": "*G for ch",
+        {"chord": "*G",
+         "description": "ch (following an -L)",
          "spelling": "ch",
          "pronunciation": " ch ",
          "ambiguity": 0,
          "what must come before": l_no_asterisk,
-         "steno theory": " (Theory: Harri)"}],
+         "theory": "Harri"}],
 
     "g": [
-        {"description": "-G for g",
+        {"chord": "-G",
+         "description": "g",
          "spelling": "gg?e?",
          "pronunciation": " g ",
          "ambiguity": 0,
          "what must come before": A_to_l_not_just_b,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-G for g (pronounced j) following an l",
+        {"description": "g pronounced j (following an -L)",
          "spelling": "gg?e?",
          "pronunciation": " jh ",
          "ambiguity": 0,
          "what must come before": l_,
-         "steno theory": " (Theory: StenEd?)"},
+         "theory": "StenEd?"},
 
-        {"description": "-G for -ing",
+        {"chord": "-G",
+         "description": "suffix -ing",
          "spelling": "ing",
          "pronunciation": " suffix  i  ng ",
          "ambiguity": 1,
          "what must come before": A_to_p_,  # ← look at that lack of _ at the end
          # okay the issue here is that maybe there's no issue
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-G for silent gh",
+        {"chord": "-G",
+         "description": "silent gh",
          "spelling": "gh",
          "pronunciation": "",
          "ambiguity": 1,
          "what must come before": A_to_p,
-         "steno theory": " (Theory: Harri?)"},
+         "theory": "Harri?"},
 
-        {"description": "folded -G for -ing",
+        {"chord": "-G fold",
+         "description": "suffix -ing",
          "spelling": "ing",
          "pronunciation": " suffix  i  ng ",
          "ambiguity": 1,
          "what must come before": after_g_no_g,
-         "steno theory": ""}],
+         "theory": ""}
+    ],
+
 
     "gt": [
-        # {"description": "-GT for -ght",
-        # "spelling": "ght",
-        # "pronunciation": " t ",
-        # "ambiguity": 0,
-        # "what must come before": A_to_l_,
-        # "steno theory": " (Theory: Phoenix)"},
-
-        {"description": "-GT for -xt",
+        {"chord": "-GT",
+         "description": "xt",
          "spelling": "xt",
          "pronunciation": " k  s  t ",
          "ambiguity": 0,
          "what must come before": A_to_l_,
-         "steno theory": " (Theory: StenEd)"},
+         "theory": "StenEd"},
     ],
 
+
     "gs": [
-        {"description": "-GS for tion",
+        {"chord": "-GS",
+         "description": "tion",
          "spelling": "tion",
          "pronunciation": "( suffix )? sh ( suffix )? n ",
          "ambiguity": 0,
          "what must come before": A_to_l_,
-         "steno theory": " (Theory: I think StenEd?)"},
+         "theory": "StenEd"},
 
-        {"description": "-GS for sion",
+        {"chord": "-GS",
+         "description": "sion",
          "spelling": "s?sion",  # double s for accession
          "pronunciation": "( suffix )? (zh|sh|sh/zh) ( suffix )? n ",
          "ambiguity": 0,
          "what must come before": A_to_l_,
-         "steno theory": " (Theory: I think StenEd?)"},
+         "theory": "StenEd"},
 
-        {"description": "-GS for cian",
+        {"chord": "-GS",
+         "description": "cian",
          "spelling": "cian",
          "pronunciation": " s ( suffix )? y  @  n ",  # beautician isn't with a suffix
          "ambiguity": 0,
          "what must come before": A_to_l_,
-         "steno theory": " (Theory: I think StenEd?)"}],
+         "theory": "StenEd"}
+    ],
 
-    # {"description": "-GS for sion",
-    # "spelling": "deion", #listen I don't make the rules I just write them
-    # "pronunciation": " zh ( suffix )? n ",
-    # "ambiguity": 0,
-    # "what must come before": A_to_l_,
-    # "steno theory": " (Theory: I think StenEd?)"}],
 
     "t": [
-        {"description": "-T for t",
+        {"chord": "-T",
+         "description": "-T for t",
          "spelling": "tt?e?",
          "pronunciation": " t ",
          "ambiguity": 0,
          "what must come before": A_to_g_,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-T for final dt",
+        {"chord": "-T",
+         "description": "final dt pronounced t",
          "spelling": "dt$",
          "pronunciation": " t ",
          "ambiguity": 0,
          "what must come before": A_to_g_,
-         "steno theory": " (Theory: Harri)"},
+         "theory": "Harri"},
 
-        {"description": "-T for t even though it's pronounced with an sh sound",
+        {"chord": "-T",
+         "description": "t pronounced sh",
          "spelling": "tt?e?",
          "pronunciation": " sh ",
          "ambiguity": 2,  # so it doesn't win against abtentious
          "what must come before": A_to_g_,
-         "steno theory": ""}],
+         "theory": ""}
+    ],
+
 
     "*t": [
-        {"description": "*T for th",
+        {"chord": "*T",
+         "description": "th",
          "spelling": "the?",
          "pronunciation": " \[?(th|dh|dh/th)\]? ",
          "ambiguity": 1,  # giving it a 1 for personal reasons lol
          "what must come before": A_to_g_no_asterisk,
-         "steno theory": " (Theory: StenEd)"},
+         "theory": "StenEd"},
 
-        {"description": "*T for -th suffix",
+        {"chord": "*T",
+         "description": "suffix -th",
          "spelling": "the?",
          "pronunciation": " suffix  \[?(th|dh|dh/th)\]? ",
          "ambiguity": 1,  # giving it a 1 for personal reasons lol
          "what must come before": A_to_g_no_asterisk,
-         "steno theory": " (Theory: StenEd?)"},
+         "theory": "StenEd?"},
     ],
 
+
     "ts": [
-        {"description": "-TS for t + s (when it's not a plural!)",
+        {"chord": "-TS",
+         "description": "t + s",
          "spelling": "tt?e?s",
          "pronunciation": " t  s ",
          "ambiguity": 0,
          "what must come before": A_to_g_,
-         "steno theory": ""}],
+         "theory": ""}
+    ],
+
 
     "*td": [
-        {"description": "*TD for dth",
+        {"chord": "*TD",
+         "description": "dth",
          "spelling": "dthe?",
          "pronunciation": " (t|d)  (th|dh|dh/th) ",
          "ambiguity": 1,  # giving it a 1 for personal reasons lol
          "what must come before": A_to_g_no_asterisk,
-         "steno theory": " (Theory: StenEd)"},
+         "theory": "StenEd"},
 
         # worthy
-        {"description": "*T for th, overlaid with *D for y",
-         "spelling": "th(y|i)",
+        {"chord": "*TD",
+         "description": "th + y",
+         "spelling": "th(y|ie?)",
          "pronunciation": " (th|dh) ( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 2,
          "what must come before": A_to_g_no_asterisk,
-         "steno theory": " (Theory: Harri?)"}],
+         "theory": "Harri?"}
+    ],
 
-    # "/-s":[
-    #    {"description": "-S for plurals",
-    #     "spelling": "s",
-    #     "pronunciation": "( (suffix) ) z ",
-    #     "ambiguity": 1,
-    #     "what must come before": A_to_z,
-    #     "steno theory": ""}],
 
     "s": [
-        {"description": "-S for se or ss",
-         "spelling": "s(s|e)",  # actresses?"
+        {"chord": "-S",
+         "description": "se",
+         "spelling": "se",  # actresses?"
          "pronunciation": " (s|z) ",
          "ambiguity": 0,
-         # cyclops
          "what must come before": A_to_t_,  # A_to_t_no_g_end, #no idea, this just feels right. or maybe A_to_t_
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-S for s on its own immediately following a vowel",
+        {"chord": "-S",
+         "description": "solo s following a vowel", #cyclops
          "spelling": "s",
          "pronunciation": " s ",
          "ambiguity": 0,
-         # cyclops
          "what must come before": A_to_u_or__,  # dis
-         "steno theory": " (Theory: cyclops with a -Z)"},
+         "theory": "Harri?"},
 
-        {"description": "-S for s on its own immediately following a vowel (I don't know if you voice it or not)",
+        {"chord": "-S",
+         "description": "solo s following a vowel (maybe voiced)",
          "spelling": "s",
          "pronunciation": " z/s ",
          "ambiguity": 0,
-         # cyclops
+         # cyclops with a z
          "what must come before": A_to_u_or__,  # dis
-         "steno theory": " (Theory: cyclops with a -Z)"},
+         "theory": ""},
 
-        # {"description": "-Z for unvoiced s",
-        # "spelling": "s",
-        # "pronunciation": " s ",
-        # "ambiguity": 0,
-        # "what must come before": r_to_t__, #no idea, this just feels right
-        # "steno theory": ""},
-
-        {"description": "-S for unvoiced s with silent t",
+        {"chord": "-S",
+         "description": "s silent t",
          "spelling": "ss?te?",
          "pronunciation": " s ",
          "ambiguity": 0,
          "what must come before": A_to_t_no_g_end,  # no idea, this just feels right
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-S for s with silent w",  # answer
+        {"chord": "-S",
+         "description": "s silent w",  # answer
          "spelling": "sw",
          "pronunciation": " s ",
          "ambiguity": 0,
          "what must come before": A_to_t_no_g_end,
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-S for unvoiced c",
+        {"chord": "-S",
+         "description": "ss",
+         "spelling": "ss",  # actresses?"
+         "pronunciation": " (s|z) ",
+         "ambiguity": 1,
+         # cyclops
+         "what must come before": A_to_t_,  # A_to_t_no_g_end, #no idea, this just feels right. or maybe A_to_t_
+         "theory": ""},
+
+        {"chord": "-S",
+         "description": "c pronounced s",
          "spelling": "s?ce?",
          "pronunciation": " s ",
          "ambiguity": 1,
          "what must come before": A_to_t_no_g_end,  # maybe I'm traumatised from ABGS/HRERPL/TER → accelerometer
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-S for maybe voiced s",
+        {"chord": "-S",
+         "description": "s maybe voiced",
          "spelling": "ss?e?",
          "pronunciation": " z/s ",
          "ambiguity": 1,
          "what must come before": A_to_t,  # no _ I think?
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-S for voiced s",
+        {"chord": "-S",
+         "description": "s pronounced z",
          "spelling": "ss?e?",
          "pronunciation": " z ",
          "ambiguity": 1,
          "what must come before": A_to_t,  # no _ I think?
-         "steno theory": ""},
+         "theory": ""},
 
-        {"description": "-S for plurals",
+        {"chord": "-S",
+         "description": "suffix -s",
          "spelling": "s",
          "pronunciation": "( (suffix) ) (s|z|z/s) ",
          "ambiguity": 1,
          "what must come before": A_to_g_yes_t,
-         "steno theory": ""}],
+         "theory": ""}
+    ],
+
 
     "*s": [
-        {"description": "*S for 's",
+        {"chord": "*S",
+         "description": "suffix -'s",
          "spelling": "'s",
          "pronunciation": " suffix  (s|z|z/s) ",
          "ambiguity": 2,
          "what must come before": A_to_t_no_asterisk,
-         "steno theory": " (Theory:  Josiah)"},
+         "theory": "Josiah"},
 
-        # {"description": "*S for voiced s",
-        # "spelling": "ss?e?",
-        # "pronunciation": " z ",
-        # "ambiguity": 0,
-        # "what must come before": A_to_t_no_asterisk,
-        # "steno theory": " (Theory: Harri?)"},
-
-        {"description": "*S for suffix -ise",
+        {"chord": "*S",
+         "description": "suffix -ise",
          "spelling": "ise?",
          "pronunciation": " suffix  ae  z ",
          "ambiguity": 1,
          "what must come before": A_to_t_no_asterisk,
-         "steno theory": " (Theory: Harri?)"},
+         "theory": "Harri?"},
 
-        {"description": "*S for st after a -G or -T",
+        {"chord": "*S",
+         "description": "st (following -G or -T)",
          "spelling": "st",
          "pronunciation": " s  t ",
          "ambiguity": 1,
          "what must come before": ends_in_b_to_t_no_asterisk,
-         "steno theory": ""}
+         "theory": ""}
     ],
 
     "/-d": [
-        {"description": "-D for -ed",
+        {"chord": "/-D",
+         "description": "suffix -ed",
          "spelling": "ed",
          "pronunciation": " suffix ( i7 )? (d|t) ",
          "ambiguity": 0,
          "what must come before": yes_s,
-         "steno theory": ""}],
+         "theory": ""}],
 
     "d": [
-        {"description": "-D for d",
+        {"chord": "D",
+         "description": "-D for d",
          "spelling": "dd?e?",
          "pronunciation": " d ",
          "ambiguity": 0,
          "what must come before": A_to_t_,
-         "steno theory": ""},
+         "theory": ""},
 
         {"description": "-D for d",
          "spelling": "dd?e?",
@@ -3222,13 +3240,6 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "what must come before": A_to_t,
          "steno theory": ""}],
-
-    # {"description": "folding -D for -ed",
-    # "spelling": "e?d",
-    # "pronunciation": " suffix ( i7 )? (d|t) ",
-    # "ambiguity": 1,
-    # "what must come before": A_to_z_no_d,
-    # "steno theory": ""}],
 
     "*d": [
         {"description": "*D for y",
