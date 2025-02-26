@@ -28,7 +28,7 @@ def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords)
     return word
 
 
-with (open("pronunciation_data/sample_of_the_unilex.txt", "r", encoding="utf-8")) as txt_dictionary:
+with (open("pronunciation_data/big.txt", "r", encoding="utf-8")) as txt_dictionary:
     outlines = txt_dictionary.readlines()
 
 # for one at a time (not multiprocessing), uncomment the next two lines

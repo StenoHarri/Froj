@@ -108,7 +108,15 @@ def get_response( user_input:str) -> str:
             response+= (f"\n{thingie}")
             if complexity == 'complex':
                 for chord in entry['explanation']:
-                    response+= f"\n\t{chord}"
+                    left_spaces = ''
+                    right_spaces = ''
+                    for space_to_add in range(10 - len(chord['theory'])):
+                        left_spaces+=' '
+
+                    for space_to_add in range(10 - len(chord['chord'])):
+                        right_spaces+=' '
+
+                    response+= f"\n{chord['theory']}{left_spaces}{chord['chord']}{right_spaces}{chord['description']}"
             response+= f"```"
 
         return response

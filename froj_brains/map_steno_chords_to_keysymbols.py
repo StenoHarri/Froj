@@ -8,7 +8,7 @@ Making the right hand lowercase so I don't have to worry about left P vs right P
 
 import re
 
-from froj_brains.chord_definitions import custom_alphabet
+from Froj_theories.Froj_Harri_theory.chord_definitions import custom_alphabet
 
 order_map = {char: index for index, char in enumerate(custom_alphabet)}
 def custom_sort_key(word):

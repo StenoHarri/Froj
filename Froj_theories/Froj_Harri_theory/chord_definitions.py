@@ -228,7 +228,8 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR,
          "theory": ""},
 
-        {"description": "ignore y sound that I don't have in my accent",
+        {"chord": "",
+         "description": "ignore y sound that I don't have in my accent",
          "spelling": "",  # bolognese
          "pronunciation": " \[y1\] ",
          "ambiguity": 0,
@@ -1036,8 +1037,7 @@ steno_chords_and_their_meanings = {
          "spelling": "rr?",
          "pronunciation": " r ",
          "ambiguity": 0,
-         "what must come before": upToH_not_just_s_or_sh_not_KWH,  # added up to H since THRU
-         # personal opinion, but SR → s + r is ugly
+         "what must come before": upToH_not_just_s_or_sh_not_KWH,  # added up to H since THRU # personal opinion, but SR → s + r is ugly
          "theory": ""},
 
         {"chord": "R",
@@ -2927,7 +2927,8 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_l_not_just_b,
          "theory": ""},
 
-        {"description": "g pronounced j (following an -L)",
+        {"chord": "-G",
+         "description": "g pronounced j (following an -L)",
          "spelling": "gg?e?",
          "pronunciation": " jh ",
          "ambiguity": 0,
