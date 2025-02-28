@@ -50,17 +50,221 @@ def order_outlines(sorted_outlines):
             ordered_outlines.append({'raw steno':outline['raw steno'][1:].upper(),'ambiguity':outline['ambiguity'], 'explanation':outline['explanation']})
 
     return ordered_outlines
-
-best_word_lookup = {}
+"""
+{
+  "word": "aachen:",
+  "word_class": "NNP",
+  "pronunciation": " starting_root  aa  k  e5  n ",
+  "word_boundaries": "aachen",
+  "frequency": "11",
+  "number of entries": 3,
+  "steno stuff": {
+   "/A/KWHA/Kepb": {
+    "raw steno outline": "/A/KWHA/Kepb",
+    "ambiguity": 4,
+    "explanation": [
+     {
+      "theory": "",
+      "chord": "A",
+      "description": "short a"
+     },
+     {
+      "theory": "",
+      "chord": "/",
+      "description": ""
+     },
+     {
+      "theory": "Harri",
+      "chord": "KWH",
+      "description": "pretend consonant"
+     },
+     {
+      "theory": "",
+      "chord": "A",
+      "description": "silent a"
+     },
+     {
+      "theory": "",
+      "chord": "/",
+      "description": ""
+     },
+     {
+      "theory": "",
+      "chord": "K",
+      "description": "ch pronounced k"
+     },
+     {
+      "theory": "?",
+      "chord": "E",
+      "description": "e"
+     },
+     {
+      "theory": "",
+      "chord": "-PB",
+      "description": "n"
+     }
+    ]
+   },
+   "/A/KWHAbg/KWHepb": {
+    "raw steno outline": "/A/KWHAbg/KWHepb",
+    "ambiguity": 6,
+    "explanation": [
+     {
+      "theory": "",
+      "chord": "A",
+      "description": "short a"
+     },
+     {
+      "theory": "",
+      "chord": "/",
+      "description": ""
+     },
+     {
+      "theory": "Harri",
+      "chord": "KWH",
+      "description": "pretend consonant"
+     },
+     {
+      "theory": "",
+      "chord": "A",
+      "description": "silent a"
+     },
+     {
+      "theory": "?",
+      "chord": "-BG",
+      "description": "ch pronounced k"
+     },
+     {
+      "theory": "",
+      "chord": "/",
+      "description": ""
+     },
+     {
+      "theory": "Harri",
+      "chord": "KWH",
+      "description": "pretend consonant"
+     },
+     {
+      "theory": "?",
+      "chord": "E",
+      "description": "e"
+     },
+     {
+      "theory": "",
+      "chord": "-PB",
+      "description": "n"
+     }
+    ]
+   },
+   "/A/KWHAbg/Hepb": {
+    "raw steno outline": "/A/KWHAbg/Hepb",
+    "ambiguity": 4,
+    "explanation": [
+     {
+      "theory": "",
+      "chord": "A",
+      "description": "short a"
+     },
+     {
+      "theory": "",
+      "chord": "/",
+      "description": ""
+     },
+     {
+      "theory": "Harri",
+      "chord": "KWH",
+      "description": "pretend consonant"
+     },
+     {
+      "theory": "",
+      "chord": "A",
+      "description": "silent a"
+     },
+     {
+      "theory": "",
+      "chord": "-BG",
+      "description": "c pronounced k"
+     },
+     {
+      "theory": "",
+      "chord": "/",
+      "description": ""
+     },
+     {
+      "theory": "?",
+      "chord": "H",
+      "description": "silent h"
+     },
+     {
+      "theory": "?",
+      "chord": "E",
+      "description": "e"
+     },
+     {
+      "theory": "",
+      "chord": "-PB",
+      "description": "n"
+     }
+    ]
+   }
+  }
+ },
+"""
+word_lookup = {}
 all_word_lookup = {}
-plain_entry_lookup = {}
-verbose_entry_lookup = {}
+entry_lookup = {}
+plover_lookup = {}
+
+
+
+def ordered_by_length(dictionary):
+    ordered_dictionary = {}
+    #print(dictionary)
+
+
+    # Sort the keys by ambiguity
+    ordered_by_ambiguity = sorted(dictionary['steno stuff'].items(), key=lambda item: item[1]['ambiguity'])
+
+    # Sort the keys by the number of forward slashes in each key
+    ordered_by_length = sorted(ordered_by_ambiguity, key=lambda item: item[0].count('/')) #, reverse=True
+
+    return ordered_by_length
+
+def create_lookups(outlines):
+
+    best_outlines = {}
+    all_outlines = {}
+    entries = {}
+
+    previous_ambiguity = 100
+
+    for outline in outlines:
+
+        outline = outline[1]
+
+        outline_length = outline['raw steno outline'].count("/")
+
+        if outline['ambiguity'] < previous_ambiguity:
+            best_outlines['outline'] = {
+                    'raw steno': outline['raw steno outline'],
+                    'ambiguity': outline['ambiguity'],
+                    'explanation': outline['explanation']}
+            previous_ambiguity=outline[outline]['ambiguity']
+
+    
+    return best_outlines
+
 
 print('generating dictionaries')
 for word in words:
 
-    ordered_outlines = (sort_word_outlines(word))
 
+
+    ordered_outlines = (ordered_by_length(word))
+
+    word_lookup = create_lookups(ordered_outlines)
+
+    """
     all_word_lookup[word['word']] = {'text':
                             f"showing all {len(ordered_outlines)} out of {word['number of entries']} entries",
                             'entries': ordered_outlines}
@@ -71,6 +275,9 @@ for word in words:
     best_word_lookup[word['word']] = {'text':
                            f"showing the best {len(filtered_outlines)} out of {word['number of entries']} entries",
                            'entries': filtered_outlines}
+
+
+                           
 
 
     #print(f"\n\n\n{word}")
@@ -113,20 +320,40 @@ for word in words:
                 'explanation': explanation}
             plain_entry_lookup[outline] = translation
 
-
+"""
 
 print('writing best lookups')
-with open("Froj_theories/Froj_Harri_theory/best_of_word_to_entry_lookup.json", "w") as outfile:
-        json.dump(best_word_lookup, outfile, indent=1)
+with open("Froj_theories/Froj_Harri_theory/word_lookup.json", "w") as outfile:
+        json.dump(word_lookup, outfile, indent=1)
 
 print('writing all lookups')
-with open("Froj_theories/Froj_Harri_theory/all_word_to_entry_lookup.json", "w") as outfile:
+with open("Froj_theories/Froj_Harri_theory/all_word_lookup.json", "w") as outfile:
         json.dump(all_word_lookup, outfile, indent=1)
 
 print('writing normal entries')
 with open("Froj_theories/Froj_Harri_theory/Froj_Plover_dictionary.json", "w") as outfile:
-        json.dump(plain_entry_lookup, outfile, indent=1)
+        json.dump(plover_lookup, outfile, indent=1)
 
 print('writing verbose entry to word lookup')
 with open("Froj_theories/Froj_Harri_theory/Froj_verbose_lookup.json", "w") as outfile:
-        json.dump(verbose_entry_lookup, outfile, indent=1)
+        json.dump(entry_lookup, outfile, indent=1)
+
+
+
+"""
+try:
+            # If the thing I'm going to add is less ambiguous, add it
+            if best_outlines[f"length {outline_length}"]['ambiguity'] > word['steno stuff'][outline]['ambiguity']:
+                best_outlines[f"length {outline_length}"] = {
+                    'raw steno': outline,
+                    'ambiguity': word['steno stuff'][outline]['ambiguity'],
+                    'explanation': word['steno stuff'][outline]['explanation']}
+
+        except KeyError:
+            best_outlines[f'length {outline_length}'] = {
+                'raw steno': outline,
+                'ambiguity': word['steno stuff'][outline]['ambiguity'],
+                'explanation': word['steno stuff'][outline]['explanation']}
+
+
+"""
