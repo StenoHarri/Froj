@@ -57,52 +57,86 @@ def get_response( user_input:str) -> str:
     elif type_of_lookup == 'word lookup' and f"{word_to_find}:" in lookup['word_lookup']:
         return f"hello"
 
-        response = ""
-        response+= f'found `{word_to_find}` in Tad theory'
-
-
-
-        if best_words[word_to_find+':']['text'] == "showing the best 0 out of 0 entries":
-            return "Sorry, Harri hasn't written all the rules to make that word. Removing suffixes *might* help"
-
-        response+= f"\n{best_words[word_to_find+':']['text']}"
-
-        for entry in reversed(best_words[word_to_find+':']['entries']):
-            response+=f"```"
-
-            thingie = (entry['raw steno']
-                   .replace('Z*','*Z')
-                   .replace('D*','*D')
-                   .replace('S*','*S')
-                   .replace('T*','*T')
-                   .replace('G*','*G')
-                   .replace('L*','*L')
-                   .replace('B*','*B')
-                   .replace('P*','*P')
-                   .replace('R*','*R')
-                   .replace('F*','*F')
-                   .replace('U*','*U')
-                   .replace('E*','*E')
-                   .replace('-*','*'))
-
-            response+= (f"\n{thingie}")
-            if complexity == 'complex':
-                for chord in entry['explanation']:
-                    left_spaces = ''
-                    right_spaces = ''
-                    for space_to_add in range(10 - len(chord['theory'])):
-                        left_spaces+=' '
-
-                    for space_to_add in range(10 - len(chord['chord'])):
-                        right_spaces+=' '
-
-                    response+= f"\n{chord['theory']}{left_spaces}{chord['chord']}{right_spaces}{chord['description']}"
-            response+= f"```"
-
-        return response
 
     else:
         return "```ANSI\n\033[31mHello\033[0mSorry, I'm missing the pronunciation data for that word :(```"
 
 
 
+"""
+{
+ "a": {
+  "ambiguity": {
+   "0": [
+    {
+     "raw steno outline": "AEU",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "AEU",
+       "description": "long a"
+      }
+     ]
+    },
+    {
+     "raw steno outline": "A",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+"""
+
+
+"""
+{
+ "AEU": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "a",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "AEU",
+       "description": "long a"
+      }
+     ]
+    }
+   ],
+   "1": [
+    {
+     "spelling": "et",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "AEU",
+       "description": "et pronounced long a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "a",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+"""
