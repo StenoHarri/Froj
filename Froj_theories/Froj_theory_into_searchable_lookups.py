@@ -8,48 +8,7 @@ sorted_words = {}
 
 custom_alphabet = "QSTKPWHRAO-*eufrpblgtsdz_"
 
-def sort_word_outlines(word):
-    sorted_outlines = {}
 
-    for outline in word['steno stuff']:
-        outline_length = outline.count("/")
-
-        try:
-            # If the thing I'm going to add is less ambiguous, add it
-            if sorted_outlines[f"length {outline_length}"]['ambiguity'] > word['steno stuff'][outline]['ambiguity']:
-                sorted_outlines[f"length {outline_length}"] = {
-                    'raw steno': outline,
-                    'ambiguity': word['steno stuff'][outline]['ambiguity'],
-                    'explanation': word['steno stuff'][outline]['explanation']}
-
-        except KeyError:
-            sorted_outlines[f'length {outline_length}'] = {
-                'raw steno': outline,
-                'ambiguity': word['steno stuff'][outline]['ambiguity'],
-                'explanation': word['steno stuff'][outline]['explanation']}
-
-    # Sort the dictionary by the length in ascending order, shortest outline first
-    # Then sort by ambiguity level for outlines of the same length
-    sorted_outlines = {key: value for key, value in
-                       sorted(sorted_outlines.items(), key=lambda x: (int(x[0].split()[1]), x[1]['ambiguity']), reverse=False)}
-
-    return sorted_outlines
-
-def order_outlines(sorted_outlines):
-    """
-    essentially I've already got them ordered, I'm just getting rid of entries where a shorter stroke is less ambiguous
-    """
-    ordered_outlines = []
-
-
-    least_ambiguous_so_far = 1000
-
-    for outline in sorted_outlines.values():
-        if outline['ambiguity'] < least_ambiguous_so_far:
-            least_ambiguous_so_far = outline['ambiguity']
-            ordered_outlines.append({'raw steno':outline['raw steno'][1:].upper(),'ambiguity':outline['ambiguity'], 'explanation':outline['explanation']})
-
-    return ordered_outlines
 """
 {
   "word": "aachen:",
@@ -230,114 +189,92 @@ def ordered_by_length(dictionary):
 
     return ordered_by_length
 
-def create_lookups(outlines):
+def create_lookups(spelling, ordered_outlines_for_this_particular_word, best_outlines, all_outlines, all_entries, resolved_entries):
 
-    best_outlines = {}
-    all_outlines = {}
-    entries = {}
+
 
     previous_ambiguity = 100
 
-    for outline in outlines:
+
+    for outline in ordered_outlines_for_this_particular_word:
 
         outline = outline[1]
 
-        outline_length = outline['raw steno outline'].count("/")
+        raw_steno = outline['raw steno outline'][1:]
+        ambiguity = outline['ambiguity']
+        explanation = outline['explanation']
+
+        #outline_length = outline['raw steno outline'].count("/")
 
         if outline['ambiguity'] < previous_ambiguity:
-            best_outlines['outline'] = {
-                    'raw steno': outline['raw steno outline'],
-                    'ambiguity': outline['ambiguity'],
-                    'explanation': outline['explanation']}
-            previous_ambiguity=outline[outline]['ambiguity']
+            best_outlines[spelling]= {
+                raw_steno: {
+                'ambiguity': ambiguity,
+                'explanation': explanation}}
+            previous_ambiguity=outline['ambiguity']
 
-    
-    return best_outlines
+
+        #chance for words with the same spelling to overwrite stuff here :(
+        all_outlines[spelling]= {
+            raw_steno: {
+            'ambiguity': ambiguity,
+            'explanation': explanation}}
+
+        #if it exists, add it alongside any with the same ambiguity
+        if raw_steno in all_entries:
+            if ambiguity in all_entries[raw_steno]:
+
+                if not {spelling:explanation} in all_entries[raw_steno][ambiguity]: #some words have the same spelling and the same outline, like a
+                    all_entries[raw_steno][ambiguity].append({spelling:explanation})
+            else:
+                all_entries[raw_steno][ambiguity] = [{spelling:explanation}]
+
+        else:
+            #at the moment there's no resolving, it's first come come come
+            resolved_entries[raw_steno] = spelling
+            all_entries[raw_steno] = {ambiguity: [{spelling:explanation}]}
+
+    return best_outlines, all_outlines, all_entries, resolved_entries
 
 
 print('generating dictionaries')
+
+
+#making these outside of the loop since they'll interact with each other (notify you of conflicts!!!)
+
+#this could be a dictionary of dictionaries, but I'mma stick to three separate ones
+best_outlines = {}
+all_outlines = {}
+all_entries = {}
+resolved_entries = {} #not for the Discord bot, but for me to have on Plover
+
+
 for word in words:
 
+    #some words have the same spelling, but I'd consider them different words, like point and point
+    #I'm prepared to just suck it up and lose that data :(
+    spelling = word['word'].split(":")[0]
 
+    ordered_outlines_for_this_particular_word = (ordered_by_length(word))
 
-    ordered_outlines = (ordered_by_length(word))
+    best_outlines, all_outlines, all_entries, resolved_entries = create_lookups(spelling, ordered_outlines_for_this_particular_word, best_outlines, all_outlines, all_entries, resolved_entries)
 
-    word_lookup = create_lookups(ordered_outlines)
-
-    """
-    all_word_lookup[word['word']] = {'text':
-                            f"showing all {len(ordered_outlines)} out of {word['number of entries']} entries",
-                            'entries': ordered_outlines}
-
-
-    filtered_outlines = order_outlines(ordered_outlines)
-
-    best_word_lookup[word['word']] = {'text':
-                           f"showing the best {len(filtered_outlines)} out of {word['number of entries']} entries",
-                           'entries': filtered_outlines}
-
-
-                           
-
-
-    #print(f"\n\n\n{word}")
-    translation = word['word'].split(":")[0]
-    for outline in word['steno stuff']:
-        ambiguity = word['steno stuff'][outline]['ambiguity']
-        explanation = word['steno stuff'][outline]['explanation']
-        outline = (outline[1:]
-                   .replace('z*','*z')
-                   .replace('d*','*d')
-                   .replace('s*','*s')
-                   .replace('t*','*t')
-                   .replace('g*','*g')
-                   .replace('l*','*l')
-                   .replace('b*','*b')
-                   .replace('p*','*p')
-                   .replace('r*','*r')
-                   .replace('f*','*f')
-                   .replace('u*','*u')
-                   .replace('e*','*e')
-                   .replace('-*','*')
-                   .upper()
-                   )
-
-
-
-        if outline in plain_entry_lookup:
-            if ambiguity < verbose_entry_lookup[outline]['ambiguity']:
-                verbose_entry_lookup[outline] = {
-                    'ambiguity': ambiguity,
-                    'translation': translation,
-                    'explanation': explanation}
-
-                plain_entry_lookup[outline] = translation
-            
-        else:
-            verbose_entry_lookup[outline] = {
-                'ambiguity': ambiguity,
-                'translation': translation,
-                'explanation': explanation}
-            plain_entry_lookup[outline] = translation
-
-"""
 
 print('writing best lookups')
-with open("Froj_theories/Froj_Harri_theory/word_lookup.json", "w") as outfile:
-        json.dump(word_lookup, outfile, indent=1)
+with open("Froj_theories/Froj_Harri_theory/best_outlines.json", "w") as outfile:
+        json.dump(best_outlines, outfile, indent=1)
 
 print('writing all lookups')
-with open("Froj_theories/Froj_Harri_theory/all_word_lookup.json", "w") as outfile:
-        json.dump(all_word_lookup, outfile, indent=1)
-
-print('writing normal entries')
-with open("Froj_theories/Froj_Harri_theory/Froj_Plover_dictionary.json", "w") as outfile:
-        json.dump(plover_lookup, outfile, indent=1)
+with open("Froj_theories/Froj_Harri_theory/all_outlines.json", "w") as outfile:
+        json.dump(all_outlines, outfile, indent=1)
 
 print('writing verbose entry to word lookup')
-with open("Froj_theories/Froj_Harri_theory/Froj_verbose_lookup.json", "w") as outfile:
-        json.dump(entry_lookup, outfile, indent=1)
+with open("Froj_theories/Froj_Harri_theory/all_entries.json", "w") as outfile:
+        json.dump(all_entries, outfile, indent=1)
 
+print('writing normal entries')
+with open("Froj_theories/Froj_Harri_theory/resolved_entries.json", "w") as outfile:
+        json.dump(resolved_entries, outfile, indent=1)
 
 
 """
