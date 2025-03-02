@@ -4,16 +4,13 @@ import re
 
 lookup = {}
 
-with open("Froj_theories/Froj_Harri_theory/best_of_word_to_entry_lookup.json", "r") as f:
-    lookup['word_lookup'] = json.load(f)
+with open("Froj_theories/Froj_Harri_theory/all_outlines.json", "r") as f:
+    lookup['word lookup'] = json.load(f)
 
-with open("Froj_theories/Froj_Harri_theory/Froj_verbose_lookup.json", "r") as f:
-    lookup['entry_lookup'] = json.load(f)
-
+with open("Froj_theories/Froj_Harri_theory/all_entries.json", "r") as f:
+    lookup['entry lookup'] = json.load(f)
 
 is_raw_steno = re.compile(r'^(S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)(/S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)*$')
-
-
 
 def get_annotation_level(word_to_find):
 
@@ -22,7 +19,6 @@ def get_annotation_level(word_to_find):
 
     else: # it must be :>
         return word_to_find.replace(":>","").strip(), False
-
 
 def get_response( user_input:str) -> str:
 
@@ -40,26 +36,19 @@ def get_response( user_input:str) -> str:
         word_to_find = word_to_find.lower()
 
 
-    
-
 
 
     if 'hello' in word_to_find:
         return f"Hi friend (ΘoΘ )"
     elif 'froj' in word_to_find:
         return f"That's me! How can I help?"
-    elif 'shrimp' in word_to_find:
-        return "🦐"
-    elif 'crazy' in word_to_find:
-        return "I was crazy once"
-    elif type_of_lookup == 'entry lookup' and word_to_find in lookup['entry_lookup']:
-        return f"hi"
-    elif type_of_lookup == 'word lookup' and f"{word_to_find}:" in lookup['word_lookup']:
-        return f"hello"
-
+    elif type_of_lookup == 'entry lookup' and word_to_find in lookup['entry lookup']:
+        return f"{lookup['entry lookup'][word_to_find]}"
+    elif type_of_lookup == 'word lookup' and word_to_find in lookup['word lookup']:
+        return f"{lookup['word lookup'][word_to_find]}"
 
     else:
-        return "```ANSI\n\033[31mHello\033[0mSorry, I'm missing the pronunciation data for that word :(```"
+        return "Sorry, I'm missing the pronunciation data for that word :("
 
 
 
