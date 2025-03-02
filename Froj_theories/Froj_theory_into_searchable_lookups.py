@@ -170,7 +170,6 @@ custom_alphabet = "QSTKPWHRAO-*eufrpblgtsdz_"
  },
 """
 word_lookup = {}
-all_word_lookup = {}
 entry_lookup = {}
 plover_lookup = {}
 
@@ -189,12 +188,7 @@ def ordered_by_length(dictionary):
 
     return ordered_by_length
 
-def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries, resolved_entries):
-
-
-
-    previous_ambiguity = 100
-
+def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries):
 
     for outline in ordered_outlines_for_this_particular_word:
 
@@ -222,6 +216,7 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
         if spelling in all_outlines:
             if ambiguity in all_outlines[spelling]['ambiguity']:
 
+                #I used because the issue is that "In Python, dictionaries are compared by reference, so two dictionaries with the same keys and values are not considered equal unless they are the same object."
                 if not any(d['raw steno outline'] == raw_steno and d['explanation'] == explanation for d in all_outlines[spelling]['ambiguity'][ambiguity]):
 
                     all_outlines[spelling]['ambiguity'][ambiguity].append(
@@ -254,12 +249,11 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
                      'explanation': explanation}]
         else:
             #no entry exists yet
-            resolved_entries[raw_steno] = spelling
             all_entries[raw_steno] = {'ambiguity':{ambiguity: [
                 {'spelling': spelling,
                  'explanation': explanation}]}}
 
-    return all_outlines, all_entries, resolved_entries
+    return all_outlines, all_entries
 
 
 print('generating dictionaries')
@@ -270,8 +264,6 @@ print('generating dictionaries')
 #this could be a dictionary of dictionaries, but I'mma stick to three separate ones
 all_outlines = {}
 all_entries = {}
-resolved_entries = {} #not for the Discord bot, but for me to have on Plover
-
 
 for word in words:
 
@@ -281,7 +273,24 @@ for word in words:
 
     ordered_outlines_for_this_particular_word = (ordered_by_length(word))
 
-    all_outlines, all_entries, resolved_entries = create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries, resolved_entries)
+    all_outlines, all_entries = create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries)
+
+
+print('writing resolved entries for Plover')
+resolved_entries = {} #not for the Discord bot, but for me to have on Plover
+for entry in all_entries:
+
+    smallest_ambiguity = 100 #there's a chance there's no entries, so I'm doing it this way just to be safe
+
+    for I_dont_need_this in all_entries[entry]: #this is bad habit since it's not a given that ambiguity is the only data I'll have under the word
+
+        for ambiguity in all_entries[entry]['ambiguity']:
+
+            if ambiguity < smallest_ambiguity:
+                smallest_ambiguity = ambiguity
+        
+        resolved_entries[entry] = all_entries[entry]['ambiguity'][smallest_ambiguity][0]['spelling']
+
 
 
 #print('writing best lookups')
