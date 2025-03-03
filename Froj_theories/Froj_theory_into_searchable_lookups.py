@@ -188,6 +188,7 @@ def ordered_by_length(dictionary):
 
     return ordered_by_length
 
+
 def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries):
 
     for outline in ordered_outlines_for_this_particular_word:
@@ -211,28 +212,42 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
         )
         ambiguity = outline['ambiguity']
         explanation = outline['explanation']
+        length = len(raw_steno.split('/'))
 
-        #chance for words with the same spelling to overwrite stuff here :(
+        # Chance for words with the same spelling to overwrite stuff here :(
         if spelling in all_outlines:
             if ambiguity in all_outlines[spelling]['ambiguity']:
 
-                #I used because the issue is that "In Python, dictionaries are compared by reference, so two dictionaries with the same keys and values are not considered equal unless they are the same object."
-                if not any(d['raw steno outline'] == raw_steno and d['explanation'] == explanation for d in all_outlines[spelling]['ambiguity'][ambiguity]):
+                # Fix the condition to check if the raw_steno and explanation exist under the current ambiguity and length
+                if not any(d['raw steno outline'] == raw_steno and d['explanation'] == explanation for d in all_outlines[spelling]['ambiguity'][ambiguity].get('number of strokes', {}).get(length, [])):
 
-                    all_outlines[spelling]['ambiguity'][ambiguity].append(
-                         {'raw steno outline': raw_steno,
-                          'explanation': explanation})
+                    # Check if there's already an entry with the same ambiguity and length
+                    if length in all_outlines[spelling]['ambiguity'][ambiguity].get('number of strokes', {}):
+                        # There's already at least one entry with the same ambiguity and length
+                        all_outlines[spelling]['ambiguity'][ambiguity]['number of strokes'][length].append(
+                            {'raw steno outline': raw_steno,
+                            'explanation': explanation})
+                    else:
+                        # Nothing with this ambiguity has this length
+                        all_outlines[spelling]['ambiguity'][ambiguity]['number of strokes'][length] = [
+                            {'raw steno outline': raw_steno,
+                            'explanation': explanation}]
+                else:
+                    # An entry with this raw_steno and explanation already exists under this ambiguity and length
+                    pass
 
             else:
-                #nothing with that ambiguity exists yet
-                all_outlines[spelling]['ambiguity'][ambiguity] = [
-                    {'raw steno outline': raw_steno,
-                     'explanation': explanation}]
+                # No ambiguity exists yet for this spelling
+                all_outlines[spelling]['ambiguity'][ambiguity] = {
+                    'number of strokes': {length: [{'raw steno outline': raw_steno,
+                                                    'explanation': explanation}]}}
         else:
-            #nothing with that spelling exists yet
-            all_outlines[spelling]={'ambiguity': {ambiguity: [
-                {'raw steno outline': raw_steno,
-                 'explanation': explanation}]}}
+            # No spelling exists yet
+            all_outlines[spelling] = {
+                'ambiguity': {ambiguity: {
+                    'number of strokes': {length: [{'raw steno outline': raw_steno,
+                                                    'explanation': explanation}]}}}
+        }
 
 
         #if it exists, add it alongside any with the same ambiguity
