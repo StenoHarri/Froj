@@ -60,11 +60,15 @@ def display_entries(entries, complexity):
 
 
 # Function to print the smallest stroke count per ambiguity level, ensuring more ambiguous strokes only show if shorter than previous ones
-def best_outlines(outlines, complexity):
+def best_outlines(spelling, outlines, complexity):
     output = ""
     ambiguity = outlines.get("ambiguity", {})
 
     number_of_best_entries = 0
+
+    total_number_of_entries = sum(
+        len(ambiguity[amb]["number of strokes"]) for amb in ambiguity
+    )
     
     # Sort ambiguity levels by their numeric value (e.g., "2", "5")
     sorted_ambiguities = sorted(ambiguity.keys(), key=int)
@@ -85,17 +89,14 @@ def best_outlines(outlines, complexity):
                 for entry in steno_entries:
                     raw_steno = entry['raw steno outline']
                     output += ("```Ansi\n\n")
-                    output += (f"{raw_steno}")
+                    output += (f"{raw_steno} → {spelling}")
 
                     if complexity:
                         for chord in entry['explanation']:
 
-                            if "/" in chord['chord']:
-                                linker = "┼"
-                            else:
-                                linker = "│"
+                            linker = " ┐ " if "/" in chord['chord'] else " │ "
 
-                            output += (f"\n\033[2;30m{chord['theory'].ljust(8)}\033[0m{chord['chord'].rjust(7)} {linker} {chord['description']}")
+                            output += (f"\n\033[2;30m{chord['theory'].ljust(8)}\033[0m{chord['chord'].rjust(7)}{linker}{chord['description']}")
 
                     output += ("```")
 
@@ -104,8 +105,7 @@ def best_outlines(outlines, complexity):
                     number_of_best_entries+=1
                     break  # Only print the smallest number of strokes for this ambiguity level
                 break  # Stop at the first entry (smallest strokes for this level)
-    output = f"Here's the best {number_of_best_entries}/ entries in Tad theory\n{output}"
-
+    output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries in Tad theory\n{output}"
 
     return output
 
@@ -113,7 +113,7 @@ def display_outlines(spelling, outlines, complexity):
     #this is the one where you give it English words
 
 
-    return best_outlines(outlines, complexity)
+    return best_outlines(spelling, outlines, complexity)
 
 
 
