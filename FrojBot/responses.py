@@ -46,6 +46,8 @@ def get_annotation_level(word_to_find: str) -> tuple:
 
 
 
+
+
 def display_entries(entries, complexity):
     #this is the one where you give it raw steno
 
@@ -57,16 +59,61 @@ def display_entries(entries, complexity):
     return entries
 
 
+# Function to print the smallest stroke count per ambiguity level, ensuring more ambiguous strokes only show if shorter than previous ones
+def best_outlines(outlines, complexity):
+    output = ""
+    ambiguity = outlines.get("ambiguity", {})
 
-def display_outlines(outlines, complexity):
+    number_of_best_entries = 0
+    
+    # Sort ambiguity levels by their numeric value (e.g., "2", "5")
+    sorted_ambiguities = sorted(ambiguity.keys(), key=int)
+
+    # Keep track of the smallest stroke count encountered
+    smallest_stroke_count = float('inf')  # Initialize to infinity, so the first stroke will always be considered
+    
+    for amb in sorted_ambiguities:
+        entries = ambiguity[amb]["number of strokes"]
+        
+        # Sort the stroke counts for the ambiguity level to pick the smallest first
+        sorted_stroke_counts = sorted(entries.keys(), key=int)
+        
+        for stroke_count in sorted_stroke_counts:
+            # Only consider this stroke if it's smaller than the smallest stroke count so far
+            if int(stroke_count) < smallest_stroke_count:
+                steno_entries = entries[stroke_count]
+                for entry in steno_entries:
+                    raw_steno = entry['raw steno outline']
+                    output += ("```Ansi\n\n")
+                    output += (f"{raw_steno}")
+
+                    if complexity:
+                        for chord in entry['explanation']:
+
+                            if "/" in chord['chord']:
+                                linker = "┼"
+                            else:
+                                linker = "│"
+
+                            output += (f"\n\033[2;30m{chord['theory'].ljust(8)}\033[0m{chord['chord'].rjust(7)} {linker} {chord['description']}")
+
+                    output += ("```")
+
+                    # Update the smallest stroke count to this one, since it's smaller
+                    smallest_stroke_count = int(stroke_count)
+                    number_of_best_entries+=1
+                    break  # Only print the smallest number of strokes for this ambiguity level
+                break  # Stop at the first entry (smallest strokes for this level)
+    output = f"Here's the best {number_of_best_entries}/ entries in Tad theory\n{output}"
+
+
+    return output
+
+def display_outlines(spelling, outlines, complexity):
     #this is the one where you give it English words
 
-    what_ambiguities_exist = []
 
-    for ambiguity in outlines['ambiguity']:
-        what_ambiguities_exist.append(ambiguity)
-
-    return what_ambiguities_exist
+    return best_outlines(outlines, complexity)
 
 
 
@@ -103,14 +150,17 @@ def get_response(user_input: str) -> str:
         looked_up_data = lookup_data[word_to_find]
 
         if lookup_type == "entries":
-            return display_entries(looked_up_data, complexity)
+            return display_entries(word_to_find, looked_up_data, complexity)
         
         elif lookup_type == "outlines":
-            return display_outlines(looked_up_data, complexity)
+            return display_outlines(word_to_find, looked_up_data, complexity)
 
         else:
             return "Huh, how did you get here?"
-    
+
+    if word_to_find in open("FrojBot/preprocessed_dictionaries/words_that_Edinburgh_has.txt").read():
+        return "Sorry, Tad theory doesn't cover that word"
+
     return "Sorry, I'm missing the pronunciation data for that word :("
 
 

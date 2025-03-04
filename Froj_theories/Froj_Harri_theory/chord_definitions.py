@@ -34,8 +34,8 @@ keysymbol_shorthands = {  #
 A_to_z_or_nothing_at_all = re.compile(r'(.*[\-AOeufrpblgtsdz])?\*?$')
 # NothingRegex = re.compile(r'')
 # AtLeastOneCharacterRegex = re.compile(r'.+')
-skipsAnEUInTheVowels_no_r = re.compile(r'[AO][fpblgtsdz]+\*?$')
-unavailable_e_no_r = re.compile(r'[QSTKPWHR][AO]*[eu]+[fpblgtsdz]*\*?$')  # fire
+skipsAnEUInTheVowels_no_r = re.compile(r'[/QSTKPWHR][AO][fpblgtsdz]+\*?$')
+unavailable_e_no_r = re.compile(r'[/QSTKPWHR][AO]*[eu]+[fpblgtsdz]*\*?$')  # fire
 
 available_e_unavailable_r = re.compile(r'[AO]+f?r[pblgtsdz]*\*?$')  # former farmer
 
@@ -952,7 +952,7 @@ steno_chords_and_their_meanings = {
 
 
     "WR": [
-        {"chord": "W",
+        {"chord": "WR",
          "description": "wr", #(rite/right/write)
          "spelling": "wr",
          "pronunciation": " r ",
