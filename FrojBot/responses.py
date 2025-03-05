@@ -59,6 +59,86 @@ def display_entries(entries, complexity):
     return entries
 
 
+
+def giveChordsColours(theory_rules, colours):
+    coloured_letters = []
+
+    # Iterate through each theory rule
+    for i, theory_rule in enumerate(theory_rules):
+        # Get the colour for this rule
+        colour = "\033[2;"+colours[i % len(colours)]+"m"
+        folding_colour = "\033[2;35m"
+        end_colour = "\033[0m"
+
+        # List to hold each character with its respective colour
+        chord_coloured = []
+
+        number_of_spaces = 5
+
+
+        if "fold" in theory_rule['chord']:
+            for character in theory_rule['chord']:
+                if character in ("/STKPWHRAO-*EUFRPBLGTSDZ"):
+                    chord_coloured.append([folding_colour, character, end_colour])
+                    number_of_spaces-=1
+        else:
+            # Iterate through the chord characters in the rule
+            for character in theory_rule['chord']:
+                if character in ("/STKPWHRAO-*EUFRPBLGTSDZ"):
+                    chord_coloured.append([colour, character, end_colour])
+
+                    number_of_spaces-=1
+
+        spaces =""
+        for i in range(number_of_spaces):
+            spaces+=" "
+
+        # Store the coloured chord back into the theory_rule
+        # The chord is now a string with its full colour coding
+        theory_rule['chord'] = spaces+''.join([x[0] + x[1] + x[2] for x in chord_coloured])
+
+        # Also append the coloured version of the chord to coloured_letters
+        coloured_letters.extend(chord_coloured)
+
+    return theory_rules, coloured_letters
+
+
+def colour_the_outline(uncoloured_outline, coloured_letters):
+    coloured_outline = ""
+    
+    # Iterate through each character in the uncoloured outline
+    for character in uncoloured_outline:
+        # Flag to check if the character is found and coloured
+        found = False
+        
+        # Check if the character matches any of the coloured letters
+        for i, coloured_letter in enumerate(coloured_letters):
+            if character == coloured_letter[1]:
+                coloured_outline += "".join(coloured_letters.pop(i))  # Apply colour to the character
+                found = True  # Set flag to True if a match is found
+                break
+        
+        # If no match was found, apply the grey and normal colour
+        if not found:
+            coloured_outline += "\033[2;30m" + character + "\033[0m"  # Grey colour for uncoloured characters
+
+    return coloured_outline
+
+def colour_the_outline_with_chords(outline, theory_rules):
+
+    colours = [
+        "32", # green
+        "34", # blue
+        "33", # yellow
+        "36", # cyan
+    ]
+
+    coloured_theory_rules, coloured_letters = giveChordsColours(theory_rules, colours)
+
+    coloured_outline = colour_the_outline(outline, coloured_letters)
+
+    return coloured_outline, coloured_theory_rules
+
 # Function to print the smallest stroke count per ambiguity level, ensuring more ambiguous strokes only show if shorter than previous ones
 def best_outlines(spelling, outlines, complexity):
     output = ""
@@ -88,16 +168,23 @@ def best_outlines(spelling, outlines, complexity):
                 steno_entries = entries[stroke_count]
                 for entry in steno_entries:
                     raw_steno = entry['raw steno outline']
+
+                    theory_rule_breakdown = ""
+                    if complexity:
+
+                        set_theory_colour = "\033[2;30m"
+                        remove_colour = "\033[0m"
+
+                        raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
+                        for theory_rule in theory_rules:
+
+                            linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
+
+                            theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
+
                     output += ("```Ansi\n\n")
                     output += (f"{raw_steno} → {spelling}")
-
-                    if complexity:
-                        for chord in entry['explanation']:
-
-                            linker = " ┐ " if "/" in chord['chord'] else " │ "
-
-                            output += (f"\n\033[2;30m{chord['theory'].ljust(8)}\033[0m{chord['chord'].rjust(7)}{linker}{chord['description']}")
-
+                    output += (theory_rule_breakdown)
                     output += ("```")
 
                     # Update the smallest stroke count to this one, since it's smaller
@@ -159,6 +246,7 @@ def get_response(user_input: str) -> str:
             return "Huh, how did you get here?"
 
     if word_to_find in open("FrojBot/preprocessed_dictionaries/words_that_Edinburgh_has.txt").read():
+        #this is wrong, "matte" isn't in the txt but this still returns true??
         return "Sorry, Tad theory doesn't cover that word"
 
     return "Sorry, I'm missing the pronunciation data for that word :("

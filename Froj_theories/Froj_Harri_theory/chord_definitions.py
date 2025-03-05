@@ -1711,7 +1711,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "theory": "?"},  # not WSI because actresses that e is a @
+         "theory": ""},  # not WSI because actresses that e is a @
 
         {"chord": "E",
          "description": "ea pronounced e",
@@ -1805,7 +1805,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "theory": "StenEd?"},
+         "theory": ""},
 
         {"chord": "EU",
          "description": "silent i",
@@ -1837,7 +1837,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " iy ",
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
-         "theory": "?"},
+         "theory": "Harri?"},
 
         {"chord": "EU",
          "description": "ea pronounced i diphthong",
@@ -1845,7 +1845,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " iy ",
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
-         "theory": "?"},
+         "theory": "Harri?"},
 
         {"chord": "EU",
          "description": "ui pronounced short e? (is this just for 'build'?)",
