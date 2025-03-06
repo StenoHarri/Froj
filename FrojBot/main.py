@@ -16,11 +16,11 @@ client: Client = Client(intents=intents)
 
 async def send_message(message:Message, user_message:str) -> None:
     if not user_message:
-        print('message was empty')
+        #print('message was empty')
         return
     
     if not user_message.startswith(":>"):
-        print('message was irrelevant')
+        #print('message was irrelevant')
         return
 
     if is_private := user_message[0] == '?':

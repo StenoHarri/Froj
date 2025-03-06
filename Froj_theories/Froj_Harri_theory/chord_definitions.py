@@ -421,6 +421,15 @@ steno_chords_and_their_meanings = {
          "theory": ""},
     ],
 
+    "STK": [
+        {"chord": "STK",
+         "description": "dis/disc/dist/des/desc",
+         "spelling": "d[ie]sc?",
+         "pronunciation": " d  (i|ii|e)  (s|z) ( root )?( k )?",
+         "ambiguity": 0,
+         "what must come before": upToQ,
+         "theory": "?"}], 
+
     "STKPW": [
         {"chord": "STKPW",
          "description": "z",
@@ -437,6 +446,15 @@ steno_chords_and_their_meanings = {
     #     "ambiguity": 0,
     #     "what must come before": slash,
     #     "steno theory": ""}],
+
+    "STKH": [
+        {"chord": "STKH",
+         "description": "disch",
+         "spelling": "disch",
+         "pronunciation": " d  i  s ( root )? ch ",
+         "ambiguity": 0,
+         "what must come before": upToQ,
+         "theory": "Josiah?"}], 
 
     "SKWR": [
         {"chord": "SKWR",
@@ -487,7 +505,25 @@ steno_chords_and_their_meanings = {
          "pronunciation": " sh  r ",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "Josiah"}
+         "theory": "Phoenix"}
+    ],
+
+    "SPW": [
+        {"chord": "SPW",
+         "description": "int/ent",
+         "spelling": "[ie]nt",
+         "pronunciation": " (i|e|e0)  n ( root )? t ",
+         "ambiguity": 1,
+         "what must come before": upToQ,
+         "theory": "?"},
+
+         {"chord": "SPW",
+         "description": "enth",
+         "spelling": "[ie]nth",
+         "pronunciation": " (i|e|e0)  n ( root )? th ",
+         "ambiguity": 1,
+         "what must come before": upToQ,
+         "theory": "Plover"}
     ],
 
 
@@ -718,20 +754,28 @@ steno_chords_and_their_meanings = {
          "theory": ""}
     ],
 
+    "KP": [
+        {"chord": "comp",
+         "description": "comp",
+         "spelling": "comp",
+         "pronunciation": " c  o4  m  p ",
+         "ambiguity": 1,
+         "what must come before": upToS,
+         "theory": "?"}],
 
     "KPW": [
         {"chord": "KPW",
-         "description": "imp",
-         "spelling": "imp",
-         "pronunciation": " i  m ( root )? p ",
+         "description": "imp/emp",
+         "spelling": "[ie]mp",
+         "pronunciation": " (i|e|e0)  m ( root )? p ",
          "ambiguity": 1,
          "what must come before": upToS,
          "theory": "?"},
 
         {"chord": "KPW",
-         "description": "impr", #`KPWR` → `you` in my theory
-         "spelling": "impr",
-         "pronunciation": " i  m ( root )? p  r ",
+         "description": "impr/empr", #`KPWR` → `you` in my theory
+         "spelling": "[ie]mpr",
+         "pronunciation": " (i|e|e0)  m ( root )? p  r ",
          "ambiguity": 2,
          "what must come before": upToS,
          "theory": "Harri"},
@@ -757,7 +801,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " iy ",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "StenEd?"},
+         "theory": ""},
 
         {"chord": "KWR",
          "description": "y",
@@ -765,7 +809,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " y ",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "StenEd?"},
+         "theory": ""},
 
         {"chord": "KWR",
          "description": "y, but for some people it's silent???",
@@ -773,7 +817,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " \[y\] ",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "StenEd?"},
+         "theory": ""},
 
         {"chord": "KWR",
          "description": "i",
@@ -781,7 +825,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( suffix )? (ii|ii2|y) ",  # aerospacial ← who wrote that???
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "Harri?"},
+         "theory": "Harri"},
 
         {"chord": "KWR",
          "description": "y",
@@ -789,7 +833,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ii ",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "StenEd?"},
+         "theory": ""},
 
         {"chord": "KWR",
          "description": "long e",  # meteor the second e
@@ -797,7 +841,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ii2 ",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "Harri?"}
+         "theory": "Harri"}
     ],
 
 
@@ -1415,7 +1459,7 @@ steno_chords_and_their_meanings = {
     "Au": [
         {"chord": "AU",
          "description": "accent dependent sound",
-         "spelling": " o?a[auh]?",  # ??? just keep it I guess
+         "spelling": "o?a[auh]?",  # ??? just keep it I guess
          "pronunciation": keysymbol_shorthands["au"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
@@ -1531,7 +1575,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": keysymbol_shorthands["long o"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "theory": "Lapwing?"},
+         "theory": ""}, #Lapwing
 
         {"chord": "OE",
          "description": "ow pronounced long o",
@@ -1702,6 +1746,15 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "theory": ""}
     ],
+
+    "Ol": [
+        {"chord": "OL",
+         "description": "final oll even though it's an OE sound",
+         "spelling": "oll$",
+         "pronunciation": " ou l ",
+         "ambiguity": -1,
+         "what must come before": SToR_or_nothing,
+         "theory": "StenEd"}],
 
 
     "e": [
@@ -2220,7 +2273,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " v ",
          "ambiguity": 0,
          "what must come before": A_to_u,
-         "theory": "Josiah?"}
+         "theory": "Phoenix"}
     ],
 
 
@@ -2231,6 +2284,17 @@ steno_chords_and_their_meanings = {
          "pronunciation": " v ",
          "ambiguity": 0,
          "what must come before": l_,
+         "theory": "Harri"}
+    ],
+
+
+    "fbgt": [
+        {"chord": "-FBGT",
+         "description": "stic",
+         "spelling": "stic",
+         "pronunciation": " s  t  i  k ",
+         "ambiguity": 0,
+         "what must come before": A_to_u,
          "theory": "Harri"}
     ],
 
@@ -2369,7 +2433,15 @@ steno_chords_and_their_meanings = {
          "pronunciation": " sh  suffix  @  b  l ",
          "ambiguity": 1,
          "what must come before": A_to_f,
-         "theory": "Harri"}
+         "theory": "Harri"},
+
+        {"chord": "-RBL",
+         "description": "rrow",
+         "spelling": "rr?ow?",
+         "pronunciation": " r  ouw? ",
+         "ambiguity": 0,
+         "what must come before": A_to_f,
+         "theory": "Josiah?"},
     ],
 
 
@@ -2680,7 +2752,15 @@ steno_chords_and_their_meanings = {
          "pronunciation": " b  i  l ",
          "ambiguity": 0,
          "what must come before": A_to_p_,
-         "theory": "Josiah?"}
+         "theory": "Josiah?"},
+
+        {"chord": "-BL",
+         "description": "low",
+         "spelling": "ll?ow?",
+         "pronunciation": " l  ouw? ",
+         "ambiguity": 1,
+         "what must come before": A_to_p_,
+         "theory": "Donna Urlaub"}
     ],
 
 
@@ -2944,6 +3024,15 @@ steno_chords_and_their_meanings = {
          # okay the issue here is that maybe there's no issue
          "theory": ""},
 
+         {"chord": "-G",
+         "description": "suffix -ing after l",
+         "spelling": "ing",
+         "pronunciation": " suffix  i  ng ",
+         "ambiguity": 2,
+         "what must come before": l_,  # ← look at that lack of _ at the end
+         # okay the issue here is that maybe there's no issue
+         "theory": ""},
+
         {"chord": "-G",
          "description": "silent gh",
          "spelling": "gh",
@@ -3092,7 +3181,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "what must come before": A_to_u_or__,  # dis
-         "theory": "Harri?"},
+         "theory": ""},
 
         {"chord": "-S",
          "description": "solo s following a vowel (maybe voiced)",
@@ -3269,7 +3358,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  i  ng ",
          "ambiguity": 0,
          "what must come before": A_to_g_yes_b_or_g,
-         "theory": ""}
+         "theory": "Magnum"}
     ],
 
 
@@ -3558,6 +3647,16 @@ steno_chords_and_their_meanings = {
          "description": "suffix -let",  # armlet
          "spelling": "let",
          "pronunciation": " suffix  l  i7  t ",
+         "ambiguity": 0,
+         "what must come before": l_to_z,
+         "theory": "StenEd?"}
+    ],
+
+    "/-ls": [
+        {"chord": "/-LT",
+         "description": "suffix -less",  # armlet
+         "spelling": "less",
+         "pronunciation": " suffix  l  e5  s ",
          "ambiguity": 0,
          "what must come before": l_to_z,
          "theory": "StenEd?"}

@@ -155,6 +155,8 @@ def best_outlines(spelling, outlines, complexity):
 
     # Keep track of the smallest stroke count encountered
     smallest_stroke_count = float('inf')  # Initialize to infinity, so the first stroke will always be considered
+
+    too_big = ""
     
     for amb in sorted_ambiguities:
         entries = ambiguity[amb]["number of strokes"]
@@ -182,6 +184,11 @@ def best_outlines(spelling, outlines, complexity):
 
                             theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
+                    if len(theory_rule_breakdown)+len(output) >1820:
+                        too_big = "Too big for Discord, stopped early. Try `:>`"
+                        smallest_stroke_count = int(stroke_count)
+                        number_of_best_entries+=1
+                        break
                     output += ("```Ansi\n\n")
                     output += (f"{raw_steno} → {spelling}")
                     output += (theory_rule_breakdown)
@@ -192,7 +199,7 @@ def best_outlines(spelling, outlines, complexity):
                     number_of_best_entries+=1
                     break  # Only print the smallest number of strokes for this ambiguity level
                 break  # Stop at the first entry (smallest strokes for this level)
-    output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries in Tad theory\n{output}"
+    output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
 
     return output
 
@@ -245,89 +252,11 @@ def get_response(user_input: str) -> str:
         else:
             return "Huh, how did you get here?"
 
-    if word_to_find in open("FrojBot/preprocessed_dictionaries/words_that_Edinburgh_has.txt").read():
-        #this is wrong, "matte" isn't in the txt but this still returns true??
-        return "Sorry, Tad theory doesn't cover that word"
+    with open("FrojBot/preprocessed_dictionaries/words_that_Edinburgh_has.txt") as file:
+        # Check each line (each line is a word)
+        for line in file:
+            if line.strip() == word_to_find:
+                return "Sorry, Tad theory doesn't cover that word"
 
     return "Sorry, I'm missing the pronunciation data for that word :("
 
-
-"""
-
- f"FrojBot/preprocessed_dictionaries/{lookup_type}_starting_{letter}.json"
-{
- "a": {
-  "ambiguity": {
-   "0": [
-    {
-     "raw steno outline": "AEU",
-     "explanation": [
-      {
-       "theory": "",
-       "chord": "AEU",
-       "description": "long a"
-      }
-     ]
-    },
-    {
-     "raw steno outline": "A",
-     "explanation": [
-      {
-       "theory": "",
-       "chord": "A",
-       "description": "short a"
-      }
-     ]
-    }
-   ]
-  }
-"""
-
-
-"""
-{
- "AEU": {
-  "ambiguity": {
-   "0": [
-    {
-     "spelling": "a",
-     "explanation": [
-      {
-       "theory": "",
-       "chord": "AEU",
-       "description": "long a"
-      }
-     ]
-    }
-   ],
-   "1": [
-    {
-     "spelling": "et",
-     "explanation": [
-      {
-       "theory": "",
-       "chord": "AEU",
-       "description": "et pronounced long a"
-      }
-     ]
-    }
-   ]
-  }
- },
- "A": {
-  "ambiguity": {
-   "0": [
-    {
-     "spelling": "a",
-     "explanation": [
-      {
-       "theory": "",
-       "chord": "A",
-       "description": "short a"
-      }
-     ]
-    }
-   ]
-  }
- },
-"""
