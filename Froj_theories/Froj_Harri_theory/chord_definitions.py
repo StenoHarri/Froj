@@ -2181,7 +2181,9 @@ steno_chords_and_their_meanings = {
          "pronunciation": " m ",
          "ambiguity": 2,
          "what must come before": A_to_u,
-         "theory": "StenEd?"}],
+         "theory": "StenEd?"}
+    ],
+
 
     "frpb": [
         {"chord": "-FRPB",
@@ -2457,9 +2459,9 @@ steno_chords_and_their_meanings = {
          "description": "rrow",
          "spelling": "rr?ow?",
          "pronunciation": " r  ouw? ",
-         "ambiguity": 0,
+         "ambiguity": 1, #facial, faro
          "what must come before": A_to_f,
-         "theory": "Josiah?"},
+         "theory": "Harri"},
     ],
 
 
