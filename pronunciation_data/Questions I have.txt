@@ -62,6 +62,9 @@ but
 why is absence with e50, but absenses no vowel at all?
 
 
+discolored yep
+discoloured nope???
+
 uu/uu????????????
 acumen::NN: { [*] A . k y [*1] uu/uu . m E n } :{acumen}:293
 

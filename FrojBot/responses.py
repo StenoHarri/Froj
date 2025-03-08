@@ -74,8 +74,6 @@ def giveChordsColours(theory_rules, colours):
         chord_coloured = []
 
         number_of_spaces = 5
-
-
         if "fold" in theory_rule['chord']:
             for character in theory_rule['chord']:
                 if character in ("/STKPWHRAO-*EUFRPBLGTSDZ"):
@@ -184,7 +182,7 @@ def best_outlines(spelling, outlines, complexity):
 
                             theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
-                    if len(theory_rule_breakdown)+len(output) >1820:
+                    if len(theory_rule_breakdown)+len(output) >1715:
                         too_big = "Too big for Discord, stopped early. Try `:>`"
                         smallest_stroke_count = int(stroke_count)
                         number_of_best_entries+=1

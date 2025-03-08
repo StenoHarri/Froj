@@ -423,10 +423,10 @@ steno_chords_and_their_meanings = {
 
     "STK": [
         {"chord": "STK",
-         "description": "dis/disc/dist/des/desc",
-         "spelling": "d[ie]sc?",
+         "description": "des sound (optional c/t)", # dis/disc/dist/des/desc/dec
+         "spelling": "d[ie][sc]+t?",
          "pronunciation": " d  (i|ii|e)  (s|z) ( root )?( k )?",
-         "ambiguity": 0,
+         "ambiguity": 1, # descend/distend
          "what must come before": upToQ,
          "theory": "?"}], 
 
@@ -751,7 +751,15 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 1,
          "what must come before": upToS,
-         "theory": ""}
+         "theory": ""},
+
+         {"chord": "K",
+         "description": "ck",
+         "spelling": "ck(k|h)?",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "what must come before": upToS,
+         "theory": ""},
     ],
 
     "KP": [
@@ -1444,6 +1452,16 @@ steno_chords_and_their_meanings = {
          "theory": ""},
     ],
 
+    "Aeugs": [
+        {"chord": "AEUGS",
+         "description": "suffix -ation",
+         "spelling": "ation",
+         "pronunciation": " suffix  ee  sh  n ",
+         "ambiguity": 2,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""},
+    ],
+
 
     "Aer": [
         {"chord": "AER",
@@ -1751,7 +1769,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OL",
          "description": "final oll even though it's an OE sound",
          "spelling": "oll$",
-         "pronunciation": " ou l ",
+         "pronunciation": " ou  l ",
          "ambiguity": -1,
          "what must come before": SToR_or_nothing,
          "theory": "StenEd"}],
@@ -2058,7 +2076,7 @@ steno_chords_and_their_meanings = {
 
 
     "f": [
-        {"chord": "F",
+        {"chord": "-F",
          "description": "f",
          "spelling": "ff?e?",
          "pronunciation": " f ",
@@ -2066,7 +2084,7 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u_,  # `PHER/SEUFL` → `merciful`, with suffix=_
          "theory": ""},
 
-        {"chord": "F",
+        {"chord": "-F",
          "description": "ph pronounced f",  # graph
          "spelling": "p?ph",
          "pronunciation": " f ",
@@ -2081,7 +2099,7 @@ steno_chords_and_their_meanings = {
         # "what must come before": A_to_u,
         # "steno theory": ""},
 
-        {"chord": "F fold",
+        {"chord": "-F fold",
          "description": "v",
          "spelling": "ve?",
          "pronunciation": " v ",
@@ -2092,7 +2110,7 @@ steno_chords_and_their_meanings = {
 
 
     "f_": [  # there's logic where anything ending in a _ cannot be followed by a new stroke
-        {"chord": "F",
+        {"chord": "-F",
          "description": "s",
          "spelling": "ss?e?",
          "pronunciation": " (s|z) ",
@@ -2100,7 +2118,7 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u,
          "theory": "StenEd?"},
 
-        {"chord": "F",
+        {"chord": "-F",
          "description": "c",
          "spelling": "s?ce?",
          "pronunciation": " (s|z) ",
@@ -2108,7 +2126,7 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u,
          "theory": "StenEd?"},
 
-        {"chord": "F",
+        {"chord": "-F",
          "description": "v",
          "spelling": "ve?",
          "pronunciation": " v ",
@@ -2116,7 +2134,7 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u,
          "theory": "StenEd?"},
 
-        {"chord": "F fold",
+        {"chord": "-F fold",
          "description": "s",  # first accurst, but not saurus
          "spelling": "s",
          "pronunciation": " s ",
@@ -2157,7 +2175,7 @@ steno_chords_and_their_meanings = {
 
 
     "fr_": [
-        {"chord": "FR",
+        {"chord": "-FR",
          "description": "m",
          "spelling": "m",
          "pronunciation": " m ",
@@ -2166,7 +2184,7 @@ steno_chords_and_their_meanings = {
          "theory": "StenEd?"}],
 
     "frpb": [
-        {"chord": "FRPB",
+        {"chord": "-FRPB",
          "description": "nch (conflicts with -rch)",
          "spelling": "nche?",
          "pronunciation": " n  ch ",
@@ -2177,7 +2195,7 @@ steno_chords_and_their_meanings = {
 
 
     "fpb": [
-        {"chord": "FRB",
+        {"chord": "-FRB",
          "description": "ch (following an r)",
          "spelling": "ch",
          "pronunciation": " ch ",
@@ -2471,7 +2489,7 @@ steno_chords_and_their_meanings = {
         {"chord": "-PB",
          "description": "n",
          "spelling": "(e|o)?nn?e?",
-         "pronunciation": " n ",
+         "pronunciation": " n ", # y for the discontinuation
          "ambiguity": 0,
          "what must come before": A_to_r_,
          "theory": ""},
@@ -2847,7 +2865,7 @@ steno_chords_and_their_meanings = {
 
     "bg/S": [
         {"chord": "-BG/S",
-         "description": "x (hint: you can't end with your left hand)",
+         "description": "x",
          "spelling": "x",
          "pronunciation": "( k  s | g  z )",
          "ambiguity": 0,
@@ -2941,7 +2959,7 @@ steno_chords_and_their_meanings = {
 
 
     "-l": [
-        {"chord": "skip vowels + L",
+        {"chord": "- and -L",
          "description": "le",
          "spelling": "le",
          "pronunciation": " l ",
@@ -3415,6 +3433,7 @@ steno_chords_and_their_meanings = {
 
 
     "Afr/": [  # the / is there because of A*FRT/KWHOUGT → afterthought
+        #however for compound words, the `/` means that it's not reordered :(
         {"chord": "AFR/",
          "description": "prefix after-",
          "spelling": "after",
@@ -3618,6 +3637,7 @@ steno_chords_and_their_meanings = {
          "what must come before": slash_or_T,
          "theory": "?"}
     ],
+
 
 
     "/-fl": [
