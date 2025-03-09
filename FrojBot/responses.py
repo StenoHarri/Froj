@@ -48,20 +48,6 @@ def get_annotation_level(word_to_find: str) -> tuple:
 
 
 
-
-
-def display_entries(entries, complexity):
-    #this is the one where you give it raw steno
-
-    what_ambiguities_exist = []
-
-    for ambiguity in entries:
-        what_ambiguities_exist.append(ambiguity)
-
-    return entries
-
-
-
 def giveChordsColours(theory_rules, colours):
     coloured_letters = []
 
@@ -209,13 +195,43 @@ def best_outlines(spelling, outlines, complexity):
 
     return output
 
+def best_entries(outline, spellings, complexity):
+    output = ""
+    ambiguity = spellings.get("ambiguity", {})
+
+    total_number_of_spellings = sum(
+        len(ambiguity[amb]) for amb in ambiguity
+    )
+
+    # Sort ambiguity levels by their numeric value (e.g., "2", "5")
+    sorted_ambiguities = sorted(ambiguity.keys(), key=int)
+
+    too_big = ""
+
+    for amb in sorted_ambiguities:
+        outlines = ambiguity[amb]
+
+        for outline in outlines:
+            spelling = outline['spelling']
+
+            theory_rule_breakdown = ""
+
+            if complexity == "summarise best":
+
+                
+
+    return output
+
 def display_outlines(spelling, outlines, complexity):
     #this is the one where you give it English words
 
     return best_outlines(spelling, outlines, complexity)
 
 
+def display_entries(outline, spellings, complexity):
+    #this is the one where you give it raw steno
 
+    return best_outlines(outline, spellings, complexity)
 
 def get_response(user_input: str) -> str:
     """Returns the appropriate response for user input."""
