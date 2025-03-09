@@ -39,10 +39,12 @@ is_raw_steno = re.compile(r'^(S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)(/S?T
 
 def get_annotation_level(word_to_find: str) -> tuple:
     """Return the base word and whether it's complex."""
+    if word_to_find.startswith(":>>>"):
+        return word_to_find.replace(":>>>", "").strip(), "summarise all"
     if word_to_find.startswith(":>>"):
-        return word_to_find.replace(":>>", "").strip(), True
+        return word_to_find.replace(":>>", "").strip(), "annotate best"
     else:  # it must be :>
-        return word_to_find.replace(":>", "").strip(), False
+        return word_to_find.replace(":>", "").strip(), "summarise best"
 
 
 
@@ -170,7 +172,7 @@ def best_outlines(spelling, outlines, complexity):
                     raw_steno = entry['raw steno outline']
 
                     theory_rule_breakdown = ""
-                    if complexity:
+                    if complexity == "summarise best":
 
                         set_theory_colour = "\033[2;30m"
                         remove_colour = "\033[0m"
@@ -195,15 +197,20 @@ def best_outlines(spelling, outlines, complexity):
                     # Update the smallest stroke count to this one, since it's smaller
                     smallest_stroke_count = int(stroke_count)
                     number_of_best_entries+=1
-                    break  # Only print the smallest number of strokes for this ambiguity level
-                break  # Stop at the first entry (smallest strokes for this level)
-    output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
+
+                    if not complexity == "summarise all":
+                        break  # Only print the smallest number of strokes for this ambiguity level
+                if not complexity == "summarise all":
+                    break  # Stop at the first entry (smallest strokes for this level)
+    if complexity == "summarise all":
+        output = f"Here's all {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
+    else: 
+        output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
 
     return output
 
 def display_outlines(spelling, outlines, complexity):
     #this is the one where you give it English words
-
 
     return best_outlines(spelling, outlines, complexity)
 
