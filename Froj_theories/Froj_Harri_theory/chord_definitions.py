@@ -812,15 +812,6 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "KP": [
-        {"chord": "comp",
-         "description": "comp",
-         "spelling": "comp",
-         "pronunciation": " c  o4  m  p ",
-         "ambiguity": 1,
-         "what must come before": upToS,
-         "theory": "?"}],
-
     "KPW": [
         {"chord": "KPW",
          "description": "imp/emp",
