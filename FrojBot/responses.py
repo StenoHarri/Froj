@@ -149,45 +149,50 @@ def best_outlines(spelling, outlines, complexity):
         
         # Sort the stroke counts for the ambiguity level to pick the smallest first
         sorted_stroke_counts = sorted(entries.keys(), key=int)
-        
+
         for stroke_count in sorted_stroke_counts:
-            # Only consider this stroke if it's smaller than the smallest stroke count so far
-            if int(stroke_count) < smallest_stroke_count:
-                steno_entries = entries[stroke_count]
-                for entry in steno_entries:
-                    raw_steno = entry['raw steno outline']
+            
+            if not complexity == "summarise all":
+                # Only consider this stroke if it's smaller than the smallest stroke count so far
+                if int(stroke_count) >= smallest_stroke_count:
+                    break
 
-                    theory_rule_breakdown = ""
-                    if complexity == "summarise best":
+            steno_entries = entries[stroke_count]
+            for entry in steno_entries:
+                raw_steno = entry['raw steno outline']
 
-                        set_theory_colour = "\033[2;30m"
-                        remove_colour = "\033[0m"
+                theory_rule_breakdown = ""
+                if complexity == "annotate best":
 
-                        raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
-                        for theory_rule in theory_rules:
+                    set_theory_colour = "\033[2;30m"
+                    remove_colour = "\033[0m"
 
-                            linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
+                    raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
+                    for theory_rule in theory_rules:
 
-                            theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
+                        linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
 
-                    if len(theory_rule_breakdown)+len(output) >1715:
-                        too_big = "Too big for Discord, stopped early. Try `:>`"
-                        smallest_stroke_count = int(stroke_count)
-                        number_of_best_entries+=1
-                        break
-                    output += ("```Ansi\n\n")
-                    output += (f"{raw_steno} → {spelling}")
-                    output += (theory_rule_breakdown)
-                    output += ("```")
+                        theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
-                    # Update the smallest stroke count to this one, since it's smaller
-                    smallest_stroke_count = int(stroke_count)
+                chunk_to_add = ("```Ansi\n\n")
+                chunk_to_add += (f"{raw_steno} → {spelling}")
+                chunk_to_add += (theory_rule_breakdown)
+                chunk_to_add += ("```")
+
+                # Update the smallest stroke count to this one, since it's smaller
+                smallest_stroke_count = int(stroke_count)
+                number_of_best_entries+=1
+
+                if len(chunk_to_add)+len(output) >1200:
+                    too_big = "Too big for Discord, stopped early. Try `:>`"
                     number_of_best_entries+=1
+                    break
+                output+=chunk_to_add
 
-                    if not complexity == "summarise all":
-                        break  # Only print the smallest number of strokes for this ambiguity level
                 if not complexity == "summarise all":
-                    break  # Stop at the first entry (smallest strokes for this level)
+                    break  # Only print the smallest number of strokes for this ambiguity level
+            if not complexity == "summarise all":
+                break  # Stop at the first entry (smallest strokes for this level)
     if complexity == "summarise all":
         output = f"Here's all {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
     else: 
@@ -207,18 +212,54 @@ def best_entries(outline, spellings, complexity):
     sorted_ambiguities = sorted(ambiguity.keys(), key=int)
 
     too_big = ""
-
+    list_of_all_spellings = []
     for amb in sorted_ambiguities:
         outlines = ambiguity[amb]
 
         for outline in outlines:
             spelling = outline['spelling']
 
+            if not spelling in list_of_all_spellings:
+                list_of_all_spellings.append(spelling)
+
             theory_rule_breakdown = ""
+            if complexity == "annotate best":
 
-            if complexity == "summarise best":
+                set_theory_colour = "\033[2;30m"
+                remove_colour = "\033[0m"
 
-                
+                raw_steno, theory_rules = colour_the_outline_with_chords(outline, outline['explanation'])
+
+                for theory_rule in theory_rules:
+
+                    linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
+
+                    theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
+
+                chunk_to_add = ("```Ansi\n\n")
+                chunk_to_add += (f"{raw_steno} → {spelling}")
+                chunk_to_add += (theory_rule_breakdown)
+                chunk_to_add += ("```")
+
+                number_of_best_entries+=1
+
+                if len(chunk_to_add)+len(output) >1200:
+                    too_big = "Too big for Discord, stopped early. Try `:>`"
+                    number_of_best_entries+=1
+                    break
+                output+=chunk_to_add
+
+                if not complexity == "summarise all":
+                    break  # Only print the first
+            if not complexity == "summarise all":
+                break
+
+
+    if complexity == "summarise all":
+        output = f"Here's all {number_of_best_entries}/{total_number_of_spellings} entries in Tadpole theory\n{output}\n{too_big}"
+    else: 
+        output = f"Here's the best {number_of_best_entries}/{total_number_of_spellings} entries in Tadpole theory\n{output}\n{too_big}"
+
 
     return output
 
