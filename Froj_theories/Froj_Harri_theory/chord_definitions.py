@@ -487,7 +487,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "SKWR",
          "description": "j sound",
-         "spelling": "(g|dj|dgg?e?)",
+         "spelling": "(g|dj|di|dgg?e?)", #soldier
          "pronunciation": " jh ",
          "ambiguity": 0,
          "what must come before": upToQ,
@@ -555,7 +555,6 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": upToQ,
          "theory": ""},
-
 
         {"chord": "SH",
          "description": "ci pronounced sh",
@@ -2573,7 +2572,7 @@ steno_chords_and_their_meanings = {
         {"chord": "*PB",
          "description": "ken sound",
          "spelling": "[ck]+[eo]n", # chicken, reckon, beacon
-         "pronunciation": f" k {keysymbol_shorthands['short vowels']} n ", # y for the discontinuation
+         "pronunciation": f" k {keysymbol_shorthands['short vowels']}( suffix )? n ", # y for the discontinuation
          "ambiguity": 1,
          "what must come before": A_to_r_no_asterisk,
          "theory": "Harri"}
