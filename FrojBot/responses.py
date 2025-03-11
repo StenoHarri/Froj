@@ -212,16 +212,16 @@ def best_entries(outline, spellings, complexity):
     sorted_ambiguities = sorted(ambiguity.keys(), key=int)
 
     too_big = ""
+    raw_steno = outline
+    number_of_best_entries = 0
     list_of_all_spellings = []
     for amb in sorted_ambiguities:
         outlines = ambiguity[amb]
-
         for outline in outlines:
-            spelling = outline['spelling']
 
+            spelling = outline['spelling']
             if not spelling in list_of_all_spellings:
                 list_of_all_spellings.append(spelling)
-
             theory_rule_breakdown = ""
             if complexity == "annotate best":
 
@@ -229,30 +229,30 @@ def best_entries(outline, spellings, complexity):
                 remove_colour = "\033[0m"
 
                 raw_steno, theory_rules = colour_the_outline_with_chords(outline, outline['explanation'])
-
                 for theory_rule in theory_rules:
 
                     linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
 
                     theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
-                chunk_to_add = ("```Ansi\n\n")
-                chunk_to_add += (f"{raw_steno} → {spelling}")
-                chunk_to_add += (theory_rule_breakdown)
-                chunk_to_add += ("```")
+            chunk_to_add = ("```Ansi\n\n")
+            chunk_to_add += (f"{raw_steno} → {spelling}")
+            chunk_to_add += (theory_rule_breakdown)
+            chunk_to_add += ("```")
+            print("got here4")
+            number_of_best_entries+=1
 
+            if len(chunk_to_add)+len(output) >1200:
+                too_big = "Too big for Discord, stopped early. Try `:>`"
                 number_of_best_entries+=1
-
-                if len(chunk_to_add)+len(output) >1200:
-                    too_big = "Too big for Discord, stopped early. Try `:>`"
-                    number_of_best_entries+=1
-                    break
-                output+=chunk_to_add
-
-                if not complexity == "summarise all":
-                    break  # Only print the first
-            if not complexity == "summarise all":
                 break
+            output+=chunk_to_add
+            print("got here5")
+
+            if not complexity == "summarise all":
+                break  # Only print the first
+        if not complexity == "summarise all":
+            break
 
 
     if complexity == "summarise all":
@@ -272,7 +272,7 @@ def display_outlines(spelling, outlines, complexity):
 def display_entries(outline, spellings, complexity):
     #this is the one where you give it raw steno
 
-    return best_outlines(outline, spellings, complexity)
+    return best_entries(outline, spellings, complexity)
 
 def get_response(user_input: str) -> str:
     """Returns the appropriate response for user input."""
