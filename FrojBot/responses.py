@@ -12,6 +12,7 @@ def load_json(filename: str) -> dict:
         return json.load(f)
 
 def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
+
     """Return the relevant lookup data for the given first letter and lookup type."""
     global _lookup_data_cache
     # Ensure that we load data only once for the given letter
@@ -133,9 +134,11 @@ def best_outlines(spelling, outlines, complexity):
     number_of_best_entries = 0
 
     total_number_of_entries = sum(
-        len(ambiguity[amb]["number of strokes"]) for amb in ambiguity
+        len(ambiguity[amb]["number of strokes"][stroke_count]) 
+        for amb in ambiguity 
+        for stroke_count in ambiguity[amb]["number of strokes"]
     )
-    
+
     # Sort ambiguity levels by their numeric value (e.g., "2", "5")
     sorted_ambiguities = sorted(ambiguity.keys(), key=int)
 
@@ -156,10 +159,10 @@ def best_outlines(spelling, outlines, complexity):
                 # Only consider this stroke if it's smaller than the smallest stroke count so far
                 if int(stroke_count) >= smallest_stroke_count:
                     break
-
             steno_entries = entries[stroke_count]
             for entry in steno_entries:
                 raw_steno = entry['raw steno outline']
+                plain_raw_steno = entry['raw steno outline']
 
                 theory_rule_breakdown = ""
                 if complexity == "annotate best":
@@ -174,8 +177,22 @@ def best_outlines(spelling, outlines, complexity):
 
                         theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
+
+                if len(output) >1200:
+                    too_big = "Too big for Discord, stopped early. Try `:>`"
+                    number_of_best_entries+=1
+                    break
+
                 chunk_to_add = ("```Ansi\n\n")
-                chunk_to_add += (f"{raw_steno} → {spelling}")
+
+
+                if len(plain_raw_steno.split("/")) < 3:
+                    list_of_all_spellings = return_list_of_all_spellings(plain_raw_steno, get_lookup_data(plain_raw_steno[0].lower(), "entries")[plain_raw_steno])
+                    chunk_to_add += (f"{raw_steno} → {'/'.join(list_of_all_spellings)}")
+                else:
+                    chunk_to_add += (f"{raw_steno} → {spelling}")
+
+
                 chunk_to_add += (theory_rule_breakdown)
                 chunk_to_add += ("```")
 
@@ -194,13 +211,38 @@ def best_outlines(spelling, outlines, complexity):
             if not complexity == "summarise all":
                 break  # Stop at the first entry (smallest strokes for this level)
     if complexity == "summarise all":
-        output = f"Here's all {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
+        output = f"Showing `{number_of_best_entries}`/`{total_number_of_entries}` outlines for `{spelling}` in Tadpole theory\n{output}{too_big}"
     else: 
         output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
 
     return output
 
+
+def return_list_of_all_spellings(outline, spellings):
+
+    ambiguity = spellings.get("ambiguity", {})
+    sorted_ambiguities = sorted(ambiguity.keys(), key=int)
+    list_of_all_spellings = []
+
+    for amb in sorted_ambiguities:
+        outlines = ambiguity[amb]
+        for outline in outlines:
+            spelling = outline['spelling']
+            if not spelling in list_of_all_spellings:
+                list_of_all_spellings.append(spelling)
+
+    return list_of_all_spellings
+
 def best_entries(outline, spellings, complexity):
+
+
+    if not complexity == "annotate best":
+
+        list_of_all_spellings = return_list_of_all_spellings(outline, spellings)
+
+        return f"Found {len(list_of_all_spellings)} matches for `{outline}` in Tadpole theory\n`{outline}` → `{'`/`'.join(list_of_all_spellings)}`"
+
+
     output = ""
     ambiguity = spellings.get("ambiguity", {})
 
@@ -212,9 +254,13 @@ def best_entries(outline, spellings, complexity):
     sorted_ambiguities = sorted(ambiguity.keys(), key=int)
 
     too_big = ""
+    initial_raw_steno= outline
     raw_steno = outline
     number_of_best_entries = 0
     list_of_all_spellings = []
+
+
+
     for amb in sorted_ambiguities:
         outlines = ambiguity[amb]
         for outline in outlines:
@@ -228,38 +274,26 @@ def best_entries(outline, spellings, complexity):
                 set_theory_colour = "\033[2;30m"
                 remove_colour = "\033[0m"
 
-                raw_steno, theory_rules = colour_the_outline_with_chords(outline, outline['explanation'])
+                raw_steno, theory_rules = colour_the_outline_with_chords(initial_raw_steno, outline['explanation'])
+
                 for theory_rule in theory_rules:
 
                     linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
 
                     theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
-            chunk_to_add = ("```Ansi\n\n")
-            chunk_to_add += (f"{raw_steno} → {spelling}")
-            chunk_to_add += (theory_rule_breakdown)
-            chunk_to_add += ("```")
-            print("got here4")
-            number_of_best_entries+=1
-
-            if len(chunk_to_add)+len(output) >1200:
-                too_big = "Too big for Discord, stopped early. Try `:>`"
-                number_of_best_entries+=1
-                break
-            output+=chunk_to_add
-            print("got here5")
-
-            if not complexity == "summarise all":
-                break  # Only print the first
-        if not complexity == "summarise all":
-            break
+                chunk_to_add = ("```Ansi\n\n")
+                chunk_to_add += (f"{raw_steno} → {spelling}")
+                chunk_to_add += (theory_rule_breakdown)
+                chunk_to_add += ("```")
 
 
-    if complexity == "summarise all":
-        output = f"Here's all {number_of_best_entries}/{total_number_of_spellings} entries in Tadpole theory\n{output}\n{too_big}"
-    else: 
-        output = f"Here's the best {number_of_best_entries}/{total_number_of_spellings} entries in Tadpole theory\n{output}\n{too_big}"
+                if len(chunk_to_add)+len(output) >1200:
+                    too_big = "Too big for Discord, stopped early. Try `:>`"
+                    break
+                output+=chunk_to_add
 
+    output = f"Here's the {total_number_of_spellings} entries for `{initial_raw_steno}` in Tadpole theory (best first)\n{output}\n{too_big}"
 
     return output
 
@@ -307,12 +341,11 @@ def get_response(user_input: str) -> str:
 
         if lookup_type == "entries":
             return display_entries(word_to_find, looked_up_data, complexity)
-        
+
         elif lookup_type == "outlines":
             return display_outlines(word_to_find, looked_up_data, complexity)
 
-        else:
-            return "Huh, how did you get here?"
+        return "Huh, how did you get here?"
 
     with open("FrojBot/preprocessed_dictionaries/words_that_Edinburgh_has.txt") as file:
         # Check each line (each line is a word)
