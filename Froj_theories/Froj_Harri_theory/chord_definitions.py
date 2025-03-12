@@ -43,6 +43,8 @@ skipsAnEUInTheVowels_no_r = re.compile(r'[/QSTKPWHR][AO][fpblgtsdz]+\*?$')
 unavailable_e_no_r = re.compile(r'[/QSTKPWHR][AO]*[eu]+[fpblgtsdz]*\*?$')  # fire
 
 available_e_unavailable_r = re.compile(r'[AO]+f?r[pblgtsdz]*\*?$')  # former farmer
+unavailable_e_unavailable_r_no_asterisk = re.compile(r'[AO][EU]+f?rp?b?l?g?t?s?d?z?$')
+
 
 A_to_g_yes_b_or_g = re.compile(r'[\-AOeufrp][bg][lg]*\*?$')
 l_to_z_no_f = re.compile(r'[\-AOeu][rpb]*[lgtsdz]+\*?$')
@@ -109,8 +111,7 @@ upToK_no_S = re.compile(r'[/Q]T?K?\*?$')
 upToW_not_just_T_not_just_k_or_just_w = re.compile(r'([STKPW]{2,}|[/QSKP])\*?_?$')  # clink    _? for baudelair
 
 upToW_not_just_s = re.compile(r'([/QTKPW]S?|[/QTKP]H)\*?_?$')  # yes _ because actresses drops a boundary after t
-upToH_not_just_s_or_sh_not_KWH = re.compile(
-    r'([/QTKP]H?|W)\*?_?$')  # yes _ because actresses drops a boundary after t          shh
+upToH_not_just_s_or_sh_not_KWH = re.compile(r'([/QTKP]H?|W)\*?_?$')  # yes _ because actresses drops a boundary after t          shh
 
 upToW_no_T = re.compile(r'[/QS]K?P?W?\*?$')
 upToW_no_P = re.compile(r'[/QSTK]W?\*?$')
@@ -342,6 +343,25 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": any_letter,
          "theory": "Field"},
+
+
+        {"chord": "*",
+         "description": "er when both e and r are unavailable",
+         "spelling": "not done yet",
+         "pronunciation": "not done yet",
+         "ambiguity": 2,
+         "what must come before": any_letter,
+         "theory": "Harri"},
+
+        {"chord": "*",
+         "description": "er",
+         "spelling": "err?",
+         "pronunciation": "( (@r|er)  r | \(r  @/@r  r\) )",
+         # sometimes (r  @/@r  r) like that whole thing is just in there
+         "ambiguity": 2,
+         "what must come before": unavailable_e_unavailable_r_no_asterisk,
+         "theory": "Harri"},
+
 
         # I would love to, but this is basically a whole new theory at this point
         # {"description": "* for connecting a suffix",
@@ -1428,7 +1448,7 @@ steno_chords_and_their_meanings = {
          "description": "ea pronounced short e (first stroke only)",
          "spelling": "ea",
          "pronunciation": " e ", # earl?
-         "ambiguity": 1,
+         "ambiguity": 2, #red
          "what must come before": first_stroke_SToR_or_nothing,
          "theory": "?"},
 
@@ -1848,8 +1868,16 @@ steno_chords_and_their_meanings = {
         #  "steno theory": " (Theory: Harri)"},
 
         {"chord": "E",
-         "description": "ai pronounced short e", #against
+         "description": "ai pronounced short e",  # against
          "spelling": "ai",
+         "pronunciation": " e ",
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": "?"},
+
+        {"chord": "E",
+         "description": "ai pronounced short e", #against
+         "spelling": "ie",
          "pronunciation": " e ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
