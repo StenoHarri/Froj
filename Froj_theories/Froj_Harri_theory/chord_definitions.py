@@ -20,7 +20,7 @@ keysymbol_shorthands = {
     "au": " \[?(oa|aa|ah|ah1|ah2|oo|o/oo)\]? ",
     #not au for me: ao  was o/uh   because o/oo   cross au
 
-    "ou": " \[?(ow)\]? ",
+    "ow! Sound": " \[?(ow|owr)\]? ",
 
     "long e": " \[?(aa/ei|ae/ii|eir/ir|i/ii|ii|ii/ae|ii/e|ii/i|ii2|ir|iy/ee)\]? ",
     "long o": " \[?(ou|ou/o|ou1|ouw)\]? ",
@@ -1546,38 +1546,19 @@ steno_chords_and_their_meanings = {
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
-    ],
 
-
-    "Aurb": [
-        {"chord": "AURB",
-         "description": "arb",
-         "spelling": "arb",
-         "pronunciation": "(" + keysymbol_shorthands["short vowels"] + "|" + keysymbol_shorthands[
-             "long vowels"] + ")" + " r  b ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": "Josiah"}
-    ],
-
-
-    "Ar": [
-        {"chord": "AR",
-         "description": "ar sound",
-         "spelling": "aa?rr?e?",
-         "pronunciation": " ar  r ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": "Lapwing?"},
-
-        {"chord": "AR",
-         "description": "aur pronounced ar sound",
-         "spelling": "uarr?e?",
+        {"chord": "AU",
+         "description": "a modified by r",
+         "spelling": "u?a",
          "pronunciation": " (ar|@r)  r ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "theory": "Lapwing"},
+         "theory": "Harri"},
+    ],
 
+
+
+    "Ar": [
         {"chord": "AR",
          "description": "ar ponounced or",
          "spelling": "arr?",  # warring maybe?, athwart
@@ -1586,6 +1567,8 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "theory": "Lapwing"},
     ],
+
+
 
 
     "O": [
@@ -1676,14 +1659,6 @@ steno_chords_and_their_meanings = {
          "theory": "?"},
 
         {"chord": "OE",
-         "description": "ou pronounced long o",
-         "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["long o"],
-         "ambiguity": 1,  # bolder/boulder
-         "what must come before": SToR_or_nothing,
-         "theory": "?"},
-
-        {"chord": "OE",
          "description": "oa pronounced owe",
          "spelling": "oa",
          "pronunciation": keysymbol_shorthands["long o"],
@@ -1756,7 +1731,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "ou pronounced au sound", #thought
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["au"],
+         "pronunciation": keysymbol_shorthands["au"], # bolder/boulder
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1764,15 +1739,31 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "ow",
          "spelling": "ow",
-         "pronunciation": " owr? ",
+         "pronunciation": keysymbol_shorthands["ow! Sound"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
 
         {"chord": "OU",
+         "description": "ou pronounced long o",
+         "spelling": "ou",
+         "pronunciation": keysymbol_shorthands["long o"],
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": "Harri"},
+
+        {"chord": "OU",
+         "description": "ou pronounced short vowel",
+         "spelling": "ou",
+         "pronunciation": keysymbol_shorthands["short vowels"],
+         "ambiguity": 0,  # colour
+         "what must come before": SToR_or_nothing,
+         "theory": "Harri"},
+
+        {"chord": "OU",
          "description": "ou pronounced ow",
          "spelling": "ou",
-         "pronunciation": " owr? ",
+         "pronunciation": keysymbol_shorthands["ow! Sound"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -3724,7 +3715,7 @@ steno_chords_and_their_meanings = {
          "spelling": "l(y|ie?)",
          "pronunciation": " suffix  l  iy ",
          "ambiguity": 0,
-         "what must come before": slash_no_asterisk,
+         "what must come before": upToW,
          "theory": "StenEd"}
     ],
 
