@@ -344,22 +344,13 @@ steno_chords_and_their_meanings = {
          "what must come before": any_letter,
          "theory": "Field"},
 
-
-        {"chord": "*",
+        {"chord": "* fold",
          "description": "er when both e and r are unavailable",
-         "spelling": "not done yet",
-         "pronunciation": "not done yet",
-         "ambiguity": 2,
-         "what must come before": any_letter,
-         "theory": "Harri"},
-
-        {"chord": "*",
-         "description": "er",
          "spelling": "err?",
          "pronunciation": "( (@r|er)  r | \(r  @/@r  r\) )",
          # sometimes (r  @/@r  r) like that whole thing is just in there
          "ambiguity": 2,
-         "what must come before": unavailable_e_unavailable_r_no_asterisk,
+         "what must come before": unavailable_e_unavailable_r_no_asterisk, #doesn't work for`KHA*ERT`  `chatterer}`????
          "theory": "Harri"},
 
 
