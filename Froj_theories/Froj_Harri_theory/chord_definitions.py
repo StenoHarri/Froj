@@ -3,23 +3,29 @@ import re
 custom_alphabet = "QSTKPWHR-AOeufrpblgtsdz*_"
 # individualistically::RB: { ~ i n =.= d I2 . v ~ i . d == y uu @ l }.> * i s t >.> i k >.> l iy > :{in==divid==ual}>ist>>ic>>ally>:0
 
-keysymbol_shorthands = {  #
-    """
-    There will be groups of keysymbols that come up again and again,
-    so I'll define them once here
-    """
-    "long a": "a i",
-    "short vowels": " \[?(@|@1|@r|a|a/ee|a1|a4|a4/a1|a5|a5/i2|aa|ae/i|ah|ah2|ai/i|ao|ar1|e|e0|e05|e1|e5|e5/e|e50|ee/a|ee1|i|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o1|o4|o5|o5/o|o/uh|oa|or1|our1|u|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
-    # ii/i bidet/bistro
-    "I don't know if these are long or short": " \[?(ao|eir)\]? ",
 
-    "long a": " \[?(ee|ei|eir|eir1|aa/ee|ii/ee)\]? ",
-    # ii/ee → beta
 
-    "au": "((oa|aa|ah|ah2)|ao|oo|(@|o/uh|o/oo)|au|(ow|our))",  # British oa, American AU ao     oo in daughter     because @|o/uh|o/oo   aura oo|ow|our
-    "long e": " \[?(aa/ei|ae/ii|eir/ir|i/ii|ii|ii/ae|ii/e|ii/i|ii2|ir)\]? ",
-    "long o": " \[?(ou|ou1|ouw)\]? ",
-    "long i": " \[?(ae|ae/i|ae/ii|aer|ai|ai/ei|ai/ii|ai1|ii/ae)\]? ",
+"""
+There will be groups of keysymbols that come up again and again,
+so I'll define them once here
+"""
+keysymbol_shorthands = {
+
+    "short vowels": " \[?(@|@1|@r|a|a/ee|a1|a4|a4/a|a4/a1|a5|a5/i2|aa|ae/i|ah|ah2|ai/i|ao|ar/@@r|ar1|au|e|e/ee|e/ei|e/ii|e0|e05|e1|e5|e5/e|e50|ee/a|ee/o|ee1|ee5/ee|i|i/ai|i/e|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o/a|o/uh|o1|o4|o5|o5/o|oa|oou|or1|our1|ouw1|u|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
+    # ii/i bidet/bistro   #ou/o???
+
+    "long a": " \[?(aa/ee|ee|ee/o|e/ei|ei|eir|eir1|ii/ee|iy/ee|e/ee|ee5/ee)\]? ",
+    # ii/ee → beta 
+
+    "au": " \[?(oa|aa|aa1|ah|ah1|ah2|oo|o/oo)\]? ",
+    #not au for me: ao  was o/uh   because o/oo   cross au
+
+    "ow! Sound": " \[?(ow|owr)\]? ",
+
+
+    "long e": " \[?(aa/ei|ae/ii|e/ii|eir/ir|i/ii|ii|ii/ae|ii/e|ii/i|ii2|ir|iy/ee)\]? ",
+    "long o": " \[?(ou|ou/o|ou1|ouw)\]? ",
+    "long i": " \[?(ae|ae/i|ae/ii|aer|ai|ai/ei|ai/ii|ai1|i/ai|ii/ae)\]? ",
     # regarding ai1, some Americans say long i, some skip it, but (most?) British people say long i, so for consistency I'm using long i
     "long vowels": " \[?(aa|ee|ei|ir|iy)\]? ",
     # adherence uses ir     #don't wanna drop y uu #\(@r/~  e\) is both long AND short
@@ -38,6 +44,8 @@ skipsAnEUInTheVowels_no_r = re.compile(r'[/QSTKPWHR][AO][fpblgtsdz]+\*?$')
 unavailable_e_no_r = re.compile(r'[/QSTKPWHR][AO]*[eu]+[fpblgtsdz]*\*?$')  # fire
 
 available_e_unavailable_r = re.compile(r'[AO]+f?r[pblgtsdz]*\*?$')  # former farmer
+unavailable_e_unavailable_r_no_asterisk = re.compile(r'[AO][eu]+f?rp?b?l?g?t?s?d?z?$')
+
 
 A_to_g_yes_b_or_g = re.compile(r'[\-AOeufrp][bg][lg]*\*?$')
 l_to_z_no_f = re.compile(r'[\-AOeu][rpb]*[lgtsdz]+\*?$')
@@ -87,7 +95,7 @@ upToH = re.compile(r'[/QSTKPWH]\*?_?$')
 upToR = re.compile(r'[/QSTKPWHR]\*?_?$')
 
 
-upToQ_or_W = re.compile(r'[/Q]W?\*?_?$')
+upToQ_or_W = re.compile(r'[/QW]\*?_?$')
 
 upToK_not_just_K = re.compile(r'(/|[QST]K?)\*?_?$')
 
@@ -104,11 +112,10 @@ upToK_no_S = re.compile(r'[/Q]T?K?\*?$')
 upToW_not_just_T_not_just_k_or_just_w = re.compile(r'([STKPW]{2,}|[/QSKP])\*?_?$')  # clink    _? for baudelair
 
 upToW_not_just_s = re.compile(r'([/QTKPW]S?|[/QTKP]H)\*?_?$')  # yes _ because actresses drops a boundary after t
-upToH_not_just_s_or_sh_not_KWH = re.compile(
-    r'([/QTKP]H?|W)\*?_?$')  # yes _ because actresses drops a boundary after t          shh
+upToH_not_just_s_or_sh_not_KWH = re.compile(r'([/QTKP]H?|W)\*?_?$')  # yes _ because actresses drops a boundary after t          shh
 
 upToW_no_T = re.compile(r'[/QS]K?P?W?\*?$')
-upToW_no_P = re.compile(r'[/QSTK]W?\*?$')
+upToW_no_P = re.compile(r'[/QSTK](P?W)?\*?$') #`PWHOELD` → `behold` needs a p
 
 first_stroke_SToR_or_nothing = re.compile(r'^/[STKPWHR]*$')
 
@@ -169,6 +176,7 @@ A_to_r_no_asterisk = re.compile(r'[\-AOeufr]_?$')
 A_to_g_no_asterisk = re.compile(r'[\-AOeufrpblg]_?$')
 A_to_t_no_asterisk = re.compile(r'[\-AOeufrpblgt]_?$')
 
+f_to_r = re.compile(r'[\-AOeu][frpblgt]\*?$')
 f_to_t_no_asterisk = re.compile(r'[\-AOeu][frpblgt]_?$')
 r_ = re.compile(r'[\-AOeu]r\*?_?$')
 r_no_asterisk = re.compile(r'[\-AOeu]r_?$')
@@ -214,8 +222,6 @@ steno_chords_and_their_meanings = {
          "ambiguity": 3,
          "what must come before": any_consonant_but_not_KWH,
          "theory": ""},
-
-
     ],
 
 
@@ -338,6 +344,16 @@ steno_chords_and_their_meanings = {
          "what must come before": any_letter,
          "theory": "Field"},
 
+        {"chord": "* fold",
+         "description": "er when both e and r are unavailable",
+         "spelling": "err?",
+         "pronunciation": "( (@r|er)  r | \(r  @/@r  r\) )",
+         # sometimes (r  @/@r  r) like that whole thing is just in there
+         "ambiguity": 2,
+         "what must come before": unavailable_e_unavailable_r_no_asterisk, #doesn't work for`KHA*ERT`  `chatterer}`????
+         "theory": "Harri"},
+
+
         # I would love to, but this is basically a whole new theory at this point
         # {"description": "* for connecting a suffix",
         # "spelling": "",
@@ -361,6 +377,16 @@ steno_chords_and_their_meanings = {
     #     "ambiguity": 1,
     #     "what must come before": first_slash,
     #     "steno theory": " (Theory: Josiah)"}],
+
+    "S*": [ #left hand with an asterisk!!!
+        {"chord": "S*",
+         "description": "sus",
+         "spelling": "sus",
+         "pronunciation": f" s {keysymbol_shorthands['short vowels']} s ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "what must come before": upToQ,
+         "theory": ""}
+    ],
 
     "S": [
         {"chord": "S",
@@ -425,19 +451,23 @@ steno_chords_and_their_meanings = {
         {"chord": "STK",
          "description": "des sound (optional c/t)", # dis/disc/dist/des/desc/dec
          "spelling": "d[ie][sc]+t?",
-         "pronunciation": " d  (i|ii|e)  (s|z) ( root )?( k )?",
+         "pronunciation": " d  (i|ii|e)  (s|z) ( root )?( (k|t) )?",
          "ambiguity": 1, # descend/distend
          "what must come before": upToQ,
-         "theory": "?"}], 
+         "theory": "?"}
+    ],
+
 
     "STKPW": [
         {"chord": "STKPW",
          "description": "z",
          "spelling": "zz?",
-         "pronunciation": " z ",
+         "pronunciation": "( z | t  s )",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "Harri"}], 
+         "theory": "Harri"}
+    ],
+
 
     # "ST-bg": [
     #    {"description": "ST-BG for -istic",
@@ -454,7 +484,8 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d  i  s ( root )? ch ",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "Josiah?"}], 
+         "theory": "Josiah?"}
+    ],
 
     "SKWR": [
         {"chord": "SKWR",
@@ -467,7 +498,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "SKWR",
          "description": "j sound",
-         "spelling": "(g|dj|dgg?e?)",
+         "spelling": "(g|dj|di|dgg?e?)", #soldier
          "pronunciation": " jh ",
          "ambiguity": 0,
          "what must come before": upToQ,
@@ -537,14 +568,6 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "SH",
-         "description": "sh sound",
-         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #sc like fascist
-         "pronunciation": "( sh | s ( suffix )? y )",
-         "ambiguity": 1,
-         "what must come before": upToQ,
-         "theory": ""},
-
-        {"chord": "SH",
          "description": "ci pronounced sh",
          "spelling": "ci",
          "pronunciation": "( s ( suffix )? y | sh  \[ii\] )",
@@ -567,6 +590,23 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": upToQ,
          "theory": "Harri"},
+
+        {"chord": "SH",
+         "description": "sh sound",
+         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #sc like fascist
+         "pronunciation": "( sh | s ( suffix )? y )",
+         "ambiguity": 1,
+         "what must come before": upToQ,
+         "theory": ""},
+
+
+        {"chord": "SH",
+         "description": "zh sound",
+         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #caucasia
+         "pronunciation": "( zh | z ( suffix )? y )",
+         "ambiguity": 1,
+         "what must come before": upToQ,
+         "theory": ""},
     ],
 
 
@@ -641,7 +681,7 @@ steno_chords_and_their_meanings = {
     "TKPW": [
         {"chord": "TKPW",
          "description": "g",
-         "spelling": "gg?",
+         "spelling": "gg?h?", #ghost can be TKPWOEFT or TKPWHOEFT
          "pronunciation": " g ",
          "ambiguity": 0,
          "what must come before": upToQ,
@@ -713,7 +753,7 @@ steno_chords_and_their_meanings = {
         {"chord": "TH",
          "description": "th",
          "spelling": "th",
-         "pronunciation": " (th|dh) ",
+         "pronunciation": " (th|dh|dh/th) ",
          "ambiguity": 0,
          "what must come before": upToQ,
          "theory": ""}
@@ -721,7 +761,7 @@ steno_chords_and_their_meanings = {
 
 
     "K": [
-        {"chord": "K",
+        {"chord": "K", #why does `KPHAOUPB` → `commune` not work????
          "description": "k",
          "spelling": "k(k|h)?",
          "pronunciation": " k ",
@@ -760,23 +800,34 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "what must come before": upToS,
          "theory": ""},
+
+        {"chord": "K", # connection, context
+         "description": "con optional std",
+         "spelling": "con[std]?",
+         "pronunciation": " k  (@|o|o4)  n ( [st] )?",
+         "ambiguity": 10,
+         "what must come before": upToS,
+         "theory": "Harri"}
     ],
 
-    "KP": [
-        {"chord": "comp",
-         "description": "comp",
-         "spelling": "comp",
-         "pronunciation": " c  o4  m  p ",
-         "ambiguity": 1,
+
+    "K_": [ # combust, needs _ for stuff like command
+        {"chord": "K", # connection, context
+         "description": "com",
+         "spelling": "com?",
+         "pronunciation": " k  (@|o|o4)  m ",
+         "ambiguity": 10,
          "what must come before": upToS,
-         "theory": "?"}],
+         "theory": "Harri"}
+    ],
+
 
     "KPW": [
         {"chord": "KPW",
          "description": "imp/emp",
          "spelling": "[ie]mp",
          "pronunciation": " (i|e|e0)  m ( root )? p ",
-         "ambiguity": 1,
+         "ambiguity": 2,
          "what must come before": upToS,
          "theory": "?"},
 
@@ -784,7 +835,7 @@ steno_chords_and_their_meanings = {
          "description": "impr/empr", #`KPWR` → `you` in my theory
          "spelling": "[ie]mpr",
          "pronunciation": " (i|e|e0)  m ( root )? p  r ",
-         "ambiguity": 2,
+         "ambiguity": 3,
          "what must come before": upToS,
          "theory": "Harri"},
     ],
@@ -830,7 +881,7 @@ steno_chords_and_their_meanings = {
         {"chord": "KWR",
          "description": "i",
          "spelling": "i",
-         "pronunciation": "( suffix )? (ii|ii2|y) ",  # aerospacial ← who wrote that???
+         "pronunciation": "( suffix )? (ii|ii2|y|iy) ",  # aerospacial ← who wrote that???, fancier has a iy
          "ambiguity": 0,
          "what must come before": upToQ,
          "theory": "Harri"},
@@ -876,6 +927,14 @@ steno_chords_and_their_meanings = {
         {"chord": "KH",
          "description": "ch",
          "spelling": "ch",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "KH",
+         "description": "cc pronounced ch",
+         "spelling": "cc",
          "pronunciation": " ch ",
          "ambiguity": 0,
          "what must come before": upToQ,
@@ -993,6 +1052,14 @@ steno_chords_and_their_meanings = {
          "what must come before": SToK,
          "theory": ""},
 
+        {"chord": "W",
+         "description": "long o",
+         "spelling": "o",
+         "pronunciation": keysymbol_shorthands["long o"],
+         "ambiguity": 1,
+         "what must come before": SToK,
+         "theory": "Harri"}, #Lapwing
+
         {"chord": "W fold",
          "description": "W",
          "spelling": "ww?",
@@ -1093,8 +1160,16 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "R",
+         "description": "r maybe silent",
+         "spelling": "rr?",
+         "pronunciation": " \[r\] ",
+         "ambiguity": 0,
+         "what must come before": upToH_not_just_s_or_sh_not_KWH,  # added up to H since THRU # personal opinion, but SR → s + r is ugly
+         "theory": ""},
+
+        {"chord": "R",
          "description": "rh silent h",
-         "spelling": "rr?h?",
+         "spelling": "rr?h",
          "pronunciation": " r ",
          "ambiguity": 1,
          "what must come before": upToH_not_just_s_or_sh_not_KWH,  # added up to H since THRU
@@ -1380,7 +1455,7 @@ steno_chords_and_their_meanings = {
          "description": "ea pronounced short e (first stroke only)",
          "spelling": "ea",
          "pronunciation": " e ", # earl?
-         "ambiguity": 1,
+         "ambiguity": 2, #red
          "what must come before": first_stroke_SToR_or_nothing,
          "theory": "?"},
 
@@ -1399,6 +1474,16 @@ steno_chords_and_their_meanings = {
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": "Lapwing?"},
+    ],
+
+    "A*eur": [
+        {"chord": "A*EUR",
+         "description": "ayer",
+         "spelling": "a(a|ye?|i)?",
+         "pronunciation": " ei  @r  r ",
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
     ],
 
 
@@ -1456,7 +1541,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AEUGS",
          "description": "suffix -ation",
          "spelling": "ation",
-         "pronunciation": " suffix  ee  sh  n ",
+         "pronunciation": " suffix  ee  sh ( suffix )? n ",
          "ambiguity": 2,
          "what must come before": SToR_but_not_KWH,
          "theory": ""},
@@ -1476,9 +1561,25 @@ steno_chords_and_their_meanings = {
 
     "Au": [
         {"chord": "AU",
-         "description": "accent dependent sound",
+         "description": "Brits modify the a like an r would",
          "spelling": "o?a[auh]?",  # ??? just keep it I guess
          "pronunciation": keysymbol_shorthands["au"],
+         "ambiguity": 1,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+        {"chord": "AU",
+         "description": "au",
+         "spelling": "au",  # ??? just keep it I guess
+         "pronunciation": keysymbol_shorthands["short vowels"],
+         "ambiguity": 1,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+        {"chord": "AU",
+         "description": "au",
+         "spelling": "au",  # ??? just keep it I guess
+         "pronunciation": keysymbol_shorthands["ow! Sound"], #Macau
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1490,38 +1591,19 @@ steno_chords_and_their_meanings = {
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
-    ],
 
-
-    "Aurb": [
-        {"chord": "AURB",
-         "description": "arb",
-         "spelling": "arb",
-         "pronunciation": "(" + keysymbol_shorthands["short vowels"] + "|" + keysymbol_shorthands[
-             "long vowels"] + ")" + " r  b ",
+        {"chord": "AU",
+         "description": "a modified by r",
+         "spelling": "u?a",
+         "pronunciation": " ar ", #I don't think @r????
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
-         "theory": "Josiah"}
+         "theory": "Harri"},
     ],
+
 
 
     "Ar": [
-        {"chord": "AR",
-         "description": "ar sound",
-         "spelling": "aa?rr?e?",
-         "pronunciation": " ar  r ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": "Lapwing?"},
-
-        {"chord": "AR",
-         "description": "aur pronounced ar sound",
-         "spelling": "uarr?e?",
-         "pronunciation": " (ar|@r)  r ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": "Lapwing"},
-
         {"chord": "AR",
          "description": "ar ponounced or",
          "spelling": "arr?",  # warring maybe?, athwart
@@ -1530,6 +1612,8 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "theory": "Lapwing"},
     ],
+
+
 
 
     "O": [
@@ -1548,22 +1632,6 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
-
-        {"chord": "O",
-         "description": "o with Harri's accent",
-         "spelling": "o",
-         "pronunciation": " (au|our|our/or|o/uh) ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": "Harri"},
-
-        {"chord": "O",
-         "description": "o (accent stuff)",
-         "spelling": "o",
-         "pronunciation": " oou ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": "Harri"},
 
         {"chord": "O",
          "description": "silent o",
@@ -1589,7 +1657,7 @@ steno_chords_and_their_meanings = {
     "Oe": [
         {"chord": "OE",
          "description": "long o",
-         "spelling": "oe?",
+         "spelling": "o[eu]?",
          "pronunciation": keysymbol_shorthands["long o"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
@@ -1616,14 +1684,6 @@ steno_chords_and_their_meanings = {
          "spelling": "ot$",
          "pronunciation": keysymbol_shorthands["long o"],
          "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": "?"},
-
-        {"chord": "OE",
-         "description": "ou pronounced long o",
-         "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["long o"],
-         "ambiguity": 1,  # bolder/boulder
          "what must come before": SToR_or_nothing,
          "theory": "?"},
 
@@ -1700,7 +1760,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "ou pronounced au sound", #thought
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["au"],
+         "pronunciation": keysymbol_shorthands["au"], # bolder/boulder  thought   " starting_root  th  oo  t  suffix  f  [u]  l ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1708,15 +1768,31 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "ow",
          "spelling": "ow",
-         "pronunciation": " owr? ",
+         "pronunciation": keysymbol_shorthands["ow! Sound"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
 
         {"chord": "OU",
+         "description": "ou pronounced long o",
+         "spelling": "ou",
+         "pronunciation": keysymbol_shorthands["long o"],
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": "Harri"},
+
+        {"chord": "OU",
+         "description": "ou pronounced short vowel",
+         "spelling": "ou",
+         "pronunciation": keysymbol_shorthands["short vowels"],
+         "ambiguity": 0,  # colour
+         "what must come before": SToR_or_nothing,
+         "theory": "Harri"},
+
+        {"chord": "OU",
          "description": "ou pronounced ow",
          "spelling": "ou",
-         "pronunciation": " owr? ",
+         "pronunciation": keysymbol_shorthands["ow! Sound"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1733,25 +1809,17 @@ steno_chords_and_their_meanings = {
 
     "Or": [
         {"chord": "OR",
-         "description": "long o + r",
+         "description": "o modified by r",
          "spelling": "orr?e?",
-         "pronunciation": " or  r ",
+         "pronunciation": " (@@r|or|our|our/or)  r ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
 
         {"chord": "OR",
-         "description": "'or' in 'word'",
-         "spelling": "or",
-         "pronunciation": " @@r  r ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": ""},
-
-        {"chord": "OR",
-         "description": "'aur' in 'dinosaur",
+         "description": "'aur' for o modified by r",
          "spelling": "aur?r",
-         "pronunciation": " or  r ",
+         "pronunciation": " (@@r|or|our|our/or)  r ",
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": "Lapwing"},
@@ -1759,7 +1827,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OR",
          "description": "oar",
          "spelling": "oar?r",
-         "pronunciation": " our  r ",
+         "pronunciation": " (@@r|or|our|our/or)  r ",
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""}
@@ -1767,12 +1835,12 @@ steno_chords_and_their_meanings = {
 
     "Ol": [
         {"chord": "OL",
-         "description": "final oll even though it's an OE sound",
-         "spelling": "oll$",
+         "description": "oll even though it's an OE sound",
+         "spelling": "oll",
          "pronunciation": " ou  l ",
-         "ambiguity": -1,
+         "ambiguity": -1, # TROLZ > TROELZ
          "what must come before": SToR_or_nothing,
-         "theory": "StenEd"}],
+         "theory": "StenEd?"}],
 
 
     "e": [
@@ -1801,8 +1869,16 @@ steno_chords_and_their_meanings = {
         #  "steno theory": " (Theory: Harri)"},
 
         {"chord": "E",
-         "description": "ai pronounced short e", #against
+         "description": "ai pronounced short e",  # against
          "spelling": "ai",
+         "pronunciation": " e ",
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": "?"},
+
+        {"chord": "E",
+         "description": "ie pronounced short e", #friend
+         "spelling": "ie",
          "pronunciation": " e ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
@@ -1919,12 +1995,20 @@ steno_chords_and_their_meanings = {
          "theory": "Harri?"},
 
         {"chord": "EU",
-         "description": "ui pronounced short e? (is this just for 'build'?)",
-         "spelling": "ui",
+         "description": "i sound, weird spelling", #busy, build
+         "spelling": "ui?",
          "pronunciation": " i ",
-         "ambiguity": 0,
+         "ambiguity": -1, #`PWUS/KWHEU` < PWEUS/KWHEU
          "what must come before": SToR_or_nothing,
          "theory": "?"},
+
+         {"chord": "EU",
+         "description": "suffix -y", #assembly
+         "spelling": "(y|ie?)",
+         "pronunciation": " suffix  iy ",
+         "ambiguity": 1,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""},
     ],
 
 
@@ -2092,6 +2176,14 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u,
          "theory": "?"},
 
+        {"chord": "-F",
+         "description": "gh pronounced f",  # graph
+         "spelling": "p?ph",
+         "pronunciation": " f ",
+         "ambiguity": 1,
+         "what must come before": A_to_u,
+         "theory": ""},
+
         # {"description": "-F for gh", #laugh?
         # "spelling": "gh",
         # "pronunciation": " f ",
@@ -2155,7 +2247,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "/-f":[
+    "/-f": [
         {"chord": "/-F",
          "description": "final f",
          "spelling": "fe?$",
@@ -2181,7 +2273,18 @@ steno_chords_and_their_meanings = {
          "pronunciation": " m ",
          "ambiguity": 2,
          "what must come before": A_to_u,
-         "theory": "StenEd?"}],
+         "theory": "StenEd?"}
+    ],
+
+    "frp": [
+        {"chord": "-FRP",
+         "description": "chur",
+         "spelling": "tur",
+         "pronunciation": " ch  r ",
+         "ambiguity": 1,
+         "what must come before": A_to_u,
+         "theory": "Harri"}
+    ],
 
     "frpb": [
         {"chord": "-FRPB",
@@ -2291,11 +2394,19 @@ steno_chords_and_their_meanings = {
          "pronunciation": " v ",
          "ambiguity": 0,
          "what must come before": A_to_u,
-         "theory": "Phoenix"}
+         "theory": "Phoenix"},
+
+        {"chord": "-FB fold",
+         "description": "v",
+         "spelling": "ve?",
+         "pronunciation": " v ",
+         "ambiguity": 1,
+         "what must come before": r_,
+         "theory": "Harri"}
     ],
 
 
-    "/-fb":[
+    "/-fb": [
         {"chord": "/-FB",
          "description": "v",
          "spelling": "ve?$",
@@ -2321,7 +2432,7 @@ steno_chords_and_their_meanings = {
         {"chord": "-FL",
          "description": "suffix -ful",
          "spelling": "ful",
-         "pronunciation": " suffix  f  l ",
+         "pronunciation": " suffix  f ( u )? l ",
          "ambiguity": 1,
          "what must come before": A_to_u,
          "theory": ""}
@@ -2336,6 +2447,16 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "what must come before": A_to_u,
          "theory": "Harri"}
+    ],
+
+    "fg": [
+        {"chord": "-FG",
+         "description": "gh pronounced f",  # graph
+         "spelling": "gh",
+         "pronunciation": " f ",
+         "ambiguity": 0,
+         "what must come before": A_to_u,
+         "theory": "Harri"},
     ],
 
     # "fs":[
@@ -2421,6 +2542,15 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "what must come before": A_to_f_,
          "theory": "StenEd?"},
+
+
+        {"chord": "-RB",
+         "description": "zh sound",
+         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #caucasia
+         "pronunciation": "( zh | z ( suffix )? y )",
+         "ambiguity": 1,
+         "what must come before": A_to_f_,
+         "theory": ""},
     ],
 
 
@@ -2443,6 +2573,15 @@ steno_chords_and_their_meanings = {
          "theory": "Harri"},
     ],
 
+    "*rbl": [
+        {"chord": "*RBL",
+         "description": "rtial",
+         "spelling": "rtial",
+         "pronunciation": " s  y  @  l ",
+         "ambiguity": 1,
+         "what must come before": SToR_, #not a mistake
+         "theory": "Harri"}
+    ],
 
     "rbl": [
         {"chord": "-RBL",
@@ -2457,9 +2596,9 @@ steno_chords_and_their_meanings = {
          "description": "rrow",
          "spelling": "rr?ow?",
          "pronunciation": " r  ouw? ",
-         "ambiguity": 0,
+         "ambiguity": 1, #facial, faro
          "what must come before": A_to_f,
-         "theory": "Josiah?"},
+         "theory": "Harri"},
     ],
 
 
@@ -2484,14 +2623,31 @@ steno_chords_and_their_meanings = {
          "theory": "StenEd"},
     ],
 
+    "*pb": [
+        {"chord": "*PB",
+         "description": "ken sound",
+         "spelling": "[ck]+[eo]n", # chicken, reckon, beacon
+         "pronunciation": f" k {keysymbol_shorthands['short vowels']}( suffix )? n ", # y for the discontinuation
+         "ambiguity": 1,
+         "what must come before": A_to_r_no_asterisk,
+         "theory": "Harri"}
+    ],
 
     "pb": [
         {"chord": "-PB",
          "description": "n",
-         "spelling": "(e|o)?nn?e?",
+         "spelling": "o?nn?e?",
          "pronunciation": " n ", # y for the discontinuation
          "ambiguity": 0,
          "what must come before": A_to_r_,
+         "theory": ""},
+
+        {"chord": "-PB",
+         "description": "en",
+         "spelling": "enn?e?",
+         "pronunciation": " n ", # y for the discontinuation
+         "ambiguity": 1,
+         "what must come before": f_to_r,
          "theory": ""},
 
         {"chord": "-PB",
@@ -2504,13 +2660,13 @@ steno_chords_and_their_meanings = {
 
         {"chord": "-PB",
          "description": "gn silent g",
-         "spelling": "gn",
+         "spelling": "gne?",
          "pronunciation": " n ",
          "ambiguity": 1,
          "what must come before": A_to_r_,
          "theory": ""},
 
-        {"chord": "-PB folding",
+        {"chord": "-PB fold",
          "description": "suffix -en",
          "spelling": "en",
          "pronunciation": " suffix  \[e5\]  n ",
@@ -2564,6 +2720,22 @@ steno_chords_and_their_meanings = {
          "spelling": "ng?",
          "pronunciation": " ng ",
          "ambiguity": 0,
+         "what must come before": A_to_r_,
+         "theory": ""},
+
+        {"chord": "-PBG",
+         "description": "ngue", #tongue
+         "spelling": "ngue",
+         "pronunciation": " ng ",
+         "ambiguity": 0,
+         "what must come before": A_to_r_,
+         "theory": ""},
+
+        {"chord": "-PBG",
+         "description": "ng with g",
+         "spelling": "ng",
+         "pronunciation": " ng ( \[?g\]? )",
+         "ambiguity": 1,
          "what must come before": A_to_r_,
          "theory": ""},
 
@@ -2873,6 +3045,16 @@ steno_chords_and_their_meanings = {
          "theory": "Lapwing"}
     ],
 
+    "bg/SH": [
+        {"chord": "-BG/SH",
+         "description": "x",
+         "spelling": "xi?",
+         "pronunciation": "( k  sh | g  zh )",
+         "ambiguity": 0,
+         "what must come before": A_to_p_,
+         "theory": "Harri"}
+    ],
+
 
     "bg/TKPW": [  # blackguard
         {"chord": "-BG/TKPW",
@@ -2941,6 +3123,14 @@ steno_chords_and_their_meanings = {
          "description": "suffix -l",  # antibacterial
          "spelling": "l",
          "pronunciation": " suffix  l ",
+         "ambiguity": 1,
+         "what must come before": A_to_u,
+         "theory": ""},
+
+         {"chord": "-L",
+         "description": "silent -l after AU",  # antibacterial
+         "spelling": "l", #PWAUL/-L → ball???
+         "pronunciation": "",
          "ambiguity": 1,
          "what must come before": A_to_u,
          "theory": ""},
@@ -3344,6 +3534,14 @@ steno_chords_and_their_meanings = {
          "theory": "Harri?"},
 
         {"chord": "*D",
+         "description": "y pronounced i diphthong",
+         "spelling": "ie?",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
+         "ambiguity": 2,
+         "what must come before": A_to_t_no_asterisk,
+         "theory": "Harri?"},
+
+        {"chord": "*D",
          "description": "y pronounced i",
          "spelling": "y",
          "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
@@ -3353,7 +3551,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "*D",
          "description": "dy",
-         "spelling": "dd?y",
+         "spelling": "dd?(y|ie?)",
          "pronunciation": " d ( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 4,
          "what must come before": A_to_t_no_asterisk,
@@ -3411,7 +3609,7 @@ steno_chords_and_their_meanings = {
         {"chord": "*Z",
          "description": "z",
          "spelling": "zz?e?",
-         "pronunciation": " z ",
+         "pronunciation": "( z | t  s )",
          "ambiguity": 1,
          "what must come before": A_to_d_no_t,
          "theory": "Harri"},
@@ -3529,11 +3727,32 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "PH-bg": [
+        {"chord": "PH-BG",
+         "description": "mc",
+         "spelling": "mc",
+         "pronunciation": " m  @  k ", #chairmanship with a @
+         "ambiguity": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Plover?"}
+    ],
+
     "PHA*pb": [
         {"chord": "PHA*PB",
          "description": "suffix -man",
          "spelling": "man",
-         "pronunciation": " suffix  m  a5  n ",
+         "pronunciation": " suffix  m  (a5|@)  n ", #chairmanship with a @
+         "ambiguity": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Plover?"}
+    ],
+
+
+    "PH*epb": [
+        {"chord": "PH*EPB",
+         "description": "suffix -men",
+         "spelling": "men",
+         "pronunciation": " suffix  m  e5  n ",
          "ambiguity": 0,
          "what must come before": slash_no_asterisk,
          "theory": "Plover?"}
@@ -3584,13 +3803,46 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "WO*pl": [
+        {"chord": "WO*PL",
+         "description": "suffix -woman",
+         "spelling": "woman",
+         "pronunciation": " suffix  w  u  m  (a5|@)  n ",
+         "ambiguity": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Plover?"}
+    ],
+
+
+    "W*eupl": [
+        {"chord": "W*EUPL",
+         "description": "suffix -women",
+         "spelling": "women",
+         "pronunciation": " suffix  w  i  m  i  n ",
+         "ambiguity": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri"}
+    ],
+
+
+    "HRA*pbd": [
+        {"chord": "HRA*PBD",
+         "description": "suffix -land",
+         "spelling": "land",
+         "pronunciation": " suffix  l  (@|ah1)  n  d ",
+         "ambiguity": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "StenEd?"}
+    ],
+
+
     "HReu": [
         {"chord": "HREU",
          "description": "suffix -ly",
          "spelling": "l(y|ie?)",
          "pronunciation": " suffix  l  iy ",
          "ambiguity": 0,
-         "what must come before": slash_no_asterisk,
+         "what must come before": upToW,
          "theory": "StenEd"}
     ],
 
@@ -3639,15 +3891,66 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "Aepbs": [
+        {"chord": "AEPBS",
+         "description": "suffix -ancy",
+         "spelling": "anc(y|ie?)",
+         "pronunciation": " suffix  @  n  s  iy ",
+         "ambiguity": 0,
+         "what must come before": SToR,  #but not not KWH
+         "theory": ""}
+    ],
+
+    "eupb": [
+        {"chord": "EUPB",
+         "description": "suffix -ine",
+         "spelling": "ine",
+         "pronunciation": " suffix  ai/i  n ",
+         "ambiguity": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
+    "eubg": [
+        {"chord": "EUBG",
+         "description": "suffix -ic",
+         "spelling": "icc?",
+         "pronunciation": " suffix  i  k ",
+         "ambiguity": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
 
     "/-fl": [
         {"chord": "/-FL",
          "description": "suffix -ful",
-         "spelling": "ful",
-         "pronunciation": " suffix  f  l ",
+         "spelling": "full?", #thoughtfully
+         "pronunciation": " suffix  f ( \[?u\]? )? l ", #canful, thoughtful
          "ambiguity": 0,
          "what must come before": f_to_z,
          "theory": "StenEd?"}
+    ],
+
+
+    "/-pbs": [
+        {"chord": "/-PBS",
+         "description": "suffix -ness",
+         "spelling": "ness",
+         "pronunciation": " suffix  n  e5  s ", #aloofness
+         "ambiguity": 0,
+         "what must come before": p_to_z,
+         "theory": ""}
+    ],
+
+    "pbs": [
+        {"chord": "-PBS",
+         "description": "suffix -ness",
+         "spelling": "ness",
+         "pronunciation": " suffix  n  e5  s ", #aloofness
+         "ambiguity": 1,
+         "what must come before": A_to_r,
+         "theory": ""}
     ],
 
 
@@ -3662,6 +3965,17 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "lt": [
+        {"chord": "-LT",
+         "description": "suffix -let",  # armlet
+         "spelling": "let",
+         "pronunciation": " suffix  l  i7  t ",
+         "ambiguity": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"}
+    ],
+
+
     "/-lt": [
         {"chord": "/-LT",
          "description": "suffix -let",  # armlet
@@ -3672,9 +3986,20 @@ steno_chords_and_their_meanings = {
          "theory": "StenEd?"}
     ],
 
+
+    "ls": [
+        {"chord": "-LS",
+         "description": "suffix -less",  # airless
+         "spelling": "less",
+         "pronunciation": " suffix  l  e5  s ",
+         "ambiguity": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"}
+    ],
+
     "/-ls": [
-        {"chord": "/-LT",
-         "description": "suffix -less",  # armlet
+        {"chord": "/-LS",
+         "description": "suffix -less",
          "spelling": "less",
          "pronunciation": " suffix  l  e5  s ",
          "ambiguity": 0,
@@ -3682,3 +4007,47 @@ steno_chords_and_their_meanings = {
          "theory": "StenEd?"}
     ],
 }
+
+
+"""
+
+ suffix  f  ou  l  d 
+ suffix  th 
+ compound  @  n  compound 
+
+
+
+
+
+
+
+  "word": "toilworn:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  t  oi  l  compound  w  our  r  suffix  n ",
+  "word_boundaries": "toilworn",
+  "frequency": "4",
+  "number of entries": 0,
+  "steno stuff": {}
+
+
+   {
+  "word": "tongue:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  t  uh  ng ",
+  "word_boundaries": "tongue",
+  "frequency": "7434",
+  "number of entries": 0,
+  "steno stuff": {}
+ },
+
+
+
+
+   "word": "cold-hearted:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  k  ou  l  d  compound  h  ar  r  t  suffix  i7  d ",
+  "word_boundaries": "cold-hearted",
+  "frequency": "31",
+  "number of entries": 0,
+  "steno stuff": {}
+"""
