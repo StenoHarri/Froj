@@ -14,6 +14,14 @@ I wanna stick a w in here, you know where
 the first morpheme is {able} and not {abile}, I get it :(
 ability::NN: { @ . b * i l $}.> @ . t iy > :{able}>ity>:14435
 
+
+so you CAN double it!
+midday::NN/RB/JJ: < m i d <.{ d * ei } ::1463
+
+
+not allowed:
+SEUPBG/TKPWER → singer
+
 "word": "abrasive:",
   this is just nasty
   "word_boundaries": "abradeive",
