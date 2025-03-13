@@ -153,6 +153,7 @@ def make_boundaries_into_list(full_pronunciation):
                            .replace(" =.=","")
                            .replace("==","") #gotta do this since it's in the spelling section too
                            #.replace("= ","") #morpheme he
+                           .replace(" [.1]","")
                            .replace(" [*]","")
                            .replace(" [*1]","")
                            .replace(" [~]","")
