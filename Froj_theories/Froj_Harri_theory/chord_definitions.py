@@ -11,7 +11,7 @@ so I'll define them once here
 """
 keysymbol_shorthands = {
 
-    "short vowels": " \[?(@|@1|@r|a|a/ee|a1|a4|a4/a|a4/a1|a5|a5/i2|aa|ae/i|ah|ah2|ai/i|ao|ar1|e|e/ee|e0|e05|e1|e5|e5/e|e50|ee/a|ee/o|ee1|ee5/ee|i|i/ai|i/e|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o1|o4|o5|o5/o|o/uh|oa|or1|our1|u|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
+    "short vowels": " \[?(@|@1|@r|a|a/ee|a1|a4|a4/a|a4/a1|a5|a5/i2|aa|ae/i|ah|ah2|ai/i|ao|ar1|e|e/ee|e0|e05|e1|e5|e5/e|e50|ee/a|ee/o|ee1|ee5/ee|i|i/ai|i/e|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o1|o4|o5|o5/o|o/uh|oa|or1|our1|ouw1|u|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
     # ii/i bidet/bistro   #ou/o???
 
     "long a": " \[?(aa/ee|ee|ee/o|ei|eir|eir1|ii/ee|iy/ee|e/ee|ee5/ee)\]? ",
@@ -220,8 +220,6 @@ steno_chords_and_their_meanings = {
          "ambiguity": 3,
          "what must come before": any_consonant_but_not_KWH,
          "theory": ""},
-
-
     ],
 
 
@@ -1544,7 +1542,7 @@ steno_chords_and_their_meanings = {
 
     "Au": [
         {"chord": "AU",
-         "description": "sound southern Brits say for the 'a' in bath",
+         "description": "Brits modify the a like an r would",
          "spelling": "o?a[auh]?",  # ??? just keep it I guess
          "pronunciation": keysymbol_shorthands["au"],
          "ambiguity": 1,
@@ -1560,6 +1558,14 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AU",
+         "description": "au",
+         "spelling": "au",  # ??? just keep it I guess
+         "pronunciation": keysymbol_shorthands["ow! Sound"],
+         "ambiguity": 1,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+        {"chord": "AU",
          "description": "aw",
          "spelling": "awe?",
          "pronunciation": keysymbol_shorthands["au"],
@@ -1570,7 +1576,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AU",
          "description": "a modified by r",
          "spelling": "u?a",
-         "pronunciation": " (ar|@r)  r ",
+         "pronunciation": " ar ", #I don't think @r????
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": "Harri"},
@@ -1648,7 +1654,7 @@ steno_chords_and_their_meanings = {
     "Oe": [
         {"chord": "OE",
          "description": "long o",
-         "spelling": "oe?",
+         "spelling": "o[eu]?",
          "pronunciation": keysymbol_shorthands["long o"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
@@ -1751,7 +1757,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "ou pronounced au sound", #thought
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["au"], # bolder/boulder
+         "pronunciation": keysymbol_shorthands["au"], # bolder/boulder  thought   " starting_root  th  oo  t  suffix  f  [u]  l ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1876,7 +1882,7 @@ steno_chords_and_their_meanings = {
          "theory": "?"},
 
         {"chord": "E",
-         "description": "ai pronounced short e", #against
+         "description": "ie pronounced short e", #friend
          "spelling": "ie",
          "pronunciation": " e ",
          "ambiguity": 0,
@@ -1994,7 +2000,7 @@ steno_chords_and_their_meanings = {
          "theory": "Harri?"},
 
         {"chord": "EU",
-         "description": "i sound, weird spelling)", #busy, build
+         "description": "i sound, weird spelling", #busy, build
          "spelling": "ui?",
          "pronunciation": " i ",
          "ambiguity": -1, #`PWUS/KWHEU` < PWEUS/KWHEU
@@ -2600,9 +2606,17 @@ steno_chords_and_their_meanings = {
     "pb": [
         {"chord": "-PB",
          "description": "n",
-         "spelling": "(e|o)?nn?e?",
+         "spelling": "o?nn?e?",
          "pronunciation": " n ", # y for the discontinuation
          "ambiguity": 0,
+         "what must come before": A_to_r_,
+         "theory": ""},
+
+        {"chord": "-PB",
+         "description": "en",
+         "spelling": "enn?e?",
+         "pronunciation": " n ", # y for the discontinuation
+         "ambiguity": 1,
          "what must come before": A_to_r_,
          "theory": ""},
 
@@ -3792,15 +3806,46 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "eubg": [
+        {"chord": "EUBG",
+         "description": "suffix -ic",
+         "spelling": "icc?",
+         "pronunciation": " suffix  i  k ",
+         "ambiguity": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
 
     "/-fl": [
         {"chord": "/-FL",
          "description": "suffix -ful",
-         "spelling": "ful",
-         "pronunciation": " suffix  f ( u )? l ", #canful
+         "spelling": "full?", #thoughtfully
+         "pronunciation": " suffix  f ( \[?u\]? )? l ", #canful, thoughtful
          "ambiguity": 0,
          "what must come before": f_to_z,
          "theory": "StenEd?"}
+    ],
+
+
+    "/-pbs": [
+        {"chord": "/-PBS",
+         "description": "suffix -ness",
+         "spelling": "ness",
+         "pronunciation": " suffix  n  e5  s ", #aloofness
+         "ambiguity": 0,
+         "what must come before": p_to_z,
+         "theory": ""}
+    ],
+
+    "pbs": [
+        {"chord": "-PBS",
+         "description": "suffix -ness",
+         "spelling": "ness",
+         "pronunciation": " suffix  n  e5  s ", #aloofness
+         "ambiguity": 1,
+         "what must come before": A_to_r,
+         "theory": ""}
     ],
 
 
@@ -3815,6 +3860,17 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "lt": [
+        {"chord": "-LT",
+         "description": "suffix -let",  # armlet
+         "spelling": "let",
+         "pronunciation": " suffix  l  i7  t ",
+         "ambiguity": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"}
+    ],
+
+
     "/-lt": [
         {"chord": "/-LT",
          "description": "suffix -let",  # armlet
@@ -3825,9 +3881,20 @@ steno_chords_and_their_meanings = {
          "theory": "StenEd?"}
     ],
 
+
+    "ls": [
+        {"chord": "-LS",
+         "description": "suffix -less",  # airless
+         "spelling": "less",
+         "pronunciation": " suffix  l  e5  s ",
+         "ambiguity": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"}
+    ],
+
     "/-ls": [
-        {"chord": "/-LT",
-         "description": "suffix -less",  # armlet
+        {"chord": "/-LS",
+         "description": "suffix -less",
          "spelling": "less",
          "pronunciation": " suffix  l  e5  s ",
          "ambiguity": 0,
@@ -3835,3 +3902,36 @@ steno_chords_and_their_meanings = {
          "theory": "StenEd?"}
     ],
 }
+
+
+"""
+
+ suffix  f  ou  l  d 
+ suffix  th 
+ compound  @  n  compound 
+
+
+
+
+
+
+
+  "word": "toilworn:",
+  "word_class": "JJ",
+  "pronunciation": " starting_root  t  oi  l  compound  w  our  r  suffix  n ",
+  "word_boundaries": "toilworn",
+  "frequency": "4",
+  "number of entries": 0,
+  "steno stuff": {}
+
+
+   {
+  "word": "tongue:",
+  "word_class": "NN",
+  "pronunciation": " starting_root  t  uh  ng ",
+  "word_boundaries": "tongue",
+  "frequency": "7434",
+  "number of entries": 0,
+  "steno stuff": {}
+ },
+"""
