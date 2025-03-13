@@ -14,6 +14,7 @@ def load_json(filename: str) -> dict:
 
 
 def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
+
     """Return the relevant lookup data for the given first letter and lookup type."""
     global _lookup_data_cache
     # Ensure that we load data only once for the given letter
@@ -46,10 +47,15 @@ def get_annotation_level(word_to_find: str) -> tuple:
     """Return the base word and whether it's complex."""
     if word_to_find.startswith(":>>>"):
         return word_to_find.replace(":>>>", "").strip(), "summarise all"
+    if word_to_find.startswith(":>>>"):
+        return word_to_find.replace(":>>>", "").strip(), "summarise all"
     if word_to_find.startswith(":>>"):
+        return word_to_find.replace(":>>", "").strip(), "annotate best"
         return word_to_find.replace(":>>", "").strip(), "annotate best"
     else:  # it must be :>
         return word_to_find.replace(":>", "").strip(), "summarise best"
+        return word_to_find.replace(":>", "").strip(), "summarise best"
+
 
 
 def giveChordsColours(theory_rules, colours):
@@ -138,10 +144,13 @@ def best_outlines(spelling, outlines, complexity):
     number_of_best_entries = 0
 
     total_number_of_entries = sum(
-        len(ambiguity[amb]["number of strokes"][stroke_count])
-        for amb in ambiguity
+        len(ambiguity[amb]["number of strokes"][stroke_count][stroke_count])
+        
+        for amb in ambiguity 
+        for stroke_count in ambiguity[amb]["number of strokes"]
         for stroke_count in ambiguity[amb]["number of strokes"]
     )
+
 
     # Sort ambiguity levels by their numeric value (e.g., "2", "5")
     sorted_ambiguities = sorted(ambiguity.keys(), key=int)
@@ -173,11 +182,18 @@ def best_outlines(spelling, outlines, complexity):
 
                     set_theory_colour = "\033[2;30m"
                     remove_colour = "\033[0m"
+                    set_theory_colour = "\033[2;30m"
+                    remove_colour = "\033[0m"
 
                     raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
                     for theory_rule in theory_rules:
                         linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
+                    raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
+                    for theory_rule in theory_rules:
 
+                        linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
+
+                        theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
                         theory_rule_breakdown += (
                             f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
@@ -311,6 +327,7 @@ def display_entries(outline, spellings, complexity):
 
     return best_entries(outline, spellings, complexity)
 
+    return best_entries(outline, spellings, complexity)
 
 def get_response(user_input: str) -> str:
     """Returns the appropriate response for user input."""
