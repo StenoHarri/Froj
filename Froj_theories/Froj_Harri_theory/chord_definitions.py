@@ -2256,7 +2256,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "/-f":[
+    "/-f": [
         {"chord": "/-F",
          "description": "final f",
          "spelling": "fe?$",
@@ -2415,7 +2415,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "/-fb":[
+    "/-fb": [
         {"chord": "/-FB",
          "description": "v",
          "spelling": "ve?$",
@@ -3736,7 +3736,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "PH-BG": [
+    "PH-bg": [
         {"chord": "PH-BG",
          "description": "mc",
          "spelling": "mc",
@@ -3834,7 +3834,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "HR*apbd": [
+    "HRA*pbd": [
         {"chord": "HRA*PBD",
          "description": "suffix -land",
          "spelling": "land",
