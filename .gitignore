@@ -6,4 +6,4 @@ Froj_theories/Froj_Harri_theory/all_entries.json
 Froj_theories/Froj_Harri_theory/all_outlines.json
 Froj_theories/Froj_Harri_theory/complete_output.json
 Froj_theories/Froj_user_theory.json
-preprocessed_dictionaries/*.json
+FrojBot/preprocessed_dictionaries/*.json
