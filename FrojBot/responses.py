@@ -6,6 +6,16 @@ from typing import Dict, Optional
 # Cached data (only loaded once, then unloaded after each use)
 _lookup_data_cache: Optional[Dict[str, dict]] = {}
 
+def get_file_path() -> str:
+    "Returns the dir this script is being executed in."
+    try:
+        return os.path.dirname(os.path.abspath(__file__))
+    except NameError:
+        # __file__ is not set in interactive environments, falls back to cwd.
+        return os.getcwd()
+
+base_dir = get_file_path()
+
 
 def load_json(filename: str) -> dict:
     """Helper function to load JSON data from a file."""
@@ -14,7 +24,6 @@ def load_json(filename: str) -> dict:
 
 
 def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
-
     """Return the relevant lookup data for the given first letter and lookup type."""
     global _lookup_data_cache
     # Ensure that we load data only once for the given letter
@@ -23,9 +32,10 @@ def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
 
     if letter not in _lookup_data_cache[lookup_type]:
         # Lazy load the corresponding file based on the letter and lookup type
-        filename = f"FrojBot/preprocessed_dictionaries/{lookup_type}_starting_{letter}.json"
-        if os.path.exists(filename):
-            _lookup_data_cache[lookup_type][letter] = load_json(filename)
+        # filename = f"FrojBot/preprocessed_dictionaries/{lookup_type}_starting_{letter}.json"
+        file_path = os.path.join(base_dir, "preprocessed_dictionaries", f"{lookup_type}_starting_{letter}.json")
+        if os.path.exists(file_path):
+            _lookup_data_cache[lookup_type][letter] = load_json(file_path)
         else:
             _lookup_data_cache[lookup_type][letter] = {}  # Empty if not found
 
@@ -51,11 +61,8 @@ def get_annotation_level(word_to_find: str) -> tuple:
         return word_to_find.replace(":>>>", "").strip(), "summarise all"
     if word_to_find.startswith(":>>"):
         return word_to_find.replace(":>>", "").strip(), "annotate best"
-        return word_to_find.replace(":>>", "").strip(), "annotate best"
     else:  # it must be :>
         return word_to_find.replace(":>", "").strip(), "summarise best"
-        return word_to_find.replace(":>", "").strip(), "summarise best"
-
 
 
 def giveChordsColours(theory_rules, colours):
@@ -144,7 +151,7 @@ def best_outlines(spelling, outlines, complexity):
     number_of_best_entries = 0
 
     total_number_of_entries = sum(
-        len(ambiguity[amb]["number of strokes"][stroke_count][stroke_count])
+        len(ambiguity[amb]["number of strokes"][stroke_count])
         
         for amb in ambiguity 
         for stroke_count in ambiguity[amb]["number of strokes"]
@@ -327,7 +334,6 @@ def display_entries(outline, spellings, complexity):
 
     return best_entries(outline, spellings, complexity)
 
-    return best_entries(outline, spellings, complexity)
 
 def get_response(user_input: str) -> str:
     """Returns the appropriate response for user input."""
@@ -368,7 +374,8 @@ def get_response(user_input: str) -> str:
 
         return "Huh, how did you get here?"
 
-    with open("FrojBot/preprocessed_dictionaries/words_that_Edinburgh_has.txt") as file:
+    file_path = os.path.join(base_dir, "preprocessed_dictionaries", "words_that_Edinburgh_has.txt")
+    with open(file_path) as file:
         # Check each line (each line is a word)
         for line in file:
             if line.strip() == word_to_find:
