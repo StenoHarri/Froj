@@ -1,5 +1,6 @@
 import json
 
+print("loading the Froj output file into RAM")
 with open("Froj_theories/Froj_Harri_theory/complete_output.json", 'r') as f:
     words = json.load(f)
 
@@ -29,7 +30,21 @@ def ordered_by_length(dictionary):
     return ordered_by_length
 
 
-def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries):
+def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries, word_class):
+
+
+    if spelling[0] == spelling[0].lower():
+
+        #if it needs capitalising, pass it through again but capitalised
+        if "NNP" in word_class:
+            all_outlines, all_entries = create_lookups(spelling.capitalize(), ordered_outlines_for_this_particular_word, all_outlines, all_entries, word_class)
+
+        # if it's a proper noun and nothing else, we're done here. (Mark vs mark would continue)
+        if word_class.replace("POS/","").replace("NNPS","").replace("NNP","").replace("POS","").replace("|","") == "":
+            return all_outlines, all_entries
+
+        if "'s" in spelling:
+            return all_outlines, all_entries
 
     for outline in ordered_outlines_for_this_particular_word:
 
@@ -50,9 +65,19 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
                      .replace("e*","*e")
                      .replace("-*","*").upper()
         )
+
         ambiguity = outline['ambiguity']
         explanation = outline['explanation']
         length = len(raw_steno.split('/'))
+
+
+        if spelling[0] == spelling[0].capitalize():
+            raw_steno = "#"+raw_steno
+            explanation.insert(0, {
+                "theory": "Lapwing",
+                "chord": "#",
+                "description": "Proper noun"
+                })
 
         # Chance for words with the same spelling to overwrite stuff here :(
         if spelling in all_outlines:
@@ -125,13 +150,14 @@ for word in words:
     #some words have the same spelling, but I'd consider them different words, like point and point
     #I'm prepared to just suck it up and lose that data :(
     spelling = word['word'].split(":")[0]
+    word_class = word['word_class']
 
     ordered_outlines_for_this_particular_word = (ordered_by_length(word))
 
-    all_outlines, all_entries = create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries)
+    all_outlines, all_entries = create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries, word_class)
 
 
-print('writing resolved entries for Plover')
+print('working out the resolved entries for Plover')
 resolved_entries = {} #not for the Discord bot, but for me to have on Plover
 for entry in all_entries:
 
@@ -146,11 +172,9 @@ for entry in all_entries:
         
         resolved_entries[entry] = all_entries[entry]['ambiguity'][smallest_ambiguity][0]['spelling']
 
-
-
-#print('writing best lookups')
-#with open("Froj_theories/Froj_Harri_theory/best_outlines.json", "w") as outfile:
-#        json.dump(best_outlines, outfile, indent=1)
+print('writing resolved entries for Plover')
+with open("Froj_theories/Froj_Harri_theory/resolved_entries.json", "w") as outfile:
+        json.dump(resolved_entries, outfile, indent=1)
 
 print('writing word -> entry lookups')
 with open("Froj_theories/Froj_Harri_theory/all_outlines.json", "w") as outfile:
@@ -160,6 +184,4 @@ print('writing entry -> word lookups')
 with open("Froj_theories/Froj_Harri_theory/all_entries.json", "w") as outfile:
         json.dump(all_entries, outfile, indent=1)
 
-print('writing Plover entry -> word')
-with open("Froj_theories/Froj_Harri_theory/resolved_entries.json", "w") as outfile:
-        json.dump(resolved_entries, outfile, indent=1)
+

@@ -83,6 +83,7 @@ slash_or_T = re.compile(r'/T?$')
 
 
 just_KWH = re.compile(r'/KWH$')
+ends_in_p = re.compile(r'p\*?$')
 
 slash = re.compile(r'/\*?_?$')
 upToQ = re.compile(r'[/Q]\*?_?$')
@@ -107,12 +108,13 @@ SToR_or_nothing = re.compile(r'(^/|[STKPWHR]\*?|/\*)$')  # or just an asterisk f
 # I'm getting rid of _? because "against"
 
 upToK_no_T = re.compile(r'[/QS]K?\*?_?$')  # _? for #PWAOUD/PEFT
-upToK_no_S = re.compile(r'[/Q]T?K?\*?$')
+upToK_not_just_T = re.compile(r'[/QSK]\*?_?$')  # _? for #PWAOUD/PEFT
+upToK_not_just_S = re.compile(r'[/QTK]\*?$') #disband
 
 upToW_not_just_T_not_just_k_or_just_w = re.compile(r'([STKPW]{2,}|[/QSKP])\*?_?$')  # clink    _? for baudelair
 
 upToW_not_just_s = re.compile(r'([/QTKPW]S?|[/QTKP]H)\*?_?$')  # yes _ because actresses drops a boundary after t
-upToH_not_just_s_or_sh_not_KWH = re.compile(r'([/QTKP]H?|W)\*?_?$')  # yes _ because actresses drops a boundary after t          shh
+upToH_not_just_s_or_sh_not_KWH = re.compile(r'([/QTKP]H?|W)\*?_?$')  # yes _ because actresses drops a boundary after t
 
 upToW_no_T = re.compile(r'[/QS]K?P?W?\*?$')
 upToW_no_P = re.compile(r'[/QSTK](P?W)?\*?$') #`PWHOELD` → `behold` needs a p
@@ -465,7 +467,15 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( z | t  s )",
          "ambiguity": 0,
          "what must come before": upToQ,
-         "theory": "Harri"}
+         "theory": "Harri"},
+
+        {"chord": "STKPW",
+         "description": "disg",
+         "spelling": "disg",
+         "pronunciation": " d  i  s  g ",
+         "ambiguity": 1,
+         "what must come before": upToQ,
+         "theory": "StenEd?"}
     ],
 
 
@@ -593,7 +603,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "SH",
          "description": "sh sound",
-         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #sc like fascist
+         "spelling": "((sc|s|c|t|x)i|ce|s?che?|sc|ss)", #sc like fascist, sci like conscience
          "pronunciation": "( sh | s ( suffix )? y )",
          "ambiguity": 1,
          "what must come before": upToQ,
@@ -761,17 +771,18 @@ steno_chords_and_their_meanings = {
 
 
     "K": [
-        {"chord": "K", #why does `KPHAOUPB` → `commune` not work????
-         "description": "k",
-         "spelling": "k(k|h)?",
-         "pronunciation": " k ",
-         "ambiguity": 0,
-         "what must come before": upToS,
-         "theory": ""},
 
         {"chord": "K",
          "description": "c pronounced k",
          "spelling": "cc?",  # acclimatise
+         "pronunciation": " k ",
+         "ambiguity": 0, # kart > cart
+         "what must come before": upToS,
+         "theory": ""},
+
+        {"chord": "K", #why does `KPHAOUPB` → `commune` not work????
+         "description": "k",
+         "spelling": "k(k|h)?",
          "pronunciation": " k ",
          "ambiguity": 1,
          "what must come before": upToS,
@@ -976,7 +987,7 @@ steno_chords_and_their_meanings = {
          "spelling": "pp?",
          "pronunciation": " p ",
          "ambiguity": 0,
-         "what must come before": upToK_no_T,
+         "what must come before": upToK_not_just_T, # displeasure
          "theory": ""},
 
         {"chord": "P",
@@ -984,7 +995,7 @@ steno_chords_and_their_meanings = {
          "spelling": "pp?",
          "pronunciation": " p  \[y\] ",
          "ambiguity": 0,
-         "what must come before": upToK_no_T,
+         "what must come before": upToK_not_just_T,
          "theory": ""}
     ],
 
@@ -995,7 +1006,7 @@ steno_chords_and_their_meanings = {
          "spelling": "bb?",
          "pronunciation": " b ",
          "ambiguity": 0,
-         "what must come before": upToK_no_S,
+         "what must come before": upToK_not_just_S,
          "theory": ""},
     ],
 
@@ -1006,7 +1017,7 @@ steno_chords_and_their_meanings = {
          "spelling": "mm?",
          "pronunciation": " m ",
          "ambiguity": 0,
-         "what must come before": upToK_no_T,
+         "what must come before": upToK_not_just_T,
          "theory": ""}
     ],
 
@@ -2177,19 +2188,12 @@ steno_chords_and_their_meanings = {
          "theory": "?"},
 
         {"chord": "-F",
-         "description": "gh pronounced f",  # graph
-         "spelling": "p?ph",
+         "description": "gh pronounced f",  # laugh
+         "spelling": "g?gh",
          "pronunciation": " f ",
          "ambiguity": 1,
          "what must come before": A_to_u,
          "theory": ""},
-
-        # {"description": "-F for gh", #laugh?
-        # "spelling": "gh",
-        # "pronunciation": " f ",
-        # "ambiguity": 1,
-        # "what must come before": A_to_u,
-        # "steno theory": ""},
 
         {"chord": "-F fold",
          "description": "v",
@@ -2449,15 +2453,15 @@ steno_chords_and_their_meanings = {
          "theory": "Harri"}
     ],
 
-    "fg": [
-        {"chord": "-FG",
-         "description": "gh pronounced f",  # graph
-         "spelling": "gh",
-         "pronunciation": " f ",
-         "ambiguity": 0,
-         "what must come before": A_to_u,
-         "theory": "Harri"},
-    ],
+    #"fg": [
+    #    {"chord": "-FG",
+    #     "description": "gh pronounced f",  # graph
+    #     "spelling": "gh",
+    #     "pronunciation": " f ",
+    #     "ambiguity": 0,
+    #     "what must come before": A_to_u,
+    #     "theory": "Harri"},
+    #],
 
     # "fs":[
     #    {"description": "-FS for double s",
@@ -2515,6 +2519,17 @@ steno_chords_and_their_meanings = {
          "ambiguity": 3,
          "what must come before": unavailable_e_no_r,  # reusing cause I'm lazy
          "theory": "Harri"}
+    ],
+
+
+    "rpb": [
+        {"chord": "-RPB",
+         "description": "nish",
+         "spelling": "r?nish",
+         "pronunciation": "( r )? n  i  sh ",
+         "ambiguity": 1,
+         "what must come before": A_to_f_,
+         "theory": "Lapwing?"}
     ],
 
 
@@ -2636,9 +2651,17 @@ steno_chords_and_their_meanings = {
     "pb": [
         {"chord": "-PB",
          "description": "n",
-         "spelling": "o?nn?e?",
+         "spelling": "o?nn?",
          "pronunciation": " n ", # y for the discontinuation
          "ambiguity": 0,
+         "what must come before": A_to_r_,
+         "theory": ""},
+
+        {"chord": "-PB",
+         "description": "ne",
+         "spelling": "o?nn?e",
+         "pronunciation": " n ", # y for the discontinuation
+         "ambiguity": 1,
          "what must come before": A_to_r_,
          "theory": ""},
 
@@ -3206,6 +3229,7 @@ steno_chords_and_their_meanings = {
          "what must come before": l_no_asterisk,
          "theory": "Harri"}],
 
+
     "g": [
         {"chord": "-G",
          "description": "g",
@@ -3243,7 +3267,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "-G",
          "description": "silent gh",
-         "spelling": "gh",
+         "spelling": "ghby",
          "pronunciation": "",
          "ambiguity": 1,
          "what must come before": A_to_p,
@@ -3253,7 +3277,7 @@ steno_chords_and_their_meanings = {
          "description": "suffix -ing",
          "spelling": "ing",
          "pronunciation": " suffix  i  ng ",
-         "ambiguity": 1,
+         "ambiguity": 2,
          "what must come before": after_g_no_g,
          "theory": ""}
     ],
@@ -3429,7 +3453,7 @@ steno_chords_and_their_meanings = {
          "description": "c pronounced s",
          "spelling": "s?ce?",
          "pronunciation": " s ",
-         "ambiguity": 1,
+         "ambiguity": -1, #practice > practise
          "what must come before": A_to_t_no_g_end,  # maybe I'm traumatised from ABGS/HRERPL/TER → accelerometer
          "theory": ""},
 
@@ -3572,7 +3596,7 @@ steno_chords_and_their_meanings = {
          "description": "suffix -ing (when G is unavailable)",
          "spelling": "ing",
          "pronunciation": " suffix  i  ng ",
-         "ambiguity": 0,
+         "ambiguity": 2,
          "what must come before": A_to_g_yes_b_or_g,
          "theory": "Magnum"}
     ],
@@ -3993,7 +4017,15 @@ steno_chords_and_their_meanings = {
          "spelling": "less",
          "pronunciation": " suffix  l  e5  s ",
          "ambiguity": 0,
-         "what must come before": A_to_b,
+         "what must come before": A_to_b_not_just_p,  #promise > propless
+         "theory": "StenEd?"}
+
+        {"chord": "-LS",
+         "description": "suffix -less", 
+         "spelling": "less",
+         "pronunciation": " suffix  l  e5  s ",
+         "ambiguity": 4, # promise > propless
+         "what must come before": ends_in_p,
          "theory": "StenEd?"}
     ],
 

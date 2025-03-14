@@ -47,13 +47,9 @@ def get_annotation_level(word_to_find: str) -> tuple:
     """Return the base word and whether it's complex."""
     if word_to_find.startswith(":>>>"):
         return word_to_find.replace(":>>>", "").strip(), "summarise all"
-    if word_to_find.startswith(":>>>"):
-        return word_to_find.replace(":>>>", "").strip(), "summarise all"
     if word_to_find.startswith(":>>"):
         return word_to_find.replace(":>>", "").strip(), "annotate best"
-        return word_to_find.replace(":>>", "").strip(), "annotate best"
     else:  # it must be :>
-        return word_to_find.replace(":>", "").strip(), "summarise best"
         return word_to_find.replace(":>", "").strip(), "summarise best"
 
 
@@ -182,20 +178,14 @@ def best_outlines(spelling, outlines, complexity):
 
                     set_theory_colour = "\033[2;30m"
                     remove_colour = "\033[0m"
-                    set_theory_colour = "\033[2;30m"
-                    remove_colour = "\033[0m"
 
-                    raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
-                    for theory_rule in theory_rules:
-                        linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
+
                     raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
                     for theory_rule in theory_rules:
 
                         linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
 
                         theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
-                        theory_rule_breakdown += (
-                            f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
                 if len(output) > 1200:
                     too_big = "Too big for Discord, stopped early. Try `:>`"
@@ -205,9 +195,12 @@ def best_outlines(spelling, outlines, complexity):
                 chunk_to_add = ("```Ansi\n\n")
 
                 if len(plain_raw_steno.split("/")) < 3:
-                    list_of_all_spellings = return_list_of_all_spellings(plain_raw_steno,
-                                                                         get_lookup_data(plain_raw_steno[:3].lower().replace("/","_"),
-                                                                                         "entries")[plain_raw_steno])
+                    list_of_all_spellings = return_list_of_all_spellings(
+                        plain_raw_steno,
+                        get_lookup_data(plain_raw_steno[:3].lower().replace("/","_"),
+                                        "entries")[plain_raw_steno]
+                        )
+
                     if not spelling == list_of_all_spellings[0]:
                         chunk_to_add += (f"{raw_steno} → {list_of_all_spellings[0]}/\033[2;31m{'/'.join(list_of_all_spellings[1:])}\033[0m")
 
@@ -327,7 +320,6 @@ def display_entries(outline, spellings, complexity):
 
     return best_entries(outline, spellings, complexity)
 
-    return best_entries(outline, spellings, complexity)
 
 def get_response(user_input: str) -> str:
     """Returns the appropriate response for user input."""
