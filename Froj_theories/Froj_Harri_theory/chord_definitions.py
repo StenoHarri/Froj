@@ -4018,7 +4018,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  l  e5  s ",
          "ambiguity": 0,
          "what must come before": A_to_b_not_just_p,  #promise > propless
-         "theory": "StenEd?"}
+         "theory": "StenEd?"},
 
         {"chord": "-LS",
          "description": "suffix -less", 
