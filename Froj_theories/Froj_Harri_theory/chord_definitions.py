@@ -1259,7 +1259,7 @@ steno_chords_and_their_meanings = {
 
     "AOe": [
         {"chord": "AOE",
-         "description": "ee pronounce long e",
+         "description": "ee pronounced long e",
          "spelling": "ee",
          "pronunciation": keysymbol_shorthands["long e"],
          "ambiguity": 0,
@@ -1267,7 +1267,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AOE",
-         "description": "ie pronounce long e",
+         "description": "ie pronounced long e",
          "spelling": "ie",
          "pronunciation": keysymbol_shorthands["long e"],
          "ambiguity": 0,
@@ -1275,7 +1275,15 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AOE",
-         "description": "i pronounce long e",
+         "description": "ei pronounced long e",
+         "spelling": "ei",
+         "pronunciation": keysymbol_shorthands["long e"],
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+        {"chord": "AOE",
+         "description": "i pronounced long e",
          "spelling": "i",
          "pronunciation": keysymbol_shorthands["long e"],
          "ambiguity": 1,  # why One? I don't know I can't think of any conflicts to be honest
@@ -1283,7 +1291,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AOE",
-         "description": "e pronounce long e",  # acne, aires
+         "description": "e pronounced long e",  # acne, aires
          "spelling": "e",
          "pronunciation": keysymbol_shorthands["long e"],
          "ambiguity": 1,
@@ -1291,7 +1299,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AOE",
-         "description": "ea pronounce long e",
+         "description": "ea pronounced long e",
          "spelling": "ea",
          "pronunciation": keysymbol_shorthands["long e"],
          "ambiguity": 2,
@@ -1867,7 +1875,7 @@ steno_chords_and_their_meanings = {
          "description": "ea pronounced e",
          "spelling": "ea",
          "pronunciation": " e ",
-         "ambiguity": 0,
+         "ambiguity": 1, # bred > bread
          "what must come before": SToR_or_nothing,
          "theory": "?"},
 
@@ -2335,7 +2343,7 @@ steno_chords_and_their_meanings = {
         {"chord": "-FRPBGS",
          "description": "nk + shn sound",
          "spelling": "nction",
-         "pronunciation": " ng  k  sh  suffix  n ",
+         "pronunciation": " ng  k  sh ( suffix )? n ", # adjunction function
          "ambiguity": 0,
          "what must come before": A_to_u,
          "theory": "Harri"},
@@ -2474,7 +2482,7 @@ steno_chords_and_their_meanings = {
     "r": [
         {"chord": "-R",
          "description": "r",
-         "spelling": "rr?e?",
+         "spelling": "rr?",
          "pronunciation": " r ",
          "ambiguity": 0,
          "what must come before": A_to_f_,
@@ -2486,6 +2494,14 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( suffix )? (\(r  @/@r  r\)|@r  r) ",
          "ambiguity": 1,
          "what must come before": A_to_z_no_r,
+         "theory": ""},
+
+        {"chord": "-R",
+         "description": "r",
+         "spelling": "rr?e",
+         "pronunciation": " r ",
+         "ambiguity": 1,
+         "what must come before": A_to_f_,
          "theory": ""},
 
         {"chord": "-R fold",
@@ -2665,7 +2681,7 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_r_,
          "theory": ""},
 
-        {"chord": "-PB",
+        {"chord": "-PB fold",
          "description": "en",
          "spelling": "enn?e?",
          "pronunciation": " n ", # y for the discontinuation
@@ -2678,7 +2694,7 @@ steno_chords_and_their_meanings = {
          "spelling": "n",
          "pronunciation": " suffix  n ",
          "ambiguity": 0,
-         "what must come before": A_to_u,
+         "what must come before": A_to_r_, # was A_to_u but I needed "`TKPWEUFPB` → `given`"
          "theory": "?"},
 
         {"chord": "-PB",
@@ -2733,8 +2749,16 @@ steno_chords_and_their_meanings = {
          "pronunciation": " zh ",
          "ambiguity": 1,
          "what must come before": A_to_r_,
-         "theory": ""}
-    ],  # arbitrage
+         "theory": ""}, # arbitrage
+
+        {"chord": "-PBLG",
+         "description": "suffix -age", # `AOUFPBLG`  `usage`
+         "spelling": "age",
+         "pronunciation": " suffix  i  jh ",
+         "ambiguity": 1,
+         "what must come before": A_to_r_,
+         "theory": ""},
+    ], 
 
 
     "pbg": [
@@ -3524,7 +3548,7 @@ steno_chords_and_their_meanings = {
     "d": [
         {"chord": "-D",
          "description": "d",
-         "spelling": "dd?e?",
+         "spelling": "dd?",
          "pronunciation": " d ",
          "ambiguity": 0,
          "what must come before": A_to_t_,
@@ -3532,9 +3556,25 @@ steno_chords_and_their_meanings = {
 
         {"chord": "-D",
          "description": "d",
-         "spelling": "dd?e?",
+         "spelling": "dd?",
          "pronunciation": " d/t ",
          "ambiguity": 0,
+         "what must come before": A_to_t_,
+         "theory": ""},
+
+        {"chord": "-D",
+         "description": "de",
+         "spelling": "dd?e",
+         "pronunciation": " d ",
+         "ambiguity": 1,
+         "what must come before": A_to_t_,
+         "theory": ""},
+
+        {"chord": "-D",
+         "description": "de",
+         "spelling": "dd?e",
+         "pronunciation": " d/t ",
+         "ambiguity": 1,
          "what must come before": A_to_t_,
          "theory": ""},
 
