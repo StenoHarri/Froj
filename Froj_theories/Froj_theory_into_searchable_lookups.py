@@ -63,7 +63,8 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
                      .replace("f*","*f")
                      .replace("u*","*u")
                      .replace("e*","*e")
-                     .replace("-*","*").upper()
+                     .replace("-*","*")
+                     .replace("Q","#").upper()
         )
 
         ambiguity = outline['ambiguity']
@@ -71,7 +72,7 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
         length = len(raw_steno.split('/'))
 
 
-        if spelling[0] == spelling[0].capitalize():
+        if spelling[0] == spelling[0].capitalize() and not raw_steno[0] == "#":
             raw_steno = "#"+raw_steno
             explanation.insert(0, {
                 "theory": "Lapwing",
