@@ -378,9 +378,20 @@ steno_chords_and_their_meanings = {
 
     "QSK": [
         {"chord": "#SK",
-         "description": "ex",
-         "spelling": "a",
-         "pronunciation": keysymbol_shorthands["short vowels"],
+         "description": "ex/ext/exc",
+         "spelling": "ex[ct]?",
+         "pronunciation": "( (E0|e|E0/e)  g  z | e  k  s | k/g  s/z  | g/z  z/s )( (k|t) )?",
+         "ambiguity": 10,
+         "what must come before": first_slash,
+         "steno theory": "Harri"},
+    ],
+
+
+    "QSKH": [
+        {"chord": "#SKH",
+         "description": "exch",
+         "spelling": "exch?",
+         "pronunciation": " E0  k  s  ch ",
          "ambiguity": 10,
          "what must come before": first_slash,
          "steno theory": "Harri"},
