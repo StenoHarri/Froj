@@ -372,7 +372,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": keysymbol_shorthands["short vowels"],
          "ambiguity": 10,
          "what must come before": first_slash,
-         "steno theory": "Josiah"},
+         "theory": "Josiah"},
      ],
 
 
@@ -383,7 +383,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( (E0|e|E0/e)  g  z | e  k  s | k/g  s/z  | g/z  z/s )( (k|t) )?",
          "ambiguity": 10,
          "what must come before": first_slash,
-         "steno theory": "Harri"},
+         "theory": "Harri"},
     ],
 
 
@@ -394,7 +394,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " E0  k  s  ch ",
          "ambiguity": 10,
          "what must come before": first_slash,
-         "steno theory": "Harri"},
+         "theory": "Harri"},
     ],
 
 
@@ -3285,7 +3285,16 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ch ",
          "ambiguity": 0,
          "what must come before": l_no_asterisk,
-         "theory": "Harri"}],
+         "theory": "Harri"},
+
+        {"chord": "*G",
+         "description": "gon",
+         "spelling": "gg?on",
+         "pronunciation": " g  o  n ",
+         "ambiguity": 3,
+         "what must come before": l_no_asterisk,
+         "theory": "Harri"},
+    ],
 
 
     "g": [
@@ -3382,7 +3391,15 @@ steno_chords_and_their_meanings = {
     "t": [
         {"chord": "-T",
          "description": "t",
-         "spelling": "tt?e?",
+         "spelling": "tt?",
+         "pronunciation": " t ",
+         "ambiguity": 0,
+         "what must come before": A_to_g_,
+         "theory": ""},
+
+        {"chord": "-T",
+         "description": "te",
+         "spelling": "tt?e",
          "pronunciation": " t ",
          "ambiguity": 0,
          "what must come before": A_to_g_,
