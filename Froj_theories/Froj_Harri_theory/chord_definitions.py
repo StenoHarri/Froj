@@ -109,7 +109,7 @@ SToR_or_nothing = re.compile(r'(^/|[STKPWHR]\*?|/\*)$')  # or just an asterisk f
 
 upToK_no_T = re.compile(r'[/QS]K?\*?_?$')  # _? for #PWAOUD/PEFT
 upToK_not_just_T = re.compile(r'[/QSK]\*?_?$')  # _? for #PWAOUD/PEFT
-upToK_not_just_S = re.compile(r'[/QTK]\*?$') #disband
+upToK_not_just_S = re.compile(r'[/QTK]\*?_?$') #disband  _ for kebab
 
 upToW_not_just_T_not_just_k_or_just_w = re.compile(r'([STKPW]{2,}|[/QSKP])\*?_?$')  # clink    _? for baudelair
 
@@ -365,20 +365,27 @@ steno_chords_and_their_meanings = {
         # "steno theory": " (Theory: Harriment)"},
     ],
 
-    # "Q": [
-    #    {"description": "^ for short a",
-    #     "spelling": "a",
-    #     "pronunciation": keysymbol_shorthands["short vowels"],
-    #     "ambiguity": 0,
-    #     "what must come before": first_slash,
-    #     "steno theory": " (Theory: Josiah)"},
+     "Q": [
+        {"chord": "#",
+         "description": "short a",
+         "spelling": "a",
+         "pronunciation": keysymbol_shorthands["short vowels"],
+         "ambiguity": 10,
+         "what must come before": first_slash,
+         "steno theory": "Josiah"},
+     ],
 
-    #    {"description": "^ for long a",
-    #     "spelling": "a",
-    #     "pronunciation": " (starting_)?((root)|(prefix))  ee ",
-    #     "ambiguity": 1,
-    #     "what must come before": first_slash,
-    #     "steno theory": " (Theory: Josiah)"}],
+
+    "QSK": [
+        {"chord": "#SK",
+         "description": "ex",
+         "spelling": "a",
+         "pronunciation": keysymbol_shorthands["short vowels"],
+         "ambiguity": 10,
+         "what must come before": first_slash,
+         "steno theory": "Harri"},
+    ],
+
 
     "S*": [ #left hand with an asterisk!!!
         {"chord": "S*",
@@ -1361,6 +1368,14 @@ steno_chords_and_their_meanings = {
          "spelling": "ie",
          "pronunciation": keysymbol_shorthands["long i"] + " @ ",
          "ambiguity": 2,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+        {"chord": "AOEU",
+         "description": "long i followed by a short o",
+         "spelling": "io",  # acidifies
+         "pronunciation": keysymbol_shorthands["long i"] + keysymbol_shorthands["short vowels"],
+         "ambiguity": 3,
          "what must come before": SToR_or_nothing,
          "theory": ""},
     ],
@@ -2658,7 +2673,7 @@ steno_chords_and_their_meanings = {
         {"chord": "*PB",
          "description": "ken sound",
          "spelling": "[ck]+[eo]n", # chicken, reckon, beacon
-         "pronunciation": f" k {keysymbol_shorthands['short vowels']}( suffix )? n ", # y for the discontinuation
+         "pronunciation": f" k {keysymbol_shorthands['short vowels']}( suffix )?( e5 )? n ", # y for the discontinuation
          "ambiguity": 1,
          "what must come before": A_to_r_no_asterisk,
          "theory": "Harri"}
@@ -2708,7 +2723,7 @@ steno_chords_and_their_meanings = {
         {"chord": "-PB fold",
          "description": "suffix -en",
          "spelling": "en",
-         "pronunciation": " suffix  \[e5\]  n ",
+         "pronunciation": " suffix  \[?e5\]?  n ",
          "ambiguity": 1,
          "what must come before": l_to_z_no_porb,
          "theory": ""}
@@ -2997,7 +3012,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " l  ouw? ",
          "ambiguity": 1,
          "what must come before": A_to_p_,
-         "theory": "Donna Urlaub"}
+         "theory": "Donna Urlaub"},
     ],
 
 
@@ -3161,7 +3176,7 @@ steno_chords_and_their_meanings = {
         {"chord": "-L",
          "description": "suffix -al",
          "spelling": "al",
-         "pronunciation": " suffix  l ",
+         "pronunciation": " suffix ( a5 )? l ",
          "ambiguity": 1,
          "what must come before": A_to_b_not_just_p,
          "theory": ""},
@@ -3189,6 +3204,14 @@ steno_chords_and_their_meanings = {
          "description": "l",
          "spelling": "ll?e?",
          "pronunciation": " l ",
+         "ambiguity": 1,
+         "what must come before": after_l_no_asterisk_or_l,
+         "theory": "Harri"},  # *BLG → ckle
+
+        {"chord": "*L fold",
+         "description": "suffix -al",
+         "spelling": "al",
+         "pronunciation": " suffix ( a5 )? l ",
          "ambiguity": 1,
          "what must come before": after_l_no_asterisk_or_l,
          "theory": "Harri"},  # *BLG → ckle
@@ -3763,6 +3786,17 @@ steno_chords_and_their_meanings = {
          "description": "suffix -ty",
          "spelling": "t(y|ie?)",
          "pronunciation": " suffix  t  iy ",
+         "ambiguity": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": ""}
+    ],
+
+
+    "Teubg": [
+        {"chord": "TEUBG",
+         "description": "suffix -tic",
+         "spelling": "ticc?",
+         "pronunciation": " suffix  t  i  k ",
          "ambiguity": 0,
          "what must come before": slash_no_asterisk,
          "theory": ""}
