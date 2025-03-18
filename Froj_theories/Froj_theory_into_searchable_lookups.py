@@ -64,11 +64,13 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
                      .replace("u*","*u")
                      .replace("e*","*e")
                      .replace("-*","*")
-                     .replace("Q","#").upper()
+                     .replace("Q","^").upper()
         )
 
         ambiguity = outline['ambiguity']
-        explanation = outline['explanation']
+
+        #this doesn't work, it's linked!!! When you add a `#` it's added to the original too!!!
+        explanation = outline['explanation'].copy()  # Creates a shallow copy
         length = len(raw_steno.split('/'))
 
 

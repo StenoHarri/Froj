@@ -14,7 +14,6 @@ def load_json(filename: str) -> dict:
 
 
 def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
-
     """Return the relevant lookup data for the given first letter and lookup type."""
     global _lookup_data_cache
     # Ensure that we load data only once for the given letter
@@ -40,7 +39,7 @@ def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
 
 # Define regex once globally
 is_raw_steno = re.compile(
-    r'^(S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)(/S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)*$')
+    r'^(#?S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)(/S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)*$')
 
 
 def get_annotation_level(word_to_find: str) -> tuple:
@@ -51,7 +50,6 @@ def get_annotation_level(word_to_find: str) -> tuple:
         return word_to_find.replace(":>>", "").strip(), "annotate best"
     else:  # it must be :>
         return word_to_find.replace(":>", "").strip(), "summarise best"
-
 
 
 def giveChordsColours(theory_rules, colours):
@@ -70,13 +68,13 @@ def giveChordsColours(theory_rules, colours):
         number_of_spaces = 5
         if "fold" in theory_rule['chord']:
             for character in theory_rule['chord']:
-                if character in ("/STKPWHRAO-*EUFRPBLGTSDZ"):
+                if character in ("/#^STKPWHRAO-*EUFRPBLGTSDZ"):
                     chord_coloured.append([folding_colour, character, end_colour])
                     number_of_spaces -= 1
         else:
             # Iterate through the chord characters in the rule
             for character in theory_rule['chord']:
-                if character in ("/STKPWHRAO-*EUFRPBLGTSDZ"):
+                if character in ("/#^STKPWHRAO-*EUFRPBLGTSDZ"):
                     chord_coloured.append([colour, character, end_colour])
 
                     number_of_spaces -= 1
@@ -140,13 +138,10 @@ def best_outlines(spelling, outlines, complexity):
     number_of_best_entries = 0
 
     total_number_of_entries = sum(
-        len(ambiguity[amb]["number of strokes"][stroke_count][stroke_count])
-        
-        for amb in ambiguity 
-        for stroke_count in ambiguity[amb]["number of strokes"]
+        len(ambiguity[amb]["number of strokes"][stroke_count])
+        for amb in ambiguity
         for stroke_count in ambiguity[amb]["number of strokes"]
     )
-
 
     # Sort ambiguity levels by their numeric value (e.g., "2", "5")
     sorted_ambiguities = sorted(ambiguity.keys(), key=int)
@@ -179,13 +174,12 @@ def best_outlines(spelling, outlines, complexity):
                     set_theory_colour = "\033[2;30m"
                     remove_colour = "\033[0m"
 
-
                     raw_steno, theory_rules = colour_the_outline_with_chords(raw_steno, entry['explanation'])
                     for theory_rule in theory_rules:
-
                         linker = " ┐ " if "/" in theory_rule['chord'] else " │ "
 
-                        theory_rule_breakdown += (f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
+                        theory_rule_breakdown += (
+                            f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
                 if len(output) > 1200:
                     too_big = "Too big for Discord, stopped early. Try `:>`"
@@ -195,12 +189,9 @@ def best_outlines(spelling, outlines, complexity):
                 chunk_to_add = ("```Ansi\n\n")
 
                 if len(plain_raw_steno.split("/")) < 3:
-                    list_of_all_spellings = return_list_of_all_spellings(
-                        plain_raw_steno,
-                        get_lookup_data(plain_raw_steno[:3].lower().replace("/","_"),
-                                        "entries")[plain_raw_steno]
-                        )
-
+                    list_of_all_spellings = return_list_of_all_spellings(plain_raw_steno,
+                                                                         get_lookup_data(plain_raw_steno[:3].replace("/","_"),
+                                                                                         "entries")[plain_raw_steno])
                     if not spelling == list_of_all_spellings[0]:
                         chunk_to_add += (f"{raw_steno} → {list_of_all_spellings[0]}/\033[2;31m{'/'.join(list_of_all_spellings[1:])}\033[0m")
 
@@ -229,9 +220,9 @@ def best_outlines(spelling, outlines, complexity):
             if not complexity == "summarise all":
                 break  # Stop at the first entry (smallest strokes for this level)
     if complexity == "summarise all":
-        output = f"Showing `{number_of_best_entries}`/`{total_number_of_entries}` outlines for `{spelling}` in Tadpole theory\n{output}{too_big}"
+        output = f"Showing `{number_of_best_entries}`/`{total_number_of_entries}` outlines for '{spelling}' in Tadpole theory\n{output}{too_big}"
     else:
-        output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries in Tadpole theory\n{output}{too_big}"
+        output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries for '{spelling}' in Tadpole theory\n{output}{too_big}"
 
     return output
 
@@ -334,10 +325,9 @@ def get_response(user_input: str) -> str:
         lookup_type = 'entries'
     else:
         lookup_type = 'outlines'
-        word_to_find = word_to_find.lower()
 
     # Get the first letter of the word to load the relevant part of the data
-    first_letter = word_to_find[:3].lower().replace("/","_")
+    first_letter = word_to_find[:3].replace("/","_")
 
     # Load only the relevant data for that letter
     lookup_data = get_lookup_data(first_letter, lookup_type)
@@ -360,11 +350,13 @@ def get_response(user_input: str) -> str:
 
         return "Huh, how did you get here?"
 
-    with open("FrojBot/preprocessed_dictionaries/words_that_Edinburgh_has.txt") as file:
+    with open("FrojBot/words_that_Edinburgh_has.txt") as file:
         # Check each line (each line is a word)
         for line in file:
             if line.strip() == word_to_find:
-                return "Sorry, Tad theory doesn't cover that word"
+                if lookup_type == 'entries':
+                    return "Sorry, that's not in Tadpole's dictionary"
+                return "Sorry, Tad theory doesn't cover that word (yet?)"
 
     return "Sorry, I'm missing the pronunciation data for that word :("
 

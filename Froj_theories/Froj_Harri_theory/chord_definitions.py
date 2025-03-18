@@ -380,7 +380,7 @@ steno_chords_and_their_meanings = {
         {"chord": "#SK",
          "description": "ex/ext/exc",
          "spelling": "ex[ct]?",
-         "pronunciation": "( (E0|e|E0/e)  g  z | e  k  s | k/g  s/z  | g/z  z/s )( (k|t) )?",
+         "pronunciation": " (E0|e|E0/e) ( g  z | k  s | k/g  s/z | g/z  z/s )( (k|t) )?",
          "ambiguity": 10,
          "what must come before": first_slash,
          "theory": "Harri"},
@@ -1644,6 +1644,22 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": "Harri"},
+
+        {"chord": "O",
+         "description": "'au' modified by r",
+         "spelling": "aur?r",
+         "pronunciation": " (@@r|or|our|our/or) ",
+         "ambiguity": 1,
+         "what must come before": SToR_or_nothing,
+         "theory": "Lapwing"},
+
+        {"chord": "O",
+         "description": "oa modified by r",
+         "spelling": "oar?r",
+         "pronunciation": " (@@r|or|our|our/or) ",
+         "ambiguity": 1,
+         "what must come before": SToR_or_nothing,
+         "theory": ""}
     ],
 
 
@@ -1685,6 +1701,16 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
+
+        {"chord": "O",
+         "description": "o modified by r",
+         "spelling": "o",
+         "pronunciation": " (@@r|or|our|our/or) ",
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+
     ],
 
 
@@ -1851,32 +1877,6 @@ steno_chords_and_their_meanings = {
          "theory": ""},
     ],
 
-
-    "Or": [
-        {"chord": "OR",
-         "description": "o modified by r",
-         "spelling": "orr?e?",
-         "pronunciation": " (@@r|or|our|our/or)  r ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_nothing,
-         "theory": ""},
-
-        {"chord": "OR",
-         "description": "'aur' for o modified by r",
-         "spelling": "aur?r",
-         "pronunciation": " (@@r|or|our|our/or)  r ",
-         "ambiguity": 1,
-         "what must come before": SToR_or_nothing,
-         "theory": "Lapwing"},
-
-        {"chord": "OR",
-         "description": "oar",
-         "spelling": "oar?r",
-         "pronunciation": " (@@r|or|our|our/or)  r ",
-         "ambiguity": 1,
-         "what must come before": SToR_or_nothing,
-         "theory": ""}
-    ],
 
     "Ol": [
         {"chord": "OL",
@@ -3088,7 +3088,7 @@ steno_chords_and_their_meanings = {
 
     "bgs": [
         {"chord": "-BGS",
-         "description": "x",
+         "description": "x",   #should asterisk this so that I can asterisk `TP*EUBLGS` → `fictional` to fold the -L
          "spelling": "xe?",  # axe
          "pronunciation": "( k  s | g  z )",
          "ambiguity": 0,
