@@ -1,9 +1,8 @@
 # Froj 
-Dictionary generator
+Shorthand dictionary generator
+![Froj diagram](<Froj diagram.png>)
 
-![image](images/froj.png)
-
-Froj converts Edinburgh's pronunciation dictionary into steno outlines using 350+ theory rules and brute force
+Froj converts Edinburgh's pronunciation dictionary into stenography outlines using theory rules and brute force
 
 Every rule depends on four things:
 - Spelling
@@ -16,21 +15,29 @@ Every rule outputs three things:
 - ambiguity (for conflict resolution)
 - description (for FrojBot)
 
+# Tadpole theory
+Tadpole theory is my collection of 400 rules from various other theories/people
+
+Designed to work with any accent, once you've labelled which vowels you use (is the 'e' in 'zebra' long or short?) you can then generate your dictionary with Froj
 
 # FrojBot
-Give it a word and it describes the clearest outline to you, then the next clearest outline that's shorter, etc
+FrojBot is the annotated lookup tool for a Froj theory running via a Discord bot
 
-# Word lookup
-## Unannotated
-![img.png](images/unannotated_word_lookup.png)
 
-## Annotated
-![img.png](images/annotated_word_lookup.png)
+## :> unannotated summary
+If you feed it a word, it summarises the best ways to write it, and what conflicts there could be
+![Unannotated lookup for the word 'summary'](image-1.png)
 
-# Entry lookup
+If you feed it raw steno, it will find what possible matches there are, showing the best fit first
+![Unannotated lookup for the steno 'PAEUR'](image-2.png)
 
-## Unannotated
-![img.png](images/unannotated_entry_lookup.png)
+## :>> annotated summary
+Given a word or raw steno, will describe each theory rule used to make that outline
+![Annotated lookup for the word 'Harlow'](image-3.png)
 
-##  Annotated
-![img.png](images/annotated_entry_lookup.png)
+Red to highlight that steno order has been folded
+![Annotated lookup for the raw steno 'TO*ERGT'](image-5.png)
+
+## :>> unannotated show all
+If you want to see all the ways you could write a word
+![Unannotated lookup for the word 'read'](image-4.png)
