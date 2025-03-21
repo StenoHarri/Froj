@@ -17,7 +17,7 @@ keysymbol_shorthands = {
     "long a": " \[?(aa/ee|ee|ee/o|e/ei|ei|eir|eir1|ii/ee|iy/ee|e/ee|ee5/ee)\]? ",
     # ii/ee → beta 
 
-    "au": " \[?(oa|aa|aa1|ah|ah1|ah2|oo|o/oo)\]? ",
+    "spa vowel": " \[?(oa|aa|aa1|ah|ah1|ah2|oo|o/oo|ar)\]? ",
     #not au for me: ao  was o/uh   because o/oo   cross au
 
     "ow! Sound": " \[?(ow|owr)\]? ",
@@ -67,6 +67,7 @@ ends_in_d_no_asterisk = re.compile(r'd$')
 ends_in_d_no_asterisk_no_t = re.compile(r'[AO\-eufrpblg]d$')
 
 any_letter = re.compile(r'[QSTKPWHRAO\-eufrpblgtsdz]\*?$')
+any_letter_no_asterisk = re.compile(r'[QSTKPWHRAO\-eufrpblgtsdz]$')
 any_letter_but_not_KWH = re.compile(r'((/(?!KWH$)[QSTKPWHR])|[AO\-eufrpblgtsdz])\*?$')
 any_consonant = re.compile(r'[STKPWHRfrpblgtsdz]\*?$')
 any_consonant_but_not_KWH = re.compile(r'(/(?!KWH$)[STKPWHR]+|[frpblgtsdz])\*?_?$')  # (?! is for negative lookahead
@@ -341,9 +342,9 @@ steno_chords_and_their_meanings = {
         {"chord": "*",
          "description": "apostrophe",
          "spelling": "'",
-         "pronunciation": "",
+         "pronunciation": "( suffix )?",
          "ambiguity": 0,
-         "what must come before": any_letter,
+         "what must come before": any_letter_no_asterisk,
          "theory": "Field"},
 
         {"chord": "* fold",
@@ -1606,9 +1607,9 @@ steno_chords_and_their_meanings = {
 
     "Au": [
         {"chord": "AU",
-         "description": "Brits modify the a like an r would",
+         "description": "spa vowel",
          "spelling": "o?a[auh]?",  # ??? just keep it I guess
-         "pronunciation": keysymbol_shorthands["au"],
+         "pronunciation": keysymbol_shorthands["spa vowel"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1632,15 +1633,15 @@ steno_chords_and_their_meanings = {
         {"chord": "AU",
          "description": "aw",
          "spelling": "awe?",
-         "pronunciation": keysymbol_shorthands["au"],
+         "pronunciation": keysymbol_shorthands["spa vowel"],
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
 
         {"chord": "AU",
-         "description": "a modified by r",
+         "description": "spa vowel",
          "spelling": "u?a",
-         "pronunciation": " ar ", #I don't think @r????
+         "pronunciation": keysymbol_shorthands["spa vowel"], #I don't think @r????
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": "Harri"},
@@ -1861,17 +1862,17 @@ steno_chords_and_their_meanings = {
          "theory": "Harri"},
 
         {"chord": "OU",
+         "description": "ou modified by r", #pour
+         "spelling": "ou",
+         "pronunciation": " (or/ur|our) ",
+         "ambiguity": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": "Harri"},
+
+        {"chord": "OU",
          "description": "ou pronounced ow",
          "spelling": "ou",
          "pronunciation": keysymbol_shorthands["ow! Sound"],
-         "ambiguity": 1,
-         "what must come before": SToR_or_nothing,
-         "theory": ""},
-
-        {"chord": "OU",
-         "description": "'ou' in 'your'",
-         "spelling": "ou",
-         "pronunciation": " or/ur ",
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -3652,7 +3653,7 @@ steno_chords_and_their_meanings = {
          "description": "y pronounced i diphthong",
          "spelling": "ie?",
          "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
-         "ambiguity": 2,
+         "ambiguity": 3,
          "what must come before": A_to_t_no_asterisk,
          "theory": "Harri?"},
 
