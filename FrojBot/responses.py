@@ -220,9 +220,9 @@ def best_outlines(spelling, outlines, complexity):
             if not complexity == "summarise all":
                 break  # Stop at the first entry (smallest strokes for this level)
     if complexity == "summarise all":
-        output = f"Showing `{number_of_best_entries}`/`{total_number_of_entries}` outlines for '{spelling}' in Tadpole theory\n{output}{too_big}"
+        output = f"Showing `{number_of_best_entries}`/`{total_number_of_entries}` outlines for '{spelling}' in Tadpole theory (British version)\n{output}{too_big}"
     else:
-        output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries for '{spelling}' in Tadpole theory\n{output}{too_big}"
+        output = f"Here's the best {number_of_best_entries}/{total_number_of_entries} entries for '{spelling}' in Tadpole theory (British version)\n{output}{too_big}"
 
     return output
 
@@ -295,7 +295,7 @@ def best_entries(outline, spellings, complexity):
                     break
                 output += chunk_to_add
 
-    output = f"Here's the {total_number_of_spellings} entries for `{initial_raw_steno}` in Tadpole theory (best first)\n{output}\n{too_big}"
+    output = f"Here's the {total_number_of_spellings} entries for `{initial_raw_steno}` in Tadpole theory (British version)\n{output}\n{too_big}"
 
     return output
 

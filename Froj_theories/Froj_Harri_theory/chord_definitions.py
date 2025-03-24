@@ -23,7 +23,6 @@ keysymbol_shorthands = {
 
     "cow vowel": " \[?(ow|owr)\]? ",
 
-
     "long e": " \[?(aa/ei|ae/ii|e/ii|eir/ir|i/ii|ii|ii/ae|ii/e|ii/i|ii2|ir|iy/ee)\]? ",
     "long o": " \[?(ou|ou/o|ou1|ouw)\]? ",
     "long i": " \[?(ae|ae/i|ae/ii|aer|ai|ai/ei|ai/ii|ai1|i/ai|ii/ae)\]? ",
@@ -32,8 +31,41 @@ keysymbol_shorthands = {
     # adherence uses ir     #don't wanna drop y uu #\(@r/~  e\) is both long AND short
 
     "long u": "( y )? (iu|iu3|u/ouw|ur|uu|uu/uu|\(u/uu\)) ",
+
+
+
+    #mergers to look out for:
+    #merry, marry, hurry, mirror, war/wore, borrow/forest, nurse
+
+    #add/glass, wrong, bread, sit, cot/mocha, bush, cup
+    "spelling based vowels": " \[?(@|@1|@r|a|a/ee|a1|a4|a4/a|a4/a1|a5|a5/i2|ae/i|ah|ah1|ah2|ai/i|ao|ar/@@r|ar1|au|e|e/ee|e/ei|e/ii|e0|e05|e1|e5|e5/e|e50|ee/a|ee/o|ee1|ee5/ee|i|i/ai|i/e|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o/a|o/oo|o/uh|o1|o4|o5|o5/o|oa|oou|or1|our1|ouw1|u|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
+
+
+    #mergers: they, Mary
+    #cake/claim, share, 
+    "usually AEU": " \[?(aa/ee|aa/ei|ee|ee/o|e/ei|ei|eir|eir1|ii/ee|iy/ee|e/ee|ee5/ee)\]? ",
+
+    #mergers: card, caught, cow
+    #father/glass/hard, caught, cow, our-hour
+    "usually AU": " \[?((aa|aa/ei|aa1|ah|ah2|ar)|((oo))|(ow|owr))\]? ",
+
+    #free, nearer
+    #queen, beard
+    "usually AOE": " \[?(ae/ii|e/ii|eir/ir|i/ii|ii|ii/ae|ii/e|ii/i|ii2|ir)\]? ",
+
+    #old, show
+    "usually OE": " \[?(ou|ou/o|ou1|ouw)\]? ",
+
+    #sigh
+    #rise/, fire, /kind, 
+    "usually AOEU": " \[?(ae|ae/i|ae/ii|aer|ai|ai/ei|ai/ii|ai1|i/ai|ii/ae)\]? ",
+
+    #due, fury
+    #Andrew/, sure, /food, 
+    "usually AOU": "( y )? (iu|iu3|u/ouw|ur|uu|uu/uu|\(u/uu\)) ",
+
+    "usually EU": " (iy|iy/ee) ",
 }
-# vowels like e5 are only found in suffixes?
 
 # regex logic for what must come before
 # hopefully compiling it all here makes it run faster since they'll be used
@@ -1618,7 +1650,7 @@ steno_chords_and_their_meanings = {
 
     "Au": [
         {"chord": "AU",
-         "description": "long 'spa' vowel",
+         "description": "long 'father' vowel",
          "spelling": "o?a[auh]?",  # ??? just keep it I guess
          "pronunciation": keysymbol_shorthands["father vowel"],
          "ambiguity": 1,
