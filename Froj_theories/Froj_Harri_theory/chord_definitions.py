@@ -41,7 +41,7 @@ steno_vowel={
     #what's confusing is that sometimes it's based off ipa, like "long back vowel" but other times it's the other way round, like 
 
 
-    #British: add, wrong, bread, sit, cot/mocha, bush, cup
+    #British: add, wrong, bread, sit, cot/mocha, war???, bush, cup
     "short": " \[?(@|@1|@r|a|a/ee|a1|a4|a4/a|a4/a1|a5|a5/i2|ae/i|ah1|ah2|ai/i|ao|ar/@@r|ar1|au|e|e/ee|e/ei|e/ii|e0|e05|e1|e5|e5/e|e50|ee/a|ee/o|ee1|ee5/ee|i|i/ai|i/e|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o/a|o/oo|o/uh|o1|o4|o5|o5/o|oa|oou|or1|our1|ouw1|u|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
 
     #British: cake/claim, share,
@@ -52,7 +52,7 @@ steno_vowel={
     #British: father/glass/hard, caught/port, cow, our-hour
     #can't give lexical sets for these, since it's different for different people
     "long back": " \[?(aa|aa/ei|aa1|ah|ah2|ar)\]? ", #father/grass/car
-    "open back":" \[?(oo|our)\]? ", #caught/tour
+    "open back":" \[?(oo|or|our)\]? ", #caught/war/wore/tour
     "back diphthong": " \[?((ow|owr))\]? ", #cow/cower
 
     #British: queen, beard
@@ -1604,6 +1604,14 @@ steno_chords_and_their_meanings = {
          "ambiguity": 2,
          "what must come before": SToR_or_slash,
          "theory": "Lapwing?"},
+
+        {"chord": "AE",
+         "description": "long back vowel, but spelt ea", #heart
+         "spelling": "ea",
+         "pronunciation": steno_vowel["long back"], # eir?
+         "ambiguity": 2,
+         "what must come before": SToR_or_slash,
+         "theory": "Harri"},
     ],
 
 
@@ -1700,7 +1708,7 @@ steno_chords_and_their_meanings = {
 
     "Au": [
         {"chord": "AU",
-         "description": "long 'father' vowel",
+         "description": "long back vowel",
          "spelling": "o?a[auh]?",  # ??? just keep it I guess
          "pronunciation": steno_vowel["long back"],
          "ambiguity": 1,
@@ -1708,7 +1716,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AU",
-         "description": "short vowel, spelt au",
+         "description": "short au",
          "spelling": "au",  # ??? just keep it I guess
          "pronunciation": steno_vowel["short"],
          "ambiguity": 1,
@@ -1716,7 +1724,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AU",
-         "description": "long 'cow' vowel",
+         "description": "back diphthong",
          "spelling": "au",  # ??? just keep it I guess
          "pronunciation": steno_vowel["back diphthong"], #Macau
          "ambiguity": 1,
@@ -1724,7 +1732,15 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AU",
-         "description": "long 'spa' vowel",
+         "description": "open back vowel",
+         "spelling": "au?",  # ??? just keep it I guess
+         "pronunciation": steno_vowel["open back"], #Macau
+         "ambiguity": 1,
+         "what must come before": SToR_or_slash,
+         "theory": ""},
+
+        {"chord": "AU",
+         "description": "long back vowel",
          "spelling": "awe?",
          "pronunciation": steno_vowel["long back"],
          "ambiguity": 2,
@@ -1732,27 +1748,13 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AU",
-         "description": "long 'spa' vowel",
-         "spelling": "u?a",
+         "description": "long back vowel",
+         "spelling": "u?a", #caught but also fall/war, but not wore
          "pronunciation": steno_vowel["long back"], #I don't think @r????
          "ambiguity": 0,
          "what must come before": SToR_or_slash,
          "theory": "Harri"},
     ],
-
-
-
-    "Ar": [
-        {"chord": "AR",
-         "description": "ar ponounced or",
-         "spelling": "arr?",  # warring maybe?, athwart
-         "pronunciation": " or  r ",
-         "ambiguity": 0,
-         "what must come before": SToR_or_slash,
-         "theory": "Lapwing"},
-    ],
-
-
 
 
     "O": [
@@ -1782,6 +1784,15 @@ steno_chords_and_their_meanings = {
 
         {"chord": "O",
          "description": "o modified by r",
+         "spelling": "o",
+         "pronunciation": " (@@r|or|our|our/or) ",
+         "ambiguity": 0,
+         "what must come before": SToR_or_slash,
+         "theory": ""},
+
+
+        {"chord": "O",
+         "description": "open back vowel spelt o",
          "spelling": "o",
          "pronunciation": " (@@r|or|our|our/or) ",
          "ambiguity": 0,
