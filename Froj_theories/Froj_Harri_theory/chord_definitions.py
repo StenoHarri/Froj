@@ -2,10 +2,10 @@ import re
 
 
 try:
-    from Froj_theories.Froj_Harri_theory.vowel_categories import keysymbol_shorthands
+    from Froj_theories.Froj_Harri_theory.vowel_categories import vowel_category
 except ModuleNotFoundError:
     # Allow running as a script
-    from vowel_categories import keysymbol_shorthands
+    from vowel_categories import vowel_category
 
 
 custom_alphabet = "QSTKPWHR-AOeufrpblgtsdz*_"
@@ -194,7 +194,7 @@ steno_chords_and_their_meanings = {
          "description": "drop short vowel",
          "spelling": "[aeiouy]+",
          # this may be a mistake adding the +, but my reasoning is ferrous, anxious, that `ou` is a short @
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 2,
          "what must come before": any_consonant_but_not_KWH,
          "theory": ""},
@@ -202,7 +202,7 @@ steno_chords_and_their_meanings = {
         {"chord": "",
          "description": "drop long vowel",
          "spelling": "[aeiouy]",
-         "pronunciation": f'({keysymbol_shorthands["AOE"]}|{keysymbol_shorthands["AOEU"]}|{keysymbol_shorthands["AOU"]}|{keysymbol_shorthands["AOU"]}|{keysymbol_shorthands["AEU"]}|{keysymbol_shorthands["AU"]}|{keysymbol_shorthands["OE"]}|{keysymbol_shorthands["OEU"]}|{keysymbol_shorthands["OU"]}|{keysymbol_shorthands["EU"]})',
+         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
          "ambiguity": 3,
          "what must come before": any_consonant_but_not_KWH,
          "theory": ""},
@@ -221,7 +221,7 @@ steno_chords_and_their_meanings = {
         {"chord": "",
          "description": "ignore y sound that I don't have in my accent",
          "spelling": "",  # bolognese
-         "pronunciation": " \[y1\] ",
+         "pronunciation": vowel_category["silent"],
          "ambiguity": 0,
          "what must come before": SToR,
          "theory": ""},
@@ -250,7 +250,7 @@ steno_chords_and_their_meanings = {
          "description": "short vowel",
          "spelling": "[aeiouy]+",
          # this may be a mistake adding the +, but my reasoning is ferrous, that `ou` is a short @
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 2,
          "what must come before": f_to_z,  # changed because meteorological was too big
          "theory": ""},
@@ -259,7 +259,7 @@ steno_chords_and_their_meanings = {
          "description": "short vowel that starts a suffix",
          "spelling": "[aeiouy]+",
          # this may be a mistake adding the +, but my reasoning is ferrous, that `ou` is a short @
-         "pronunciation": " suffix " + keysymbol_shorthands["short"],
+         "pronunciation": " suffix " + vowel_category["short"],
          "ambiguity": 3,
          "what must come before": f_to_z,
          "theory": ""},
@@ -267,7 +267,7 @@ steno_chords_and_their_meanings = {
         {"chord": "/",
          "description": "short vowel that starts a suffix, but I'm not sure about this one",
          "spelling": "[aeiouy]+",  # merciful
-         "pronunciation": keysymbol_shorthands["short"] + " suffix ",
+         "pronunciation": vowel_category["short"] + " suffix ",
          "ambiguity": 3,
          "what must come before": f_to_z,
          "theory": ""},
@@ -275,30 +275,7 @@ steno_chords_and_their_meanings = {
         {"chord": "/",
          "description": "long vowel",
          "spelling": "[aeiouy]",
-         "pronunciation": f'({keysymbol_shorthands["AOE"]}|{keysymbol_shorthands["AOEU"]}|{keysymbol_shorthands["AOU"]}|{keysymbol_shorthands["AOU"]}|{keysymbol_shorthands["AEU"]}|{keysymbol_shorthands["AU"]}|{keysymbol_shorthands["OE"]}|{keysymbol_shorthands["OEU"]}|{keysymbol_shorthands["OU"]}|{keysymbol_shorthands["EU"]})',
-         "ambiguity": 3,
-         "what must come before": f_to_z,
-         "theory": ""},
-
-        #{"chord": "/",
-        # "description": "silent i?????????",
-        # "spelling": "i",  # medicine
-        # "pronunciation": "",
-        # "ambiguity": 1,
-        # "what must come before": f_to_z,
-        # "theory": " (Theory: Harri?)"},
-
-        # {"description": "drop long u",
-        # "spelling": "ue?",
-        # "pronunciation": keysymbol_shorthands["long u"],
-        # "ambiguity": 3,
-        # "what must come before": any_consonant_but_not_KWH,
-        # "theory": ""},
-
-        {"chord": "/",
-         "description": "middle a in banana",
-         "spelling": "a",
-         "pronunciation": " oa ",
+         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
          "ambiguity": 3,
          "what must come before": f_to_z,
          "theory": ""}],
@@ -337,36 +314,13 @@ steno_chords_and_their_meanings = {
          "what must come before": unavailable_e_unavailable_r_no_asterisk, #doesn't work for`KHA*ERT`  `chatterer}`????
          "theory": "Harri"},
 
-
-        # I would love to, but this is basically a whole new theory at this point
-        # {"description": "* for connecting a suffix",
-        # "spelling": "",
-        # "pronunciation": " suffix ",
-        # "ambiguity": 0,
-        # "what must come before": slash_no_asterisk,
-        # "steno theory": " (Theory: Harriment)"},
     ],
-
-    # "Q": [
-    #    {"description": "^ for short a",
-    #     "spelling": "a",
-    #     "pronunciation": keysymbol_shorthands["short"],
-    #     "ambiguity": 0,
-    #     "what must come before": first_slash,
-    #     "steno theory": " (Theory: Josiah)"},
-
-    #    {"description": "^ for long a",
-    #     "spelling": "a",
-    #     "pronunciation": " (starting_)?((root)|(prefix))  ee ",
-    #     "ambiguity": 1,
-    #     "what must come before": first_slash,
-    #     "steno theory": " (Theory: Josiah)"}],
 
     "S*": [ #left hand with an asterisk!!!
         {"chord": "S*",
          "description": "sus",
          "spelling": "sus",
-         "pronunciation": f" s {keysymbol_shorthands['short']} s ",  # ( \[y\] )? yeah you can add that
+         "pronunciation": f" s {vowel_category['short']} s ",  # ( \[y\] )? yeah you can add that
          "ambiguity": 0,
          "what must come before": upToQ,
          "theory": ""}
@@ -1039,7 +993,7 @@ steno_chords_and_their_meanings = {
         {"chord": "W",
          "description": "OE vowel",
          "spelling": "o",
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 1,
          "what must come before": SToK,
          "theory": "Harri"}, #Lapwing
@@ -1177,7 +1131,7 @@ steno_chords_and_their_meanings = {
         {"chord": "A",
          "description": "short a",
          "spelling": "a",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1234,7 +1188,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOE",
          "description": "AOE vowel",
          "spelling": "ee",
-         "pronunciation": keysymbol_shorthands["AOE"],
+         "pronunciation": vowel_category["AOE"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1242,7 +1196,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOE",
          "description": "AOE vowel",
          "spelling": "ie",
-         "pronunciation": keysymbol_shorthands["AOE"],
+         "pronunciation": vowel_category["AOE"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1250,7 +1204,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOE",
          "description": "AOE vowel",
          "spelling": "i",
-         "pronunciation": keysymbol_shorthands["AOE"],
+         "pronunciation": vowel_category["AOE"],
          "ambiguity": 1,  # why One? I don't know I can't think of any conflicts to be honest
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1258,7 +1212,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOE",
          "description": "AOE vowel",  # acne, aires
          "spelling": "e",
-         "pronunciation": keysymbol_shorthands["AOE"],
+         "pronunciation": vowel_category["AOE"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1266,7 +1220,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOE",
          "description": "AOE vowel",
          "spelling": "ea",
-         "pronunciation": keysymbol_shorthands["AOE"],
+         "pronunciation": vowel_category["AOE"],
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1282,7 +1236,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOE",
          "description": "AOE vowel",
          "spelling": "ey", #key
-         "pronunciation": keysymbol_shorthands["AOE"],
+         "pronunciation": vowel_category["AOE"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": "StenEd?"},
@@ -1292,7 +1246,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOEU",
          "description": "AOEU vowel",
          "spelling": "ie?",  # acidifies
-         "pronunciation": keysymbol_shorthands["AOEU"],
+         "pronunciation": vowel_category["AOEU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1300,7 +1254,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOEU",
          "description": "AOEU vowel",
          "spelling": "ei",  # acidifies
-         "pronunciation": keysymbol_shorthands["AOEU"],
+         "pronunciation": vowel_category["AOEU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1308,7 +1262,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOEU",
          "description": "AOEU vowel",
          "spelling": "y",
-         "pronunciation": keysymbol_shorthands["AOEU"],
+         "pronunciation": vowel_category["AOEU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": "StenEd?"},
@@ -1316,7 +1270,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOEU",
          "description": "AOEU vowel",  # Ainu, Aida,
          "spelling": "ai",
-         "pronunciation": keysymbol_shorthands["AOEU"],
+         "pronunciation": vowel_category["AOEU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1324,7 +1278,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOEU",
          "description": "AOEU vowel followed by a short e",
          "spelling": "ie",
-         "pronunciation": keysymbol_shorthands["AOEU"] + " @ ",
+         "pronunciation": vowel_category["AOEU"] + " @ ",
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1368,7 +1322,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOU",
          "description": "AOU vowel",
          "spelling": "ue?",
-         "pronunciation": keysymbol_shorthands["AOU"],
+         "pronunciation": vowel_category["AOU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1376,7 +1330,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOU",
          "description": "AOU vowel",
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["AOU"],
+         "pronunciation": vowel_category["AOU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1384,7 +1338,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOU",
          "description": "AOU vowel",
          "spelling": "eau",
-         "pronunciation": keysymbol_shorthands["AOU"],
+         "pronunciation": vowel_category["AOU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1392,7 +1346,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOU",
          "description": "AOU vowel",
          "spelling": "ui",
-         "pronunciation": keysymbol_shorthands["AOU"],
+         "pronunciation": vowel_category["AOU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1400,7 +1354,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOU",
          "description": "AOU vowel",
          "spelling": "ew",
-         "pronunciation": keysymbol_shorthands["AOU"],
+         "pronunciation": vowel_category["AOU"],
          "ambiguity": 1,  # nute > nute, flew > flu, blew > blue... I do make the rules, and I'm power hungry
          "what must come before": SToR_or_nothing,
          "theory": "Harri?"},
@@ -1408,7 +1362,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AOU",
          "description": "AOU vowel",
          "spelling": "o",
-         "pronunciation": keysymbol_shorthands["AOU"],
+         "pronunciation": vowel_category["AOU"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": "Lapwing"},
@@ -1430,7 +1384,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AE",
          "description": "AOE vowel but spelt ea (first stroke only)",
          "spelling": "ea",
-         "pronunciation": keysymbol_shorthands["AOE"], #it was just ii before
+         "pronunciation": vowel_category["AOE"], #it was just ii before
          "ambiguity": 1,
          "what must come before": first_stroke_SToR_or_nothing,
          "theory": "?"},
@@ -1446,7 +1400,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AE",
          "description": "AEU vowel spelt ea (first stroke only)",
          "spelling": "ea",
-         "pronunciation": keysymbol_shorthands["AEU"],
+         "pronunciation": vowel_category["AEU"],
          "ambiguity": 1,
          "what must come before": first_stroke_SToR_or_nothing,
          "theory": "?"},
@@ -1454,7 +1408,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AE",
          "description": "AOE vowel spelt ae",
          "spelling": "ae",
-         "pronunciation": keysymbol_shorthands["AOE"], # eir?
+         "pronunciation": vowel_category["AOE"], # eir?
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": "Lapwing?"},
@@ -1475,7 +1429,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AEU",
          "description": "AEU vowel",
          "spelling": "a(a|ye?|i)?",
-         "pronunciation": keysymbol_shorthands["AEU"],
+         "pronunciation": vowel_category["AEU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1483,7 +1437,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AEU",
          "description": "AEU vowel (are you British?)",
          "spelling": "e",
-         "pronunciation": keysymbol_shorthands["AEU"],
+         "pronunciation": vowel_category["AEU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1491,7 +1445,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AEU",
          "description": "AEU vowel",
          "spelling": "ett?e?",
-         "pronunciation": keysymbol_shorthands["AEU"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
+         "pronunciation": vowel_category["AEU"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1499,7 +1453,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AEU",
          "description": "AEU vowel",
          "spelling": "ey",
-         "pronunciation": keysymbol_shorthands["AEU"],
+         "pronunciation": vowel_category["AEU"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1507,7 +1461,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AEU",
          "description": "AEU vowel",
          "spelling": "ei",
-         "pronunciation": keysymbol_shorthands["AEU"],
+         "pronunciation": vowel_category["AEU"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1515,7 +1469,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AEU",
          "description": "AEU vowel",
          "spelling": "ea",
-         "pronunciation": keysymbol_shorthands["AEU"],
+         "pronunciation": vowel_category["AEU"],
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1547,7 +1501,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AU",
          "description": "AU vowel",
          "spelling": "o?a[auh]?",  # ??? just keep it I guess
-         "pronunciation": keysymbol_shorthands["AU"],
+         "pronunciation": vowel_category["AU"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1555,7 +1509,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AU",
          "description": "au",
          "spelling": "au",  # ??? just keep it I guess
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1563,7 +1517,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AU",
          "description": "OU vowel spelt au",
          "spelling": "au",  # ??? just keep it I guess
-         "pronunciation": keysymbol_shorthands["OU"], #Macau
+         "pronunciation": vowel_category["OU"], #Macau
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1571,7 +1525,7 @@ steno_chords_and_their_meanings = {
         {"chord": "AU",
          "description": "AU vowel",
          "spelling": "awe?",
-         "pronunciation": keysymbol_shorthands["AU"],
+         "pronunciation": vowel_category["AU"],
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1604,7 +1558,7 @@ steno_chords_and_their_meanings = {
         {"chord": "O",
          "description": "o",
          "spelling": "o",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1612,7 +1566,7 @@ steno_chords_and_their_meanings = {
         {"chord": "O",
          "description": "ow pronounced short", # Knowledge
          "spelling": "ow",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1631,7 +1585,7 @@ steno_chords_and_their_meanings = {
         {"chord": "O*E",
          "description": "OE vowel... spelt weird",
          "spelling": "e?aux?",  # baudelaire, aubergine beaux
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 2,
          "what must come before": SToR_or_nothing,
          "theory": "Harri"},
@@ -1639,7 +1593,7 @@ steno_chords_and_their_meanings = {
         {"chord": "O*E",
          "description": "OE vowel spelt ow",
          "spelling": "ow",  # baudelaire, aubergine beaux
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": "Harri"}
@@ -1650,7 +1604,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OE",
          "description": "OE vowel",
          "spelling": "o[eu]?",
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1658,7 +1612,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OE",
          "description": "OE vowel",
          "spelling": "owe?",
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1666,7 +1620,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OE",
          "description": "OE vowel",
          "spelling": "au",  # baudelaire, aubergine beaux
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1674,7 +1628,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OE",
          "description": "OE vowel",
          "spelling": "ot$",
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1682,7 +1636,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OE",
          "description": "OE vowel",
          "spelling": "oa",
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 0,  # 0 ambiguity because toad > towed... load >_< lode
          "what must come before": SToR_or_nothing,
          "theory": "?"},
@@ -1752,7 +1706,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "AU vowel spelt ou", #thought
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["AU"], # bolder/boulder  thought   " starting_root  th  oo  t  suffix  f  [u]  l ",
+         "pronunciation": vowel_category["AU"], # bolder/boulder  thought   " starting_root  th  oo  t  suffix  f  [u]  l ",
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1760,7 +1714,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "OU vowel",
          "spelling": "ow",
-         "pronunciation": keysymbol_shorthands["OU"],
+         "pronunciation": vowel_category["OU"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1768,7 +1722,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "OE vowel spelt OU??",
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["OE"],
+         "pronunciation": vowel_category["OE"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": "Harri"},
@@ -1776,7 +1730,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "ou pronounced short vowel",
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 0,  # colour
          "what must come before": SToR_or_nothing,
          "theory": "Harri"},
@@ -1784,7 +1738,7 @@ steno_chords_and_their_meanings = {
         {"chord": "OU",
          "description": "OU vowel",
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["OU"],
+         "pronunciation": vowel_category["OU"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1839,7 +1793,7 @@ steno_chords_and_their_meanings = {
         {"chord": "E",
          "description": "e",
          "spelling": "e",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},  # not WSI because actresses that e is a @
@@ -1941,7 +1895,7 @@ steno_chords_and_their_meanings = {
         {"chord": "EU",
          "description": "i",
          "spelling": "i",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -1957,7 +1911,7 @@ steno_chords_and_their_meanings = {
         {"chord": "EU",
          "description": "y",
          "spelling": "y",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 1,  # honestly this might be 0
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -2090,7 +2044,7 @@ steno_chords_and_their_meanings = {
         {"chord": "U",
          "description": "u",
          "spelling": "u",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 0,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -2106,7 +2060,7 @@ steno_chords_and_their_meanings = {
         {"chord": "U",
          "description": "ou",
          "spelling": "ou",
-         "pronunciation": keysymbol_shorthands["short"],
+         "pronunciation": vowel_category["short"],
          "ambiguity": 1,
          "what must come before": SToR_or_nothing,
          "theory": ""},
@@ -2619,7 +2573,7 @@ steno_chords_and_their_meanings = {
         {"chord": "*PB",
          "description": "ken sound",
          "spelling": "[ck]+[eo]n", # chicken, reckon, beacon
-         "pronunciation": f" k {keysymbol_shorthands['short']}( suffix )? n ", # y for the discontinuation
+         "pronunciation": f" k {vowel_category['short']}( suffix )? n ", # y for the discontinuation
          "ambiguity": 1,
          "what must come before": A_to_r_no_asterisk,
          "theory": "Harri"}

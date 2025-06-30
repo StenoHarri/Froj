@@ -7,6 +7,8 @@ british_accent = {
     # ii/i bidet/bistro   #ou/o???
     "short r coloured": "none",
 
+    "silent": " \[y1\] ",
+
 
     #phonetic, you can ignore spelling
     #`PREU/TEU` → "pretty"
@@ -81,4 +83,4 @@ american_accent = {
 # f'({keysymbol_shorthands["AOE"]}|{keysymbol_shorthands["AOEU"]}|{keysymbol_shorthands["AOU"]}|{keysymbol_shorthands["AOU"]}|{keysymbol_shorthands["AEU"]}|{keysymbol_shorthands["AU"]}|{keysymbol_shorthands["OE"]}|{keysymbol_shorthands["OEU"]}|{keysymbol_shorthands["OU"]}|{keysymbol_shorthands["EU"]})'
 
 
-keysymbol_shorthands = british_accent
+vowel_category = british_accent
