@@ -91,7 +91,7 @@ SToR = re.compile(r'[STKPWHR]\*?$')
 SToR_ = re.compile(r'[STKPWHR]\*?_?$')
 SToK = re.compile(r'[STK]\*?_?$')
 
-SToR_but_not_a_vowel_before = re.compile(r'(^|[FRPBLGTSDZ])/[STKPWHR]+\*?$')
+SToR_but_not_a_vowel_before = re.compile(r'([FRPBLGTSDZ]/KWH|([/QTKP]H?|W))\*?$')
 
 SToR_or_nothing = re.compile(r'(^/|[STKPWHR]\*?|/\*)$')  # or just an asterisk for compound words
 # I'm getting rid of _? because "against"
@@ -727,7 +727,16 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": upToS,
-         "theory": ""}
+         "theory": ""},
+
+        #{"chord": "TPH",
+        # "description": "in brief",
+        # "spelling": "inn?",
+        # "pronunciation": " i  n ( \[y\] )?",
+        # "ambiguity": 10,
+        # "orthoscore": 0,
+        # "what must come before": upToS,
+        # "theory": ""},
     ],
 
 
@@ -1291,6 +1300,16 @@ steno_chords_and_their_meanings = {
          "theory": ""}
          ],
 
+    "AO*e": [
+        {"chord": "AO*E",
+         "description": "AOE vowel spelt oe",
+         "spelling": "oe",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": 1, #diarrhoea
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+    ],
 
     "AOe": [
         {"chord": "AOE",
@@ -1354,8 +1373,31 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": -1, #key
          "what must come before": SToR_or_nothing,
-         "theory": "StenEd?"},
+         "theory": ""},
+
+        {"chord": "AOE",
+         "description": "AOE vowel",
+         "spelling": "oe",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": -1,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
     ],
+
+
+    "AO*eu": [
+        {"chord": "AO*EU",
+         "description": "AOEU vowel, but two syllables", #diary, diagram
+         "spelling": "ia",  # acidifies
+         "pronunciation": f'{vowel_category["AOEU"]}{vowel_category["short"]}',
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+    ],
+
+
 
     "AOeu": [
         {"chord": "AOEU",
@@ -1649,6 +1691,15 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "AU",
+         "description": "AU vowel spelt o",
+         "spelling": "o",
+         "pronunciation": vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": -1, #corp
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+        {"chord": "AU",
          "description": "au",
          "spelling": "short vowel spelt au",
          "pronunciation": vowel_category["short"],
@@ -1705,6 +1756,16 @@ steno_chords_and_their_meanings = {
          "pronunciation": vowel_category["short"],
          "ambiguity": 0,
          "orthoscore": 0,
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+
+        {"chord": "AU",
+         "description": "AU vowel spelt o",
+         "spelling": "o",
+         "pronunciation": vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": 1, #corp
          "what must come before": SToR_or_nothing,
          "theory": ""},
 
@@ -2361,7 +2422,7 @@ steno_chords_and_their_meanings = {
 
 
     "fpb": [
-        {"chord": "-FRB",
+        {"chord": "-FPB",
          "description": "ch (following an r)",
          "spelling": "ch",
          "pronunciation": " ch ",
@@ -2415,6 +2476,15 @@ steno_chords_and_their_meanings = {
 
 
     "*fb": [
+        {"chord": "*FB",
+         "description": "v",
+         "spelling": "rve?",
+         "pronunciation": " v ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": A_to_u,
+         "theory": "Harri"},
+
         {"chord": "*FB fold",
          "description": "f sound",
          "spelling": "(f|ph)",
@@ -2469,14 +2539,23 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u,
          "theory": "Phoenix"},
 
-        {"chord": "-FB fold",
+        {"chord": "-FB",
          "description": "v",
-         "spelling": "ve?",
+         "spelling": "rve?",
          "pronunciation": " v ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": r_,
-         "theory": "Harri"}
+         "what must come before": A_to_u,
+         "theory": "Harri"},
+
+        #{"chord": "-FB fold",
+        # "description": "v",
+        # "spelling": "ve?",
+        # "pronunciation": " v ",
+        # "ambiguity": 1,
+        # "orthoscore": 0,
+        # "what must come before": r_,
+        # "theory": "Harri"}
     ],
 
 
