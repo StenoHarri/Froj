@@ -91,7 +91,7 @@ SToR = re.compile(r'[STKPWHR]\*?$')
 SToR_ = re.compile(r'[STKPWHR]\*?_?$')
 SToK = re.compile(r'[STK]\*?_?$')
 
-SToR_but_not_a_vowel_before = re.compile(r'([FRPBLGTSDZ]/KWH|([/QTKP]H?|W))\*?$')
+SToR_but_not_a_vowel_before = re.compile(r'([FRPBLGTSDZ]/KWH|([STKPR]H?|W))\*?$')
 
 SToR_or_nothing = re.compile(r'(^/|[STKPWHR]\*?|/\*)$')  # or just an asterisk for compound words
 # I'm getting rid of _? because "against"
@@ -3349,14 +3349,14 @@ steno_chords_and_their_meanings = {
          "what must come before": A_to_u,
          "theory": ""},
 
-         {"chord": "-L",
-         "description": "silent -l after AU",  # antibacterial
-         "spelling": "l", #PWAUL/-L → ball???
-         "pronunciation": "",
-         "ambiguity": 1,
-         "orthoscore": 0,
-         "what must come before": A_to_u,
-         "theory": ""},
+         #{"chord": "-L",
+         #"description": "silent -l after AU",  # antibacterial
+         #"spelling": "l", #PWAUL/-L → ball???
+         #"pronunciation": "",
+         #"ambiguity": 1,
+         #"orthoscore": 0,
+         #"what must come before": A_to_u,
+         #"theory": ""},
     ],
 
 
