@@ -49,6 +49,7 @@ if __name__ == '__main__':
         results = list(tqdm.tqdm(pool.imap(make_unilex_entry_helper, tasks),
                                  total=len(outlines),
                                  unit="words",
+                                 smoothing=0, #don't use a moving average for the words/s
                                  desc="converting words into entries"))
 
     end_time = time.time()
