@@ -3,7 +3,7 @@ british_accent = {
     #short, just pay attention to spelling
     #`PRE/TEU` → "pretty"
     #`PWU/SEU` → "busy"
-    "short": " \[?(@|@1|@r|a|a/ee|a1|a4|a4/a|a4/a1|a5|a5/i2|aa|aa1|ae/i|ah|ah1|ah2|ai/i|ao|ar/@@r|ar1|au|e|e/ee|e/ei|e/ii|e0|e0/e|e05|e1|e5|e5/e|e50|ee/a|ee/o|ee1|ee5/ee|i|i/@@r|i/ai|i/e|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o/a|o/oo|o/uh|o1|o4|o5|o5/o|oa|oou|or1|our1|ouw1|u|u/@@r|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
+    "short": " \[?(@|@@r|@1|@r|a|a/ee|a1|a4|a4/a|a4/a1|a5|a5/i2|aa|aa1|ae/i|ah|ah1|ah2|ai/i|ao|ar/@@r|ar1|au|e|e/ee|e/ei|e/ii|e0|e0/e|e05|e1|e5|e5/e|e50|ee/a|ee/o|ee1|ee5/ee|i|i/@@r|i/ai|i/e|i/ii|i1|i2|i5|i6|i7|ii/e|ii/i|ii1|o|o/a|o/oo|o/uh|o1|o4|o5|o5/o|oa|oou|or1|our1|ouw1|u|u/@@r|u/ouw|u/uu|uu/u|uh|uh/o|\(@r/e\))\]? ",
     # ii/i bidet/bistro   #ou/o???
     "short r coloured": "none",
 
@@ -14,11 +14,11 @@ british_accent = {
     #`PREU/TEU` → "pretty"
     #`PWEU/SEU` → "busy"
     "A": " \[?(a|ah|ao|oa)\]? ",
-    "O": " \[?(au|o|oou)\]? ",
+    "O": " \[?(au|o|oou)\]? ",  #some of these?@@r|or|our|our/or
     "E": " \[?(e)\]? ",
     #"EU": " \[?(i|iy)\]? ",
-    "U": " \[?(uh)\]? ",
-    #interestingly enough, there are some vowels that aren't phonetic! Like "o", found in "book" and "bully"
+    "U": " \[?(uh|ouw?1)\]? ",
+    #interestingly enough, there are some vowels that aren't phonetic! Like "u", found in "book" and "bully"
 
 
     "AOE": " \[?(aa/ei|ae/ii|e/ii|eir/ir|i/ii|ii|ii/ae|ii/e|ii/i|ii2|ir|iy/ee)\]? ",
@@ -40,7 +40,7 @@ british_accent = {
 
     #water, NOT father!!!!!
     #For Brits AU is /ɔː/, not /ɑː/
-    "AU": " \[?(oo|o/oo)\]? ",
+    "AU": " \[?(oo|o/oo|or|or/ur)\]? ",
     #not au for me: ao  was o/uh   because o/oo   cross au
 
     "OE": " \[?(ou|ou/o|ou1|ouw)\]? ",
