@@ -1,5 +1,8 @@
 import json
+import tqdm
 
+
+print("loading the Froj output file into RAM...")
 with open("Froj_theories/Froj_Harri_theory/complete_output.json", 'r') as f:
     words = json.load(f)
 
@@ -29,7 +32,21 @@ def ordered_by_length(dictionary):
     return ordered_by_length
 
 
-def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries):
+def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries, word_class):
+
+
+    if spelling[0] == spelling[0].lower():
+
+        #if it needs capitalising, pass it through again but capitalised
+        if "NNP" in word_class:
+            all_outlines, all_entries = create_lookups(spelling.capitalize(), ordered_outlines_for_this_particular_word, all_outlines, all_entries, word_class)
+
+        # if it's a proper noun and nothing else, we're done here. (Mark vs mark would continue)
+        if word_class.replace("POS/","").replace("NNPS","").replace("NNP","").replace("POS","").replace("|","") == "":
+            return all_outlines, all_entries
+
+        if "'s" in spelling:
+            return all_outlines, all_entries
 
     for outline in ordered_outlines_for_this_particular_word:
 
@@ -48,11 +65,24 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
                      .replace("f*","*f")
                      .replace("u*","*u")
                      .replace("e*","*e")
-                     .replace("-*","*").upper()
+                     .replace("-*","*")
+                     .replace("Q","^").upper()
         )
+
         ambiguity = outline['ambiguity']
-        explanation = outline['explanation']
+
+        #this doesn't work, it's linked!!! When you add a `#` it's added to the original too!!!
+        explanation = outline['explanation'].copy()  # Creates a shallow copy
         length = len(raw_steno.split('/'))
+
+
+        if spelling[0] == spelling[0].capitalize() and not raw_steno[0] == "#":
+            raw_steno = "#"+raw_steno
+            explanation.insert(0, {
+                "theory": "Lapwing",
+                "chord": "#",
+                "description": "Proper noun"
+                })
 
         # Chance for words with the same spelling to overwrite stuff here :(
         if spelling in all_outlines:
@@ -111,8 +141,6 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
     return all_outlines, all_entries
 
 
-print('generating dictionaries')
-
 
 #making these outside of the loop since they'll interact with each other (notify you of conflicts!!!)
 
@@ -120,20 +148,19 @@ print('generating dictionaries')
 all_outlines = {}
 all_entries = {}
 
-for word in words:
-
+for word in tqdm.tqdm(words, desc="distributing words to dictionaries", unit="word"):
     #some words have the same spelling, but I'd consider them different words, like point and point
     #I'm prepared to just suck it up and lose that data :(
     spelling = word['word'].split(":")[0]
+    word_class = word['word_class']
 
     ordered_outlines_for_this_particular_word = (ordered_by_length(word))
 
-    all_outlines, all_entries = create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries)
+    all_outlines, all_entries = create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outlines, all_entries, word_class)
 
 
-print('writing resolved entries for Plover')
 resolved_entries = {} #not for the Discord bot, but for me to have on Plover
-for entry in all_entries:
+for entry in tqdm.tqdm(all_entries, desc="resolving conflicts", unit="word"):
 
     smallest_ambiguity = 100 #there's a chance there's no entries, so I'm doing it this way just to be safe
 
@@ -152,14 +179,16 @@ for entry in all_entries:
 #with open("Froj_theories/Froj_Harri_theory/best_outlines.json", "w") as outfile:
 #        json.dump(best_outlines, outfile, indent=1)
 
-print('writing word -> entry lookups')
+print('writing word -> entry lookups...')
 with open("Froj_theories/Froj_Harri_theory/all_outlines.json", "w") as outfile:
         json.dump(all_outlines, outfile, indent=1)
 
-print('writing entry -> word lookups')
+print('writing entry -> word lookups...')
 with open("Froj_theories/Froj_Harri_theory/all_entries.json", "w") as outfile:
         json.dump(all_entries, outfile, indent=1)
 
-print('writing Plover entry -> word')
+print('writing Plover entry -> word...')
 with open("Froj_theories/Froj_Harri_theory/resolved_entries.json", "w") as outfile:
         json.dump(resolved_entries, outfile, indent=1)
+
+print('done')
