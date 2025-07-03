@@ -1,3 +1,40 @@
+
+
+
+
+
+
+
+`SKWRAOEPB/TAOEUP` → "genotype"
+`TPOR/PWAEUD` → "forbade"
+
+gendered
+Scouse
+Scouser
+cytosol
+sigil
+grift
+grifter
+gallerist
+git
+knobbly
+novocaine
+hazmat
+thylacine
+thunk
+triage
+blog
+blogger
+maleficent
+orc
+epiphyte
+
+oo? nah
+false::JJ: { f * oo l s } ::9821
+
+
+`PWEPB/TPEURBT` → "beneficent"
+
 where's matte
 
 questions for professor
@@ -249,3 +286,4 @@ efficiency update & removed plurals on another stroke. got from 11 minute runtim
 19/02/25 = 108,404 words 823,962 entries
 
 grep -c 'number of entries": [1-9]' Froj_output.json
+grep -c 'steno outline' Froj_output.json
