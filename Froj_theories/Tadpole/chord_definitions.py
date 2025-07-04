@@ -2,7 +2,7 @@ import re
 
 
 try:
-    from Froj_theories.Froj_Harri_theory.vowel_categories import vowel_category
+    from Froj_theories.Tadpole.vowel_categories import vowel_category
 except ModuleNotFoundError:
     # Allow running as a script
     from vowel_categories import vowel_category

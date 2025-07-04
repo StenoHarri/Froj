@@ -13,7 +13,20 @@ from froj_brains.convert_unilex_into_readable_lists import (
 
 from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
-from Froj_theories.Froj_Harri_theory.chord_definitions import steno_chords_and_their_meanings
+while True:
+    selection = input("what theory would you like to generate?\n1)\tTadpole\n:")
+
+    if selection == "1":
+        from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet
+
+
+        break
+    else:
+        print("hu")
+
+
+order_map = {char: index for index, char in enumerate(custom_alphabet)}
+
 import time
 
 def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords):
@@ -22,7 +35,7 @@ def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords)
     word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
     word['word_boundaries'] = word["word"].split(":")[0]
     word['number of entries'] = 0
-    word['steno stuff'] = generate_write_outs(word, user_chords)
+    word['steno stuff'] = generate_write_outs(word, user_chords, order_map)
     word['number of entries'] = len(word['steno stuff'])
     word['pronunciation'] = str(word['pronunciation'])
     word['word_boundaries'] = str(word['word_boundaries'])

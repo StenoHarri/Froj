@@ -8,15 +8,13 @@ Making the right hand lowercase so I don't have to worry about left P vs right P
 
 import re
 
-from Froj_theories.Froj_Harri_theory.chord_definitions import custom_alphabet
 
-order_map = {char: index for index, char in enumerate(custom_alphabet)}
-def custom_sort_key(word):
+def custom_sort_key(word, order_map):
     return [order_map[char] for char in word]
 
 
 
-def add_chord_to_chords(old_chords, new_chord):
+def add_chord_to_chords(old_chords, new_chord, order_map):
 
     if new_chord:
         old_chords = old_chords.replace("_","")
@@ -72,7 +70,7 @@ def is_entry_complete(entry, pronunciation_target, spelling_target):
 
 
 
-def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target_spelling):
+def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target_spelling, order_map):
     """
     Adds a chord to the entry if it's valid.
     Returns the updated entry or None if not valid.
@@ -88,7 +86,7 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
         return None  # No valid pronunciation found
 
     # Update the raw steno outline
-    raw_steno_outline = add_chord_to_chords(entry["raw steno outline"], preconditions_chord["raw steno"])
+    raw_steno_outline = add_chord_to_chords(entry["raw steno outline"], preconditions_chord["raw steno"], order_map)
 
     # Update ambiguity and explanation
     ambiguity = entry["ambiguity"] + preconditions_chord["ambiguity"]
@@ -114,7 +112,7 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
     }
 
 
-def process_preconditions_and_chords(entry, preconditions_and_their_chords, target_pronunciation, target_spelling):
+def process_preconditions_and_chords(entry, preconditions_and_their_chords, target_pronunciation, target_spelling, order_map):
     """
     Processes the chords for a given entry and returns valid updates.
     """
@@ -125,7 +123,7 @@ def process_preconditions_and_chords(entry, preconditions_and_their_chords, targ
         if precondition.search(entry["raw steno outline"]):
             for preconditions_chord in preconditions_chords:
                 # Try adding a chord for the entry
-                updated_entry = add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target_spelling)
+                updated_entry = add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target_spelling, order_map)
                 if updated_entry:
                     updated_entries.append(updated_entry)
 
@@ -133,7 +131,7 @@ def process_preconditions_and_chords(entry, preconditions_and_their_chords, targ
 
 
 
-def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, preconditions_and_their_chords={}):
+def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, preconditions_and_their_chords={}, order_map={}):
     """
     Adds a chord to each incomplete entry, with optimized logic.
     """
@@ -141,7 +139,7 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
     dictionary_with_a_chord_added_to_each_entry = []
 
     for entry in initial_dictionary:
-        updated_entries = process_preconditions_and_chords(entry, preconditions_and_their_chords, target_pronunciation, target_spelling)
+        updated_entries = process_preconditions_and_chords(entry, preconditions_and_their_chords, target_pronunciation, target_spelling, order_map)
 
         # Add updated entries to the result list
         dictionary_with_a_chord_added_to_each_entry.extend(updated_entries)
@@ -175,7 +173,8 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
             target_spelling,
             new_never_seen_before_entries,
             every_complete_entry_generated,
-            preconditions_and_their_chords=preconditions_and_their_chords
+            preconditions_and_their_chords=preconditions_and_their_chords,
+            order_map=order_map
         )
 
     return never_seen_before_entries, every_complete_entry_generated
@@ -209,7 +208,7 @@ def filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(
 
 
 
-def generate_write_outs(input_word, user_chords):
+def generate_write_outs(input_word, user_chords,order_map):
 
     list_of_incomplete_entries = [
         {
@@ -227,7 +226,7 @@ def generate_write_outs(input_word, user_chords):
     preconditions_and_their_chords = filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(input_word, user_chords)
 
     #print(input_word['word'])
-    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={}, preconditions_and_their_chords=preconditions_and_their_chords)
+    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={}, preconditions_and_their_chords=preconditions_and_their_chords, order_map=order_map)
 
     if list_of_incomplete_entries==[]:
         return["###########################################################################"]
