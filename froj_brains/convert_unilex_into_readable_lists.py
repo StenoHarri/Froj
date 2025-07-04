@@ -137,6 +137,10 @@ def make_boundaries_into_list(full_pronunciation):
         morphemes.append([morpheme
                            .replace(" ~/*","")
                            .replace(" */~","")
+                           .replace(" */-","")
+                           .replace(" -/*","")
+                           .replace(" (.","")
+                           .replace(" .)","")
                            .replace(" *","") #remove stress marker
                            .replace("* ","")#[*  e]
                            .replace(" ~","") #secondary stress (for compound words)

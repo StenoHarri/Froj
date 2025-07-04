@@ -1,4 +1,6 @@
-from typing import Final
+from typing import Any
+class Final:
+    pass
 
 import os
 from dotenv import load_dotenv
@@ -7,11 +9,13 @@ from responses import get_response
 
 #is step 0, load token
 load_dotenv()
-TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
+#TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
+TOKEN: str = os.getenv('DISCORD_TOKEN')
+
 print(TOKEN)
 
 intents: Intents = Intents.default()
-intents.message_content = True
+intents.message_content = True   #this is to be toggleable depending whether or not I'm on the server
 client: Client = Client(intents=intents)
 
 async def send_message(message:Message, user_message:str) -> None:
@@ -23,7 +27,8 @@ async def send_message(message:Message, user_message:str) -> None:
         #print('message was irrelevant')
         return
 
-    if is_private := user_message[0] == '?':
+    is_private = user_message[0] == '?'
+    if is_private:
         user_message = user_message[1:]
 
     try:
@@ -54,7 +59,7 @@ async def on_message(message: Message) -> None:
 
 
 def main() -> None:
-    client.run(token=TOKEN)
+    client.run(TOKEN)
 
 
 if __name__ == '__main__':
