@@ -400,6 +400,16 @@ steno_chords_and_their_meanings = {
          "what must come before": upToQ,
          "theory": ""},
 
+
+        {"chord": "S",
+         "description": "consumer",  # consumer
+         "spelling": "s",
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": upToQ,
+         "theory": ""},
+
         {"chord": "S",
          "description": "s pronounced z",
          "spelling": "ss?",
@@ -588,9 +598,9 @@ steno_chords_and_their_meanings = {
          "spelling": "ss?",  # assume
          "pronunciation": " s  \[y\] ",
          "ambiguity": 0,
-         "orthoscore": 0,
+         "orthoscore": -1,
          "what must come before": upToQ,
-         "theory": "Harri"},
+         "theory": ""},
 
         {"chord": "SH",
          "description": "sh sound",
@@ -956,25 +966,25 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "KWH": [
-        {"chord": "KWH",
-         "description": "suffix",
-         "spelling": "",
-         "pronunciation": " suffix ",
-         "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
-         "orthoscore": 0,
-         "what must come before": slash_no_asterisk,
-         "theory": "Harri"},
+    #"KWH": [
+    #    {"chord": "KWH",
+    #     "description": "suffix",
+    #     "spelling": "",
+    #     "pronunciation": " suffix ",
+    #     "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
+    #     "orthoscore": 0,
+    #     "what must come before": slash_no_asterisk,
+    #     "theory": "Harri"},
 
-        {"chord": "KWH",
-         "description": "pretend consonant",
-         "spelling": "",
-         "pronunciation": "",
-         "ambiguity": 3, #diary diary
-         "orthoscore": 0,
-         "what must come before": slash_no_asterisk_no__,
-         "theory": "Harri"}
-    ],
+    #    {"chord": "KWH",
+    #     "description": "pretend consonant",
+    #     "spelling": "",
+    #     "pronunciation": "",
+    #     "ambiguity": 3, #diary diary
+    #     "orthoscore": 0,
+    #     "what must come before": slash_no_asterisk_no__,
+    #     "theory": "Harri"}
+    #],
 
 
     "KH": [
@@ -1003,7 +1013,17 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": upToQ,
-         "theory": "Plover?"}
+         "theory": "Plover?"},
+
+        {"chord": "KH",
+         "description": "ti pronounced ch", #congestion
+         "spelling": "t",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": upToQ,
+         "theory": ""},
+
     ],
 
     "KHR": [  # because I've made HR illegal to follow K
@@ -1388,6 +1408,15 @@ steno_chords_and_their_meanings = {
          "pronunciation": vowel_category["AOE"],
          "ambiguity": 2,
          "orthoscore": 1, #diarrhoea
+         "what must come before": SToR_or_nothing,
+         "theory": ""},
+
+        {"chord": "AO*E",
+         "description": "AOE vowel + another vowel",
+         "spelling": "ea",
+         "pronunciation": vowel_category["AOE"] + vowel_category["AEU"],
+         "ambiguity": 2,
+         "orthoscore": 1, #create
          "what must come before": SToR_or_nothing,
          "theory": ""},
     ],
@@ -2411,11 +2440,11 @@ steno_chords_and_their_meanings = {
         {"chord": "EUFB",
          "description": "suffix -ive",
          "spelling": "ive?",
-         "pronunciation": " suffix  i  v ",  # (ii|ii2|ir)
+         "pronunciation": " suffix  i  v ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": SToR_but_not_KWH,
-         "theory": "StenEd?"},
+         "theory": ""},
     ],
 
 
@@ -2795,7 +2824,7 @@ steno_chords_and_their_meanings = {
     "/*fb": [
         {"chord": "/*FB",
          "description": "v",
-         "spelling": "ve?",
+         "spelling": "ve?$",
          "pronunciation": " v ",
          "ambiguity": 0,
          "orthoscore": 0,
@@ -2858,7 +2887,7 @@ steno_chords_and_their_meanings = {
     "/*fp": [
         {"chord": "/*FP", #church
          "description": "final ch",
-         "spelling": "ch",
+         "spelling": "ch$",
          "pronunciation": " ch ",
          "ambiguity": 0,
          "orthoscore": 0,
@@ -3109,7 +3138,7 @@ steno_chords_and_their_meanings = {
     "/*rb": [
         {"chord": "/*RB", #harsh
          "description": "final sh",
-         "spelling": "sh",
+         "spelling": "sh$",
          "pronunciation": " sh ",
          "ambiguity": 0,
          "orthoscore": 0,
@@ -4036,7 +4065,7 @@ steno_chords_and_their_meanings = {
          "description": "cian",
          "spelling": "cian",
          "pronunciation": " s ( suffix )? y  @  n ",  # beautician isn't with a suffix
-         "ambiguity": 0,
+         "ambiguity": 1, #confusion > confucian
          "orthoscore": 0,
          "what must come before": A_to_l_,
          "theory": "StenEd"}
@@ -4069,6 +4098,15 @@ steno_chords_and_their_meanings = {
          "ambiguity": 2,  # so it doesn't win against abtentious
          "orthoscore": 0,
          "what must come before": A_to_g_,
+         "theory": ""},
+
+        {"chord": "-T",
+         "description": "ti pronounced ch", #congestion
+         "spelling": "ti",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": upToQ,
          "theory": ""},
 
         {"chord": "-T", #variability
