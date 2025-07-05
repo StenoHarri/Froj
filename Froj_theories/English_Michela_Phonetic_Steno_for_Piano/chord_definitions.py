@@ -27,6 +27,7 @@ any_consonant_but_not_SZN = re.compile(r'((?!SZN$)[FSCZPN]|[npzcsf])$')
 slash_ = re.compile(r'/$_?')
 
 
+F_to_N_but_not_SZN_ = re.compile(r'((?!SZN$)[FSCZPN]_?$')
 F_to_U_or_nothing = re.compile(r'(^/|[FSCZPNRXIU])$')
 
 
@@ -884,6 +885,447 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    # for the second series, I'm using `not SZN`, I just think it would create too many options?
+
+    "R": [
+        {"chord": "R",
+         "description": "r",
+         "spelling": "rr?",
+         "pronunciation": " r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "R",
+         "description": "r maybe silent",
+         "spelling": "rr?",
+         "pronunciation": " \[r\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "R",
+         "description": "rh silent h",
+         "spelling": "rr?h",
+         "pronunciation": " r ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""}
+    ],
+
+
+    "RI": [  # might be some logic for Commonwealth/United States spelling
+        {"chord": "RI",
+         "description": "l",
+         "spelling": "ll?",
+         "pronunciation": " l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+    ],
+
+
+    "RIU": [
+        {"chord": "RIU",
+         "description": "t",
+         "spelling": "tt?",
+         "pronunciation": " t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "RIU",
+         "description": "t but Harri says ch",
+         "spelling": "tt?",  # attune
+         "pronunciation": " t  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "SCP",
+         "description": "d",
+         "spelling": "dd?",
+         "pronunciation": " d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "SCP",
+         "description": "d but Harri says j",
+         "spelling": "dd?",
+         "pronunciation": " d  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""}
+    ],
+
+
+    "RU": [
+        {"chord": "RU",
+         "description": "m",
+         "spelling": "mm?",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""}
+    ],
+
+
+    "X": [
+        {"chord": "X",
+         "description": "s",
+         "spelling": "ss?",
+         "pronunciation": " s ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "X",
+         "description": "s (maybe silent)",
+         "spelling": "ss?",
+         "pronunciation": " z/s ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "X",
+         "description": "sw silent w",  # answer 
+         "spelling": "sw",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "X",
+         "description": "ps silent p",
+         # conflicts with "uppsala" but psychotic has `HOT` → `hot` because of silent h so I don't mind
+         "spelling": "ps",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "X",
+         "description": "c pronounced s or sy",  # the ce in pharmaceutical
+         "spelling": "cc?",
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "X",
+         "description": "s (maybe y too)",  # consumer
+         "spelling": "s",
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "X",
+         "description": "s pronounced z",
+         "spelling": "ss?",
+         "pronunciation": " z ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "X",
+         "description": "c pronounced s",
+         "spelling": "s?c",
+         "pronunciation": " s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+    ],
+
+
+    "XI": [
+        {"chord": "XI",
+         "description": "Other languages stick w and f here, but we don't have f, and I'm sticking w on U",
+         "spelling": "freeeeeeeeeeeeeeee???",
+         "pronunciation": "freeeeeeeeeeee",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": "Harri"},
+    ],
+
+
+    "XIU": [
+        {"chord": "XIU",
+         "description": "k",
+         "spelling": "k(k|h)?",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "XIU",
+         "description": "c pronounced k",
+         "spelling": "cc?",  # acclimatise
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "XIU",
+         "description": "k, maybe ky",
+         "spelling": "cc?",  # barracuda
+         "pronunciation": " k  \[y\] ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "XIU",
+         "description": "ch pronounced k",
+         "spelling": "ch",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+         {"chord": "XIU",
+         "description": "ck",
+         "spelling": "ck(k|h)?",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "XIU",
+         "description": "q",
+         "spelling": "c?q", #acquire
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "XIU", # connection, context
+         "description": "con optional std",
+         "spelling": "con[std]?",
+         "pronunciation": " k  (@|o|o4)  n ( [st] )?",
+         "ambiguity": 10,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": "Harri"},
+
+        {"chord": "XIU",
+         "description": "g",
+         "spelling": "gg?h?", #ghost can be TKPWOEFT or TKPWHOEFT
+         "pronunciation": " g ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""}
+    ],
+
+
+    "XU": [
+        {"chord": "TPH",
+         "description": "n",
+         "spelling": "nn?",
+         "pronunciation": " n ( \[y\] )?",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "TPH",
+         "description": "gn silent g",
+         "spelling": "g?n",
+         "pronunciation": " n ( y )?",
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+    ],
+
+
+    "IU": [
+        {"chord": "IU",
+         "description": "p",
+         "spelling": "pp?",
+         "pronunciation": " p ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "IU",
+         "description": "p (but British people say py?",
+         "spelling": "pp?",
+         "pronunciation": " p  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "IU",
+         "description": "b",
+         "spelling": "bb?",
+         "pronunciation": " b ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+    ],
+
+
+    "I": [
+        {"chord": "I",
+         "description": "y",
+         "spelling": "y",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "I",
+         "description": "y",
+         "spelling": "y",
+         "pronunciation": " y ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "I",
+         "description": "y, but for some people it's silent???",
+         "spelling": "y",
+         "pronunciation": " \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "I",
+         "description": "i",
+         "spelling": "i",
+         "pronunciation": "( suffix )? (ii|ii2|y|iy) ",  # aerospacial ← who wrote that???, fancier has a iy
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "I",
+         "description": "y",
+         "spelling": "y",
+         "pronunciation": " ii ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "I",
+         "description": "long e?",  # meteor the second e
+         "spelling": "e",
+         "pronunciation": " ii2 ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "I",
+         "description": "unspelt y",
+         "spelling": "",
+         "pronunciation": " y ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+    ],
+
+
+    "U": [
+        {"chord": "U",
+         "description": "w",
+         "spelling": "ww?",
+         "pronunciation": " (w|hw) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": "Harri"},
+
+        {"chord": "U",
+         "description": "u pronounced w",
+         "spelling": "u",
+         "pronunciation": " w ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": "Harri"},
+
+        {"chord": "U",
+         "description": "long u", #poplar / popular
+         "spelling": "u",
+         "pronunciation": "( suffix )? y  uu ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "U",
+         "description": "long u", #duet
+         "spelling": "u",
+         "pronunciation": "( suffix )? \[y\]  iu ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+
+        {"chord": "U",
+         "description": "w pronounced v",
+         "spelling": "w",
+         "pronunciation": " (v|v/w) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": "Harri"},
+
+        {"chord": "U",
+         "description": "OE vowel",
+         "spelling": "o",
+         "pronunciation": vowel_category["OE"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": "Harri"}, #Lapwing
+
+        {"chord": "U",
+         "description": "u",
+         "spelling": "u",
+         "pronunciation": " \(y uu/w\) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+    ],
+
+
     "a": [
         {"chord": "a",
          "description": "short a",
@@ -1479,7 +1921,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " v ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": slash_,
+         "what must come before": u_to_a,
          "theory": ""},
 
         {"chord": "cs",
@@ -1488,7 +1930,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " v ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": slash_,
+         "what must come before": u_to_a,
          "theory": "Harri"}
     ],
 
