@@ -14,15 +14,17 @@ from froj_brains.convert_unilex_into_readable_lists import (
 from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
 while True:
-    selection = input("what theory would you like to generate?\n1)\tTadpole\n:")
+    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n:")
 
     if selection == "1":
         from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet
+        break
 
-
+    elif selection == "2":
+        from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet
         break
     else:
-        print("hu")
+        print("try again")
 
 
 order_map = {char: index for index, char in enumerate(custom_alphabet)}
