@@ -22,12 +22,13 @@ custom_alphabet = "FSCZPNRXIUuieanpzcsf_"
 Regex logic here
 """
 
-any_consonant_but_not_SZN = re.compile(r'((?!SZN$)[FSCZPN]|[npzcsf])$')
+any_consonant_but_not_SZN = re.compile(r'(((?!SZN$)[FSCZPN]+)|[npzcsf])$')
 
 slash_ = re.compile(r'/$_?')
 
 
-F_to_N_but_not_SZN_ = re.compile(r'((?!SZN$)[FSCZPN]_?$')
+F_to_N_but_not_SZN_ = re.compile(r'((?!SZN$)[FSCZPN]+)_?$')
+F_to_U_but_not_SZN_ = re.compile(r'((?!SZN$)[FSCZPN]+|[RXIU])$')
 F_to_U_or_nothing = re.compile(r'(^/|[FSCZPNRXIU])$')
 
 
@@ -1322,6 +1323,191 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": F_to_N_but_not_SZN_,
+         "theory": ""},
+    ],
+
+    "i": [
+        {"chord": "i",
+         "description": "y pronounced i diphthong",
+         "spelling": "e?y",
+         "pronunciation": " iy ",  # (ii|ii2|ir)
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "ee pronounced i diphthong",
+         "spelling": "ee",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "ii pronounced i diphthong",
+         "spelling": "ii",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "ie pronounced i diphthong",
+         "spelling": "ie",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "i",
+         "spelling": "i",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "y",
+         "spelling": "y",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 1,  # honestly this might be 0
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "i diphthong",
+         "spelling": "i",
+         "pronunciation": " iy ",
+         "ambiguity": 1,  # why One? I don't know I can't think of any conflicts to be honest
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "e pronounced i diphthong",  # acne, aires
+         "spelling": "e",
+         "pronunciation": " iy ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": "Harri?"},
+
+        {"chord": "i",
+         "description": "ea pronounced i diphthong",
+         "spelling": "ea",
+         "pronunciation": " iy ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": "Harri?"},
+
+        {"chord": "i",
+         "description": "EU vowel spelt u", #busy
+         "spelling": "u",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": -1, #busy
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "EU vowel spelt u", #busy
+         "spelling": "a",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": -1, #garbage
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "EU vowel spelt ui", #build
+         "spelling": "ui?",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        #{"chord": "i", commented out because of antidisestablishmentarianism, electrocardiography
+        # "description": "EU vowel spelt e",  # delicious
+        # "spelling": "e",
+        # "pronunciation": vowel_category["EU"],
+        # "ambiguity": 0,
+        # "orthoscore": -1,
+        # "what must come before": SToR_or_nothing,
+        # "theory": ""},
+
+        {"chord": "i",
+         "description": "AOE vowel spelt i",
+         "spelling": "i",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": 1, #Mozambique, Shiba
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+         {"chord": "i",
+         "description": "suffix -y", #assembly
+         "spelling": "(y|ie?)",
+         "pronunciation": " suffix  iy ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_U_but_not_SZN_,
+         "theory": ""},
+    ],
+
+
+    "e": [
+        {"chord": "e",
+         "description": "e",
+         "spelling": "e",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "E vowel spelt ea",
+         "spelling": "ea",
+         "pronunciation": vowel_category["E"],
+         "ambiguity": 1,
+         "orthoscore": -1,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "E vowel spelt ai",  # against
+         "spelling": "ai",
+         "pronunciation": vowel_category["E"],
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "EU vowel spelt e",  # delicious
+         "spelling": "e",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": F_to_U_or_nothing,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "E vowel", #friend
+         "spelling": "ie",
+         "pronunciation": vowel_category["E"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": F_to_U_or_nothing,
          "theory": ""},
     ],
 
