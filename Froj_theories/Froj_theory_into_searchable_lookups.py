@@ -2,15 +2,45 @@ import json
 import tqdm
 
 
-print("loading the Froj output file into RAM...")
-with open("Froj_theories/Froj_Harri_theory/complete_output.json", 'r') as f:
-    words = json.load(f)
+
 
 
 sorted_words = {}
 
-custom_alphabet = "QSTKPWHRAO-*eufrpblgtsdz_"
+while True:
+    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n:")
 
+    if selection == "1":
+        theory = "Tadpole"
+        def clean_raw_steno(input):
+            return (input.replace("z*","*z")
+                     .replace("d*","*d")
+                     .replace("s*","*s")
+                     .replace("t*","*t")
+                     .replace("g*","*g")
+                     .replace("l*","*l")
+                     .replace("b*","*b")
+                     .replace("p*","*p")
+                     .replace("r*","*r")
+                     .replace("f*","*f")
+                     .replace("u*","*u")
+                     .replace("e*","*e")
+                     .replace("-*","*")
+                     .replace("Q","^").upper())
+        break
+
+    elif selection == "2":
+        theory = "English_Michela_Phonetic_Steno_for_Piano"
+        def clean_raw_steno(input):
+            return input
+        break
+    else:
+        print("try again")
+
+
+print("loading the Froj output file into RAM...")
+with open("Froj_theories/"+theory+"/complete_output.json", 'r') as f:
+    words = json.load(f)
 
 word_lookup = {}
 entry_lookup = {}
@@ -52,22 +82,7 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
 
         outline = outline[1]
 
-        raw_steno = (outline['raw steno outline'][1:]
-                     .replace("z*","*z")
-                     .replace("d*","*d")
-                     .replace("s*","*s")
-                     .replace("t*","*t")
-                     .replace("g*","*g")
-                     .replace("l*","*l")
-                     .replace("b*","*b")
-                     .replace("p*","*p")
-                     .replace("r*","*r")
-                     .replace("f*","*f")
-                     .replace("u*","*u")
-                     .replace("e*","*e")
-                     .replace("-*","*")
-                     .replace("Q","^").upper()
-        )
+        raw_steno = clean_raw_steno(outline['raw steno outline'][1:])
 
         ambiguity = outline['ambiguity']
 
@@ -180,15 +195,15 @@ for entry in tqdm.tqdm(all_entries, desc="resolving conflicts", unit="word"):
 #        json.dump(best_outlines, outfile, indent=1)
 
 print('writing Plover entry -> word...')
-with open("Froj_theories/Froj_Harri_theory/resolved_entries.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/resolved_entries.json", "w") as outfile:
         json.dump(resolved_entries, outfile, indent=1)
 
 print('writing word -> entry lookups...')
-with open("Froj_theories/Froj_Harri_theory/all_outlines.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/all_outlines.json", "w") as outfile:
         json.dump(all_outlines, outfile, indent=1)
 
 print('writing entry -> word lookups...')
-with open("Froj_theories/Froj_Harri_theory/all_entries.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/all_entries.json", "w") as outfile:
         json.dump(all_entries, outfile, indent=1)
 
 

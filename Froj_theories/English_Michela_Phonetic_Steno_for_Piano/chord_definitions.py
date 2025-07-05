@@ -686,7 +686,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "W": [
+    "CN": [
         {"chord": "CN",
          "description": "w",
          "spelling": "ww?",
@@ -2263,7 +2263,7 @@ steno_chords_and_their_meanings = {
 
 
     "a_": [
-        {"chord": "A",
+        {"chord": "a",
          "description": "silent a",
          "spelling": "a",
          "pronunciation": "",
