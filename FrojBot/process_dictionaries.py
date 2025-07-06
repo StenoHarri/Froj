@@ -35,7 +35,7 @@ def preprocess_json(filename, newname):
     os.makedirs(output_dir, exist_ok=True)
     
     # Save each bin into separate files, with progress bar
-    for letters, letter_data in tqdm(binned_data.items(), desc=f"output bins into json", unit="bin"):
+    for letters, letter_data in tqdm(binned_data.items(), desc=f"output bins into json", unit="bin", smoothing=0):
         output_filename = os.path.join(output_dir, f"{newname}_{letters}.json")
         with open(output_filename, 'w') as f:
             json.dump(letter_data, f, indent=4)
