@@ -53,9 +53,9 @@ def add_spelling_to_spelling(old_spelling, new_spelling, target):
 
     return False
 
-def is_entry_complete(entry, pronunciation_target, spelling_target):
+def is_entry_complete(entry, pronunciation_target, spelling_target, valid_final_letter):
 
-    if not re.search(r'[AOeufrpblgtsdz]\*?$', entry["raw steno outline"]):
+    if not re.search(r'['+valid_final_letter+']\*?$', entry["raw steno outline"]):
         return False
 
     pronunciation_regex_attempt = re.compile(entry['pronunciation'])
@@ -131,7 +131,7 @@ def process_preconditions_and_chords(entry, preconditions_and_their_chords, targ
 
 
 
-def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, preconditions_and_their_chords={}, order_map={}):
+def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, preconditions_and_their_chords={}, order_map={}, valid_final_letter=''):
     """
     Adds a chord to each incomplete entry, with optimized logic.
     """
@@ -155,7 +155,7 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
 
         # If the raw_steno_outline is not in initial_set or hasn't been processed yet, check it
         if raw_steno_outline not in initial_set and raw_steno_outline not in every_complete_entry_generated:
-            is_entry_complete_answer = is_entry_complete(entry, target_pronunciation, target_spelling)
+            is_entry_complete_answer = is_entry_complete(entry, target_pronunciation, target_spelling, valid_final_letter)
 
             if is_entry_complete_answer:
                 # Add the complete entry to the dictionary
@@ -174,7 +174,8 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
             new_never_seen_before_entries,
             every_complete_entry_generated,
             preconditions_and_their_chords=preconditions_and_their_chords,
-            order_map=order_map
+            order_map=order_map,
+            valid_final_letter=valid_final_letter
         )
 
     return never_seen_before_entries, every_complete_entry_generated
@@ -208,7 +209,7 @@ def filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(
 
 
 
-def generate_write_outs(input_word, user_chords,order_map):
+def generate_write_outs(input_word, user_chords, order_map, valid_final_letter):
 
     list_of_incomplete_entries = [
         {
@@ -226,7 +227,7 @@ def generate_write_outs(input_word, user_chords,order_map):
     preconditions_and_their_chords = filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(input_word, user_chords)
 
     #print(input_word['word'])
-    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={}, preconditions_and_their_chords=preconditions_and_their_chords, order_map=order_map)
+    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={}, preconditions_and_their_chords=preconditions_and_their_chords, order_map=order_map, valid_final_letter= valid_final_letter)
 
     if list_of_incomplete_entries==[]:
         return["###########################################################################"]

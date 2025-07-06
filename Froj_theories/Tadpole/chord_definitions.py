@@ -9,6 +9,7 @@ except ModuleNotFoundError:
 
 
 custom_alphabet = "QSTKPWHR-AOeufrpblgtsdz*_1"
+valid_final_letter = "AOeufrpblgtsdz"
 #Q preinitial schwa
 #_ midway through a briefing technique
 #1 last vowel was silent silent
@@ -1889,14 +1890,14 @@ steno_chords_and_their_meanings = {
          "what must come before": SToR_or_nothing,
          "theory": ""},
 
-        {"chord": "AU",
-         "description": "AU vowel spelt o",
-         "spelling": "o",
-         "pronunciation": vowel_category["AU"],
-         "ambiguity": 3,
-         "orthoscore": -1, #corp
-         "what must come before": SToR_or_nothing,
-         "theory": ""},
+        #{"chord": "AU",
+        # "description": "AU vowel spelt o",
+        # "spelling": "o",
+        # "pronunciation": vowel_category["AU"],
+        # "ambiguity": 3,
+        # "orthoscore": -1, #corp
+        # "what must come before": SToR_or_nothing,
+        # "theory": ""},
 
         {"chord": "AU",
          "description": "au",

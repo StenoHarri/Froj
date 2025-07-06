@@ -17,11 +17,11 @@ while True:
     selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n:")
 
     if selection == "1":
-        from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet
+        from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
         break
 
     elif selection == "2":
-        from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet
+        from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
         break
     else:
         print("try again")
@@ -37,7 +37,7 @@ def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords)
     word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
     word['word_boundaries'] = word["word"].split(":")[0]
     word['number of entries'] = 0
-    word['steno stuff'] = generate_write_outs(word, user_chords, order_map)
+    word['steno stuff'] = generate_write_outs(word, user_chords, order_map, valid_final_letter)
     word['number of entries'] = len(word['steno stuff'])
     word['pronunciation'] = str(word['pronunciation'])
     word['word_boundaries'] = str(word['word_boundaries'])

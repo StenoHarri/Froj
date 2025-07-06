@@ -8,9 +8,9 @@ except ModuleNotFoundError:
     from vowel_categories import vowel_category
 
 
-custom_alphabet = "QSTKPWHR-AOeufrpblgtsdz*_1"
-
 custom_alphabet = "FSCZPNRXIUuieanpzcsf_"
+valid_final_letter = "uieanpzcsf"
+
 
 
 "FSCZPN|RXIU|uiea|npzcsf|_"
