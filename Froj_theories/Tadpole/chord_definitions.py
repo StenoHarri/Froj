@@ -967,15 +967,16 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    #"KWH": [
-    #    {"chord": "KWH",
-    #     "description": "suffix",
-    #     "spelling": "",
-    #     "pronunciation": " suffix ",
-    #     "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
-    #     "orthoscore": 0,
-    #     "what must come before": slash_no_asterisk,
-    #     "theory": "Harri"},
+    "KWH": [
+        {"chord": "KWH",
+         "description": "suffix",
+         "spelling": "",
+         "pronunciation": " suffix ",
+         "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri"},
+    ],
 
     #    {"chord": "KWH",
     #     "description": "pretend consonant",

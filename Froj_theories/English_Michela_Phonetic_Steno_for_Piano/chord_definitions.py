@@ -25,14 +25,20 @@ Regex logic here
 
 
 slash_ = re.compile(r'/$_?')
+not_first_slash = re.compile(r'./$')
+not_first_slash_ = re.compile(r'./_?$')
 
+# instead of
+# ((?!SZN$)[FSCZPN]+)
+#I'm using
+# ([FSCZP]|[/SCP]N|[/F]ZN)
 
-F_to_N_but_not_SZN_ = re.compile(r'((?!SZN$)[FSCZPN]+)_?$')
+F_to_N_but_not_SZN_ = re.compile(r'([FSCZP]|[/SCP]N|is ifF]ZN)_?$')
 F_to_N_or_nothing = re.compile(r'(^/|[FSCZPN])$')
 
-F_to_U_but_not_SZN_ = re.compile(r'((?!SZN$)[FSCZPN]+|[RXIU])_?$')
+F_to_U_but_not_SZN_ = re.compile(r'(([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])_?$')
 F_to_U_or_nothing = re.compile(r'(^/|[FSCZPNRXIU])$')
-F_to_U_but_not_a_vowel_before = re.compile(r'([npzcsf]/SZN|((?!SZN$)[FSCZPN]+)|[RXIU])$')
+F_to_U_but_not_a_vowel_before = re.compile(r'([npzcsf]/SZN|([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])$')
 
 first_stroke_F_to_U_or_nothing = re.compile(r'(^/[FSCZPNRXIU]+)$')
 
@@ -506,10 +512,28 @@ steno_chords_and_their_meanings = {
          "description": "x (I was lazy here)",
          "spelling": "x",
          "pronunciation": "( k  s | g  z )",
-         "ambiguity": 0,
+         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": slash_,
-         "theory": ""}
+         "theory": ""},
+
+        {"chord": "SZN",
+         "description": "suffix",
+         "spelling": "",
+         "pronunciation": " suffix ",
+         "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
+         "orthoscore": 0,
+         "what must come before": not_first_slash_,
+         "theory": "Harri"},
+
+        {"chord": "SZN",
+         "description": "pretend consonant",
+         "spelling": "",
+         "pronunciation": "",
+         "ambiguity": 3, #diary diary
+         "orthoscore": 0,
+         "what must come before": not_first_slash,
+         "theory": "Harri"}
     ],
 
     "SP": [
@@ -1962,7 +1986,7 @@ steno_chords_and_their_meanings = {
          "description": "ua vowel",
          "spelling": "a",
          "pronunciation": vowel_category["AEU"],
-         "ambiguity": 0,
+         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": F_to_U_or_nothing,
          "theory": ""},
@@ -1971,7 +1995,7 @@ steno_chords_and_their_meanings = {
          "description": "ua vowel",
          "spelling": "a(a|ye?|i)",
          "pronunciation": vowel_category["AEU"],
-         "ambiguity": 1, # wave > waive
+         "ambiguity": 1, # wave > waive... I take this back, maid > made, can you use AE
          "orthoscore": 0,
          "what must come before": F_to_U_or_nothing,
          "theory": ""},
@@ -2214,21 +2238,21 @@ steno_chords_and_their_meanings = {
 
         {"chord": "ea",
          "description": "ua vowel spelt ea (first stroke only)",
-         "spelling": "ea",
+         "spelling": "e", # made
          "pronunciation": vowel_category["AEU"],
-         "ambiguity": 1,
+         "ambiguity": 2,
          "orthoscore": 1,
          "what must come before": first_stroke_F_to_U_or_nothing,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "ea",
          "description": "ue vowel spelt ae",
          "spelling": "ae",
          "pronunciation": vowel_category["AOE"], # eir?
-         "ambiguity": 2,
+         "ambiguity": 3, # made > mead
          "orthoscore": 0,
          "what must come before": F_to_U_or_nothing,
-         "theory": "Lapwing?"},
+         "theory": ""},
     ],
 
 
