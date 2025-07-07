@@ -60,7 +60,7 @@ client = Client(command_prefix="!", intents=intents)
 @client.tree.command(
     name="tadpole",
     description="Tadpole Steno Theory",
-    guild=GUILD_ID
+    #guild=GUILD_ID
 )
 @app_commands.describe(
     lookup="word or raw steno",
@@ -78,7 +78,7 @@ async def tadpoleResponse(
 @client.tree.command(
     name="michela",
     description="English Michela Phonetic Steno Theory for Piano/CharaChorder",
-    guild=GUILD_ID
+    #guild=GUILD_ID
 )
 @app_commands.describe(
     lookup="word or raw steno",
