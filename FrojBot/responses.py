@@ -22,10 +22,13 @@ def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
 
     if letter not in _lookup_data_cache[lookup_type]:
         # Lazy load the corresponding file based on the letter and lookup type
-        filename = f"FrojBot/preprocessed_dictionaries/{lookup_type}_starting_{letter}.json"
+        filename = os.path.join("FrojBot", "theories", "English_Michela_Phonetic_Steno_for_Piano", f"{lookup_type}_starting_{letter}.json")
+        print(filename)
         if os.path.exists(filename):
+            print('does')
             _lookup_data_cache[lookup_type][letter] = load_json(filename)
         else:
+            print('doesnae')
             _lookup_data_cache[lookup_type][letter] = {}  # Empty if not found
 
     # After lookup, clear the cache
@@ -39,7 +42,7 @@ def get_lookup_data(letter: str, lookup_type: str) -> Dict[str, dict]:
 
 # Define regex once globally
 is_raw_steno = re.compile(
-    r'^(#?S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)(/S?T?K?P?W?H?R?[AO*\-EU]+F?R?P?B?L?G?T?S?D?Z?)*$')
+    r'^([FS]?[CZ]?[PN]?[RX]?[I]?[U]?[uiea]+[np]?[zc]?[sf]?)+$')
 
 
 def get_annotation_level(word_to_find: str) -> tuple:
@@ -68,13 +71,13 @@ def giveChordsColours(theory_rules, colours):
         number_of_spaces = 5
         if "fold" in theory_rule['chord']:
             for character in theory_rule['chord']:
-                if character in ("/#^STKPWHRAO-*EUFRPBLGTSDZ"):
+                if character in ("/#FSCZPNRXIUuieanpzcsf"):
                     chord_coloured.append([folding_colour, character, end_colour])
                     number_of_spaces -= 1
         else:
             # Iterate through the chord characters in the rule
             for character in theory_rule['chord']:
-                if character in ("/#^STKPWHRAO-*EUFRPBLGTSDZ"):
+                if character in ("/#FSCZPNRXIUuieanpzcsf"):
                     chord_coloured.append([colour, character, end_colour])
 
                     number_of_spaces -= 1
