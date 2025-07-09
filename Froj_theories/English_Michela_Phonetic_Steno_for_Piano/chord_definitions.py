@@ -22,22 +22,16 @@ valid_final_letter = "uieanpzcsf"
 Regex logic here
 """
 
-
-
 slash_ = re.compile(r'/$_?')
 not_first_slash = re.compile(r'./$')
 not_first_slash_ = re.compile(r'./_?$')
 
-# instead of
-# ((?!SZN$)[FSCZPN]+)
-#I'm using
-# ([FSCZP]|[/SCP]N|[/F]ZN)
-
-F_to_N_but_not_SZN_ = re.compile(r'([FSCZP]|[/SCP]N|is ifF]ZN)_?$')
+F_to_N_but_not_SZN_ = re.compile(r'([FSCZP]|[/SCP]N|[F]ZN|[FSCZPN]_)$')
 F_to_N_or_nothing = re.compile(r'(^/|[FSCZPN])$')
 
 F_to_U_but_not_SZN_ = re.compile(r'(([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])_?$')
-F_to_U_or_nothing = re.compile(r'(^/|[FSCZPNRXIU])$')
+F_to_U_or_nothing = re.compileby(r'(^/|[FSCZPNRXIU])$')
+#up_to_U_but_not_first = re.compileby(r'([.]/|[FSCZPNRXIU])$')
 F_to_U_but_not_a_vowel_before = re.compile(r'([npzcsf]/SZN|([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])$')
 
 first_stroke_F_to_U_or_nothing = re.compile(r'(^/[FSCZPNRXIU]+)$')
@@ -48,7 +42,176 @@ n_to_f = re.compile(r'[npzcsf]$')
 u_to_a_ = re.compile(r'[uiea]_?$')
 
 
-any_consonant_but_not_KWH = re.compile(r'(/(?!KWH$)[STKPWHR]+|[frpblgtsdz])\*?_?$')  # (?! is for negative lookahead
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 """
@@ -95,7 +258,9 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": u_to_f,
-         "theory": ""}],
+         "theory": ""}
+    ],
+
 
     "/_": [
         {"chord": "/",
@@ -184,7 +349,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": slash_,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "FC",
          "description": "silent h depending on accent",
@@ -193,7 +358,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": slash_,
-         "theory": "?"},
+         "theory": ""},
     ],
 
 
@@ -300,7 +465,7 @@ steno_chords_and_their_meanings = {
 
 
     "FZP": [
-        {"chord": "TKPW",
+        {"chord": "FZP",
          "description": "g",
          "spelling": "gg?h?", #ghost can be TKPWOEFT or TKPWHOEFT
          "pronunciation": " g ",
@@ -328,7 +493,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": slash_,
-         "theory": "Plover"}
+         "theory": ""}
     ],
 
 
@@ -518,22 +683,35 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "SZN",
-         "description": "suffix",
+         "description": "root/suffix boundary",
          "spelling": "",
-         "pronunciation": " suffix ",
+         "pronunciation": " (suffix|compound) ",
          "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
          "orthoscore": 0,
          "what must come before": not_first_slash_,
          "theory": "Harri"},
 
         {"chord": "SZN",
-         "description": "pretend consonant",
+         "description": "silent linker",
          "spelling": "",
          "pronunciation": "",
          "ambiguity": 3, #diary diary
          "orthoscore": 0,
          "what must come before": not_first_slash,
          "theory": "Harri"}
+    ],
+
+
+    "SZN_": [ #if you wanna use second series, gotta have SZN_
+        #you can essentially treat _ as "I need second series"
+        {"chord": "SZN",
+         "description": "root/suffix boundary",
+         "spelling": "",
+         "pronunciation": " (suffix|compound) ",
+         "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
+         "orthoscore": 0,
+         "what must come before": not_first_slash_,
+         "theory": "Harri"},
     ],
 
     "SP": [
@@ -562,7 +740,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": slash_,
-         "theory": "Plover?"},
+         "theory": ""},
 
         {"chord": "SP",
          "description": "ti pronounced ch", #congestion
@@ -713,7 +891,7 @@ steno_chords_and_their_meanings = {
     "CN": [
         {"chord": "CN",
          "description": "w",
-         "spelling": "ww?",
+         "spelling": "ww?h?",
          "pronunciation": " (w|hw) ",
          "ambiguity": 0,
          "orthoscore": 0,
@@ -784,7 +962,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": slash_,
-         "theory": "Harri"},
+         "theory": ""},
 
         {"chord": "Z",
          "description": "s (maybe voiced)",
@@ -1221,7 +1399,7 @@ steno_chords_and_their_meanings = {
 
 
     "XU": [
-        {"chord": "TPH",
+        {"chord": "XU",
          "description": "n",
          "spelling": "nn?",
          "pronunciation": " n ( \[y\] )?",
@@ -1230,7 +1408,7 @@ steno_chords_and_their_meanings = {
          "what must come before": F_to_N_but_not_SZN_,
          "theory": ""},
 
-        {"chord": "TPH",
+        {"chord": "XU",
          "description": "gn silent g",
          "spelling": "g?n",
          "pronunciation": " n ( y )?",
@@ -1422,14 +1600,14 @@ steno_chords_and_their_meanings = {
          "what must come before": F_to_N_or_nothing,
          "theory": ""},
 
-        {"chord": "Uu",
-         "description": "Uu vowel spelt o",
-         "spelling": "o",
-         "pronunciation": vowel_category["AU"],
-         "ambiguity": 3,
-         "orthoscore": -1, #corp
-         "what must come before": F_to_N_or_nothing,
-         "theory": ""},
+        #{"chord": "Uu",
+        # "description": "Uu vowel spelt o",
+        # "spelling": "o",
+        # "pronunciation": vowel_category["AU"],
+        # "ambiguity": 3,
+        # "orthoscore": -1, #corp
+        # "what must come before": F_to_N_or_nothing,
+        # "theory": ""},
 
         {"chord": "Uu",
          "description": "au",
@@ -1548,7 +1726,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": F_to_U_or_nothing,
-         "theory": "StenEd?"},
+         "theory": ""},
 
         {"chord": "ui",
          "description": "ui vowel",  # Ainu, Aida,
@@ -1970,11 +2148,11 @@ steno_chords_and_their_meanings = {
 
 
     "e_": [
-        {"chord": "E",
+        {"chord": "e",
          "description": "silent e",
          "spelling": "e",
          "pronunciation": "",
-         "ambiguity": 0,
+         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": F_to_U_but_not_a_vowel_before,
          "theory": "Harri"}
@@ -2324,7 +2502,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": u_to_a_,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "n",
          "description": "gn silent g",
@@ -2478,7 +2656,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": u_to_a_,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "pc",
          "description": "ck",
@@ -2496,7 +2674,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": u_to_a_,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "pc",
          "description": "ch pronounced x",
@@ -2656,7 +2834,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": u_to_a_,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "ps",
          "description": "tch",
@@ -2867,9 +3045,9 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "cs",
-         "description": "v",
+         "description": "rv",
          "spelling": "rve?",
-         "pronunciation": " v ",
+         "pronunciation": " r  v ",
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": u_to_a_,
@@ -3191,7 +3369,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": u_to_a_,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "f",
          "description": "gh pronounced f",  # laugh
@@ -3202,5 +3380,1117 @@ steno_chords_and_their_meanings = {
          "what must come before": u_to_a_,
          "theory": ""},
     ],
+
+
+
+    ##now to dupe everything below, but make it pressable as a second final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "/n": [
+        {"chord": "/n",
+         "description": "final n",
+         "spelling": "o?ne?$",
+         "pronunciation": " n ", # y for the discontinuation
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/n",
+         "description": "final n", #gin
+         "spelling": "o?nne?$",
+         "pronunciation": " n ", # y for the discontinuation
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/n",
+         "description": "final suffix -n",
+         "spelling": "n$",
+         "pronunciation": " suffix  n ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "?"},
+
+        {"chord": "/n",
+         "description": "final gn silent g",
+         "spelling": "gne?$",
+         "pronunciation": " n ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/p": [
+        {"chord": "/p",
+         "description": "final p",
+         "spelling": "pp?$",
+         "pronunciation": " p ",
+         "ambiguity": 0, #group > groupe
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/p",
+         "description": "final p",
+         "spelling": "pp?e$",
+         "pronunciation": " p ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""}
+    ],
+
+
+    "/nz": [
+        {"chord": "/nz",
+         "description": "final y pronounced i diphthong",
+         "spelling": "y$",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""},
+
+        {"chord": "/nz",
+         "description": "final y pronounced i diphthong",
+         "spelling": "ie?$",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""},
+
+        {"chord": "/nz",
+         "description": "final y pronounced i",
+         "spelling": "y$",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/nz",
+         "description": "final dy",
+         "spelling": "dd?(y|ie?)$",
+         "pronunciation": " d ( ((root)|(prefix)|(suffix)) )? iy ",
+         "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "HelloChap?"}
+    ],
+
+
+    "/pz": [
+        {"chord": "/pz",
+         "description": "final j",
+         "spelling": "d?je?$",
+         "pronunciation": " jh ",
+         "ambiguity": 1, #Why 1? not 0?
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pz",
+         "description": "final g pronounced j",
+         "spelling": "d?gg?e?$",
+         "pronunciation": " jh ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pz",
+         "description": "final zh sound",
+         "spelling": "(j|dj|d?gg?)e?$",
+         "pronunciation": " zh ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""}
+    ],  # arbitrage
+
+
+    "/z": [
+        {"chord": "/z",
+         "description": "final s voiced",
+         "spelling": "se?$",
+         "pronunciation": " z ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/z",
+         "description": "final s (maybe voiced)",
+         "spelling": "ss?e?$",
+         "pronunciation": " z/s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/z",
+         "description": "final ss voiced",
+         "spelling": "sse?$",  # actresses?"
+         "pronunciation": " z ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         # cyclops
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+ 
+    "/nc": [
+        {"chord": "/nc",
+         "description": "final w????",
+         "spelling": "ww?$",
+         "pronunciation": "( w | hw )?",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/pc": [
+        {"chord": "/pc",
+         "description": "final k",
+         "spelling": "k(k|e)?$",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "?"},
+
+        {"chord": "/pc",
+         "description": "final ck",
+         "spelling": "cke?$",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pc",
+         "description": "final ch pronounced k",
+         "spelling": "che?$",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "?"},
+
+        {"chord": "/pc",
+         "description": "final ch pronounced x",
+         "spelling": "che?$",
+         "pronunciation": " x ",
+         "ambiguity": 2, #lock/loch
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "Harri"},
+
+        {"chord": "/pc",
+         "description": "final lk silent l??)",
+         "spelling": "lk$",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pc",
+         "description": "final c pronounced k",
+         "spelling": "c(c|e)?$",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pc",
+         "description": "final qu",
+         "spelling": "que?$",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "pc/S": [
+        {"chord": "/pc/S",
+         "description": "final x (sorry, too lazy for g+z)",
+         "spelling": "x$",
+         "pronunciation": "( k  s | g  z )",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "pc/SP": [
+        {"chord": "/pc/SP",
+         "description": "final x (sorry, too lazy for g+zh)",
+         "spelling": "xi?$",
+         "pronunciation": "( k  sh | g  zh )",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/c": [
+        {"chord": "/c",
+         "description": "final sh",
+         "spelling": "sh$",
+         "pronunciation": " sh ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/c",
+         "description": "final ci pronounced sh (Harri's accent)",  # aerospacial
+         "spelling": "ci$",
+         "pronunciation": "( s ( suffix )? y | sh  \[ii\] )",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/c",
+         "description": "final sh sound",
+         "spelling": "((s|t|x)i|c[ei]|s?che?|sc|ss)$",
+         "pronunciation": "( sh | s ( suffix )? y )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/c",
+         "description": "final zh sound",
+         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)$", #caucasia
+         "pronunciation": "( zh | z ( suffix )? y )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/ns": [
+        {"chord": "/ns",
+         "description": "final ng",
+         "spelling": "ng?$",
+         "pronunciation": " ng ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ns",
+         "description": "final ngue", #tongue
+         "spelling": "ngue$",
+         "pronunciation": " ng ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ns",
+         "description": "final ng with g",
+         "spelling": "ng$",
+         "pronunciation": " ng ( \[?g\]? )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ns",
+         "description": "final 'nge' in 'singe'",
+         # funny example cause of course `SEUPBG` → `sing`, but `ORPBG` → `orange`
+         "spelling": "nge?$",
+         "pronunciation": " n  jh ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ns",
+         "description": "final ng sound then g sound",
+         "spelling": "ng?$",
+         "pronunciation": " ng  g ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""}
+    ],
+
+
+    "/ps": [
+        {"chord": "/ps",
+         "description": "final ch",
+         "spelling": "ch$",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "?"},
+
+        {"chord": "/ps",
+         "description": "final tch",
+         "spelling": "tch$",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ps",
+         "description": "final ch spelt t",
+         "spelling": "t$",
+         "pronunciation": " t ( suffix )? y ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/nzs": [
+        {"chord": "/nzs",
+         "description": "final x",
+         "spelling": "x$",
+         "pronunciation": "( k  s | g  z )",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/nzs",
+         "description": "final ction",
+         "spelling": "ction$",
+         "pronunciation": " k  sh  suffix  n ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/nzs",
+         "description": "final cation",
+         "spelling": "cation$",
+         "pronunciation": " k  ee  sh  suffix  n ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "Harri"}
+    ],
+
+
+    "/pzs": [
+        {"chord": "/pzs",
+         "description": "final m",
+         "spelling": "mm?e?$",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pzs",
+         "description": "final mb silent b",
+         "spelling": "mb$",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pzs",
+         "description": "final mp silent p",
+         "spelling": "mp$",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pzs",
+         "description": "final mn silent n",
+         "spelling": "mn$",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        #{"chord": "/pzs",
+        # "description": "final lm silent l (has to follow AU)",
+        # "spelling": "lm$",
+        # "pronunciation": "( \[l1\] )? m ",
+        # "ambiguity": 0,
+        # "orthoscore": 0,
+        # "what must come before": Au, #balm
+        # "theory": ""},
+    ],
+
+
+    "/zs": [
+        {"chord": "/zs",
+         "description": "final rd",
+         "spelling": "rdd?$",
+         "pronunciation": " r  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/ncs": [
+        {"chord": "/ncs",
+         "description": "final l",
+         "spelling": "ll?$",
+         "pronunciation": " l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ncs",
+         "description": "final le",
+         "spelling": "ll?e$",
+         "pronunciation": " l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ncs",
+         "description": "final el",
+         "spelling": "ell?e?$", #I added the final ? cause it looked wrong without it?
+         "pronunciation": " l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ncs",
+         "description": "final al",
+         "spelling": "all?e?$",
+         "pronunciation": " @  l ",  # silent a is already a thing
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ncs",
+         "description": "final suffix -al",
+         "spelling": "al$",
+         "pronunciation": " suffix  l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""},
+
+        {"chord": "/ncs",
+         "description": "final suffix -l",  # antibacterial
+         "spelling": "l$",
+         "pronunciation": " suffix  l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""},
+    ],
+
+
+    "/pcs": [
+        {"chord": "/pcs",
+         "description": "final d",
+         "spelling": "dd?e?$",
+         "pronunciation": " d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pcs",
+         "description": "final d",
+         "spelling": "dd?e?$",
+         "pronunciation": " d/t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pcs",
+         "description": "final suffix -ed",
+         "spelling": "e?d$",
+         "pronunciation": " suffix ( i7 )? (d|t) ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""}
+    ],
+
+
+
+    "/cs": [
+        {"chord": "/cs",
+         "description": "final v",
+         "spelling": "ve?$",
+         "pronunciation": " v ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/cs",
+         "description": "final v",
+         "spelling": "rve?$",
+         "pronunciation": " v ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "Harri"}
+    ],
+
+
+    "/s": [
+        {"chord": "/s",
+         "description": "final unvoiced se",
+         "spelling": "se$",  # actresses?"
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/s",
+         "description": "final unvoiced s", #cyclops
+         "spelling": "s$",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/s",
+         "description": "final s (maybe voiced)",
+         "spelling": "s$",
+         "pronunciation": " z/s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/s",
+         "description": "final s silent t",
+         "spelling": "ss?te?$",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/s",
+         "description": "final s silent w",  # answer
+         "spelling": "sw$",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/s",
+         "description": "final ss",
+         "spelling": "unvoiced ss$",  # actresses?"
+         "pronunciation": " s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/s",
+         "description": "final unvoiced s spelt c",
+         "spelling": "s?ce?$",
+         "pronunciation": " s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/s",
+         "description": "final s maybe voiced",
+         "spelling": "ss?e?$",
+         "pronunciation": " z/s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+
+        {"chord": "/s",
+         "description": "final suffix -s",
+         "spelling": "s$",
+         "pronunciation": "( (suffix) ) (s|z|z/s) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""}
+    ],
+
+    "/nf": [
+        {"chord": "/nd",
+         "description": "final nd",
+         "spelling": "ndd?$",
+         "pronunciation": " n  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+    "/pcf": [
+        {"chord": "/pcf",
+         "description": "final b",
+         "spelling": "bb?e?$",
+         "pronunciation": " b ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/cf": [
+        {"chord": "/cf",
+         "description": "final h",
+         "spelling": "h$",
+         "pronunciation": " h ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/cf",
+         "description": "final silent h",
+         "spelling": "h$",
+         "pronunciation": "",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+
+        {"chord": "/cf",
+         "description": "final st!",
+         "spelling": "st$",
+         "pronunciation": " s  t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/pf": [
+        {"chord": "/pf",
+         "description": "final t",
+         "spelling": "tt?e?$",
+         "pronunciation": " t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pf",
+         "description": "final final dt pronounced t",
+         "spelling": "dt$$",
+         "pronunciation": " t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pf",
+         "description": "final t pronounced sh",
+         "spelling": "tt?e?$",
+         "pronunciation": " sh ",
+         "ambiguity": 2,  # so it doesn't win against abtentious
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pf",
+         "description": "final ti pronounced ch", #congestion
+         "spelling": "ti$",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pf", #variability
+         "description": "final suffix ity",
+         "spelling": "ity$",
+         "pronunciation": " suffix  @  t  iy ",
+         "ambiguity": 3, #ambiguity, versatility
+         "orthostore": 0,
+         "what must come before": u_to_f,
+         "theory": ""}
+    ],
+
+
+    "/nzf": [
+        {"chord": "/nzf",
+         "description": "final nt",
+         "spelling": "nt$",
+         "pronunciation": " n ( root )? t ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+    "/pzf": [
+        {"chord": "/pzf",
+         "description": "final g",
+         "spelling": "gg?e?$",
+         "pronunciation": " g ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/pzf",
+         "description": "final silent gh",
+         "spelling": "gh$",
+         "pronunciation": "",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "Harri"},
+    ],
+
+
+    "/zf": [
+        {"chord": "/zf",
+         "description": "final th",
+         "spelling": "the?$",
+         "pronunciation": " \[?(th|dh|dh/th)\]? ",
+         "ambiguity": 1,  # giving it a 1 for personal reasons lol
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/zf",
+         "description": "final suffix -th",
+         "spelling": "the?$",
+         "pronunciation": " suffix  \[?(th|dh|dh/th)\]? ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""},
+    ],
+
+
+    "/ncf": [
+        {"chord": "/ncf",
+         "description": "final r",
+         "spelling": "rr?e?$",
+         "pronunciation": " r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/ncf",
+         "description": "final suffix? -re",
+         "spelling": "re$",
+         "pronunciation": "( suffix )? (\(r  @/@r  r\)|@r  r) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""},
+
+        {"chord": "/ncf",
+         "description": "final suffix -r??", #secret
+         "spelling": "r$",
+         "pronunciation": "( suffix ) r ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": ""},
+
+        {"chord": "/ncf",
+         "description": "final suffix -er",
+         "spelling": "err?$",
+         "pronunciation": " suffix  @r  r ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": "Harri"},
+
+        {"chord": "/ncf",
+         "description": "final ar???",
+         "spelling": "arr?$",  # friar
+         "pronunciation": " r ",
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "Harri"},
+
+        {"chord": "/ncf",
+         "description": "final suffix -or/-our???",
+         "spelling": "ou?rr?$",
+         "pronunciation": " suffix  @r  r ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": u_to_f,
+         "theory": "Harri"}
+    ],
+
+
+    "/f": [
+        {"chord": "/f",
+         "description": "final f",
+         "spelling": "ff?e?$",
+         "pronunciation": " f ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+
+        {"chord": "/f",
+         "description": "final ph pronounced f",  # graph
+         "spelling": "p?ph$",
+         "pronunciation": " f ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": "?"},
+
+        {"chord": "/f",
+         "description": "final gh pronounced f",  # laugh
+         "spelling": "gh$",
+         "pronunciation": " f ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": n_to_f,
+         "theory": ""},
+    ],
+
+
+
+
+
+
+
+
 
 }
