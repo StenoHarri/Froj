@@ -184,10 +184,11 @@ def best_outlines(spelling, outlines, complexity):
                         theory_rule_breakdown += (
                             f"\n{set_theory_colour}{theory_rule['theory'].ljust(8)}{remove_colour}{theory_rule['chord']}{linker}{theory_rule['description']}")
 
-                if len(output) > 2400:
-                    too_big = "Too big for Discord, stopped early. Try `:>`"
-                    number_of_best_entries += 1
-                    break
+                if len(output) > 800 or len(output+theory_rule_breakdown) > 800:
+                    too_big = "Too big for Discord, stopped annotating"
+                    raw_steno = plain_raw_steno
+                    theory_rule_breakdown = ""
+                    #number_of_best_entries += 1
 
                 chunk_to_add = ("```Ansi\n\n")
 
@@ -213,7 +214,8 @@ def best_outlines(spelling, outlines, complexity):
                 number_of_best_entries += 1
 
                 if len(chunk_to_add) + len(output) > 1200:
-                    too_big = "Too big for Discord, stopped early. Try `:>`"
+                    too_big = "Too big for Discord, stopped early"
+                    complexity = "summarise best"
                     number_of_best_entries += 1
                     break
                 output += chunk_to_add
