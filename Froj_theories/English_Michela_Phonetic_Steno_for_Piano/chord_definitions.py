@@ -15,7 +15,8 @@ valid_final_letter = "uieanpzcsf"
 
 "FSCZPN|RXIU|uiea|npzcsf|_"
 
-#_ midway through a briefing technique
+#_  at the end means, you require a forth series before you can move on to the next stroke
+#_ at the start means you require a first series
 
 
 """
@@ -26,10 +27,12 @@ slash_ = re.compile(r'/$_?')
 not_first_slash = re.compile(r'./$')
 not_first_slash_ = re.compile(r'./_?$')
 
-F_to_N_but_not_SZN_ = re.compile(r'([FSCZP]|[/SCP]N|[F]ZN|[FSCZPN]_)$')
+#F_to_N_ = re.compile(r'([FSCZP]|[/SCP]N|[F]ZN|[FSCZPN]_)$')
+F_to_N = re.compile(r'[FSCZPN]$')
 F_to_N_or_nothing = re.compile(r'(^/|[FSCZPN])$')
 
-F_to_U_but_not_SZN_ = re.compile(r'(([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])_?$')
+#F_to_U_ = re.compile(r'(([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])_?$')
+F_to_U = re.compile(r'(([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])_?$')
 F_to_U_or_nothing = re.compileby(r'(^/|[FSCZPNRXIU])$')
 #up_to_U_but_not_first = re.compileby(r'([.]/|[FSCZPNRXIU])$')
 F_to_U_but_not_a_vowel_before = re.compile(r'([npzcsf]/SZN|([FSCZP]|[/SCP]N|[/F]ZN)|[RXIU])$')
@@ -42,10 +45,11 @@ n_to_f = re.compile(r'[npzcsf]$')
 u_to_a_ = re.compile(r'[uiea]_?$')
 
 
+first_series = re.compile(r'[FSCZPN]$')
 
+#first_stroke_1st_or_3rd_to_4th = 
 
-
-
+initial_first_series_or_third_or_fourth = re.compile(r'[uieanpzcsf]$')
 
 
 
@@ -219,14 +223,14 @@ Chord: [[spelling,          sound,          briefiness, theory]]
 """
 steno_chords_and_their_meanings = {
 
-    "_": [
+    "": [
         {"chord": "",
          "description": "drop silent vowel",
          "spelling": "[aiu]",  # merciful, somethingcal
          "pronunciation": "",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": first_series,
          "theory": ""},
 
         {"chord": "",
@@ -236,7 +240,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": vowel_category["short"],
          "ambiguity": 2,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": first_series,
          "theory": ""},
 
         {"chord": "",
@@ -245,7 +249,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
          "ambiguity": 3,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": first_series,
          "theory": ""},
     ],
 
@@ -258,7 +262,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": u_to_f,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -681,37 +685,6 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": slash_,
          "theory": ""},
-
-        {"chord": "SZN",
-         "description": "root/suffix boundary",
-         "spelling": "",
-         "pronunciation": " (suffix|compound) ",
-         "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
-         "orthoscore": 0,
-         "what must come before": not_first_slash_,
-         "theory": "Harri"},
-
-        {"chord": "SZN",
-         "description": "silent linker",
-         "spelling": "",
-         "pronunciation": "",
-         "ambiguity": 3, #diary diary
-         "orthoscore": 0,
-         "what must come before": not_first_slash,
-         "theory": "Harri"}
-    ],
-
-
-    "SZN_": [ #if you wanna use second series, gotta have SZN_
-        #you can essentially treat _ as "I need second series"
-        {"chord": "SZN",
-         "description": "root/suffix boundary",
-         "spelling": "",
-         "pronunciation": " (suffix|compound) ",
-         "ambiguity": 2,  # PWAEU/PWEU > PWAEUB/KWHEU, I'd rather see `KPW` → `imp` than KWH showcased
-         "orthoscore": 0,
-         "what must come before": not_first_slash_,
-         "theory": "Harri"},
     ],
 
     "SP": [
@@ -1149,7 +1122,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " r ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "R",
@@ -1158,7 +1131,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " \[r\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "R",
@@ -1167,7 +1140,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " r ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""}
     ],
 
@@ -1179,7 +1152,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " l ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
     ],
 
@@ -1191,7 +1164,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "RIU",
@@ -1200,7 +1173,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "SCP",
@@ -1209,7 +1182,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "SCP",
@@ -1218,7 +1191,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""}
     ],
 
@@ -1230,7 +1203,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " m ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""}
     ],
 
@@ -1242,7 +1215,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",  # ( \[y\] )? yeah you can add that
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "X",
@@ -1251,7 +1224,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z/s ",  # ( \[y\] )? yeah you can add that
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "X",
@@ -1260,7 +1233,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": -1,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "X",
@@ -1270,7 +1243,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "X",
@@ -1279,7 +1252,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "X",
@@ -1288,7 +1261,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 1,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "X",
@@ -1297,7 +1270,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "X",
@@ -1306,7 +1279,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
     ],
 
@@ -1318,7 +1291,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "freeeeeeeeeeee",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": "Harri"},
     ],
 
@@ -1330,7 +1303,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "XIU",
@@ -1339,7 +1312,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "XIU",
@@ -1348,7 +1321,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k  \[y\] ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "XIU",
@@ -1357,7 +1330,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
          {"chord": "XIU",
@@ -1366,7 +1339,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "XIU",
@@ -1375,7 +1348,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "XIU", # connection, context
@@ -1384,7 +1357,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k  (@|o|o4)  n ( [st] )?",
          "ambiguity": 10,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": "Harri"},
 
         {"chord": "XIU",
@@ -1393,7 +1366,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " g ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""}
     ],
 
@@ -1405,7 +1378,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n ( \[y\] )?",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "XU",
@@ -1414,7 +1387,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n ( y )?",
          "ambiguity": 3,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
     ],
 
@@ -1426,7 +1399,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " p ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "IU",
@@ -1435,7 +1408,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " p  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "IU",
@@ -1444,7 +1417,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " b ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
     ],
 
@@ -1456,7 +1429,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " iy ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "I",
@@ -1465,7 +1438,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " y ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "I",
@@ -1474,7 +1447,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "I",
@@ -1483,7 +1456,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( suffix )? (ii|ii2|y|iy) ",  # aerospacial ← who wrote that???, fancier has a iy
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "I",
@@ -1492,7 +1465,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ii ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "I",
@@ -1501,7 +1474,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ii2 ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "I",
@@ -1510,7 +1483,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " y ",
          "ambiguity": 2,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
     ],
 
@@ -1522,7 +1495,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " (w|hw) ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": "Harri"},
 
         {"chord": "U",
@@ -1531,7 +1504,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " w ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": "Harri"},
 
         {"chord": "U",
@@ -1540,7 +1513,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( suffix )? y  uu ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "U",
@@ -1549,7 +1522,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( suffix )? \[y\]  iu ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
 
         {"chord": "U",
@@ -1558,7 +1531,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " (v|v/w) ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": "Harri"},
 
         {"chord": "U",
@@ -1567,7 +1540,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": vowel_category["OE"],
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": "Harri"}, #Lapwing
 
         {"chord": "U",
@@ -1576,12 +1549,12 @@ steno_chords_and_their_meanings = {
          "pronunciation": " \(y uu/w\) ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": F_to_N_but_not_SZN_,
+         "what must come before": F_to_N,
          "theory": ""},
     ],
 
 
-    "Uu": [
+    "Uu_": [
         {"chord": "Uu",
          "description": "Uu vowel",
          "spelling": "a[auh]?",
@@ -1637,12 +1610,12 @@ steno_chords_and_their_meanings = {
          "theory": ""},
     ],
 
-    "Ii": [
+    "Ii_": [
         {"chord": "Ii",
          "description": "Ii vowel",
          "spelling": "oi",
          "pronunciation": vowel_category["OEU"],
-         "ambiguity": 0,
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": F_to_N_or_nothing,
          "theory": ""},
@@ -2096,6 +2069,27 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": F_to_U_but_not_a_vowel_before,
          "theory": "Harri"},
+    ],
+
+
+    "ienz": [
+        {"chord": "ienz",
+         "description": "ienz vowel",
+         "spelling": "oi",
+         "pronunciation": vowel_category["OEU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": F_to_U,
+         "theory": ""},
+
+        {"chord": "ienz",
+         "description": "ienz vowel",
+         "spelling": "oye?",
+         "pronunciation": vowel_category["OEU"],
+         "ambiguity": 0,  # feel free to change this prioritisation
+         "orthoscore": 0,
+         "what must come before": F_to_N_or_nothing,
+         "theory": ""}
     ],
 
 
