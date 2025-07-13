@@ -2819,6 +2819,33 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+        {"chord": "u",
+         "description": "suffix u",
+         "spelling": "u",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "u",
+         "description": "suffix U vowel spelt ou",
+         "spelling": "ou",
+         "pronunciation": " suffix " + vowel_category["U"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": "Harri"},
+
+        {"chord": "u",
+         "description": "suffix ou",
+         "spelling": "ou",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -2892,11 +2919,56 @@ steno_chords_and_their_meanings = {
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
 
+        #{"chord": "ui",
+        # "description": "suffix ui vowel",
+        # "spelling": "i",
+        # "pronunciation": f' suffix {vowel_category["AOEU"]}',
+        # "ambiguity": 3,
+        # "orthoscore": 0,
+        # "what must come before": not_initial_slash_or_first_or_second_series_,
+        # "theory": ""},
+
         {"chord": "ui",
          "description": "suffix ui vowel",
-         "spelling": "i",
-         "pronunciation": f' suffix {vowel_category["AOEU"]}',
-         "ambiguity": 3,
+         "spelling": "ie?",  # acidifies
+         "pronunciation": " suffix " + vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ui",
+         "description": "suffix ui vowel",
+         "spelling": "ei",  # acidifies
+         "pronunciation": " suffix " + vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ui",
+         "description": "suffix ui vowel",
+         "spelling": "y",
+         "pronunciation": " suffix " + vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ui",
+         "description": "suffix ui vowel",  # Ainu, Aida,
+         "spelling": "ai",
+         "pronunciation": " suffix " + vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ui",
+         "description": "suffix ui vowel followed by a short e",
+         "spelling": "ie",
+         "pronunciation": " suffix " + vowel_category["AOEU"] + " @ ",
+         "ambiguity": 2,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
@@ -2995,7 +3067,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "i",
-         "description": "EU vowel spelt u", #busy
+         "description": "EU vowel spelt a", #busy
          "spelling": "a",
          "pronunciation": vowel_category["EU"],
          "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
@@ -3030,12 +3102,129 @@ steno_chords_and_their_meanings = {
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
 
-         {"chord": "i",
-         "description": "suffix -y", #assembly
-         "spelling": "(y|ie?)",
-         "pronunciation": " suffix  iy ",
+        {"chord": "i",
+         "description": "suffix y pronounced i diphthong",
+         "spelling": "e?y",
+         "pronunciation": " suffix " + " iy ",  # (ii|ii2|ir)
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix ee pronounced i diphthong",
+         "spelling": "ee",
+         "pronunciation": " suffix " + " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix ii pronounced i diphthong",
+         "spelling": "ii",
+         "pronunciation": " suffix " + " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix ie pronounced i diphthong",
+         "spelling": "ie",
+         "pronunciation": " suffix " + " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix i",
+         "spelling": "i",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix y",
+         "spelling": "y",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 1,  # honestly this might be 0
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix i diphthong",
+         "spelling": "i",
+         "pronunciation": " suffix " + " iy ",
+         "ambiguity": 1,  # why One? I don't know I can't think of any conflicts to be honest
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix e pronounced i diphthong",  # acne, aires
+         "spelling": "e",
+         "pronunciation": " suffix " + " iy ",
          "ambiguity": 1,
          "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": "Harri?"},
+
+        {"chord": "i",
+         "description": "suffix ea pronounced i diphthong",
+         "spelling": "ea",
+         "pronunciation": " suffix " + " iy ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": "Harri?"},
+
+        {"chord": "i",
+         "description": "suffix EU vowel spelt u", #busy
+         "spelling": "u",
+         "pronunciation": " suffix " + vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": -1, #busy
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix EU vowel spelt a", #busy
+         "spelling": "a",
+         "pronunciation": " suffix " + vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": -1, #garbage
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix EU vowel spelt ui", #build
+         "spelling": "ui?",
+         "pronunciation": " suffix " + vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        #{"chord": "i", commented out because of antidisestablishmentarianism, electrocardiography
+        # "description": "EU vowel spelt e",  # delicious
+        # "spelling": "e",
+        # "pronunciation": vowel_category["EU"],
+        # "ambiguity": 0,
+        # "orthoscore": -1,
+        # "what must come before": SToR_or_nothing,
+        # "theory": ""},
+
+        {"chord": "i",
+         "description": "suffix ue vowel spelt i",
+         "spelling": "i",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": 1, #Mozambique, Shiba
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
     ],
@@ -3146,6 +3335,87 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+         {"chord": "ue",
+         "description": "suffix ue vowel",
+         "spelling": "ee",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel",
+         "spelling": "ie",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel",
+         "spelling": "i",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 1,  # why One? I don't know I can't think of any conflicts to be honest
+         "orthoscore": -1, #Mozambique, Shiba
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel",  # acne, aires
+         "spelling": "e",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": -1, #genotype
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel",
+         "spelling": "ea",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": -1, #read
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel but maybe it's two syllables?",
+         "spelling": "ea",
+         "pronunciation": " suffix " + " i@ ",
+         "ambiguity": 1,
+         "orthoscore": -1, #real
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel",
+         "spelling": "ey",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": -1, #key
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel",
+         "spelling": "oe",
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": -1, #diarhoea
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ue",
+         "description": "suffix ue vowel",
+         "spelling": "eo", #theory
+         "pronunciation": " suffix " + vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -3194,6 +3464,51 @@ steno_chords_and_their_meanings = {
          "orthoscore": -1, #toad
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+        {"chord": "uie",
+         "description": "suffix uie vowel",
+         "spelling": "o[eu]?",
+         "pronunciation": " suffix " + vowel_category["OE"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uie",
+         "description": "suffix uie vowel spelt ow",
+         "spelling": "owe?",
+         "pronunciation": " suffix " + vowel_category["OE"],
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uie",
+         "description": "suffix uie vowel spelt au",
+         "spelling": "au",  # baudelaire, aubergine beaux,
+         "pronunciation": " suffix " + vowel_category["OE"],
+         "ambiguity": 1,
+         "orthoscore": -1, #aubergine
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uie",
+         "description": "suffix uie vowel",
+         "spelling": "ot$",
+         "pronunciation": " suffix " + vowel_category["OE"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uie",
+         "description": "suffix uie vowel spelt oa",
+         "spelling": "oa",
+         "pronunciation": " suffix " + vowel_category["OE"],
+         "ambiguity": 0,  # 0 ambiguity because toad > towed... load >_< lode
+         "orthoscore": -1, #toad
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -3238,6 +3553,51 @@ steno_chords_and_their_meanings = {
          "description": "O vowel spelt a",
          "spelling": "a",
          "pronunciation": vowel_category["O"],
+         "ambiguity": 1,
+         "orthoscore": -1, #yacht
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ie",
+         "description": "suffix o",
+         "spelling": "o",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ie",
+         "description": "suffix short vowel spelt ow", # Knowledge
+         "spelling": "ow",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ie",
+         "description": "suffix Uu vowel spelt o",
+         "spelling": "o",
+         "pronunciation": " suffix " + vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": 1, #corp story
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ie",
+         "description": "suffix uia vowel spelt o",
+         "spelling": "o",
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 1,
+         "orthoscore": 1, #move,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ie",
+         "description": "suffix O vowel spelt a",
+         "spelling": "a",
+         "pronunciation": " suffix " + vowel_category["O"],
          "ambiguity": 1,
          "orthoscore": -1, #yacht
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3335,6 +3695,51 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+        {"chord": "e",
+         "description": "suffix e",
+         "spelling": "e",
+         "pronunciation": " suffix " +vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "suffix E vowel spelt ea",
+         "spelling": "ea",
+         "pronunciation": " suffix " +vowel_category["E"],
+         "ambiguity": 1,
+         "orthoscore": -1,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "suffix E vowel spelt ai",  # against
+         "spelling": "ai",
+         "pronunciation": " suffix " +vowel_category["E"],
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "suffix EU vowel spelt e",  # delicious
+         "spelling": "e",
+         "pronunciation": " suffix " +vowel_category["EU"],
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "e",
+         "description": "suffix E vowel", #friend
+         "spelling": "ie",
+         "pronunciation": " suffix " + vowel_category["E"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -3426,14 +3831,86 @@ steno_chords_and_their_meanings = {
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
 
-        {"chord": "ua",
+        #{"chord": "ua",
+        # "description": "suffix ua vowel",
+        # "spelling": "a",
+        # "pronunciation": f' suffix {vowel_category["AEU"]}',
+        # "ambiguity": 3,
+        # "orthoscore": 0,
+        # "what must come before": not_initial_slash_or_first_or_second_series_,
+        # "theory": ""},
+
+         {"chord": "ua",
          "description": "suffix ua vowel",
          "spelling": "a",
-         "pronunciation": f' suffix {vowel_category["AEU"]}',
-         "ambiguity": 3,
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+        {"chord": "ua",
+         "description": "suffix ua vowel",
+         "spelling": "a(a|ye?|i)",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1, # wave > waive... I take this back, maid > made, can you use AE
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ua",
+         "description": "suffix ua vowel (are you British?)",
+         "spelling": "e",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ua",
+         "description": "suffix ua vowel",
+         "spelling": "ett?e?",
+         "pronunciation": vowel_category["AEU"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ua",
+         "description": "suffix ua vowel",
+         "spelling": "ey",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ua",
+         "description": "suffix ua vowel",
+         "spelling": "ei", #inveigh, weigh
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ua",
+         "description": "suffix ua vowel",
+         "spelling": "ea",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 2,
+         "orthoscore": -1,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        #{"chord": "ua",
+        # "description": "suffix ua vowel",
+        # "spelling": "a",
+        # "pronunciation": f' suffix {vowel_category["AEU"]}',
+        # "ambiguity": 3,
+        # "orthoscore": 0,
+        # "what must come before": not_initial_slash_or_first_or_second_series_,
+        # "theory": ""},
     ],
 
 
@@ -3509,6 +3986,78 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+         {"chord": "uia",
+         "description": "suffix uia vowel",
+         "spelling": "e?ue?", # deuteronomy
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uia",
+         "description": "suffix uia vowel",
+         "spelling": "ou", 
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": -1, #soup
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uia",
+         "description": "suffix uia vowel",
+         "spelling": "eau",
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uia",
+         "description": "suffix uia vowel",
+         "spelling": "ui",
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uia",
+         "description": "suffix uia vowel",
+         "spelling": "ew",
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 1,  # nute > nute, flew > flu, blew > blue... I do make the rules, and I'm power hungry
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uia",
+         "description": "suffix uia vowel",
+         "spelling": "o",
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 1,
+         "orthoscore": -1, #move
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uia", 
+         "description": "suffix uia vowel",
+         "spelling": "uu", #vacuum
+         "pronunciation": " suffix " + vowel_category["AOU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "uia", 
+         "description": "suffix uia vowel + another",
+         "spelling": "ui", #druid
+         "pronunciation": " suffix " + f'{vowel_category["AOU"]} i ',
+         "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -3557,6 +4106,51 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+        {"chord": "ia",
+         "description": "suffix Uu vowel spelt ou", #thought
+         "spelling": "ou",
+         "pronunciation": " suffix " + vowel_category["AU"], # bolder/boulder  thought   " starting_root  th  oo  t  suffix  f  [u]  l ",
+         "ambiguity": 0,
+         "orthoscore": 1, #thought
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ia",
+         "description": "suffix ia vowel",
+         "spelling": "ow",
+         "pronunciation": " suffix " + vowel_category["OU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "ia",
+         "description": "suffix uie vowel spelt OU??",
+         "spelling": "ou",
+         "pronunciation": " suffix " + vowel_category["OE"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": "Harri"},
+
+        {"chord": "ia",
+         "description": "suffix short vowel spelt ou",
+         "spelling": "ou",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 0,  # colour
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": "Harri"},
+
+        {"chord": "ia",
+         "description": "suffix ia vowel",
+         "spelling": "ou",
+         "pronunciation": " suffix " + vowel_category["OU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -3595,7 +4189,43 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
-         "theory": ""}
+         "theory": ""},
+
+        {"chord": "iea",
+         "description": "suffix Uu vowel spelt ao",
+         "spelling": "oa",
+         "pronunciation": " suffix " + vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": 1, #coarse
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "iea",
+         "description": "suffix uie vowel spelt oa",
+         "spelling": "oa",
+         "pronunciation": " suffix " + vowel_category["OE"],
+         "ambiguity": 1,
+         "orthoscore": 1, #toad
+         "what must come before": initial_first_or_second_series,
+         "theory": ""},
+
+        {"chord": "iea",
+         "description": "suffix short vowel spelt oo",
+         "spelling": "oo",
+         "pronunciation": " suffix " + vowel_category["short"] ,  # u is took I think?
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "iea",
+         "description": "suffix uia vowel spelt oo",
+         "spelling": "oo",
+         "pronunciation": " suffix " + vowel_category["AOU"],  # uu is noon
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -3635,6 +4265,42 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
          "theory": ""},
+
+        #{"chord": "ea",
+        # "description": "suffix ue vowel spelt ea (first stroke only)",
+        # "spelling": "ea",
+        # "pronunciation": vowel_category["AOE"], #it was just ii before
+        # "ambiguity": 1,
+        # "orthoscore": 1, #read
+        # "what must come before": initial_first_or_second_series,
+        # "theory": ""},
+
+        #{"chord": "ea",
+        # "description": "suffix ea pronounced short e (first stroke only)",
+        # "spelling": "ea",
+        # "pronunciation": " e ", # earl?
+        # "ambiguity": 2, #red
+        # "orthoscore": 1, #read
+        # "what must come before": initial_first_or_second_series,
+        # "theory": ""},
+
+        #{"chord": "ea",
+        # "description": "suffix ua vowel spelt ea (first stroke only)",
+        # "spelling": "e", # made
+        # "pronunciation": vowel_category["AEU"],
+        # "ambiguity": 2,
+        # "orthoscore": 1,
+        # "what must come before": initial_first_or_second_series,
+        # "theory": ""},
+
+        {"chord": "ea",
+         "description": "suffix ue vowel spelt ae",
+         "spelling": "ae",
+         "pronunciation": " suffix " + vowel_category["AOE"], # eir?
+         "ambiguity": 3, # made > mead
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
     ],
 
 
@@ -3661,6 +4327,33 @@ steno_chords_and_their_meanings = {
          "description": "EU vowel spelt a",
          "spelling": "a",
          "pronunciation": vowel_category["EU"],
+         "ambiguity": 0,
+         "orthoscore": 1, #garbage
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "a",
+         "description": "suffix short a",
+         "spelling": "a",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "a",
+         "description": "suffix short a", #villain... but not against?
+         "spelling": "ai",
+         "pronunciation": " suffix " + vowel_category["short"],
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": not_initial_slash_or_first_or_second_series_,
+         "theory": ""},
+
+        {"chord": "a",
+         "description": "suffix EU vowel spelt a",
+         "spelling": "a",
+         "pronunciation": " suffix " + vowel_category["EU"],
          "ambiguity": 0,
          "orthoscore": 1, #garbage
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -5788,6 +6481,16 @@ steno_chords_and_their_meanings = {
 
 
 # Suffixes
+
+
+
+
+
+
+
+
+
+
 
 
 
