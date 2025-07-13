@@ -387,6 +387,18 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "FC_": [
+        {"chord": "FC",
+         "description": "preinitial A?",
+         "spelling": "a",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": initial_slash,
+         "theory": ""},
+    ],
+
+
     "FCP": [
         {"chord": "FCP",
          "description": "b",
