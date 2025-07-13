@@ -9,7 +9,8 @@ except ModuleNotFoundError:
 
 
 custom_alphabet = "QSTKPWHR-AOeufrpblgtsdz*_1"
-valid_final_letter = "AOeufrpblgtsdz"
+valid_final_letter = r'[AOeufrpblgtsdz]\*?$'
+
 #Q preinitial schwa
 #_ midway through a briefing technique
 #1 last vowel was silent silent
