@@ -4397,7 +4397,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n ", # y for the discontinuation
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/n",
@@ -4406,7 +4406,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n ", # y for the discontinuation
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/n",
@@ -4415,7 +4415,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  n ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "?"},
 
         {"chord": "/n",
@@ -4424,7 +4424,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4436,7 +4436,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " p ",
          "ambiguity": 0, #group > groupe
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/p",
@@ -4445,7 +4445,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " p ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""}
     ],
 
@@ -4457,7 +4457,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""},
 
         {"chord": "/nz",
@@ -4466,7 +4466,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""},
 
         {"chord": "/nz",
@@ -4475,7 +4475,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
          "ambiguity": 3,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/nz",
@@ -4484,7 +4484,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d ( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 4,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "HelloChap?"}
     ],
 
@@ -4496,7 +4496,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " jh ",
          "ambiguity": 1, #Why 1? not 0?
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pz",
@@ -4505,7 +4505,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " jh ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pz",
@@ -4514,7 +4514,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " zh ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""}
     ],  # arbitrage
 
@@ -4526,7 +4526,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/z",
@@ -4535,7 +4535,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z/s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/z",
@@ -4545,7 +4545,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          # cyclops
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4557,7 +4557,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( w | hw )?",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4569,7 +4569,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "?"},
 
         {"chord": "/pc",
@@ -4578,7 +4578,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pc",
@@ -4587,7 +4587,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "?"},
 
         {"chord": "/pc",
@@ -4596,7 +4596,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " x ",
          "ambiguity": 2, #lock/loch
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "Harri"},
 
         {"chord": "/pc",
@@ -4605,7 +4605,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pc",
@@ -4614,7 +4614,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pc",
@@ -4623,7 +4623,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4635,7 +4635,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( k  s | g  z )",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4647,7 +4647,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( k  sh | g  zh )",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4659,7 +4659,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " sh ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/c",
@@ -4668,7 +4668,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( s ( suffix )? y | sh  \[ii\] )",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/c",
@@ -4677,7 +4677,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( sh | s ( suffix )? y )",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/c",
@@ -4686,7 +4686,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( zh | z ( suffix )? y )",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4698,7 +4698,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ng ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ns",
@@ -4707,7 +4707,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ng ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ns",
@@ -4716,7 +4716,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ng ( \[?g\]? )",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ns",
@@ -4726,7 +4726,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n  jh ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ns",
@@ -4735,7 +4735,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ng  g ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""}
     ],
 
@@ -4747,7 +4747,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ch ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "?"},
 
         {"chord": "/ps",
@@ -4756,7 +4756,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ch ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ps",
@@ -4765,7 +4765,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t ( suffix )? y ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4777,7 +4777,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( k  s | g  z )",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/nzs",
@@ -4786,7 +4786,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k  sh  suffix  n ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/nzs",
@@ -4795,7 +4795,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " k  ee  sh  suffix  n ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "Harri"}
     ],
 
@@ -4807,7 +4807,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " m ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pzs",
@@ -4816,7 +4816,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " m ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pzs",
@@ -4825,7 +4825,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " m ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pzs",
@@ -4834,7 +4834,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " m ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         #{"chord": "/pzs",
@@ -4855,7 +4855,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " r  d ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -4867,7 +4867,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " l ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ncs",
@@ -4876,7 +4876,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " l ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ncs",
@@ -4885,7 +4885,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " l ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ncs",
@@ -4894,7 +4894,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " @  l ",  # silent a is already a thing
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ncs",
@@ -4903,7 +4903,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  l ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""},
 
         {"chord": "/ncs",
@@ -4912,7 +4912,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  l ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""},
     ],
 
@@ -4924,7 +4924,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pcs",
@@ -4933,7 +4933,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d/t ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pcs",
@@ -4942,7 +4942,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix ( i7 )? (d|t) ",
          "ambiguity": 2,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""}
     ],
 
@@ -4955,7 +4955,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " v ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/cs",
@@ -4964,7 +4964,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " v ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "Harri"}
     ],
 
@@ -4976,7 +4976,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/s",
@@ -4985,7 +4985,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/s",
@@ -4994,7 +4994,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z/s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/s",
@@ -5003,7 +5003,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/s",
@@ -5012,7 +5012,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/s",
@@ -5021,7 +5021,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/s",
@@ -5030,7 +5030,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/s",
@@ -5039,7 +5039,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z/s ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
 
@@ -5049,7 +5049,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( (suffix) ) (s|z|z/s) ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""}
     ],
 
@@ -5060,7 +5060,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n  d ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -5071,7 +5071,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " b ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -5083,7 +5083,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " h ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/cf",
@@ -5092,7 +5092,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
 
@@ -5102,7 +5102,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s  t ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -5114,7 +5114,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pf",
@@ -5123,7 +5123,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pf",
@@ -5132,7 +5132,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " sh ",
          "ambiguity": 2,  # so it doesn't win against abtentious
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pf",
@@ -5141,7 +5141,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " ch ",
          "ambiguity": 0,
          "orthoscore": 1,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pf", #variability
@@ -5150,7 +5150,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  @  t  iy ",
          "ambiguity": 3, #ambiguity, versatility
          "orthostore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""}
     ],
 
@@ -5162,7 +5162,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n ( root )? t ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
@@ -5174,7 +5174,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " g ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/pzf",
@@ -5183,7 +5183,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "Harri"},
     ],
 
@@ -5195,7 +5195,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " \[?(th|dh|dh/th)\]? ",
          "ambiguity": 1,  # giving it a 1 for personal reasons lol
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/zf",
@@ -5204,7 +5204,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  \[?(th|dh|dh/th)\]? ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""},
     ],
 
@@ -5216,7 +5216,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " r ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/ncf",
@@ -5225,7 +5225,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( suffix )? (\(r  @/@r  r\)|@r  r) ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""},
 
         {"chord": "/ncf",
@@ -5234,7 +5234,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "( suffix ) r ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": ""},
 
         {"chord": "/ncf",
@@ -5243,7 +5243,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  @r  r ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": "Harri"},
 
         {"chord": "/ncf",
@@ -5252,7 +5252,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " r ",
          "ambiguity": 3,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "Harri"},
 
         {"chord": "/ncf",
@@ -5261,7 +5261,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " suffix  @r  r ",
          "ambiguity": 2,
          "orthoscore": 0,
-         "what must come before": u_to_f,
+         "what must come before": initial_second_series_or_third_or_fourth,
          "theory": "Harri"}
     ],
 
@@ -5273,7 +5273,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " f ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
 
         {"chord": "/f",
@@ -5282,7 +5282,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " f ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": "?"},
 
         {"chord": "/f",
@@ -5291,7 +5291,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " f ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": n_to_f,
+         "what must come before": fourth_series,
          "theory": ""},
     ],
 
