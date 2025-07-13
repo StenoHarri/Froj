@@ -4620,7 +4620,7 @@ steno_chords_and_their_meanings = {
         {"chord": "PH-BG",
          "description": "mc",
          "spelling": "mc",
-         "pronunciation": " m  @  k ", #chairmanship with a @
+         "pronunciation": " m  @  k ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": slash_no_asterisk,

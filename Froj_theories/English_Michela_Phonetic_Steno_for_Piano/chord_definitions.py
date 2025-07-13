@@ -6485,16 +6485,554 @@ steno_chords_and_their_meanings = {
 
 
 
+        {"chord": "-FPL",
+         "description": "suffix -some",
+         "spelling": "some",
+         "pronunciation": " suffix  s  m ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": A_to_u,
+         "theory": "Magnum?"}
 
 
+        {"chord": "-FL",
+         "description": "suffix -ful",
+         "spelling": "ful",
+         "pronunciation": " suffix  f ( \[?u\]? )? l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": A_to_u,
+         "theory": ""}
 
 
+       {"chord": "-RBT",
+         "description": "suffix? -cent",
+         "spelling": "cent",
+         "pronunciation": " (s ( \[e50\] )?|sh ) n  t ", #beneficent/efficient
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": A_to_f,
+         "theory": "?"},
+
+        {"chord": "-PLT",
+         "description": "suffix -ment",
+         "spelling": "ment",
+         "pronunciation": "( suffix )? m  e5  n  t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         # "what must come before": ".*[AOeu]f?r?b?g?s?z\*?",
+         "what must come before": A_to_r_,
+         "theory": "?"},
+
+        {"chord": "-PLT",
+         "description": "t then suffix -ment",
+         "spelling": "tment",
+         "pronunciation": " t  suffix  m  e5  n  t ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         # "what must come before": ".*[AOeu]f?r?b?g?s?z\*?",
+         "what must come before": A_to_r_,
+         "theory": "?"},
+
+        {"chord": "-L",
+         "description": "suffix -l",  # antibacterial
+         "spelling": "l",
+         "pronunciation": " suffix  l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": A_to_u,
+         "theory": ""},
+
+        {"chord": "-T", #variability
+         "description": "suffix ity",
+         "spelling": "ity",
+         "pronunciation": " suffix  @  t  iy ",
+         "ambiguity": 4, #ambiguity, versatility
+         "orthostore": 0,
+         "what must come before": A_to_g_,
+         "theory": "Harri?"},
 
 
+        {"chord": "*T",
+         "description": "suffix -th",
+         "spelling": "the?",
+         "pronunciation": " suffix  \[?(th|dh|dh/th)\]? ",
+         "ambiguity": 1,  # giving it a 1 for personal reasons lol
+         "orthoscore": 0,
+         "what must come before": A_to_g_no_asterisk,
+         "theory": "StenEd?"},
+
+        {"chord": "STER",
+         "description": "suffix -ster",
+         "spelling": "ster",
+         "pronunciation": " suffix  s  t  @r  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri"},
 
 
+        {"chord": "SH*EUR",
+         "description": "shire",
+         "spelling": "shire",
+         "pronunciation": " sh  aer1  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri"},
 
 
+        {"chord": "SH*EUP",
+         "description": "suffix -ship",
+         "spelling": "ship",
+         "pronunciation": " suffix  sh  i  p ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Lapwing"},
+
+
+        {"chord": "SO*PL",
+         "description": "suffix -some",
+         "spelling": "some",
+         "pronunciation": " suffix  s  m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Lapwing"},
+
+
+        {"chord": "SEU",
+         "description": "suffix -cy",
+         "spelling": "c(y|ie?)",
+         "pronunciation": " suffix  s  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": ""},
+
+        {"chord": "TEU",
+         "description": "suffix -ty",
+         "spelling": "t(y|ie?)",
+         "pronunciation": " suffix  t  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": ""},
+
+
+        {"chord": "KHUR",
+         "description": "suffix -ture",
+         "spelling": "ture",
+         "pronunciation": " suffix  t  y  @r  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Lapwing"},
+
+        {"chord": "PWR*EU",
+         "description": "suffix -berry",
+         "spelling": "berr(y|ie?)",
+         "pronunciation": " suffix  b  \(@r/e\)  r  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri"},
+
+
+        {"chord": "PH-BG",
+         "description": "mc",
+         "spelling": "mc",
+         "pronunciation": " m  @  k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Plover?"},
+
+        {"chord": "PHA*PB",
+         "description": "suffix -man",
+         "spelling": "man",
+         "pronunciation": " suffix  m  (a5|@)  n ", #chairmanship with a @
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Plover?"},
+
+
+        {"chord": "PH*EPB",
+         "description": "suffix -men",
+         "spelling": "men",
+         "pronunciation": " suffix  m  e5  n $", #$ cause antidisestablishmentarianism
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Plover?"},
+
+        {"chord": "WAO*EUS",
+         "description": "suffix -wise",
+         "spelling": "wise",
+         "pronunciation": " suffix  w  ae  z ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Lapwing"},
+
+        {"chord": "WA*RD",
+         "description": "suffix -ward",
+         "spelling": "ward",
+         "pronunciation": " suffix  w  @r  r  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "StenEd?"},
+
+        {"chord": "WO*RTD",
+         "description": "suffix -worthy",
+         "spelling": "worth(y|ie?)",
+         "pronunciation": " suffix  w  @@r  r  dh  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri?"},
+
+                 {"chord": "WO*PL",
+         "description": "suffix -woman",
+         "spelling": "woman",
+         "pronunciation": " suffix  w  u  m  (a5|@)  n ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Plover?"},
+
+                 {"chord": "W*EUPL",
+         "description": "suffix -women",
+         "spelling": "women",
+         "pronunciation": " suffix  w  i  m  i  n ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri"},
+
+
+                 {"chord": "HRA*PBD",
+         "description": "suffix -land",
+         "spelling": "land",
+         "pronunciation": " suffix  l  (@|ah1)  n  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "StenEd?"},
+
+                 {"chord": "HREU",
+         "description": "suffix -ly",
+         "spelling": "l(y|ie?)",
+         "pronunciation": " suffix  l  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToW,
+         "theory": "StenEd"},
+
+
+                 {"chord": "HREU",
+         "description": "suffix -ling",
+         "spelling": "ling",
+         "pronunciation": " suffix  l  i  ng ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToW,
+         "theory": ""},
+
+
+                 {"chord": "HAO*D",
+         "description": "suffix -hood",
+         "spelling": "hood",
+         "pronunciation": " suffix  h  u  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "StenEd"},
+
+                 {"chord": "HA*PL",
+         "description": "ham silent h",
+         "spelling": "ham",
+         "pronunciation": " \(@/h  a\)  m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Harri"},
+
+                 {"chord": "R*ES",
+         "description": "suffix -ress",  # actress
+         "spelling": "ress",
+         "pronunciation": " suffix  r  (e5|@)  s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_no_asterisk,
+         "theory": "Lapwing"},
+
+
+                 {"chord": "REU",
+         "description": "suffix -ry",
+         "spelling": "r(y|ie)",
+         "pronunciation": " suffix  r  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": slash_or_T,
+         "theory": "?"},
+
+
+                 {"chord": "/-FL",
+         "description": "suffix -ful",
+         "spelling": "full?", #thoughtfully
+         "pronunciation": " suffix  f ( \[?u\]? )? l ", #canful, thoughtful
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": f_to_z,
+         "theory": "StenEd?"},
+
+
+                 {"chord": "/-PBS",
+         "description": "suffix -ness",
+         "spelling": "ness",
+         "pronunciation": " suffix  n  e5  s ", #aloofness
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": p_to_z,
+         "theory": ""},
+
+
+                 {"chord": "/-PLT",
+         "description": "suffix -ment",  # adjournment
+         "spelling": "ment",
+         "pronunciation": " suffix  m  e5  n  t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": p_to_z,
+         "theory": "StenEd?"},
+
+
+                 {"chord": "-LG",
+         "description": "suffix -ling",
+         "spelling": "ling",
+         "pronunciation": " suffix  l  i  ng ",
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": A_to_b_,
+         "theory": ""},
+
+
+                 {"chord": "-LT",
+         "description": "suffix -let",  # armlet
+         "spelling": "let",
+         "pronunciation": " suffix  l  i7  t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"},
+
+
+                 {"chord": "-LS",
+         "description": "suffix -less",  # airless
+         "spelling": "less",
+         "pronunciation": " suffix  l  e5  s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"}
 
 
 }
+
+
+
+
+
+"""
+
+
+    "Abl": [
+        {"chord": "ABL",
+         "description": "suffix -able",
+         "spelling": "able?",
+         "pronunciation": " suffix  @  b  l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
+
+    "Olg": [
+        {"chord": "OLG",
+         "description": "suffix -ology",
+         "spelling": "olog[yi]",
+         "pronunciation": "( suffix )? o  l  @  jh  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
+
+    "eupb": [
+        {"chord": "EUPB",
+         "description": "suffix -ine",
+         "spelling": "ine",
+         "pronunciation": " suffix  ai/i  n ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
+    "eubg": [
+        {"chord": "EUBG",
+         "description": "suffix -ic",
+         "spelling": "icc?",
+         "pronunciation": " suffix  i  k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
+
+    "eft": [
+        {"chord": "EFT",
+         "description": "suffix -est",
+         "spelling": "est",
+         "pronunciation": " suffix  eO5  s  t ", #closest
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
+
+    "epb": [
+        {"chord": "EPB",
+         "description": "suffix -en",
+         "spelling": "en",
+         "pronunciation": " suffix  e5  n ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": SToR_but_not_KWH,
+         "theory": ""}
+    ],
+
+
+    "/-fl": [
+        {"chord": "/-FL",
+         "description": "suffix -ful",
+         "spelling": "full?", #thoughtfully
+         "pronunciation": " suffix  f ( \[?u\]? )? l ", #canful, thoughtful
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": f_to_z,
+         "theory": "StenEd?"}
+    ],
+
+
+    "/-pbs": [
+        {"chord": "/-PBS",
+         "description": "suffix -ness",
+         "spelling": "ness",
+         "pronunciation": " suffix  n  e5  s ", #aloofness
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": p_to_z,
+         "theory": ""}
+    ],
+
+    "pbs": [
+        {"chord": "-PBS",
+         "description": "suffix -ness",
+         "spelling": "ness",
+         "pronunciation": " suffix  n  e5  s ", #aloofness
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": A_to_r,
+         "theory": ""},
+
+        {"chord": "-PBS",
+         "description": "suffix -ence",
+         "spelling": "ence?",
+         "pronunciation": " suffix  (@|e5)  s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": A_to_r,
+         "theory": ""},
+    ],
+
+
+    "/-plt": [
+        {"chord": "/-PLT",
+         "description": "suffix -ment",  # adjournment
+         "spelling": "ment",
+         "pronunciation": " suffix  m  e5  n  t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": p_to_z,
+         "theory": "StenEd?"}
+    ],
+
+
+    "lg": [
+        {"chord": "-LG",
+         "description": "suffix -ling",
+         "spelling": "ling",
+         "pronunciation": " suffix  l  i  ng ",
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": A_to_b_,
+         "theory": ""}
+    ],
+
+
+    "lt": [
+        {"chord": "-LT",
+         "description": "suffix -let",  # armlet
+         "spelling": "let",
+         "pronunciation": " suffix  l  i7  t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"}
+    ],
+
+
+    "/-lt": [
+        {"chord": "/-LT",
+         "description": "suffix -let",  # armlet
+         "spelling": "let",
+         "pronunciation": " suffix  l  i7  t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": l_to_z,
+         "theory": "StenEd?"}
+    ],
+
+
+    "ls": [
+        {"chord": "-LS",
+         "description": "suffix -less",  # airless
+         "spelling": "less",
+         "pronunciation": " suffix  l  e5  s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": A_to_b,
+         "theory": "StenEd?"}
+    ],
+
+    "/-ls": [
+        {"chord": "/-LS",
+         "description": "suffix -less",
+         "spelling": "less",
+         "pronunciation": " suffix  l  e5  s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": l_to_z,
+         "theory": "StenEd?"}
+    ],
+}
+"""
