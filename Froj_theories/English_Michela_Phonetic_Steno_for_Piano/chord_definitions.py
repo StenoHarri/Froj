@@ -22,7 +22,7 @@ valid_final_letter = r'(^/[RXIU]+|[uieanpzcsf])$'
 Regex logic here
 """
 initial_slash = re.compile(r'^/$')
-slash = re.compile(r'/')
+slash = re.compile(r'/$')
 slash_ = re.compile(r'/$_?')
 
 
@@ -53,7 +53,7 @@ fourth_series = re.compile(r'[npzcsf]$')
 
 #Can't think of a good way to describe this, here's a link to the discussion https://discord.com/channels/136953735426473984/452550775592321054/1393999334755926130
 consonanted_consonant_OR_initial_second_OR_third_ = re.compile(
-    r'([npzcsf]/[FSCZPN]+|(^/|[FSCZPN])[RXIU]+|[uiea]_?)')
+    r'([npzcsf]/[FSCZPN]+|(^/|[FSCZPN])[RXIU]+|[uiea]_?)$')
 
 
 initial_slash_or_anything_else = re.compile(r'(^/|[FSCZPNRXIUuieanpzcsf])$')
@@ -394,6 +394,15 @@ steno_chords_and_their_meanings = {
          "spelling": "a",
          "pronunciation": vowel_category["short"],
          "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": initial_slash,
+         "theory": ""},
+
+        {"chord": "FC",
+         "description": "preinitial A?",
+         "spelling": "a",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 5,
          "orthoscore": 0,
          "what must come before": initial_slash,
          "theory": ""},
@@ -3341,9 +3350,9 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "ue",
-         "description": "ue vowel",
+         "description": "ue vowel, but maybe two syllables",
          "spelling": "eo", #theory
-         "pronunciation": vowel_category["AOE"],
+         "pronunciation": " ii  @r ",
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3856,7 +3865,7 @@ steno_chords_and_their_meanings = {
          {"chord": "ua",
          "description": "suffix ua vowel",
          "spelling": "a",
-         "pronunciation": vowel_category["AEU"],
+         "pronunciation": " suffix " + vowel_category["AEU"],
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3865,7 +3874,7 @@ steno_chords_and_their_meanings = {
         {"chord": "ua",
          "description": "suffix ua vowel",
          "spelling": "a(a|ye?|i)",
-         "pronunciation": vowel_category["AEU"],
+         "pronunciation": " suffix " + vowel_category["AEU"],
          "ambiguity": 1, # wave > waive... I take this back, maid > made, can you use AE
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3874,7 +3883,7 @@ steno_chords_and_their_meanings = {
         {"chord": "ua",
          "description": "suffix ua vowel (are you British?)",
          "spelling": "e",
-         "pronunciation": vowel_category["AEU"],
+         "pronunciation": " suffix " + vowel_category["AEU"],
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3883,7 +3892,7 @@ steno_chords_and_their_meanings = {
         {"chord": "ua",
          "description": "suffix ua vowel",
          "spelling": "ett?e?",
-         "pronunciation": vowel_category["AEU"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
+         "pronunciation": " suffix " + vowel_category["AEU"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3892,7 +3901,7 @@ steno_chords_and_their_meanings = {
         {"chord": "ua",
          "description": "suffix ua vowel",
          "spelling": "ey",
-         "pronunciation": vowel_category["AEU"],
+         "pronunciation": " suffix " + vowel_category["AEU"],
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3901,7 +3910,7 @@ steno_chords_and_their_meanings = {
         {"chord": "ua",
          "description": "suffix ua vowel",
          "spelling": "ei", #inveigh, weigh
-         "pronunciation": vowel_category["AEU"],
+         "pronunciation": " suffix " + vowel_category["AEU"],
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -3910,7 +3919,7 @@ steno_chords_and_their_meanings = {
         {"chord": "ua",
          "description": "suffix ua vowel",
          "spelling": "ea",
-         "pronunciation": vowel_category["AEU"],
+         "pronunciation": " suffix " + vowel_category["AEU"],
          "ambiguity": 2,
          "orthoscore": -1,
          "what must come before": not_initial_slash_or_first_or_second_series_,
@@ -4459,32 +4468,32 @@ steno_chords_and_their_meanings = {
 
 
     "nz": [
-        {"chord": "nz",
-         "description": "y pronounced i diphthong",
-         "spelling": "y",
-         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
-         "ambiguity": 2,
-         "orthoscore": 0,
-         "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
-         "theory": ""},
+        #{"chord": "nz",
+        # "description": "y pronounced i diphthong",
+        # "spelling": "y",
+        # "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
+        # "ambiguity": 2,
+        # "orthoscore": 0,
+        # "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
+        # "theory": ""},
 
-        {"chord": "nz",
-         "description": "y pronounced i diphthong",
-         "spelling": "ie?",
-         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
-         "ambiguity": 2,
-         "orthoscore": 0,
-         "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
-         "theory": ""},
+        #{"chord": "nz",
+        # "description": "y pronounced i diphthong",
+        # "spelling": "ie?",
+        # "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
+        # "ambiguity": 2,
+        # "orthoscore": 0,
+        # "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
+        # "theory": ""},
 
-        {"chord": "nz",
-         "description": "y pronounced i",
-         "spelling": "y",
-         "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
-         "ambiguity": 3,
-         "orthoscore": 0,
-         "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
-         "theory": ""},
+        #{"chord": "nz",
+        # "description": "y pronounced i",
+        # "spelling": "y",
+        # "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
+        # "ambiguity": 3,
+        # "orthoscore": 0,
+        # "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
+        # "theory": ""},
 
         {"chord": "nz",
          "description": "dy",
@@ -5049,6 +5058,15 @@ steno_chords_and_their_meanings = {
          "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
          "theory": ""},
 
+
+        {"chord": "s", #only unvoiced s??
+         "description": "suffix -s",
+         "spelling": "s",
+         "pronunciation": "( (suffix) ) (s|z/s) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
+         "theory": ""}
 
         #{"chord": "s",
         # "description": "suffix -s",

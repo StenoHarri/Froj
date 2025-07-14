@@ -55,7 +55,7 @@ def add_spelling_to_spelling(old_spelling, new_spelling, target):
 
 def is_entry_complete(entry, pronunciation_target, spelling_target, valid_final_letter):
 
-    if not re.search(r'['+valid_final_letter+']\*?$', entry["raw steno outline"]):
+    if not re.search(valid_final_letter, entry["raw steno outline"]):
         return False
 
     pronunciation_regex_attempt = re.compile(entry['pronunciation'])
