@@ -23,7 +23,7 @@ Regex logic here
 """
 initial_slash = re.compile(r'^/$')
 slash = re.compile(r'/$')
-slash_ = re.compile(r'/$_?')
+slash_ = re.compile(r'/_?$')
 
 
 slash_or_first_series = re.compile(r'[/FSCZPN]$')
@@ -42,7 +42,7 @@ initial_second_series_or_third_or_fourth = re.compile(r'((/[RXIU])|[uieanpzcsf])
 
 slash_or_first_or_second_series = re.compile(r'[FSCZPNRXIU]$')
 
-not_initial_slash_or_first_or_second_series_ = re.compile(r'(./|[FSCZPNRXIU]_?)$')
+not_initial_slash_or_first_or_second_series_ = re.compile(r'(./|[FSCZPN]|[RXIU]_?)$')
 
 
 fourth_before_slash_or_first_or_second_series = re.compile(r'([npzcsf]/|[FSCZPNRXIU])$')
@@ -250,7 +250,7 @@ steno_chords_and_their_meanings = {
         {"chord": "",
          "description": "drop long vowel",
          "spelling": "[aeiouy]",
-         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
+         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]})', #{vowel_category["EU"]
          "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": first_series,
@@ -330,7 +330,7 @@ steno_chords_and_their_meanings = {
         {"chord": "/",
          "description": "long vowel",
          "spelling": "[aeiouy]",
-         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
+         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]})', #{vowel_category["EU"]}
          "ambiguity": 2,
          "orthoscore": 0,
          "what must come before": fourth_series,
@@ -388,25 +388,25 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "FC_": [
-        {"chord": "FC",
-         "description": "preinitial A?",
-         "spelling": "a",
-         "pronunciation": vowel_category["short"],
-         "ambiguity": 4,
-         "orthoscore": 0,
-         "what must come before": initial_slash,
-         "theory": ""},
+    #"FC_": [
+    #    {"chord": "FC",
+    #     "description": "preinitial A?",
+    #     "spelling": "a",
+    #     "pronunciation": vowel_category["short"],
+    #     "ambiguity": 4,
+    #     "orthoscore": 0,
+    #     "what must come before": initial_slash,
+    #     "theory": ""},
 
-        {"chord": "FC",
-         "description": "preinitial A?",
-         "spelling": "a",
-         "pronunciation": vowel_category["AEU"],
-         "ambiguity": 5,
-         "orthoscore": 0,
-         "what must come before": initial_slash,
-         "theory": ""},
-    ],
+    #    {"chord": "FC",
+    #     "description": "preinitial A?",
+    #     "spelling": "a",
+    #     "pronunciation": vowel_category["AEU"],
+    #     "ambiguity": 5,
+    #     "orthoscore": 0,
+    #     "what must come before": initial_slash,
+    #     "theory": ""},
+    #],
 
 
     "FCP": [
@@ -684,6 +684,7 @@ steno_chords_and_their_meanings = {
          "theory": ""}
     ],
 
+
     "SCN": [
         {"chord": "SCN",
          "description": "l",
@@ -895,14 +896,14 @@ steno_chords_and_their_meanings = {
          "what must come before": slash_,
          "theory": ""},
 
-        {"chord": "CP", # connection, context
-         "description": "con optional std",
-         "spelling": "con[std]?",
-         "pronunciation": " k  (@|o|o4)  n ( [st] )?",
-         "ambiguity": 10,
-         "orthoscore": 0,
-         "what must come before": slash_,
-         "theory": "Harri"}
+        #{"chord": "CP", # connection, context
+        # "description": "con optional std",
+        # "spelling": "con[std]?",
+        # "pronunciation": " k  (@|o|o4)  n ( [st] )?",
+        # "ambiguity": 10,
+        # "orthoscore": 0,
+        # "what must come before": slash_,
+        # "theory": "Harri"}
     ],
 
 
@@ -5063,7 +5064,7 @@ steno_chords_and_their_meanings = {
          "description": "suffix -s",
          "spelling": "s",
          "pronunciation": "( (suffix) ) (s|z/s) ",
-         "ambiguity": 1,
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": consonanted_consonant_OR_initial_second_OR_third_,
          "theory": ""}
@@ -5578,45 +5579,6 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": fourth_series,
          "theory": ""}
-    ],
-
-
-    "/nz": [
-        {"chord": "/nz",
-         "description": "final y pronounced i diphthong",
-         "spelling": "y$",
-         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
-         "ambiguity": 1,
-         "orthoscore": 0,
-         "what must come before": initial_second_series_or_third_or_fourth,
-         "theory": ""},
-
-        {"chord": "/nz",
-         "description": "final y pronounced i diphthong",
-         "spelling": "ie?$",
-         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
-         "ambiguity": 1,
-         "orthoscore": 0,
-         "what must come before": initial_second_series_or_third_or_fourth,
-         "theory": ""},
-
-        {"chord": "/nz",
-         "description": "final y pronounced i",
-         "spelling": "y$",
-         "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
-         "ambiguity": 3,
-         "orthoscore": 0,
-         "what must come before": fourth_series,
-         "theory": ""},
-
-        {"chord": "/nz",
-         "description": "final dy",
-         "spelling": "dd?(y|ie?)$",
-         "pronunciation": " d ( ((root)|(prefix)|(suffix)) )? iy ",
-         "ambiguity": 4,
-         "orthoscore": 0,
-         "what must come before": fourth_series,
-         "theory": "HelloChap?"}
     ],
 
 
