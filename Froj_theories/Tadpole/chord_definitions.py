@@ -111,7 +111,7 @@ upToW_no_P = re.compile(r'[/QSTK](P?W)?\*?$') #`PWHOELD` → `behold` needs a p
 
 first_stroke_SToR_or_nothing = re.compile(r'^/[STKPWHR]*$')
 
-H_to_R_no_W = re.compile(r'[/QSTKP]H?R?\*?_?$')
+H_to_R_no_W = re.compile(r'[/QSTKP][HR]+\*?_?$')
 
 A_to_u = re.compile(r'[\-AOeu]\*?$')
 A_to_f = re.compile(r'[\-AOeuf]\*?$')

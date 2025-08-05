@@ -144,22 +144,26 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
         # Add updated entries to the result list
         dictionary_with_a_chord_added_to_each_entry.extend(updated_entries)
 
-    # Create a set of unique identifiers (e.g., 'raw steno outline') from initial_dictionary
-    initial_set = set(entry["raw steno outline"] for entry in initial_dictionary)
+    # Create a set of unique identifiers (e.g., ('raw steno outline', 'spelling')) from initial_dictionary
+    initial_set = set((entry["raw steno outline"], entry["spelling"]) for entry in initial_dictionary)
 
     # Initialize the list for new entries
     new_never_seen_before_entries = []
 
     for entry in dictionary_with_a_chord_added_to_each_entry:
         raw_steno_outline = entry["raw steno outline"]
+        spelling = entry["spelling"]
 
-        # If the raw_steno_outline is not in initial_set or hasn't been processed yet, check it
-        if raw_steno_outline not in initial_set and raw_steno_outline not in every_complete_entry_generated:
+        # Use the tuple as the unique identifier
+        key = f"{raw_steno_outline}|{spelling}"
+        if key not in initial_set and key not in every_complete_entry_generated:
             is_entry_complete_answer = is_entry_complete(entry, target_pronunciation, target_spelling, valid_final_letter)
 
             if is_entry_complete_answer:
-                # Add the complete entry to the dictionary
-                every_complete_entry_generated[raw_steno_outline] = is_entry_complete_answer[0]
+                # Add spelling to the output dictionary
+                result = is_entry_complete_answer[0]
+                result["spelling"] = spelling
+                every_complete_entry_generated[raw_steno_outline] = result
             else:
                 new_never_seen_before_entries.append(entry)
 
