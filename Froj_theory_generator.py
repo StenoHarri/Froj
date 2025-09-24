@@ -4,6 +4,8 @@
 import multiprocessing
 import json
 import tqdm
+import time
+
 
 from froj_brains.convert_unilex_into_readable_lists import (
     full_entry_pattern,
@@ -13,25 +15,7 @@ from froj_brains.convert_unilex_into_readable_lists import (
 
 from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
-while True:
-    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n:")
-
-    if selection == "1":
-        from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
-        break
-
-    elif selection == "2":
-        from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
-        break
-    else:
-        print("try again")
-
-
-order_map = {char: index for index, char in enumerate(custom_alphabet)}
-
-import time
-
-def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords):
+def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords, order_map, valid_final_letter):
     word = full_entry_pattern.fullmatch(unilex_definition).groupdict()
 
     word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
@@ -44,8 +28,7 @@ def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords)
     return word
 
 
-with (open("pronunciation_data/big.txt", "r", encoding="utf-8")) as txt_dictionary:
-    outlines = txt_dictionary.readlines()
+
 
 # for one at a time (not multiprocessing), uncomment the next two lines
 #for outline in outlines:
@@ -56,11 +39,36 @@ def make_unilex_entry_helper(args):
 
 if __name__ == '__main__':
 
+    while True:
+        selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tMussel Power for Controller\n:")
+
+        if selection == "1":
+            from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
+            break
+
+        elif selection == "2":
+            from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
+            break
+
+        elif selection == "3":
+            from Froj_theories.Mussel_Power.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
+            break
+        else:
+            print("try again")
+
+
+    order_map = {char: index for index, char in enumerate(custom_alphabet)}
+
+    with (open("pronunciation_data/big.txt", "r", encoding="utf-8")) as txt_dictionary:
+        outlines = txt_dictionary.readlines()
+
     start_time = time.time()
     print(f"Start Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(start_time))}")
 
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        tasks = ((outline, steno_chords_and_their_meanings) for outline in outlines)
+        tasks = (
+            (outline, steno_chords_and_their_meanings, order_map, valid_final_letter)
+            for outline in outlines)
         results = list(tqdm.tqdm(pool.imap(make_unilex_entry_helper, tasks),
                                  total=len(outlines),
                                  unit="words",
