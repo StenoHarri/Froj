@@ -15,10 +15,10 @@ from froj_brains.convert_unilex_into_readable_lists import (
 
 from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
-def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords, order_map, valid_final_letter):
+def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords, order_map, valid_final_letter, make_boundaries_into_list, does_theory_pay_attention_to_stress_markers):
     word = full_entry_pattern.fullmatch(unilex_definition).groupdict()
 
-    word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
+    word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation'], does_theory_pay_attention_to_stress_markers))
     word['word_boundaries'] = word["word"].split(":")[0]
     word['number of entries'] = 0
     word['steno stuff'] = generate_write_outs(word, user_chords, order_map, valid_final_letter)
@@ -43,15 +43,15 @@ if __name__ == '__main__':
         selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tMussel Power for Controller\n:")
 
         if selection == "1":
-            from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
+            from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter, does_theory_pay_attention_to_stress_markers
             break
 
         elif selection == "2":
-            from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
+            from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter, does_theory_pay_attention_to_stress_markers
             break
 
         elif selection == "3":
-            from Froj_theories.Mussel_Power.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter
+            from Froj_theories.Mussel_Power.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter, does_theory_pay_attention_to_stress_markers
             break
         else:
             print("try again")

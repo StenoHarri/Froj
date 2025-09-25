@@ -8,8 +8,9 @@ except ModuleNotFoundError:
     from vowel_categories import vowel_category
 
 
-custom_alphabet = "QSTKPWHR-AOeufrpblgtsdz*_1"
+custom_alphabet = "WPDSTYVFLKMBHNJR-srlfvpckndgthmjby"
 valid_final_letter = r'[AOeufrpblgtsdz]\*?$'
+does_theory_pay_attention_to_stress_markers = True
 
 
 "FSCZPN|RXIU|uiea|npzcsf|_"
