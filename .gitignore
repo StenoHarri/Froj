@@ -26,3 +26,6 @@ Froj_theories/English_Michela_Phonetic_Steno_for_Piano/__pycache__/chord_definit
 Froj_theories/Tadpole/__pycache__/chord_definitions.cpython-311.pyc
 Froj_theories/Tadpole/__pycache__/chord_definitions.cpython-311.pyc
 froj_brains/__pycache__/map_steno_chords_to_keysymbols.cpython-311.pyc
+*.pyc
+*.pyc
+*.pyc
