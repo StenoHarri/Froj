@@ -8,7 +8,7 @@ import tqdm
 sorted_words = {}
 
 while True:
-    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n:")
+    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tgtbot piano theory\n:")
 
     if selection == "1":
         theory = "Tadpole"
@@ -31,6 +31,12 @@ while True:
 
     elif selection == "2":
         theory = "English_Michela_Phonetic_Steno_for_Piano"
+        def clean_raw_steno(input):
+            return input
+        break
+
+    elif selection == "3":
+        theory = "gtbot_piano_theory"
         def clean_raw_steno(input):
             return input
         break

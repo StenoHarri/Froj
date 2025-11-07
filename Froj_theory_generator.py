@@ -32,7 +32,8 @@ if __name__ == '__main__':
         selection = input(
             "What theory would you like to generate?\n"
             "1)\tTadpole\n"
-            "2)\tEnglish Michela Phonetic Steno for Piano\n:"
+            "2)\tEnglish Michela Phonetic Steno for Piano\n"
+            "3)\tgtbot piano theory\n:"
         )
 
         if selection == "1":
@@ -41,6 +42,7 @@ if __name__ == '__main__':
                 custom_alphabet,
                 valid_final_letter,
             )
+            theory_path = "Tadpole"
             break
         elif selection == "2":
             from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import (
@@ -48,6 +50,15 @@ if __name__ == '__main__':
                 custom_alphabet,
                 valid_final_letter,
             )
+            theory_path = "English_Michela_Phonetic_Steno_for_Piano"
+            break
+        elif selection == "3":
+            from Froj_theories.gtbot_piano_theory.chord_definitions import(
+                steno_chords_and_their_meanings,
+                custom_alphabet,
+                valid_final_letter,
+            )
+            theory_path = "gtbot_piano_theory"
             break
         else:
             print("Invalid selection — try again.\n")
@@ -79,5 +90,5 @@ if __name__ == '__main__':
 
     print('now writing it to the json file...')
 
-    with open("Froj_theories/Froj_user_theory.json", "w") as outfile:
+    with open(f"Froj_theories/{theory_path}/complete_output.json", "w") as outfile:
         json.dump(results, outfile, indent=1)

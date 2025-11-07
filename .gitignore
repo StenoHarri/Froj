@@ -29,3 +29,4 @@ froj_brains/__pycache__/map_steno_chords_to_keysymbols.cpython-311.pyc
 *.pyc
 *.pyc
 *.pyc
+/froj_brains/__pycache__
