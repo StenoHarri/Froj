@@ -32,7 +32,10 @@ so I'll define them once here
 # NothingRegex = re.compile(r'')
 # AtLeastOneCharacterRegex = re.compile(r'.+')
 
-initial_slash = re.compile(r'^/$')
+ends_in_slash = re.compile(r'/$')
+ends_in_slash_or_initial = re.compile(r'[/12345678](lLrR)?$')
+initial = re.compile(r'[12345678](lLrR)?$')
+
 ends_in__ = re.compile(r'_$')
 
 
@@ -49,9 +52,208 @@ steno_chords_and_their_meanings = {
          "pronunciation": " stressed ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": initial_slash,
+         "what must come before": ends_in_slash_or_initial,
          "theory": ""},
     ],
+
+
+    "/": [
+        {"chord": "",
+         "description": "",
+         "spelling": "",
+         "pronunciation": "",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": initial,
+         "theory": ""},
+    ],
+
+
+    "1": [
+        {"chord": "1",
+         "description": "r",
+         "spelling": "rr?",
+         "pronunciation": " r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # added up to H since THRU # personal opinion, but SR → s + r is ugly
+         "theory": ""},
+
+        {"chord": "1",
+         "description": "r maybe silent",
+         "spelling": "rr?",
+         "pronunciation": " \[r\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # added up to H since THRU # personal opinion, but SR → s + r is ugly
+         "theory": ""},
+
+        {"chord": "1",
+         "description": "rh silent h",
+         "spelling": "rr?h",
+         "pronunciation": " r ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # added up to H since THRU
+         # personal opinion, but SR → s + r is ugly
+         "theory": ""}
+    ],
+
+
+    "2": [
+        {"chord": "2",
+         "description": "s",
+         "spelling": "ss?",
+         "pronunciation": " s ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2",
+         "description": "s (maybe silent)",
+         "spelling": "ss?",
+         "pronunciation": " z/s ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2",
+         "description": "sw silent w",  # answer 
+         "spelling": "sw",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2",
+         "description": "ps silent p",
+         # conflicts with "uppsala" but psychotic has `HOT` → `hot` because of silent h so I don't mind
+         "spelling": "ps",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2",
+         "description": "c pronounced s or sy",  # the ce in pharmaceutical
+         "spelling": "cc?e?",
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2",
+         "description": "consumer",  # consumer
+         "spelling": "s",
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2",
+         "description": "s pronounced z",
+         "spelling": "ss?",
+         "pronunciation": " z ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2",
+         "description": "c pronounced s",
+         "spelling": "s?c",
+         "pronunciation": " s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
+    "3": [ 
+        {"chord": "3",
+         "description": "l",
+         "spelling": "ll?",
+         "pronunciation": " l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+    "4": [
+        {"chord": "4", #why does `KPHAOUPB` → `commune` not work????
+         "description": "k",
+         "spelling": "k(k|h)?",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4",
+         "description": "c pronounced k",
+         "spelling": "cc?",  # acclimatise
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4",
+         "description": "k, maybe ky",
+         "spelling": "cc?",  # barracuda
+         "pronunciation": " k  \[y\] ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4",
+         "description": "ch pronounced k",
+         "spelling": "ch",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4",
+         "description": "ck",
+         "spelling": "ck(k|h)?",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4", # connection, context
+         "description": "con optional std",
+         "spelling": "con[std]?",
+         "pronunciation": " k  (@|o|o4)  n ( [st] )?",
+         "ambiguity": 10,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "Harri"}
+    ],
+
+    "5": [
+        {"chord": "5",
+         "description": "b",
+         "spelling": "bb?",
+         "pronunciation": " b ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
 
 
     "A": [
