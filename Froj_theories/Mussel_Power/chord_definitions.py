@@ -8,8 +8,8 @@ except ModuleNotFoundError:
     from vowel_categories import vowel_category
 
 
-custom_alphabet = "12345678lrLR-AOEU12345678lLrR_"
-valid_final_letter = r'[\-AOEU]([12345678lLrR]+)?$' #Will need to come back to this for multi-strokes
+custom_alphabet = "12345678lrLR-AOEUabcdefghlLrR_"
+valid_final_letter = r'[\-AOEU]([abcdefghlLrR]+)?$' #Will need to come back to this for multi-strokes
 does_theory_pay_attention_to_stress_markers = True
 
 
