@@ -8,7 +8,7 @@ import tqdm
 sorted_words = {}
 
 while True:
-    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n:")
+    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n2)\tMussel Power for Controller\n:")
 
     if selection == "1":
         theory = "Tadpole"
@@ -33,6 +33,26 @@ while True:
         theory = "English_Michela_Phonetic_Steno_for_Piano"
         def clean_raw_steno(input):
             return input
+        break
+
+
+    elif selection == "3":
+        theory = "Mussel_Power"
+        def clean_raw_steno(input):
+            return (input.replace("z*","*z")
+                     .replace("d*","*d")
+                     .replace("s*","*s")
+                     .replace("t*","*t")
+                     .replace("g*","*g")
+                     .replace("l*","*l")
+                     .replace("b*","*b")
+                     .replace("p*","*p")
+                     .replace("r*","*r")
+                     .replace("f*","*f")
+                     .replace("u*","*u")
+                     .replace("e*","*e")
+                     .replace("-*","*")
+                     .replace("Q","^").upper())
         break
     else:
         print("try again")

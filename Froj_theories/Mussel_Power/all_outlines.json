@@ -1,0 +1,327 @@
+{
+ "A": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "#AEU",
+       "explanation": [
+        {
+         "theory": "Lapwing",
+         "chord": "#",
+         "description": "Proper noun"
+        },
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "AEU",
+         "description": "long a"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "a": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "AEU",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "AEU",
+         "description": "long a"
+        }
+       ]
+      },
+      {
+       "raw steno outline": "A",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "spelling",
+         "chord": "A",
+         "description": "short vowel"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "au": {
+  "ambiguity": {
+   "2": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "OE",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "OE",
+         "description": "long o"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "awe": {
+  "ambiguity": {
+   "3": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "AU",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "AU",
+         "description": "caught vowel"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "e": {
+  "ambiguity": {
+   "2": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "AOE",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "phonetic",
+         "chord": "AOE",
+         "description": "long e"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "et": {
+  "ambiguity": {
+   "2": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "AEU",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "AEU",
+         "description": "long a"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "i": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "AOEU",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "AOEU",
+         "description": "long i"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "O": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "#OE",
+       "explanation": [
+        {
+         "theory": "Lapwing",
+         "chord": "#",
+         "description": "Proper noun"
+        },
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "OE",
+         "description": "long o"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "o": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "OE",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "OE",
+         "description": "long o"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "oi": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "OEU",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "OEU",
+         "description": "oy vowel"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "owe": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "OE",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "OE",
+         "description": "long o"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "ow": {
+  "ambiguity": {
+   "1": {
+    "number of strokes": {
+     "1": [
+      {
+       "raw steno outline": "OU",
+       "explanation": [
+        {
+         "theory": "",
+         "chord": "",
+         "description": "stress"
+        },
+        {
+         "theory": "",
+         "chord": "OU",
+         "description": "ow vowel"
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ }
+}

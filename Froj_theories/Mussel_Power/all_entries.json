@@ -1,0 +1,271 @@
+{
+ "#AEU": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "A",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "AEU",
+       "description": "long a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "AEU": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "a",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "AEU",
+       "description": "long a"
+      }
+     ]
+    }
+   ],
+   "2": [
+    {
+     "spelling": "et",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "AEU",
+       "description": "long a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "a",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "spelling",
+       "chord": "A",
+       "description": "short vowel"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "OE": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "au",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "OE",
+       "description": "long o"
+      }
+     ]
+    }
+   ],
+   "1": [
+    {
+     "spelling": "o",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "OE",
+       "description": "long o"
+      }
+     ]
+    },
+    {
+     "spelling": "owe",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "OE",
+       "description": "long o"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "AU": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "awe",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "caught vowel"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "AOE": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "e",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "phonetic",
+       "chord": "AOE",
+       "description": "long e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "AOEU": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "i",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "AOEU",
+       "description": "long i"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#OE": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "O",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "OE",
+       "description": "long o"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "OEU": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "oi",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "OEU",
+       "description": "oy vowel"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "OU": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "ow",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "",
+       "description": "stress"
+      },
+      {
+       "theory": "",
+       "chord": "OU",
+       "description": "ow vowel"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
