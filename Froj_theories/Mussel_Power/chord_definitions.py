@@ -33,7 +33,7 @@ so I'll define them once here
 # AtLeastOneCharacterRegex = re.compile(r'.+')
 
 ends_in_slash = re.compile(r'/$')
-ends_in_slash_or_initial = re.compile(r'[/12345678](lLrR)?$')
+initial_slash_or_initial = re.compile(r'(^/|[12345678](lLrR)?)$')
 initial = re.compile(r'[12345678](lLrR)?$')
 vowel_or_hyphen = re.compile(r'[AOEU\-]$')
 final = re.compile(r'[abcdefgh](lLrR)?$')
@@ -53,7 +53,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " stressed ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": ends_in_slash_or_initial,
+         "what must come before": initial_slash_or_initial,
          "theory": ""},
     ],
 
