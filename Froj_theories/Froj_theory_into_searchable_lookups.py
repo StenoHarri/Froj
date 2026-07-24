@@ -39,20 +39,14 @@ while True:
     elif selection == "3":
         theory = "Mussel_Power"
         def clean_raw_steno(input):
-            return (input.replace("z*","*z")
-                     .replace("d*","*d")
-                     .replace("s*","*s")
-                     .replace("t*","*t")
-                     .replace("g*","*g")
-                     .replace("l*","*l")
-                     .replace("b*","*b")
-                     .replace("p*","*p")
-                     .replace("r*","*r")
-                     .replace("f*","*f")
-                     .replace("u*","*u")
-                     .replace("e*","*e")
-                     .replace("-*","*")
-                     .replace("Q","^").upper())
+            return (input.replace("a","1")
+                     .replace("b","2")
+                     .replace("c","3")
+                     .replace("d","4")
+                     .replace("e","5")
+                     .replace("f","6")
+                     .replace("g","7")
+                     .replace("h","8"))
         break
     else:
         print("try again")
@@ -112,7 +106,7 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
 
 
         if spelling[0] == spelling[0].capitalize() and not raw_steno[0] == "#":
-            raw_steno = "#"+raw_steno
+            raw_steno = "S/"+raw_steno
             explanation.insert(0, {
                 "theory": "Lapwing",
                 "chord": "#",

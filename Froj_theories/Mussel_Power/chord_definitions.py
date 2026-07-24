@@ -35,7 +35,8 @@ so I'll define them once here
 ends_in_slash = re.compile(r'/$')
 ends_in_slash_or_initial = re.compile(r'[/12345678](lLrR)?$')
 initial = re.compile(r'[12345678](lLrR)?$')
-
+vowel_or_hyphen = re.compile(r'[AOEU\-]$')
+final = re.compile(r'[abcdefgh](lLrR)?$')
 ends_in__ = re.compile(r'_$')
 
 
@@ -58,13 +59,25 @@ steno_chords_and_their_meanings = {
 
 
     "/": [
-        {"chord": "",
+        {"chord": "/",
          "description": "",
          "spelling": "",
          "pronunciation": "",
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": initial,
+         "theory": ""},
+    ],
+
+
+    "/-": [
+        {"chord": "/",
+         "description": "",
+         "spelling": "",
+         "pronunciation": "",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": final,
          "theory": ""},
     ],
 
@@ -1092,6 +1105,160 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in__,
          "theory": ""},
+    ],
+
+
+    "a": [
+        {"chord": "-1",
+         "description": "solo s (following a consonant)",
+         "spelling": "s",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # dis
+         "theory": "Harri"}, #cyclops
+
+        {"chord": "-1",
+         "description": "plural",  # actresses
+         "spelling": "s",
+         "pronunciation": " suffix  (s|z) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "?"},
+
+        {"chord": "-1",
+         "description": "plural",  # actresses
+         "spelling": "es",
+         "pronunciation": " suffix  i7  (s|z) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "?"},
+
+
+        {"chord": "-1",
+         "description": "whatever this is",
+         "spelling": "is",
+         "pronunciation": " i  s ", #halitosis
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "Harri"},
+    ],
+
+
+    "d": [
+        {"chord": "-4",
+         "description": "l",
+         "spelling": "ll?",
+         "pronunciation": " l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # surely this should then work for "level"??
+         "theory": ""},
+
+        {"chord": "-4",
+         "description": "le",
+         "spelling": "ll?e",
+         "pronunciation": " l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # surely this should then work for "level"??
+         "theory": ""},
+
+        {"chord": "-4",
+         "description": "el",
+         "spelling": "ell?e?",#I added the final ? cause it looked wrong without it?
+         "pronunciation": " l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # surely this should then work for "level"??
+         "theory": ""},
+
+        {"chord": "-4",
+         "description": "al",
+         "spelling": "all?e?",
+         "pronunciation": " @  l ",  # silent a is already a thing
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # surely this should then work for "level"??
+         "theory": ""},
+
+        {"chord": "-4",
+         "description": "suffix -al",
+         "spelling": "al",
+         "pronunciation": " suffix  l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-4",
+         "description": "suffix -l",  # antibacterial
+         "spelling": "l",
+         "pronunciation": " suffix  l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+         #{"chord": "-L",
+         #"description": "silent -l after AU",  # antibacterial
+         #"spelling": "l", #PWAUL/-L → ball???
+         #"pronunciation": "",
+         #"ambiguity": 1,
+         #"orthoscore": 0,
+         #"what must come before": A_to_u,
+         #"theory": ""},
+    ],
+
+
+    "e": [
+        {"chord": "-5",
+         "description": "t",
+         "spelling": "tt?e?",
+         "pronunciation": " t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5",
+         "description": "final dt pronounced t",
+         "spelling": "dt$",
+         "pronunciation": " t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "Harri"},
+
+        {"chord": "-5",
+         "description": "t pronounced sh",
+         "spelling": "tt?e?",
+         "pronunciation": " sh ",
+         "ambiguity": 2,  # so it doesn't win against abtentious
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5",
+         "description": "ti pronounced ch", #congestion
+         "spelling": "ti",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5", #variability
+         "description": "suffix ity",
+         "spelling": "ity",
+         "pronunciation": " suffix  @  t  iy ",
+         "ambiguity": 4, #ambiguity, versatility
+         "orthostore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "Harri?"}
     ],
 
 }
