@@ -77,7 +77,7 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
     """
     # Add spelling if it's valid
     spelling = add_spelling_to_spelling(entry["spelling"], preconditions_chord["spelling"], target_spelling)
-    if not spelling:
+    if spelling is False: # More falsy, I want empty strings to be valid, such as when picking up on stress
         return None  # No valid spelling found
 
     # Add pronunciation if it's valid

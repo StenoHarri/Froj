@@ -15,6 +15,8 @@ from froj_brains.convert_unilex_into_readable_lists import (
 
 from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
+USE_MULTIPROCESSING = True  # True for normal runs, False for debugging
+
 def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords, order_map, valid_final_letter, make_boundaries_into_list, does_theory_pay_attention_to_stress_markers):
     word = full_entry_pattern.fullmatch(unilex_definition).groupdict()
 
@@ -65,23 +67,38 @@ if __name__ == '__main__':
     start_time = time.time()
     print(f"Start Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(start_time))}")
 
-    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        tasks = (
-            (
-                outline,
-                steno_chords_and_their_meanings,
-                order_map,
-                valid_final_letter,
-                make_boundaries_into_list,
-                does_theory_pay_attention_to_stress_markers,
-            )
-            for outline in outlines
+    tasks = (
+        (
+            outline,
+            steno_chords_and_their_meanings,
+            order_map,
+            valid_final_letter,
+            make_boundaries_into_list,
+            does_theory_pay_attention_to_stress_markers,
         )
-        results = list(tqdm.tqdm(pool.imap(make_unilex_entry_helper, tasks),
-                                 total=len(outlines),
-                                 unit="words",
-                                 smoothing=0, #don't use a moving average for the words/s
-                                 desc="converting words into entries"))
+        for outline in outlines
+    )
+
+    if USE_MULTIPROCESSING:
+        with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+            results = list(tqdm.tqdm(
+                pool.imap(make_unilex_entry_helper, tasks),
+                total=len(outlines),
+                unit="words",
+                smoothing=0,
+                desc="converting words into entries",
+            ))
+    else:
+        results = [
+            make_unilex_entry_helper(task)
+            for task in tqdm.tqdm(
+                tasks,
+                total=len(outlines),
+                unit="words",
+                smoothing=0,
+                desc="converting words into entries",
+            )
+        ]
 
     end_time = time.time()
     print(f"End Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(end_time))}")
