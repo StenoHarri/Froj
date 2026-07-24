@@ -67,8 +67,16 @@ if __name__ == '__main__':
 
     with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
         tasks = (
-            (outline, steno_chords_and_their_meanings, order_map, valid_final_letter)
-            for outline in outlines)
+            (
+                outline,
+                steno_chords_and_their_meanings,
+                order_map,
+                valid_final_letter,
+                make_boundaries_into_list,
+                does_theory_pay_attention_to_stress_markers,
+            )
+            for outline in outlines
+        )
         results = list(tqdm.tqdm(pool.imap(make_unilex_entry_helper, tasks),
                                  total=len(outlines),
                                  unit="words",

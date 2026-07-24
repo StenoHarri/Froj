@@ -10,6 +10,7 @@ except ModuleNotFoundError:
 
 custom_alphabet = "FSCZPNRXIUuieanpzcsf_"
 valid_final_letter = r'(^/[RXIU]+|[uieanpzcsf])$'
+does_theory_pay_attention_to_stress_markers = False
 
 
 "FSCZPN|RXIU|uiea|npzcsf|_"
