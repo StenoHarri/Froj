@@ -54,9 +54,515 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "A": [
+        {"chord": "A",
+         "description": "short vowel",
+         "spelling": "a",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "A",
+         "description": "short vowel", #villain... but not against?
+         "spelling": "ai",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+
+        {"chord": "A",
+         "description": "short i",
+         "spelling": "a",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0,
+         "orthoscore": 1, #garbage
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+    ],
+
+
+    "AO": [
+        {"chord": "AO",
+         "description": "caught vowel",
+         "spelling": "oa",
+         "pronunciation": vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": 1, #coarse
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "AO",
+         "description": "long o",
+         "spelling": "oa",
+         "pronunciation": vowel_category["OE"],
+         "ambiguity": 1,
+         "orthoscore": 1, #toad
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "AO",
+         "description": "short vowel",
+         "spelling": "oo",
+         "pronunciation": vowel_category["short"] ,  # u is took I think?
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "AO",
+         "description": "long u",
+         "spelling": "oo",
+         "pronunciation": vowel_category["AOU"],  # uu is noon
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "spelling"}
+         ],
+
+
+    "AOE": [
+        {"chord": "AOE",
+         "description": "long e",
+         "spelling": "ee",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOE",
+         "description": "long e",
+         "spelling": "ie",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+
+        {"chord": "AOE",
+         "description": "long e",
+         "spelling": "i",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 1,  # why One? I don't know I can't think of any conflicts to be honest
+         "orthoscore": -1, #Mozambique, Shiba
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+
+        {"chord": "AOE",
+         "description": "long e",  # acne, aires
+         "spelling": "e",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": -1, #genotype
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+
+        {"chord": "AOE",
+         "description": "long e",
+         "spelling": "ea",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": -1, #read
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+
+        {"chord": "AOE",
+         "description": "long e but maybe it's two syllables?",
+         "spelling": "ea",
+         "pronunciation": " i@ ",
+         "ambiguity": 1,
+         "orthoscore": -1, #real
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+
+        {"chord": "AOE",
+         "description": "long e",
+         "spelling": "ey",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": -1, #key
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+
+        {"chord": "AOE",
+         "description": "long e",
+         "spelling": "oe",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": -1, #diarhoea
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+
+        {"chord": "AOE",
+         "description": "long e",
+         "spelling": "eo", #theory
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "phonetic"},
+    ],
+
+
+    "AOEU": [
+        {"chord": "AOEU",
+         "description": "long i",
+         "spelling": "ie?",  # acidifies
+         "pronunciation": vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOEU",
+         "description": "long i",
+         "spelling": "ei",  # acidifies
+         "pronunciation": vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOEU",
+         "description": "long i",
+         "spelling": "y",
+         "pronunciation": vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "StenEd?"},
+
+        {"chord": "AOEU",
+         "description": "long i",  # Ainu, Aida,
+         "spelling": "ai",
+         "pronunciation": vowel_category["AOEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOEU",
+         "description": "long i followed by a short e",
+         "spelling": "ie",
+         "pronunciation": vowel_category["AOEU"] + " @ ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOEU",
+         "description": "long i as a suffix",
+         "spelling": "i",
+         "pronunciation": f' suffix {vowel_category["AOEU"]}',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+
+    "AOU": [
+        {"chord": "AOU",
+         "description": "long u",
+         "spelling": "e?ue?", # deuteronomy
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOU",
+         "description": "long u",
+         "spelling": "ou", 
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": -1, #soup
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOU",
+         "description": "long u",
+         "spelling": "eau",
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOU",
+         "description": "long u",
+         "spelling": "ui",
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOU",
+         "description": "long u",
+         "spelling": "ew",
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 1,  # nute > nute, flew > flu, blew > blue... I do make the rules, and I'm power hungry
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOU",
+         "description": "long u",
+         "spelling": "o",
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 1,
+         "orthoscore": -1, #move
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOU", 
+         "description": "long u",
+         "spelling": "uu", #vacuum
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AOU", 
+         "description": "long u + i",
+         "spelling": "ui", #druid
+         "pronunciation": f'{vowel_category["AOU"]} i ',
+         "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+
+    "AE": [
+        {"chord": "AE",
+         "description": "long e",
+         "spelling": "ea",
+         "pronunciation": vowel_category["AOE"], #it was just ii before
+         "ambiguity": 1,
+         "orthoscore": 1, #read
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "AE",
+         "description": "short e",
+         "spelling": "ea",
+         "pronunciation": " e ", # earl?
+         "ambiguity": 2, #red
+         "orthoscore": 1, #read
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "AE",
+         "description": "long a",
+         "spelling": "ea",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
+         "orthoscore": 1,
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "AE",
+         "description": "AOE vowel spelt ae",
+         "spelling": "ae",
+         "pronunciation": vowel_category["AOE"], # eir?
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "Lapwing?"},
+    ],
+
+
+    "AEU": [
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "a",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "a(a|ye?|i)",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1, # wave > waive
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a (you British?)",
+         "spelling": "e",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ett?e?",
+         "pronunciation": vowel_category["AEU"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ey",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ei", #inveigh, weigh
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ea",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 2,
+         "orthoscore": -1,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "suffix long a",
+         "spelling": "a",
+         "pronunciation": f' suffix {vowel_category["AEU"]}',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+
+    "AU": [
+        {"chord": "AU",
+         "description": "caught vowel",
+         "spelling": "a[auh]?",
+         "pronunciation": vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AU",
+         "description": "caught vowel",
+         "spelling": "ou",
+         "pronunciation": vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": -1, #thought
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        #{"chord": "AU",
+        # "description": "AU vowel spelt o",
+        # "spelling": "o",
+        # "pronunciation": vowel_category["AU"],
+        # "ambiguity": 3,
+        # "orthoscore": -1, #corp
+        # "what must come before": ends_in__,
+        # "theory": ""},
+
+        {"chord": "AU",
+         "description": "au",
+         "spelling": "short vowel",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AU",
+         "description": "ow vowel",
+         "spelling": "au",
+         "pronunciation": vowel_category["OU"], #Macau
+         "ambiguity": 2,
+         "orthoscore": 1,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "AU",
+         "description": "caught vowel",
+         "spelling": "awe?",
+         "pronunciation": vowel_category["AU"],
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+    
+    "O": [
+        {"chord": "O",
+         "description": "short vowel",
+         "spelling": "o",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "O",
+         "description": "short vowel", # Knowledge
+         "spelling": "ow",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+
+        {"chord": "O",
+         "description": "caught vowel",
+         "spelling": "o",
+         "pronunciation": vowel_category["AU"],
+         "ambiguity": 1,
+         "orthoscore": 1, #corp story
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "O",
+         "description": "long u",
+         "spelling": "o",
+         "pronunciation": vowel_category["AOU"],
+         "ambiguity": 1,
+         "orthoscore": 1, #move,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "O",
+         "description": "short o",
+         "spelling": "a",
+         "pronunciation": vowel_category["O"],
+         "ambiguity": 1,
+         "orthoscore": -1, #yacht
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+    ],
+
+
     "OE": [
         {"chord": "OE",
-         "description": "OE vowel",
+         "description": "long o",
          "spelling": "o[eu]?",
          "pronunciation": vowel_category["OE"],
          "ambiguity": 0,
@@ -65,7 +571,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "OE",
-         "description": "OE vowel spelt ow",
+         "description": "long o",
          "spelling": "owe?",
          "pronunciation": vowel_category["OE"],
          "ambiguity": 0,
@@ -74,7 +580,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "OE",
-         "description": "OE vowel spelt au",
+         "description": "long o",
          "spelling": "au",  # baudelaire, aubergine beaux,
          "pronunciation": vowel_category["OE"],
          "ambiguity": 1,
@@ -83,7 +589,7 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "OE",
-         "description": "OE vowel",
+         "description": "long o",
          "spelling": "ot$",
          "pronunciation": vowel_category["OE"],
          "ambiguity": 0,
@@ -92,11 +598,296 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "OE",
-         "description": "OE vowel spelt oa",
+         "description": "long o",
          "spelling": "oa",
          "pronunciation": vowel_category["OE"],
          "ambiguity": 0,  # 0 ambiguity because toad > towed... load >_< lode
          "orthoscore": -1, #toad
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+
+    "OEU": [
+        {"chord": "OEU",
+         "description": "oy vowel",
+         "spelling": "oi",
+         "pronunciation": vowel_category["OEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "OEU",
+         "description": "oy vowel",
+         "spelling": "oye?",
+         "pronunciation": vowel_category["OEU"],
+         "ambiguity": 1,  # feel free to change this prioritisation
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""}
+    ],
+
+
+    "OU": [
+        {"chord": "OU",
+         "description": "caught vowel", #thought
+         "spelling": "ou",
+         "pronunciation": vowel_category["AU"], # bolder/boulder  thought   " starting_root  th  oo  t  suffix  f  [u]  l ",
+         "ambiguity": 0,
+         "orthoscore": 1, #thought
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "OU",
+         "description": "ow vowel",
+         "spelling": "ow",
+         "pronunciation": vowel_category["OU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "OU",
+         "description": "long o",
+         "spelling": "ou",
+         "pronunciation": vowel_category["OE"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "Harri"},
+
+        {"chord": "OU",
+         "description": "short vowel",
+         "spelling": "ou",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,  # colour
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "Harri"},
+
+        {"chord": "OU",
+         "description": "ow vowel",
+         "spelling": "ou",
+         "pronunciation": vowel_category["OU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+
+    "E": [
+        {"chord": "E",
+         "description": "short vowel",
+         "spelling": "e",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},  # not WSI because actresses that e is a @
+
+        {"chord": "E",
+         "description": "short e",
+         "spelling": "ea",
+         "pronunciation": vowel_category["E"],
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "E",
+         "description": "short e",  # against
+         "spelling": "ai",
+         "pronunciation": vowel_category["E"],
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "E",
+         "description": "short i",  # delicious
+         "spelling": "e",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "E",
+         "description": "short e", #friend
+         "spelling": "ie",
+         "pronunciation": vowel_category["E"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+
+    "EU": [
+        {"chord": "EU",
+         "description": "y pronounced i diphthong",
+         "spelling": "e?y",
+         "pronunciation": " iy ",  # (ii|ii2|ir)
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "StenEd?"},
+
+        {"chord": "EU",
+         "description": "ee pronounced i diphthong",
+         "spelling": "ee",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "ii pronounced i diphthong",
+         "spelling": "ii",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "ie pronounced i diphthong",
+         "spelling": "ie",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "short i",
+         "spelling": "i",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "short vowel",
+         "spelling": "y",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 1,  # honestly this might be 0
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "i diphthong",
+         "spelling": "i",
+         "pronunciation": " iy ",
+         "ambiguity": 1,  # why One? I don't know I can't think of any conflicts to be honest
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "e pronounced i diphthong",  # acne, aires
+         "spelling": "e",
+         "pronunciation": " iy ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "Harri?"},
+
+        {"chord": "EU",
+         "description": "ea pronounced i diphthong",
+         "spelling": "ea",
+         "pronunciation": " iy ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "Harri?"},
+
+        {"chord": "EU",
+         "description": "short i", #busy
+         "spelling": "u",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": -1, #busy
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "short i", #busy
+         "spelling": "a",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": -1, #garbage
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "EU",
+         "description": "short i", #build
+         "spelling": "ui?",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0, #`PWUS/KWHEU` < PWEUS/KWHEU
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        #{"chord": "EU", commented out because of antidisestablishmentarianism, electrocardiography
+        # "description": "EU vowel spelt e",  # delicious
+        # "spelling": "e",
+        # "pronunciation": vowel_category["EU"],
+        # "ambiguity": 0,
+        # "orthoscore": -1,
+        # "what must come before": ends_in__,
+        # "theory": ""},
+
+        {"chord": "EU",
+         "description": "long e",
+         "spelling": "i",
+         "pronunciation": vowel_category["AOE"],
+         "ambiguity": 2,
+         "orthoscore": 1, #Mozambique, Shiba
+         "what must come before": ends_in__,
+         "theory": ""},
+
+         {"chord": "EU",
+         "description": "suffix -y", #assembly
+         "spelling": "(y|ie?)",
+         "pronunciation": " suffix  iy ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+    ],
+
+
+    "U": [
+        {"chord": "U",
+         "description": "short u",
+         "spelling": "u",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": ""},
+
+        {"chord": "U",
+         "description": "short u",
+         "spelling": "ou",
+         "pronunciation": vowel_category["U"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "Harri"},
+
+        {"chord": "U",
+         "description": "short vowel",
+         "spelling": "ou",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 1,
+         "orthoscore": 0,
          "what must come before": ends_in__,
          "theory": ""},
     ],
