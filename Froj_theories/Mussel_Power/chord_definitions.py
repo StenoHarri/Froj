@@ -112,96 +112,8 @@ steno_chords_and_their_meanings = {
          "theory": ""}
     ],
 
-
     "2": [
-        {"chord": "2",
-         "description": "s",
-         "spelling": "ss?",
-         "pronunciation": " s ",  # ( \[y\] )? yeah you can add that
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-
-        {"chord": "2",
-         "description": "s (maybe silent)",
-         "spelling": "ss?",
-         "pronunciation": " z/s ",  # ( \[y\] )? yeah you can add that
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-
-        {"chord": "2",
-         "description": "sw silent w",  # answer 
-         "spelling": "sw",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "orthoscore": -1,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-
-        {"chord": "2",
-         "description": "ps silent p",
-         # conflicts with "uppsala" but psychotic has `HOT` → `hot` because of silent h so I don't mind
-         "spelling": "ps",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-
-        {"chord": "2",
-         "description": "c pronounced s or sy",  # the ce in pharmaceutical
-         "spelling": "cc?e?",
-         "pronunciation": " s  \[y\] ",
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-
-        {"chord": "2",
-         "description": "consumer",  # consumer
-         "spelling": "s",
-         "pronunciation": " s  \[y\] ",
-         "ambiguity": 0,
-         "orthoscore": 1,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-
-        {"chord": "2",
-         "description": "s pronounced z",
-         "spelling": "ss?",
-         "pronunciation": " z ",
-         "ambiguity": 1,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-
-        {"chord": "2",
-         "description": "c pronounced s",
-         "spelling": "s?c",
-         "pronunciation": " s ",
-         "ambiguity": 1,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-    ],
-
-
-    "3": [ 
-        {"chord": "3",
-         "description": "l",
-         "spelling": "ll?",
-         "pronunciation": " l ",
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": ""},
-    ],
-
-    "4": [
-        {"chord": "4", #why does `KPHAOUPB` → `commune` not work????
+        {"chord": "2", #why does `KPHAOUPB` → `commune` not work????
          "description": "k",
          "spelling": "k(k|h)?",
          "pronunciation": " k ",
@@ -210,7 +122,7 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
-        {"chord": "4",
+        {"chord": "2",
          "description": "c pronounced k",
          "spelling": "cc?",  # acclimatise
          "pronunciation": " k ",
@@ -219,7 +131,7 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
-        {"chord": "4",
+        {"chord": "2",
          "description": "k, maybe ky",
          "spelling": "cc?",  # barracuda
          "pronunciation": " k  \[y\] ",
@@ -228,7 +140,7 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
-        {"chord": "4",
+        {"chord": "2",
          "description": "ch pronounced k",
          "spelling": "ch",
          "pronunciation": " k ",
@@ -237,7 +149,7 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
-        {"chord": "4",
+        {"chord": "2",
          "description": "ck",
          "spelling": "ck(k|h)?",
          "pronunciation": " k ",
@@ -246,27 +158,177 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
-        {"chord": "4", # connection, context
-         "description": "con optional std",
-         "spelling": "con[std]?",
-         "pronunciation": " k  (@|o|o4)  n ( [st] )?",
-         "ambiguity": 10,
-         "orthoscore": 0,
-         "what must come before": ends_in_slash,
-         "theory": "Harri"}
+        # {"chord": "4", # connection, context
+        #  "description": "con optional std",
+        #  "spelling": "con[std]?",
+        #  "pronunciation": " k  (@|o|o4)  n ( [st] )?",
+        #  "ambiguity": 10,
+        #  "orthoscore": 0,
+        #  "what must come before": ends_in_slash,
+        #  "theory": "Harri"}
     ],
 
-    "5": [
-        {"chord": "5",
+
+    "3": [
+        {"chord": "3",
          "description": "b",
          "spelling": "bb?",
          "pronunciation": " b ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": ends_in_slash,
+         "what must come before": upToK_no_S,
          "theory": ""},
     ],
 
+
+    "4": [
+        {"chord": "4",
+         "description": "p",
+         "spelling": "pp?",
+         "pronunciation": " p ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToK_no_T,
+         "theory": ""},
+
+        {"chord": "4",
+         "description": "p (but British people say py?",
+         "spelling": "pp?",
+         "pronunciation": " p  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToK_no_T,
+         "theory": ""}
+    ],
+
+
+    "5": [
+        {"chord": "5",
+         "description": "l",
+         "spelling": "ll?",
+         "pronunciation": " l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToW_not_just_T_not_just_k_or_just_w,
+         "theory": ""},
+    ],
+
+    "6": [
+        {"chord": "6",
+         "description": "d",
+         "spelling": "dd?",
+         "pronunciation": " d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "6",
+         "description": "d but Harri says j",
+         "spelling": "dd?",
+         "pronunciation": " d  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToS,
+         "theory": ""}
+    ],
+
+
+    "7": [
+        {"chord": "7",
+         "description": "s",
+         "spelling": "ss?",
+         "pronunciation": " s ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "7",
+         "description": "s (maybe silent)",
+         "spelling": "ss?",
+         "pronunciation": " z/s ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "7",
+         "description": "sw silent w",  # answer 
+         "spelling": "sw",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "7",
+         "description": "ps silent p",
+         # conflicts with "uppsala" but psychotic has `HOT` → `hot` because of silent h so I don't mind
+         "spelling": "ps",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "7",
+         "description": "c pronounced s or sy",  # the ce in pharmaceutical
+         "spelling": "cc?e?",
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "7",
+         "description": "consumer",  # consumer
+         "spelling": "s",
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 1,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "7",
+         "description": "s pronounced z",
+         "spelling": "ss?",
+         "pronunciation": " z ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+
+        {"chord": "7",
+         "description": "c pronounced s",
+         "spelling": "s?c",
+         "pronunciation": " s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": upToQ,
+         "theory": ""},
+    ],
+
+
+    "8": [
+        {"chord": "8",
+         "description": "t",
+         "spelling": "tt?",
+         "pronunciation": " t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToS,
+         "theory": ""},
+
+        {"chord": "8",
+         "description": "t but Harri says ch",
+         "spelling": "tt?",  # attune
+         "pronunciation": " t  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": upToS,
+         "theory": ""}
+    ],
 
 
     "A": [
