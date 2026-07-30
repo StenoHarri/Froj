@@ -38,6 +38,7 @@ initial = re.compile(r'[12345678](lLrR)?$')
 vowel_or_hyphen = re.compile(r'[AOEU\-]$')
 final = re.compile(r'[abcdefgh](lLrR)?$')
 ends_in__ = re.compile(r'_$')
+hyphen = re.compile(r'-$')
 
 
 
@@ -349,7 +350,6 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in__,
          "theory": "spelling"},
-
 
         {"chord": "A",
          "description": "short i",
@@ -1177,7 +1177,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,  # dis
+         "what must come before": hyphen,  # dis
          "theory": "Harri"}, #cyclops
 
         {"chord": "-1",
@@ -1187,7 +1187,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": "?"},
+         "theory": ""},
 
         {"chord": "-1",
          "description": "plural",  # actresses
@@ -1196,7 +1196,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": "?"},
+         "theory": ""},
 
 
         {"chord": "-1",
@@ -1207,6 +1207,104 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": "Harri"},
+    ],
+
+
+    "b": [
+        {"chord": "-2",
+         "description": "ng",
+         "spelling": "ng?",
+         "pronunciation": " ng ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-2",
+         "description": "ngue", #tongue
+         "spelling": "ngue",
+         "pronunciation": " ng ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-2",
+         "description": "ng with g",
+         "spelling": "ng",
+         "pronunciation": " ng ( \[?g\]? )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        # {"chord": "-2",
+        #  "description": "'nge' in 'singe'",
+        #  # funny example cause of course `SEUPBG` → `sing`, but `ORPBG` → `orange`
+        #  "spelling": "nge?",
+        #  "pronunciation": " n  jh ",
+        #  "ambiguity": 1,
+        #  "orthoscore": 0,
+        #  "what must come before": vowel_or_hyphen,
+        #  "theory": ""},
+
+        {"chord": "-2",
+         "description": "ng sound then g sound",
+         "spelling": "ng?",
+         "pronunciation": " ng  g ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-2",
+         "description": "suffix -ing",
+         "spelling": "ing",
+         "pronunciation": " suffix  i  ng ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # ← look at that lack of _ at the end
+         # okay the issue here is that maybe there's no issue
+         "theory": ""},
+    ],
+
+
+    "c": [
+        {"chord": "-3",
+         "description": "y pronounced i diphthong",
+         "spelling": "y",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3",
+         "description": "y pronounced i diphthong",
+         "spelling": "ie?",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? iy ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3",
+         "description": "y pronounced i",
+         "spelling": "y",
+         "pronunciation": "( ((root)|(prefix)|(suffix)) )? i ",
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3",
+         "description": "dy",
+         "spelling": "dd?(y|ie?)",
+         "pronunciation": " d ( ((root)|(prefix)|(suffix)) )? iy ",
+         "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "HelloChap?"}
     ],
 
 
@@ -1278,6 +1376,18 @@ steno_chords_and_their_meanings = {
 
     "e": [
         {"chord": "-5",
+         "description": "n",
+         "spelling": "nn?e?",
+         "pronunciation": " n ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # surely this should then work for "level"??
+         "theory": ""},
+    ],
+
+
+    "f": [
+        {"chord": "-5",
          "description": "t",
          "spelling": "tt?e?",
          "pronunciation": " t ",
@@ -1323,5 +1433,15 @@ steno_chords_and_their_meanings = {
          "theory": "Harri?"}
     ],
 
-}
 
+    "r": [
+        {"chord": "-R",
+         "description": "r",
+         "spelling": "rr?e?",
+         "pronunciation": " r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+}
