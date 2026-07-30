@@ -176,7 +176,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " b ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToK_no_S,
+         "what must come before": ends_in_slash,
          "theory": ""},
     ],
 
@@ -188,7 +188,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " p ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToK_no_T,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "4",
@@ -197,7 +197,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " p  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToK_no_T,
+         "what must come before": ends_in_slash,
          "theory": ""}
     ],
 
@@ -209,7 +209,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " l ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToW_not_just_T_not_just_k_or_just_w,
+         "what must come before": ends_in_slash,
          "theory": ""},
     ],
 
@@ -220,7 +220,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "6",
@@ -229,7 +229,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " d  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToS,
+         "what must come before": ends_in_slash,
          "theory": ""}
     ],
 
@@ -241,7 +241,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",  # ( \[y\] )? yeah you can add that
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "7",
@@ -250,7 +250,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z/s ",  # ( \[y\] )? yeah you can add that
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "7",
@@ -259,7 +259,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": -1,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "7",
@@ -269,7 +269,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "7",
@@ -278,7 +278,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "7",
@@ -287,7 +287,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 1,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "7",
@@ -296,7 +296,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " z ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "7",
@@ -305,7 +305,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " s ",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": upToQ,
+         "what must come before": ends_in_slash,
          "theory": ""},
     ],
 
@@ -317,7 +317,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToS,
+         "what must come before": ends_in_slash,
          "theory": ""},
 
         {"chord": "8",
@@ -326,7 +326,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t  \[y\] ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": upToS,
+         "what must come before": ends_in_slash,
          "theory": ""}
     ],
 
