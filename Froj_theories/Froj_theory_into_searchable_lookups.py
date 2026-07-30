@@ -209,15 +209,15 @@ for entry in tqdm.tqdm(all_entries, desc="resolving conflicts", unit="word"):
 #        json.dump(best_outlines, outfile, indent=1)
 
 print('writing Plover entry -> word...')
-with open("Froj_theories/"+theory+"/resolved_entries.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/"+theory+"_base.json", "w") as outfile:
         json.dump(resolved_entries, outfile, indent=1)
 
 print('writing word -> entry lookups...')
-with open("Froj_theories/"+theory+"/all_outlines.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/frojbot_outlines_lookup.json", "w") as outfile:
         json.dump(all_outlines, outfile, indent=1)
 
 print('writing entry -> word lookups...')
-with open("Froj_theories/"+theory+"/all_entries.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/frojbot_entries_lookup.json", "w") as outfile:
         json.dump(all_entries, outfile, indent=1)
 
 

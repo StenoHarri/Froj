@@ -108,5 +108,5 @@ if __name__ == '__main__':
 
     print('now writing it to the json file...')
 
-    with open("Froj_theories/Froj_user_theory.json", "w") as outfile:
+    with open("Froj_theories/complete_output.json", "w") as outfile:
         json.dump(results, outfile, indent=1)
