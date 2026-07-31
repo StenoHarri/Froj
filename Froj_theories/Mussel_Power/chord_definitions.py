@@ -1603,9 +1603,38 @@ steno_chords_and_their_meanings = {
          #"theory": ""},
     ],
 
-
     "e": [
         {"chord": "-5",
+         "description": "d",
+         "spelling": "dd?e?",
+         "pronunciation": " d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5",
+         "description": "d",
+         "spelling": "dd?e?",
+         "pronunciation": " d/t ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5",
+         "description": "suffix -ed",
+         "spelling": "e?d",
+         "pronunciation": " suffix ( i7 )? (d|t) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""}
+    ],
+
+
+    "f": [
+        {"chord": "-6",
          "description": "n",
          "spelling": "nn?e?",
          "pronunciation": " n ",
@@ -1616,8 +1645,8 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "f": [
-        {"chord": "-5",
+    "g": [
+        {"chord": "-7",
          "description": "t",
          "spelling": "tt?e?",
          "pronunciation": " t ",
@@ -1626,7 +1655,7 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
-        {"chord": "-5",
+        {"chord": "-7",
          "description": "final dt pronounced t",
          "spelling": "dt$",
          "pronunciation": " t ",
@@ -1635,7 +1664,7 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": "Harri"},
 
-        {"chord": "-5",
+        {"chord": "-7",
          "description": "t pronounced sh",
          "spelling": "tt?e?",
          "pronunciation": " sh ",
@@ -1644,7 +1673,7 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
-        {"chord": "-5",
+        {"chord": "-7",
          "description": "ti pronounced ch", #congestion
          "spelling": "ti",
          "pronunciation": " ch ",
@@ -1653,7 +1682,7 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
-        {"chord": "-5", #variability
+        {"chord": "-7", #variability
          "description": "suffix ity",
          "spelling": "ity",
          "pronunciation": " suffix  @  t  iy ",
@@ -1664,8 +1693,8 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "r": [
-        {"chord": "-R",
+    "h": [
+        {"chord": "-8",
          "description": "r",
          "spelling": "rr?e?",
          "pronunciation": " r ",
