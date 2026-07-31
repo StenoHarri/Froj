@@ -1496,6 +1496,27 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "ax": [
+        {"chord": "-1l",
+         "description": "z",
+         "spelling": "zz?e?",
+         "pronunciation": "( z | t  s )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-1l",
+         "description": "suffix -ize",
+         "spelling": "ize?",
+         "pronunciation": " suffix  ae  z ",
+         "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+
+
     "b": [
         {"chord": "-2",
          "description": "ng",
@@ -1555,6 +1576,65 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "bl": [
+        {"chord": "-2l",
+         "description": "sh",
+         "spelling": "sh",
+         "pronunciation": " sh ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-2l",
+         "description": "ci pronounced sh (Harri's accent)",  # aerospacial
+         "spelling": "ci",
+         "pronunciation": "( s ( suffix )? y | sh  \[ii\] )",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-2l",
+         "description": "sh sound",
+         "spelling": "((s|t|x)i|c[ei]|s?che?|sc|ss)",
+         "pronunciation": "( sh | s ( suffix )? y )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+
+        {"chord": "-2l",
+         "description": "zh sound",
+         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #caucasia
+         "pronunciation": "( zh | z ( suffix )? y )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        # conscious abstentious anxious?
+        {"chord": "-2l",
+         "description": "nsh sound",
+         "spelling": "n(sc|t|x)i",  # x for anxious
+         "pronunciation": " n  sh ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "Harri"},
+
+        {"chord": "-2l",
+         "description": "ngksh sound",
+         "spelling": "n(sc|t|x)i",  # xi for anxious,
+         "pronunciation": " ng ( k )? sh ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "Harri"},
+    ],
+
+
     "c": [
         {"chord": "-3",
          "description": "y pronounced i diphthong",
@@ -1591,6 +1671,27 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": "HelloChap?"}
+    ],
+
+
+    "cl": [
+        {"chord": "-3l",
+         "description": "v",
+         "spelling": "ve?",
+         "pronunciation": " v ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3l",
+         "description": "rv",
+         "spelling": "rve?",
+         "pronunciation": " r  v ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "Harri"},
     ],
 
 
@@ -1659,6 +1760,19 @@ steno_chords_and_their_meanings = {
          #"theory": ""},
     ],
 
+
+    "dl": [
+        {"chord": "-2l",
+         "description": "ll?y",
+         "spelling": "l(y|ie?)",
+         "pronunciation": "( suffix )? l  iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""}
+    ],
+
+
     "e": [
         {"chord": "-5",
          "description": "d",
@@ -1689,6 +1803,27 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "el": [
+        {"chord": "-5l",
+         "description": "p",
+         "spelling": "pp?",
+         "pronunciation": " p ",
+         "ambiguity": 0, #group > groupe
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # ".*[AOeu](?!.*(.).*\1)[frblgtsdsz]*\*?"
+         "theory": ""},
+
+        {"chord": "-5l",
+         "description": "p",
+         "spelling": "pp?e",
+         "pronunciation": " p ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # ".*[AOeu](?!.*(.).*\1)[frblgtsdsz]*\*?"
+         "theory": ""}
+    ],
+
+
     "f": [
         {"chord": "-6",
          "description": "n",
@@ -1696,7 +1831,19 @@ steno_chords_and_their_meanings = {
          "pronunciation": " n ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,  # surely this should then work for "level"??
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+
+
+    "fl": [
+        {"chord": "-6l",
+         "description": "nd",
+         "spelling": "nn?e?d",
+         "pronunciation": " n  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
          "theory": ""},
     ],
 
@@ -1749,11 +1896,53 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "gl": [
+        {"chord": "-7l",
+         "description": "f",
+         "spelling": "ff?e?",
+         "pronunciation": " f ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # `PHER/SEUFL` → `merciful`, with suffix=_
+         "theory": ""},
+
+        {"chord": "-7l",
+         "description": "ph pronounced f",  # graph
+         "spelling": "p?ph",
+         "pronunciation": " f ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "?"},
+
+        {"chord": "-7l",
+         "description": "gh pronounced f",  # graph
+         "spelling": "p?ph",
+         "pronunciation": " f ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+
+
     "h": [
         {"chord": "-8",
          "description": "r",
          "spelling": "rr?e?",
          "pronunciation": " r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+
+
+    "hl": [
+        {"chord": "-8l",
+         "description": "r",
+         "spelling": "rr?tt?e?",
+         "pronunciation": " r  t ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,

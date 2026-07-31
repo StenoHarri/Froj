@@ -8,7 +8,7 @@ import tqdm
 sorted_words = {}
 
 while True:
-    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n2)\tMussel Power for Controller\n:")
+    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tMussel Power for Controller\n:")
 
     if selection == "1":
         theory = "Tadpole"
@@ -46,7 +46,11 @@ while True:
                      .replace("e","5")
                      .replace("f","6")
                      .replace("g","7")
-                     .replace("h","8"))
+                     .replace("h","8")
+                     .replace("x","l")
+                     .replace("y","r")
+                     .replace("X","L")
+                     .replace("Y","R"))
         break
     else:
         print("try again")
