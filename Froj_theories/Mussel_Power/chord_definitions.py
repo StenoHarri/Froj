@@ -39,7 +39,7 @@ vowel_or_hyphen = re.compile(r'[AOEU\-]$')
 final = re.compile(r'[abcdefghxXyY]$')
 ends_in__ = re.compile(r'_$')
 hyphen = re.compile(r'-$')
-
+AU = re.compile(r'AU$')
 
 
 """
@@ -237,6 +237,18 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "1r": [
+        {"chord": "1r",
+         "description": "v",
+         "spelling": "vv?",
+         "pronunciation": " v ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
+    ],
+
+
     "2": [
         {"chord": "2", #why does `KPHAOUPB` → `commune` not work????
          "description": "k",
@@ -293,6 +305,7 @@ steno_chords_and_their_meanings = {
         #  "theory": "Harri"}
     ],
 
+
     "2l": [
         {"chord": "2l",
          "description": "kr",
@@ -322,6 +335,26 @@ steno_chords_and_their_meanings = {
          "theory": "spelling"},
     ],
 
+    "2r": [
+        {"chord": "2r", # connection, context
+         "description": "con optional std",
+         "spelling": "conn?",
+         "pronunciation": " k  (@|o|o4)  n ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2r", # connection, context
+         "description": "con optional std",
+         "spelling": "con[std]?",
+         "pronunciation": " k  (@|o|o4)  n ( [std] )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
 
     "3": [
         {"chord": "3",
@@ -344,6 +377,36 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""}
+    ],
+
+
+    "3r": [
+        {"chord": "3r",
+         "description": "h",
+         "spelling": "h",
+         "pronunciation": " h ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "3r",
+         "description": "silent h",
+         "spelling": "h",
+         "pronunciation": "",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # upToW_no_P  removed because of "school" I think
+         "theory": "?"},
+
+        {"chord": "3r",
+         "description": "silent h depending on accent",
+         "spelling": "h",
+         "pronunciation": " \[h1\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "?"},
     ],
 
 
@@ -434,6 +497,18 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "4r": [
+        {"chord": "4r",
+         "description": "pl",
+         "spelling": "pp?ll?",
+         "pronunciation": " p  l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
     "5": [
         {"chord": "5",
          "description": "l",
@@ -455,6 +530,45 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""}
+    ],
+
+
+    "5r": [
+        {"chord": "5r",
+         "description": "j",
+         "spelling": "j",
+         "pronunciation": " jh ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "5r",
+         "description": "j sound",
+         "spelling": "(g|dj|di|dgg?e?)", #soldier
+         "pronunciation": " jh ",
+         "ambiguity": 1, #jest>gest
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "5r",
+         "description": "g pronounced zh",
+         "spelling": "(d?jj?e?|d?gg?e?)", #aubergine
+         "pronunciation": " zh ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "5r",
+         "description": "j pronounced zh", #bonjour
+         "spelling": "(d?jj?e?|d?gg?e?)",
+         "pronunciation": " zh ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -496,7 +610,28 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": ends_in_slash,  # sphere
-         "theory": "Plover?"}
+         "theory": ""}
+    ],
+
+
+    "6r": [
+        {"chord": "6r",
+         "description": "dis/des sound", # dis/disc/dist/des/desc/dec
+         "spelling": "d[ie][sc]+t?",
+         "pronunciation": " d  (i|ii|e)  (s|z) ( root )?",
+         "ambiguity": 1, # descend/distend
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "?"},
+
+        {"chord": "6r",
+         "description": "dis/des + consonant", # dis/disc/dist/des/desc/dec
+         "spelling": "d[ie][sc]+[td]?",
+         "pronunciation": " d  (i|ii|e)  (s|z) ( root )?( (k|t|d) )?",
+         "ambiguity": 1, # descend/distend
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "?"}
     ],
 
 
@@ -597,6 +732,18 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "7r": [
+        {"chord": "7r",
+         "description": "st",
+         "spelling": "ss?tt?",
+         "pronunciation": " s  t ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
     "8": [
         {"chord": "8",
          "description": "t",
@@ -615,6 +762,18 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""}
+    ],
+
+
+    "8r": [
+        {"chord": "8r",
+         "description": "tr",
+         "spelling": "tt?rr?",
+         "pronunciation": " t  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -1517,6 +1676,101 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "ay": [
+        {"chord": "-1r",
+         "description": "se",
+         "spelling": "se",  # actresses?"
+         "pronunciation": " (s|z) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # A_to_t_no_g_end, #no idea, this just feels right. or maybe A_to_t_
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "solo s following a vowel", #cyclops
+         "spelling": "s",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # dis
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "solo s following a vowel (maybe voiced)",
+         "spelling": "s",
+         "pronunciation": " z/s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         # cyclops with a z
+         "what must come before": vowel_or_hyphen,  # dis
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "s silent t",
+         "spelling": "ss?te?",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # no idea, this just feels right
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "s silent w",  # answer
+         "spelling": "sw",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "ss",
+         "spelling": "ss",  # actresses?"
+         "pronunciation": " (s|z) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         # cyclops
+         "what must come before": vowel_or_hyphen,  # A_to_t_no_g_end, #no idea, this just feels right. or maybe A_to_t_
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "c pronounced s",
+         "spelling": "s?ce?",
+         "pronunciation": " s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # maybe I'm traumatised from ABGS/HRERPL/TER → accelerometer
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "s maybe voiced",
+         "spelling": "ss?e?",
+         "pronunciation": " z/s ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # no _ I think?
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "s pronounced z",
+         "spelling": "ss?e?",
+         "pronunciation": " z ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # no _ I think?
+         "theory": ""},
+
+        {"chord": "-1r",
+         "description": "suffix -s",
+         "spelling": "s",
+         "pronunciation": "( (suffix) ) (s|z|z/s) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""}
+    ],
+
+
     "b": [
         {"chord": "-2",
          "description": "ng",
@@ -1604,7 +1858,6 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
-
         {"chord": "-2l",
          "description": "zh sound",
          "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #caucasia
@@ -1632,6 +1885,36 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": "Harri"},
+    ],
+
+
+    "by": [
+        {"chord": "-2r",
+         "description": "nk",
+         "spelling": "nk",
+         "pronunciation": " ng  k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-2r",
+         "description": "nc",
+         "spelling": "nc",
+         "pronunciation": " ng  k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-2r",
+         "description": "nic",
+         "spelling": "nicc?",
+         "pronunciation": " n  i  k ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
     ],
 
 
@@ -1692,6 +1975,72 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": "Harri"},
+    ],
+
+
+    "cy": [
+        {"chord": "-3r",
+         "description": "k",
+         "spelling": "k(k|e)?",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3r",
+         "description": "ck",
+         "spelling": "cke?",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3r",
+         "description": "ch pronounced k",
+         "spelling": "che?",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3r",
+         "description": "ch pronounced x",
+         "spelling": "che?",
+         "pronunciation": " x ",
+         "ambiguity": 2, #lock/loch
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3r",
+         "description": "lk silent l (immediately after a vowel)",
+         "spelling": "lk",
+         "pronunciation": " k ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3r",
+         "description": "c pronounced k",  # do I make *BG? pick pic? $$$$
+         "spelling": "c(c|e)?",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-3r",
+         "description": "qu",  # do I make *BG? pick pic? $$$$$$$?
+         "spelling": "que?",
+         "pronunciation": " k ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
     ],
 
 
@@ -1773,6 +2122,18 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "dy": [
+        {"chord": "-4r",
+         "description": "ld",
+         "spelling": "ll?dd?",
+         "pronunciation": " l  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # surely this should then work for "level"??
+         "theory": ""},
+    ],
+
+
     "e": [
         {"chord": "-5",
          "description": "d",
@@ -1824,6 +2185,63 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "ey": [
+        {"chord": "-5r",
+         "description": "m",
+         "spelling": "mm?e?",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5r",
+         "description": "mb silent b",
+         "spelling": "mb",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5r",
+         "description": "mp silent p",
+         "spelling": "mp",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5r",
+         "description": "mn silent n",
+         "spelling": "mn",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-5r",
+         "description": "lm silent l (has to follow AU)",
+         "spelling": "lm",
+         "pronunciation": "( \[l1\] )? m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": AU, #balm
+         "theory": ""},
+
+        {"chord": "-5r",
+         "description": "uhm sound",
+         "spelling": "m(b|m)?e?",
+         "pronunciation": " @  m ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+
+
     "f": [
         {"chord": "-6",
          "description": "n",
@@ -1841,6 +2259,18 @@ steno_chords_and_their_meanings = {
          "description": "nd",
          "spelling": "nn?e?d",
          "pronunciation": " n  d ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+
+
+    "fr": [
+        {"chord": "-6r",
+         "description": "nt",
+         "spelling": "nn?e?tt?",
+         "pronunciation": " n  t ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
@@ -1926,6 +2356,27 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "gy": [
+        {"chord": "-7r",
+         "description": "g",
+         "spelling": "gg?e?",
+         "pronunciation": " g ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-7r",
+         "description": "silent gh",
+         "spelling": "gh",
+         "pronunciation": "",
+         "ambiguity": -1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": "Harri?"},
+    ],
+
+
     "h": [
         {"chord": "-8",
          "description": "r",
@@ -1940,7 +2391,7 @@ steno_chords_and_their_meanings = {
 
     "hx": [
         {"chord": "-8l",
-         "description": "r",
+         "description": "rt",
          "spelling": "rr?tt?e?",
          "pronunciation": " r  t ",
          "ambiguity": 0,
@@ -1948,4 +2399,17 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": ""},
     ],
+
+
+    "hy": [
+        {"chord": "-8r",
+         "description": "r + plural",
+         "spelling": "rr?e?ss?",
+         "pronunciation": " r  suffix ( i7 )? (s|z) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+    ],
+
 }
