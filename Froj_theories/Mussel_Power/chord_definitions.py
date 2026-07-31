@@ -8,8 +8,8 @@ except ModuleNotFoundError:
     from vowel_categories import vowel_category
 
 
-custom_alphabet = "12345678lrLR-AOEUabcdefghlLrR_"
-valid_final_letter = r'[\-AOEU]([abcdefghlLrR]+)?$' #Will need to come back to this for multi-strokes
+custom_alphabet = "12345678lrLR-AOEUabcdefghxXyY_"
+valid_final_letter = r'[\-AOEU]([abcdefghxXyY]+)?$' #Will need to come back to this for multi-strokes
 does_theory_pay_attention_to_stress_markers = True
 
 
@@ -33,10 +33,10 @@ so I'll define them once here
 # AtLeastOneCharacterRegex = re.compile(r'.+')
 
 ends_in_slash = re.compile(r'/$')
-initial_slash_or_initial = re.compile(r'(^/|[12345678](lLrR)?)$')
-initial = re.compile(r'[12345678](lLrR)?$')
+initial_slash_or_initial = re.compile(r'(^/|[12345678lLrR])$')
+initial = re.compile(r'[12345678lLrR]$')
 vowel_or_hyphen = re.compile(r'[AOEU\-]$')
-final = re.compile(r'[abcdefgh](lLrR)?$')
+final = re.compile(r'[abcdefghxXyY]$')
 ends_in__ = re.compile(r'_$')
 hyphen = re.compile(r'-$')
 
@@ -113,6 +113,74 @@ steno_chords_and_their_meanings = {
          "theory": ""}
     ],
 
+
+    "1l": [
+        {"chord": "1l",
+         "description": "w",
+         "spelling": "ww?",
+         "pronunciation": " (w|hw) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "1l",
+         "description": "u pronounced w",
+         "spelling": "u",
+         "pronunciation": " w ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "1l",
+         "description": "long u", #poplar / popular
+         "spelling": "u",
+         "pronunciation": "( suffix )? y  uu ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "Harri?"},
+
+        {"chord": "1l",
+         "description": "long u", #duet
+         "spelling": "u",
+         "pronunciation": "( suffix )? \[y\]  iu ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "Harri?"},
+
+        {"chord": "1l",
+         "description": "w pronounced v",
+         "spelling": "w",
+         "pronunciation": " (v|v/w) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "1l",
+         "description": "OE vowel",
+         "spelling": "o",
+         "pronunciation": vowel_category["OE"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "Harri"},
+
+
+        {"chord": "1l",
+         "description": "u",
+         "spelling": "u",
+         "pronunciation": " \(y uu/w\) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
+    ],
+
+
     "2": [
         {"chord": "2", #why does `KPHAOUPB` → `commune` not work????
          "description": "k",
@@ -169,6 +237,35 @@ steno_chords_and_their_meanings = {
         #  "theory": "Harri"}
     ],
 
+    "2l": [
+        {"chord": "2l",
+         "description": "kr",
+         "spelling": "k(k|h)?rr?",
+         "pronunciation": " k  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2l",
+         "description": "cr",
+         "spelling": "cc?rr?",  # acclimatise
+         "pronunciation": " k  r ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2l",
+         "description": "chr",
+         "spelling": "chrr?",
+         "pronunciation": " k  r ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "spelling"},
+    ],
+
 
     "3": [
         {"chord": "3",
@@ -179,6 +276,18 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+    ],
+
+
+    "3l": [
+        {"chord": "3l",
+         "description": "m",
+         "spelling": "mm?",
+         "pronunciation": " m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
     ],
 
 
@@ -203,6 +312,72 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "4l": [
+        {"chord": "4l",
+         "description": "y",
+         "spelling": "y",
+         "pronunciation": " iy ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4l",
+         "description": "y",
+         "spelling": "y",
+         "pronunciation": " y ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4l",
+         "description": "y, but for some people it's silent???",
+         "spelling": "y",
+         "pronunciation": " \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4l",
+         "description": "i",
+         "spelling": "i",
+         "pronunciation": "( suffix )? (ii|ii2|y|iy) ",  # aerospacial ← who wrote that???, fancier has a iy
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4l",
+         "description": "y",
+         "spelling": "y",
+         "pronunciation": " ii ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4l",
+         "description": "long e?",  # meteor the second e
+         "spelling": "e",
+         "pronunciation": " ii2 ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4l",
+         "description": "unspelt y",
+         "spelling": "",
+         "pronunciation": " y ",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
     "5": [
         {"chord": "5",
          "description": "l",
@@ -213,6 +388,19 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
     ],
+
+
+    "5l": [
+        {"chord": "5l",
+         "description": "g",
+         "spelling": "gg?h?", #ghost can be TKPWOEFT or TKPWHOEFT
+         "pronunciation": " g ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
+    ],
+
 
     "6": [
         {"chord": "6",
@@ -232,6 +420,27 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""}
+    ],
+
+
+    "6l": [
+        {"chord": "6l",
+         "description": "f",
+         "spelling": "ff?",
+         "pronunciation": " f ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # sphere
+         "theory": ""},
+
+        {"chord": "TP",
+         "description": "ph pronounced f",
+         "spelling": "p?ph", #sapphire
+         "pronunciation": " f ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # sphere
+         "theory": "Plover?"}
     ],
 
 
@@ -305,6 +514,27 @@ steno_chords_and_their_meanings = {
          "spelling": "s?c",
          "pronunciation": " s ",
          "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
+    "7l": [
+        {"chord": "7l",
+         "description": "n",
+         "spelling": "nn?",
+         "pronunciation": " n ( \[y\] )?",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "7l",
+         "description": "gn silent g",
+         "spelling": "g?n",
+         "pronunciation": " n ( y )?",
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
