@@ -9,7 +9,7 @@ except ModuleNotFoundError:
 
 
 custom_alphabet = "12345678lrLR-AOEUabcdefghxXyY_"
-valid_final_letter = r'[\-AOEU]([abcdefghxXyY]+)?$' #Will need to come back to this for multi-strokes
+valid_final_letter = r'[AOEUabcdefghxXyY]$' #Will need to come back to this for multi-strokes
 does_theory_pay_attention_to_stress_markers = True
 
 
@@ -68,6 +68,34 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": initial,
          "theory": ""},
+
+        {"chord": "/",
+         "description": "drop silent vowel",
+         "spelling": "[aiu]",  # merciful, somethingcal
+         "pronunciation": "",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": initial,
+         "theory": ""},
+
+        {"chord": "/",
+         "description": "drop short vowel",
+         "spelling": "[aeiouy]+",
+         # this may be a mistake adding the +, but my reasoning is ferrous, anxious, that `ou` is a short @
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": initial,
+         "theory": ""},
+
+        {"chord": "/",
+         "description": "drop long vowel",
+         "spelling": "[aeiouy]",
+         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": initial,
+         "theory": ""},
     ],
 
 
@@ -77,6 +105,34 @@ steno_chords_and_their_meanings = {
          "spelling": "",
          "pronunciation": "",
          "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": final,
+         "theory": ""},
+
+        {"chord": "/",
+         "description": "drop silent vowel",
+         "spelling": "[aiu]",  # merciful, somethingcal
+         "pronunciation": "",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": final,
+         "theory": ""},
+
+        {"chord": "/",
+         "description": "drop short vowel",
+         "spelling": "[aeiouy]+",
+         # this may be a mistake adding the +, but my reasoning is ferrous, anxious, that `ou` is a short @
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": final,
+         "theory": ""},
+
+        {"chord": "/",
+         "description": "drop long vowel",
+         "spelling": "[aeiouy]",
+         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": final,
          "theory": ""},
