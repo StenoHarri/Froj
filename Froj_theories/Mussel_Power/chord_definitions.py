@@ -1576,7 +1576,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "bl": [
+    "bx": [
         {"chord": "-2l",
          "description": "sh",
          "spelling": "sh",
@@ -1674,7 +1674,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "cl": [
+    "cx": [
         {"chord": "-3l",
          "description": "v",
          "spelling": "ve?",
@@ -1761,7 +1761,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "dl": [
+    "dx": [
         {"chord": "-2l",
          "description": "ll?y",
          "spelling": "l(y|ie?)",
@@ -1803,7 +1803,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "el": [
+    "ex": [
         {"chord": "-5l",
          "description": "p",
          "spelling": "pp?",
@@ -1836,7 +1836,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "fl": [
+    "fx": [
         {"chord": "-6l",
          "description": "nd",
          "spelling": "nn?e?d",
@@ -1896,7 +1896,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "gl": [
+    "gx": [
         {"chord": "-7l",
          "description": "f",
          "spelling": "ff?e?",
@@ -1938,7 +1938,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "hl": [
+    "hx": [
         {"chord": "-8l",
          "description": "r",
          "spelling": "rr?tt?e?",
