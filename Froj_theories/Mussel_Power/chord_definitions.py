@@ -249,6 +249,27 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "1R": [
+        {"chord": "1R", # connection, context
+         "description": "com",
+         "spelling": "comm?",
+         "pronunciation": " k  (@|o|o4)  m ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "1R", # connection, context
+         "description": "com optional std",
+         "spelling": "com[std]?",
+         "pronunciation": " k  (@|o|o4)  m ( [std] )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
     "2": [
         {"chord": "2", #why does `KPHAOUPB` → `commune` not work????
          "description": "k",
@@ -335,9 +356,23 @@ steno_chords_and_their_meanings = {
          "theory": "spelling"},
     ],
 
+
+    "2L": [
+        {"chord": "2L",
+         "description": "qu",  # acquaint
+         "spelling": "c?qu",
+         # combined with the `U` → `ui` in build, this is a nasty combination but I don't know a fix for it, I guess there's always two ways to read KWEU → qui
+         "pronunciation": " k ( w )?",  # briquette doesn't have a w
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
+    ],
+
+
     "2r": [
         {"chord": "2r", # connection, context
-         "description": "con optional std",
+         "description": "con",
          "spelling": "conn?",
          "pronunciation": " k  (@|o|o4)  n ",
          "ambiguity": 0,
@@ -349,6 +384,18 @@ steno_chords_and_their_meanings = {
          "description": "con optional std",
          "spelling": "con[std]?",
          "pronunciation": " k  (@|o|o4)  n ( [std] )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
+    "2L": [
+        {"chord": "2L",
+         "description": "cl",
+         "spelling": "cc?ll?",  # acclimatise
+         "pronunciation": " k  l ",
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
@@ -380,6 +427,18 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "3L": [
+        {"chord": "3L",
+         "description": "br",
+         "spelling": "bb?rr?",
+         "pronunciation": " b  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
     "3r": [
         {"chord": "3r",
          "description": "h",
@@ -407,6 +466,18 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": "?"},
+    ],
+
+
+    "3R": [
+        {"chord": "3R",
+         "description": "bl",
+         "spelling": "bb?ll?",
+         "pronunciation": " b  l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -497,11 +568,35 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "4L": [
+        {"chord": "4L",
+         "description": "pr",
+         "spelling": "pp?rr?",
+         "pronunciation": " p  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
     "4r": [
         {"chord": "4r",
          "description": "pl",
          "spelling": "pp?ll?",
          "pronunciation": " p  l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
+    "4R": [
+        {"chord": "4R",
+         "description": "z",
+         "spelling": "zz?",
+         "pronunciation": "( z | t  s )",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
@@ -526,6 +621,18 @@ steno_chords_and_their_meanings = {
          "description": "g",
          "spelling": "gg?h?", #ghost can be TKPWOEFT or TKPWHOEFT
          "pronunciation": " g ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
+    ],
+
+
+    "5L": [
+        {"chord": "5L",
+         "description": "gr",
+         "spelling": "gg?rr?",
+         "pronunciation": " g  r ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
@@ -566,6 +673,64 @@ steno_chords_and_their_meanings = {
          "spelling": "(d?jj?e?|d?gg?e?)",
          "pronunciation": " zh ",
          "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
+    "5R": [
+        {"chord": "5R",
+         "description": "sh",
+         "spelling": "sh",
+         "pronunciation": " sh ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "5R",
+         "description": "ci pronounced sh",
+         "spelling": "ci",
+         "pronunciation": "( s ( suffix )? y | sh  \[ii\] )",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "Harri"},
+
+        {"chord": "5R",
+         "description": "s pronounced sh",
+         "spelling": "ss?",  # pressure
+         "pronunciation": "( sh | s  y )",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "5R",
+         "description": "s pronounced sh in Harri's accent (Essex?)",
+         "spelling": "ss?",  # assume
+         "pronunciation": " s  \[y\] ",
+         "ambiguity": 0,
+         "orthoscore": -1,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "5R",
+         "description": "sh sound",
+         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #sc like fascist
+         "pronunciation": "( sh | s ( suffix )? y )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+
+        {"chord": "SH",
+         "description": "zh sound",
+         "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #caucasia
+         "pronunciation": "( zh | z ( suffix )? y )",
+         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
@@ -614,6 +779,27 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "6L": [
+        {"chord": "6L",
+         "description": "fl",
+         "spelling": "ff?ll?",
+         "pronunciation": " f  l ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # sphere
+         "theory": ""},
+
+        {"chord": "6L",
+         "description": "phl",
+         "spelling": "p?phl", #sapphire
+         "pronunciation": " f  l ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # sphere
+         "theory": ""}
+    ],
+
+
     "6r": [
         {"chord": "6r",
          "description": "dis/des sound", # dis/disc/dist/des/desc/dec
@@ -632,6 +818,27 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": "?"}
+    ],
+
+
+    "6R": [
+        {"chord": "6R",
+         "description": "fr",
+         "spelling": "ff?rr?",
+         "pronunciation": " f  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # sphere
+         "theory": ""},
+
+        {"chord": "6R",
+         "description": "phr",
+         "spelling": "p?phr", #sapphire
+         "pronunciation": " f  r ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,  # sphere
+         "theory": ""}
     ],
 
 
@@ -732,11 +939,35 @@ steno_chords_and_their_meanings = {
     ],
 
 
+    "7L": [
+        {"chord": "7L",
+         "description": "sp",
+         "spelling": "ss?pp?",
+         "pronunciation": " s  p ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
     "7r": [
         {"chord": "7r",
          "description": "st",
          "spelling": "ss?tt?",
          "pronunciation": " s  t ",  # ( \[y\] )? yeah you can add that
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
+    "7R": [
+        {"chord": "7R",
+         "description": "str",
+         "spelling": "ss?tt?rr?",
+         "pronunciation": " s  t  r ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
@@ -772,6 +1003,45 @@ steno_chords_and_their_meanings = {
          "pronunciation": " t  r ",
          "ambiguity": 0,
          "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+    ],
+
+
+    "8R": [
+        {"chord": "8R",
+         "description": "ch",
+         "spelling": "ch",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "8R",
+         "description": "cc pronounced ch",
+         "spelling": "cc",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "8R",
+         "description": "t pronounced ch",
+         "spelling": "t",
+         "pronunciation": " t ( suffix )? y ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "Plover?"},
+
+        {"chord": "8R",
+         "description": "ti pronounced ch", #congestion
+         "spelling": "t",
+         "pronunciation": " ch ",
+         "ambiguity": 0,
+         "orthoscore": -1,
          "what must come before": ends_in_slash,
          "theory": ""},
     ],
