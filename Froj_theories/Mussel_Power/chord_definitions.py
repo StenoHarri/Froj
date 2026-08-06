@@ -10,7 +10,7 @@ except ModuleNotFoundError:
 
 custom_alphabet = "12345678lrLR-AOEUabcdefghxXyY_"
 valid_final_letter = r'[AOEUabcdefghxXyY]$' #Will need to come back to this for multi-strokes
-does_theory_pay_attention_to_stress_markers = Trued
+does_theory_pay_attention_to_stress_markers = True
 
 
 
@@ -388,6 +388,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "2r",
+         "description": "im/em",
+         "spelling": "[ie]m",
+         "pronunciation": " (i|e|e0)  m ( root )?",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -601,6 +610,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "4R",
+         "description": "ex",
+         "spelling": "[ei]xx?",
+         "pronunciation": f"{vowel_category["short"]}( k  s | g  z )",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -636,7 +654,26 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
+
+        {"chord": "5L",
+         "description": "in",
+         "spelling": "inn?e?",
+         "pronunciation": f'{vowel_category["short"]} n ',
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "5L",
+         "description": "in",
+         "spelling": "ynn?e?",
+         "pronunciation": f'{vowel_category["short"]} n ',
+         "ambiguity": 1,  # honestly this might be 0
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
     ],
 
 
@@ -775,6 +812,78 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": ends_in_slash,  # sphere
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "a",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "a(a|ye?|i)",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1, # wave > waive
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a (you British?)",
+         "spelling": "e",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ett?e?",
+         "pronunciation": vowel_category["AEU"] + "$",  # ←←← look!!!! how cool!!!!!!   \($w$)/
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ey",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ei", #inveigh, weigh
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "long a",
+         "spelling": "ea",
+         "pronunciation": vowel_category["AEU"],
+         "ambiguity": 2,
+         "orthoscore": -1,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "AEU",
+         "description": "suffix long a",
+         "spelling": "a",
+         "pronunciation": f' suffix {vowel_category["AEU"]}',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
          "theory": ""}
     ],
 
@@ -817,7 +926,16 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1, # descend/distend
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": "?"}
+         "theory": "?"},
+
+        {"chord": "TH",
+         "description": "th",
+         "spelling": "th",
+         "pronunciation": " (th|dh|dh/th) ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
     ],
 
 
@@ -936,6 +1054,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "7l",
+         "description": "i or e",
+         "spelling": "[ie]",
+         "pronunciation": " (i|e|e0) ( root )?",
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -995,6 +1122,65 @@ steno_chords_and_their_meanings = {
          "theory": ""}
     ],
 
+    "8l": [
+        {"chord": "8l",
+         "description": "short vowel",
+         "spelling": "a",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "spelling"},
+
+        {"chord": "8l",
+         "description": "short vowel", #villain... but not against?
+         "spelling": "ai",
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": "spelling"},
+
+        {"chord": "8l",
+         "description": "short i",
+         "spelling": "a",
+         "pronunciation": vowel_category["EU"],
+         "ambiguity": 0,
+         "orthoscore": 1, #garbage
+         "what must come before": ends_in_slash,
+         "theory": "spelling"},
+    ],
+
+
+    "8L": [
+        {"chord": "8l",
+         "description": "an",
+         "spelling": "ann?e?",
+         "pronunciation": f'{vowel_category["short"]} n ',
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "8l",
+         "description": "an",
+         "spelling": "ainn?e?", #villain... but not against?
+         "pronunciation": f'{vowel_category["short"]} n ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+
+        {"chord": "8l",
+         "description": "an",
+         "spelling": "inn?e?",
+         "pronunciation": f'{vowel_category["EU"]} n ',
+         "ambiguity": 0,
+         "orthoscore": 1, #garbage
+         "what must come before": ends_in__,
+         "theory": "spelling"},
+    ],
+
 
     "8r": [
         {"chord": "8r",
@@ -1044,6 +1230,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": -1,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "8R",
+         "description": "shr",
+         "spelling": "shr",
+         "pronunciation": " sh  r ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""}
     ],
 
 
@@ -1113,7 +1308,7 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in__,
          "theory": "spelling"}
-         ],
+    ],
 
 
     "AOE": [
