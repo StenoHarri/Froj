@@ -2169,12 +2169,12 @@ steno_chords_and_their_meanings = {
 
     "aX": [
         {"chord": "-1L",
-         "description": "ry",
-         "spelling": "rr?(y|ie?)",
-         "pronunciation": " r ( ((root)|(prefix)|(suffix)) )? iy ",
+         "description": "st",
+         "spelling": "ss?tt?",
+         "pronunciation": " (s|z)  t ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,
+         "what must come before": vowel_or_hyphen,  # A_to_t_no_g_end, #no idea, this just feels right. or maybe A_to_t_
          "theory": ""},
     ],
 
@@ -2229,13 +2229,22 @@ steno_chords_and_their_meanings = {
 
 
     "aY": [
-        {"chord": "-1R",
-         "description": "st",
-         "spelling": "ss?tt?",
-         "pronunciation": " (s|z)  t ",
+        {"chord": "-8R",
+         "description": "rse",
+         "spelling": "rr?ss?e?",
+         "pronunciation": " r  (s|z|s/z) ",
          "ambiguity": 0,
          "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,  # A_to_t_no_g_end, #no idea, this just feels right. or maybe A_to_t_
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-8R",
+         "description": "rce",
+         "spelling": "rr?cc?e?",
+         "pronunciation": " r  (s|z|s/z) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
          "theory": ""},
     ],
 
@@ -3157,19 +3166,10 @@ steno_chords_and_their_meanings = {
 
     "hY": [
         {"chord": "-8R",
-         "description": "rs",
-         "spelling": "rr?ss?e?",
-         "pronunciation": " r  s ",
+         "description": "ry",
+         "spelling": "rr?(y|ie?)",
+         "pronunciation": " r ( ((root)|(prefix)|(suffix)) )? iy ",
          "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,
-         "theory": ""},
-
-        {"chord": "-8R",
-         "description": "rs",
-         "spelling": "rr?cc?e?",
-         "pronunciation": " r  s ",
-         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": ""},
