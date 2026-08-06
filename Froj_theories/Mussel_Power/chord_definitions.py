@@ -10,7 +10,7 @@ except ModuleNotFoundError:
 
 custom_alphabet = "12345678lrLR-AOEUabcdefghxXyY_"
 valid_final_letter = r'[AOEUabcdefghxXyY]$' #Will need to come back to this for multi-strokes
-does_theory_pay_attention_to_stress_markers = True
+does_theory_pay_attention_to_stress_markers = Trued
 
 
 
@@ -2295,22 +2295,22 @@ steno_chords_and_their_meanings = {
 
     "cx": [
         {"chord": "-3l",
-         "description": "v",
-         "spelling": "ve?",
-         "pronunciation": " v ",
+         "description": "g",
+         "spelling": "gg?e?",
+         "pronunciation": " g ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
         {"chord": "-3l",
-         "description": "rv",
-         "spelling": "rve?",
-         "pronunciation": " r  v ",
-         "ambiguity": 1,
+         "description": "silent gh",
+         "spelling": "gh",
+         "pronunciation": "",
+         "ambiguity": -1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": "Harri"},
+         "theory": "Harri?"},
     ],
 
 
@@ -2856,22 +2856,22 @@ steno_chords_and_their_meanings = {
 
     "gy": [
         {"chord": "-7r",
-         "description": "g",
-         "spelling": "gg?e?",
-         "pronunciation": " g ",
+         "description": "v",
+         "spelling": "ve?",
+         "pronunciation": " v ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
         {"chord": "-7r",
-         "description": "silent gh",
-         "spelling": "gh",
-         "pronunciation": "",
-         "ambiguity": -1,
+         "description": "rv",
+         "spelling": "rve?",
+         "pronunciation": " r  v ",
+         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": "Harri?"},
+         "theory": "Harri"},
     ],
 
 
