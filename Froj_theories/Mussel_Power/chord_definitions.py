@@ -2082,22 +2082,31 @@ steno_chords_and_their_meanings = {
 
     "a": [
         {"chord": "-1",
-         "description": "solo s (following a consonant)",
+         "description": "solo s",
          "spelling": "s",
-         "pronunciation": " s ",
+         "pronunciation": " (s|z) ",
          "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": hyphen,  # dis
-         "theory": "Harri"}, #cyclops
-
-        {"chord": "-1",
-         "description": "plural",  # actresses
-         "spelling": "s",
-         "pronunciation": " suffix  (s|z) ",
-         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": ""},
+
+        {"chord": "-1",
+         "description": "solo s",
+         "spelling": "s",
+         "pronunciation": " s/z ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-1",
+         "description": "suffix -s",
+         "spelling": "s",
+         "pronunciation": "( (suffix) ) (s|z|z/s) ",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""}
 
         {"chord": "-1",
          "description": "plural",  # actresses
@@ -2108,7 +2117,6 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
-
         {"chord": "-1",
          "description": "whatever this is",
          "spelling": "is",
@@ -2117,12 +2125,30 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": "Harri"},
+
+        {"chord": "-1",
+         "description": "s silent t",
+         "spelling": "ss?te?",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,  # no idea, this just feels right
+         "theory": ""},
+
+        {"chord": "-1",
+         "description": "s silent w",  # answer
+         "spelling": "sw",
+         "pronunciation": " s ",
+         "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
     ],
 
 
     "ax": [
         {"chord": "-1l",
-         "description": "z",
+         "description": "zz or ze",
          "spelling": "zz?e?",
          "pronunciation": "( z | t  s )",
          "ambiguity": 1,
@@ -2164,43 +2190,6 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "-1r",
-         "description": "solo s following a vowel", #cyclops
-         "spelling": "s",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,  # dis
-         "theory": ""},
-
-        {"chord": "-1r",
-         "description": "solo s following a vowel (maybe voiced)",
-         "spelling": "s",
-         "pronunciation": " z/s ",
-         "ambiguity": 0,
-         "orthoscore": 0,
-         # cyclops with a z
-         "what must come before": vowel_or_hyphen,  # dis
-         "theory": ""},
-
-        {"chord": "-1r",
-         "description": "s silent t",
-         "spelling": "ss?te?",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,  # no idea, this just feels right
-         "theory": ""},
-
-        {"chord": "-1r",
-         "description": "s silent w",  # answer
-         "spelling": "sw",
-         "pronunciation": " s ",
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,
-         "theory": ""},
-
-        {"chord": "-1r",
          "description": "ss",
          "spelling": "ss",  # actresses?"
          "pronunciation": " (s|z) ",
@@ -2220,8 +2209,8 @@ steno_chords_and_their_meanings = {
          "theory": ""},
 
         {"chord": "-1r",
-         "description": "s maybe voiced",
-         "spelling": "ss?e?",
+         "description": "se maybe voiced",
+         "spelling": "ss?e",
          "pronunciation": " z/s ",
          "ambiguity": 1,
          "orthoscore": 0,
@@ -2236,15 +2225,6 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,  # no _ I think?
          "theory": ""},
-
-        {"chord": "-1r",
-         "description": "suffix -s",
-         "spelling": "s",
-         "pronunciation": "( (suffix) ) (s|z|z/s) ",
-         "ambiguity": 1,
-         "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,
-         "theory": ""}
     ],
 
 
