@@ -40,6 +40,7 @@ final = re.compile(r'[abcdefghxXyY]$')
 ends_in__ = re.compile(r'_$')
 hyphen = re.compile(r'-$')
 AU = re.compile(r'AU$')
+something = re.compile(r'[/12345678lLrRAOEUabcdefghxXyY]$')
 
 
 """
@@ -98,6 +99,16 @@ steno_chords_and_their_meanings = {
          "theory": ""},
     ],
 
+    "": [
+        {"chord": "",
+         "description": "ignore suffix",
+         "spelling": "",
+         "pronunciation": " (compound|prefix|suffix) ",
+         "ambiguity": 5,
+         "orthoscore": 0,
+         "what must come before": something, #terrible way to do this, every suffix triples the outputs
+         "theory": ""},
+    ],
 
     "/-": [
         {"chord": "/",
