@@ -36,7 +36,7 @@ def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords,
         word['number of entries'] = len(word['steno stuff'])
 
     except TimeoutError:
-        word['steno stuff'] = []
+        word['steno stuff'] = {}
         word['number of entries'] = 'Timeout'
 
 
