@@ -108,6 +108,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": something, #terrible way to do this, every suffix triples the outputs
          "theory": ""},
+
+        {"chord": "",
+         "description": "ignore stress",
+         "spelling": "",
+         "pronunciation": " stress ",
+         "ambiguity": 5,
+         "orthoscore": 0,
+         "what must come before": something, #terrible way to do this, every suffix triples the outputs
+         "theory": ""},
     ],
 
     "/-": [
