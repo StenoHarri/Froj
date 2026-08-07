@@ -41,7 +41,7 @@ ends_in__ = re.compile(r'_$')
 hyphen = re.compile(r'-$')
 AU = re.compile(r'AU$')
 something = re.compile(r'[/\-12345678lLrRAOEUabcdefghxXyY]$')
-
+chord = re.compile(r'[12345678lLrRAOEUabcdefghxXyY]$')
 
 """
 Chord: [[spelling,          sound,          briefiness, theory]]
@@ -106,16 +106,16 @@ steno_chords_and_their_meanings = {
          "pronunciation": " (root|compound|prefix|suffix) ",
          "ambiguity": 5,
          "orthoscore": 0,
-         "what must come before": something, #terrible way to do this, every suffix triples the outputs
+         "what must come before": chord,
          "theory": ""},
 
         {"chord": "",
          "description": "ignore stress",
          "spelling": "",
-         "pronunciation": " stress ",
+         "pronunciation": " stressed ",
          "ambiguity": 5,
          "orthoscore": 0,
-         "what must come before": something, #terrible way to do this, every suffix triples the outputs
+         "what must come before": chord,
          "theory": ""},
     ],
 
@@ -428,8 +428,8 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "2L": [
-        {"chord": "2L",
+    "2R": [
+        {"chord": "2R",
          "description": "cl",
          "spelling": "cc?ll?",  # acclimatise
          "pronunciation": " k  l ",
@@ -3374,6 +3374,15 @@ steno_chords_and_their_meanings = {
          "spelling": "rr?dd?e?",
          "pronunciation": " r  d ",
          "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": vowel_or_hyphen,
+         "theory": ""},
+
+        {"chord": "-8L",
+         "description": "rd",
+         "spelling": "rr?edd?e?",
+         "pronunciation": " r ( suffix )?( i7 )? (d|t) ",
+         "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
          "theory": ""},
