@@ -42,6 +42,8 @@ hyphen = re.compile(r'-$')
 AU = re.compile(r'AU$')
 something = re.compile(r'[/\-12345678lLrRAOEUabcdefghxXyY]$')
 chord = re.compile(r'[12345678lLrRAOEUabcdefghxXyY]$')
+initial_slash_or_vowel = re.compile(r'(^/|[AOEU])$')
+
 
 """
 Chord: [[spelling,          sound,          briefiness, theory]]
@@ -72,7 +74,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "/",
          "description": "drop silent vowel",
-         "spelling": "[aiu]",  # merciful, somethingcal
+         "spelling": "[aiuo]",  # merciful, somethingcal, adoration (silent o)
          "pronunciation": "",
          "ambiguity": 1,
          "orthoscore": 0,
@@ -117,6 +119,34 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": chord,
          "theory": ""},
+
+        {"chord": "",
+         "description": "drop silent vowel",
+         "spelling": "[aiuo]",  # merciful, somethingcal, adoration (silent o)
+         "pronunciation": "",
+         "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": initial_slash,
+         "theory": ""},
+
+        {"chord": "",
+         "description": "drop short vowel",
+         "spelling": "[aeiouy]+",
+         # this may be a mistake adding the +, but my reasoning is ferrous, anxious, that `ou` is a short @
+         "pronunciation": vowel_category["short"],
+         "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": initial_slash,
+         "theory": ""},
+
+        {"chord": "",
+         "description": "drop long vowel",
+         "spelling": "[aeiouy]",
+         "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": initial_slash,
+         "theory": ""},
     ],
 
     "/-": [
@@ -131,7 +161,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "/",
          "description": "drop silent vowel",
-         "spelling": "[aiu]",  # merciful, somethingcal
+         "spelling": "[aiuo]",  # merciful, somethingcal, adoration (silent o)
          "pronunciation": "",
          "ambiguity": 1,
          "orthoscore": 0,
@@ -790,8 +820,7 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
-
-        {"chord": "SH",
+        {"chord": "5R",
          "description": "zh sound",
          "spelling": "((s|c|t|x)i|ce|s?che?|sc|ss)", #caucasia
          "pronunciation": "( zh | z ( suffix )? y )",
