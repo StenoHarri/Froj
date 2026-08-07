@@ -43,7 +43,7 @@ AU = re.compile(r'AU$')
 something = re.compile(r'[/\-12345678lLrRAOEUabcdefghxXyY]$')
 chord = re.compile(r'[12345678lLrRAOEUabcdefghxXyY]$')
 initial_slash_or_chord = re.compile(r'(^/|[12345678lLrRAOEUabcdefghxXyY])$')
-
+initial_slash = re.compile(r'(^/$)')
 
 """
 Chord: [[spelling,          sound,          briefiness, theory]]
@@ -1058,13 +1058,13 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
-        {"chord": "7l",
+        {"chord": "7l", #should be only for initials???
          "description": "i or e",
          "spelling": "[ie]",
          "pronunciation": " (i|e|e0) ( root )?",
          "ambiguity": 2,
          "orthoscore": 0,
-         "what must come before": ends_in_slash,
+         "what must come before": initial_slash,
          "theory": ""},
     ],
 
