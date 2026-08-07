@@ -42,7 +42,7 @@ def make_unilex_entry_helper(args):
 if __name__ == '__main__':
 
     while True:
-        selection = "3"
+        selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tMussel Power for Controller\n:")
 
         if selection == "1":
             from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter, does_theory_pay_attention_to_stress_markers
