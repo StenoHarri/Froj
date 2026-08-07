@@ -126,7 +126,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": "",
          "ambiguity": 1,
          "orthoscore": 0,
-         "what must come before": initial_slash,
+         "what must come before": initial_slash_or_vowel,
          "theory": ""},
 
         {"chord": "",
@@ -136,7 +136,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": vowel_category["short"],
          "ambiguity": 2,
          "orthoscore": 0,
-         "what must come before": initial_slash,
+         "what must come before": initial_slash_or_vowel,
          "theory": ""},
 
         {"chord": "",
@@ -145,7 +145,7 @@ steno_chords_and_their_meanings = {
          "pronunciation": f'({vowel_category["AOE"]}|{vowel_category["AOEU"]}|{vowel_category["AOU"]}|{vowel_category["AOU"]}|{vowel_category["AEU"]}|{vowel_category["AU"]}|{vowel_category["OE"]}|{vowel_category["OEU"]}|{vowel_category["OU"]}|{vowel_category["EU"]})',
          "ambiguity": 3,
          "orthoscore": 0,
-         "what must come before": initial_slash,
+         "what must come before": initial_slash_or_vowel,
          "theory": ""},
     ],
 
