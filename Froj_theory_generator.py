@@ -23,8 +23,23 @@ def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords,
     word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation'], does_theory_pay_attention_to_stress_markers))
     word['word_boundaries'] = word["word"].split(":")[0]
     word['number of entries'] = 0
-    word['steno stuff'] = generate_write_outs(word, user_chords, order_map, valid_final_letter)
-    word['number of entries'] = len(word['steno stuff'])
+
+    #This is expensive and recursive, so it can timeout sometimes
+    try:
+        word['steno stuff'] = generate_write_outs(
+            word,
+            user_chords,
+            order_map,
+            valid_final_letter,
+        )
+
+        word['number of entries'] = len(word['steno stuff'])
+
+    except TimeoutError:
+        word['steno stuff'] = []
+        word['number of entries'] = 'Timeout'
+
+
     word['pronunciation'] = str(word['pronunciation'])
     word['word_boundaries'] = str(word['word_boundaries'])
     return word
