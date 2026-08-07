@@ -2830,8 +2830,8 @@ steno_chords_and_their_meanings = {
 
     "dx": [
         {"chord": "-2l",
-         "description": "ll?y",
-         "spelling": "l(y|ie?)",
+         "description": "ly",
+         "spelling": "ll?(y|ie?)",
          "pronunciation": "( suffix )? l  iy ",
          "ambiguity": 0,
          "orthoscore": 0,
