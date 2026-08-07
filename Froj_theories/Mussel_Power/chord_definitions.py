@@ -2222,7 +2222,7 @@ steno_chords_and_their_meanings = {
 
         {"chord": "-1r",
          "description": "s pronounced z",
-         "spelling": "ss?e?",
+         "spelling": "s[se]",
          "pronunciation": " z ",
          "ambiguity": 1,
          "orthoscore": 0,
