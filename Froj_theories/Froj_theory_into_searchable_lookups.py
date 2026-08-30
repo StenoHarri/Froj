@@ -1,10 +1,6 @@
 import json
 import tqdm
 
-
-
-
-
 sorted_words = {}
 
 while True:

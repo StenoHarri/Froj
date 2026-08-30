@@ -1,0 +1,10766 @@
+{
+ "A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "a",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "added",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/BTEn/BTA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "addenda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/BTEbtn/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "addenda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abt/En/BTA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "addenda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abt/Ebtn/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "addenda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/BTEn/-bt/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "addenda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abt/En/-bt/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "addenda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "add",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    },
+    {
+     "spelling": "ad",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/BTO": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "ado",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abt/O": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "ado",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "An": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "an",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "An/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "ana",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "and",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "An/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "and",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#Abtn/RAn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Andorran",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/BTO/RAn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Andorran",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#Abtn/O/RAn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Andorran",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/-bt/RAn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Andorran",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/-bt/O/RAn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Andorran",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abtn/RAn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "andorran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "An/BTO/RAn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "andorran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Abtn/O/RAn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "andorran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "An/-bt/RAn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "andorran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "An/-bt/O/RAn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "andorran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#Abtn/RA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Andorra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/BTO/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Andorra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#Abtn/O/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Andorra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/-bt/RA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Andorra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/-bt/O/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Andorra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/An": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Annan",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Anna",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#An": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Anne",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    },
+    {
+     "spelling": "Ann",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "An/On": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "anon",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/PEbtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "appended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/PEn/-bt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "appended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/PEbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "append",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/PEn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "append",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/SEbtn/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "ascended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/SEn/-bt/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "ascended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/SEbtn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "ascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/SEn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "ascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#A/SBTA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Asda",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s pronounced z"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#A/SPEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Aspen",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "A/SPEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "aspen",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTA/BTA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Dada",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTAbt/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Dada",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTA/BTA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "dada",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTAbt/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "dada",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTAbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Dad",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTAbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "dad",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Dan",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "dan",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Da",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTREn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Darren",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTA/REn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Darren",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTE": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "De",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "de",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTEbt/-btn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "deadened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTEbtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "deadened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTEbt/-n/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "deadened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTEbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "deaden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTEbt/-n": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "deaden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTEbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "dead",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Den",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "den",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BPTEbtn/-bt": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "depended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/PEbtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "depended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BPTEn/-bt/-bt": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "depended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/PEn/-bt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "depended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BPTEbtn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "depend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/PEbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "depend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BPTEn/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "depend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/PEn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "depend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SBTEbtn/-bt": {
+  "ambiguity": {
+   "4": [
+    {
+     "spelling": "descended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/SEbtn/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "descended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SBTEn/-bt/-bt": {
+  "ambiguity": {
+   "4": [
+    {
+     "spelling": "descended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/SEn/-bt/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "descended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SBTEbtn": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "descend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/SEbtn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "descend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SBTEn/-bt": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "descend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/SEn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "descend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SBPTObtn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "despond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/SPObtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "despond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SBPTOn/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "despond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTE/SPOn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "despond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTO": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "do",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTObt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Dodd",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTOn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "done",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    },
+    {
+     "spelling": "don",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTOn/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Donna",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTObtn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "donned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTOn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "donned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTOn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Donne",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    },
+    {
+     "spelling": "Don",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTO/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Dora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTREbt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "dreaded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "BTREbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "dread",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BTRE/SBTEn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Dresden",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s pronounced z"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#Ebtn/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Edna",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#Ebt/-n/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Edna",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#Ebt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Ed",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Ebt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "ed",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Ebtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "ended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "En/-bt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "ended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Ebtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "end",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "En/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "end",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "En": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "en",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#En/ROn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Enron",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "E/RAbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "errand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "E/RAn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "errand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "E/SE": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "esse",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Obt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "odd",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "On": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "on",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#On/SEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Onsen",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "On/SEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "onsen",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#On/A": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Oona",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "O/PRAbtn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "operand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "O/PE/RAbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "operand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "O/PRAn/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "operand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "O/PE/RAn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "operand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAbt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "padded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PAbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Pad",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pad",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAn/BTA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "panda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAbtn/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "panda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAn/-bt/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "panda",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PAbtn/RA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Pandora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PAn/BTO/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Pandora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PAbtn/O/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Pandora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PAn/-bt/RA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Pandora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PAn/-bt/O/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Pandora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAbtn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "panned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "panned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Pan",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pan",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Pa",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pa",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PA/PA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Papa",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    },
+    {
+     "spelling": "Pappa",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PA/PA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "papa",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    },
+    {
+     "spelling": "pappa",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PRA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "para",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PA/RA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "para",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPREbtn": {
+  "ambiguity": {
+   "5": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PRA/SEbtn": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PA/SREbtn": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPREn/-bt": {
+  "ambiguity": {
+   "5": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PA/RA/SEbtn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PRA/SEn/-bt": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PA/SREn/-bt": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PA/RA/SEn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "parascend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PEbtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "pended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PEn/-bt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "pended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PEbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ],
+   "1": [
+    {
+     "spelling": "penned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PEn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ],
+   "1": [
+    {
+     "spelling": "penned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PEn/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "penna",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Penn",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pen",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PROn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Peron",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    },
+    {
+     "spelling": "Ripon",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PE/ROn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Peron",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PObt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pod",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PObtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "POn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "pond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#POn/A": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Poona",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPE": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "posse",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PO/SE": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "posse",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#BPTRA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Prada",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PRA/BTA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Prada",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#PRAbt/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Prada",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PRObt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "prodded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "PRObt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "prod",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RAbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "rad",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#RAbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Rand",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#RAn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Rand",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RAbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "rand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RAn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "rand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#RA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Ra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "ran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "read",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    },
+    {
+     "spelling": "red",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPRE": {
+  "ambiguity": {
+   "5": [
+    {
+     "spelling": "recipe",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ],
+   "4": [
+    {
+     "spelling": "serape",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RE/SPE": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "recipe",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "c pronounced s"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REbt/-btn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "reddened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REbtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "reddened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    },
+    {
+     "spelling": "rended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REbt/-n/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "reddened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "redden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    },
+    {
+     "spelling": "rend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REbt/-n": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "redden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#REbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Red",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REn/-bt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "rended",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "REn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "rend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPRObtn/-bt": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "responded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RE/SPObtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "responded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPROn/-bt/-bt": {
+  "ambiguity": {
+   "3": [
+    {
+     "spelling": "responded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RE/SPOn/-bt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "responded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPRObtn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "respond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RE/SPObtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "respond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPROn/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "respond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RE/SPOn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "respond",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#ROn/BTA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Rhonda",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "rh silent h"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ],
+   "0": [
+    {
+     "spelling": "Ronda",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#RObtn/A": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Rhonda",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "rh silent h"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ],
+   "0": [
+    {
+     "spelling": "Ronda",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#ROn/-bt/A": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Rhonda",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "rh silent h"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ],
+   "0": [
+    {
+     "spelling": "Ronda",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RObt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "rodded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "RObt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "rod",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#ROn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Ron",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAbt/-btn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "saddened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAbtn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "saddened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    },
+    {
+     "spelling": "sanded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAbt/-n/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "saddened",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sadden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    },
+    {
+     "spelling": "sand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAbt/-n": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sadden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "?",
+       "chord": "-n",
+       "description": "suffix -n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SAbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Sade",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sad",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ],
+   "4": [
+    {
+     "spelling": "said",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SEbt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "said",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ai"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAn/-bt/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "sanded",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sand",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SAn/BTRA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Sandra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SAbtn/RA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Sandra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SAn/-bt/RA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Sandra",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "San",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "san",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SRA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Sara",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SA/RA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Sara",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SA/SOn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Sassoon",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SE": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "se",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SBTAn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "sedan",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SE/BTAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sedan",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "BT",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SEbt/An": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sedan",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SEbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "send",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SEn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "send",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SEn/A": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "senna",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SEn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "Sen",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SRA/PE": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "serape",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SE/PRE": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "serape",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SE/RA/PE": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "serape",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "EU vowel spelt e"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SObtn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "sodden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "en"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SObt/-n": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "sodden",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "en"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SObt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sod",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SOn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "son",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ],
+   "1": [
+    {
+     "spelling": "soon",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SOn/RA": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "Sonora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": "long vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "#SOn/O/RA": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "Sonora",
+     "explanation": [
+      {
+       "theory": "Lapwing",
+       "chord": "#",
+       "description": "Proper noun"
+      },
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "AU",
+       "description": "AU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPAbtn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "spanned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPAn/-bt": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "spanned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "span",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPA": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "spa",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPEbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sped",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPEbtn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "spend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPEn/-bt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "spend",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "e"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPObtn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "spooned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPOn/-bt": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "spooned",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      },
+      {
+       "theory": "",
+       "chord": "/-",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "suffix -ed"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPOn": {
+  "ambiguity": {
+   "1": [
+    {
+     "spelling": "spoon",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "AOU vowel spelt o"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPRAn": {
+  "ambiguity": {
+   "2": [
+    {
+     "spelling": "sporran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "",
+       "description": "drop short vowel"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPO/RAn": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "sporran",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "O",
+       "description": "o"
+      },
+      {
+       "theory": "",
+       "chord": "/",
+       "description": ""
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "A",
+       "description": "short a"
+      },
+      {
+       "theory": "",
+       "chord": "-n",
+       "description": "n"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "SPREbt": {
+  "ambiguity": {
+   "0": [
+    {
+     "spelling": "spread",
+     "explanation": [
+      {
+       "theory": "",
+       "chord": "S",
+       "description": "s"
+      },
+      {
+       "theory": "",
+       "chord": "P",
+       "description": "p"
+      },
+      {
+       "theory": "",
+       "chord": "R",
+       "description": "r"
+      },
+      {
+       "theory": "",
+       "chord": "E",
+       "description": "E vowel spelt ea"
+      },
+      {
+       "theory": "",
+       "chord": "-bt",
+       "description": "d"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
