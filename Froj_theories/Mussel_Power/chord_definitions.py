@@ -163,7 +163,7 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,  # added up to H since THRU
          # personal opinion, but SR → s + r is ugly
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -250,7 +250,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -269,6 +269,15 @@ steno_chords_and_their_meanings = {
          "spelling": "com[std]?",
          "pronunciation": " k  (@|o|o4)  m ( [std] )",
          "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "1R",
+         "description": "k _ m",
+         "spelling": "[kc][khc]?[aeiouy]+mm?",
+         "pronunciation": f' k {vowel_category["short"]} m ',
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
@@ -359,6 +368,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": "spelling"},
+
+        {"chord": "2l",
+         "description": "k _ r",
+         "spelling": "[kc][khc]?[aeiouy]+rr?",
+         "pronunciation": f' k {vowel_category["short"]} r ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -371,7 +389,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -402,6 +420,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "2r",
+         "description": "k _ n",
+         "spelling": "[kc][khc]?[aeiouy]+nn?",
+         "pronunciation": f' k {vowel_category["short"]} n ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -420,6 +447,15 @@ steno_chords_and_their_meanings = {
          "spelling": "cc?hll?",  # acclimatise
          "pronunciation": " k  l ",
          "ambiguity": 2,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2R",
+         "description": "k _ l",
+         "spelling": "[kc][khc]?[aeiouy]+ll?",
+         "pronunciation": f' k {vowel_category["short"]} l ',
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
@@ -446,7 +482,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -456,6 +492,15 @@ steno_chords_and_their_meanings = {
          "spelling": "bb?rr?",
          "pronunciation": " b  r ",
          "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "3L",
+         "description": "b _ r",
+         "spelling": "bb?[aeiouy]+rr?",
+         "pronunciation": f' b {vowel_category["short"]} r ',
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
@@ -501,6 +546,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "3R",
+         "description": "b _ l",
+         "spelling": "bb?[aeiouy]+ll?",
+         "pronunciation": f' b {vowel_category["short"]} l ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -521,7 +575,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -600,6 +654,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "4L",
+         "description": "p _ r",
+         "spelling": "pp?[aeiouy]+rr?",
+         "pronunciation": f' p {vowel_category["short"]} r ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -609,6 +672,15 @@ steno_chords_and_their_meanings = {
          "spelling": "pp?ll?",
          "pronunciation": " p  l ",
          "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "4r",
+         "description": "p _ l",
+         "spelling": "pp?[aeiouy]+ll?",
+         "pronunciation": f' p {vowel_category["short"]} l ',
+         "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
@@ -656,7 +728,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -688,6 +760,14 @@ steno_chords_and_their_meanings = {
          "what must come before": ends_in_slash,
          "theory": ""},
 
+        {"chord": "5L",
+         "description": "g _ r",
+         "spelling": "gg?[aeiouy]+rr?",
+         "pronunciation": f' g {vowel_category["short"]} r ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -804,7 +884,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -897,7 +977,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 3,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -918,7 +998,16 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": ends_in_slash,  # sphere
-         "theory": ""}
+         "theory": ""},
+
+        {"chord": "6L",
+         "description": "f _ l",
+         "spelling": "(ph|f)f?[aeiouy]+ll?",
+         "pronunciation": f' f {vowel_category["short"]} l ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -948,7 +1037,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -969,7 +1058,16 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": ends_in_slash,  # sphere
-         "theory": ""}
+         "theory": ""},
+
+        {"chord": "6R",
+         "description": "f _ r",
+         "spelling": "(ph|f)f?[aeiouy]+rr?",
+         "pronunciation": f' f {vowel_category["short"]} r ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -1088,6 +1186,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "7L",
+         "description": "s _ p",
+         "spelling": "ss?[aeiouy]+pp?",
+         "pronunciation": f' s {vowel_category["short"]} p ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -1100,6 +1207,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "7r",
+         "description": "s _ t",
+         "spelling": "ss?[aeiouy]+tt?",
+         "pronunciation": f' s {vowel_category["short"]} t ( \[y\] )?',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -1109,6 +1225,35 @@ steno_chords_and_their_meanings = {
          "spelling": "ss?tt?rr?",
          "pronunciation": " s  t  r ",
          "ambiguity": 0,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "7r",
+         "description": "s _ tr",
+         "spelling": "ss?[aeiouy]+tt?rr?",
+         "pronunciation": f' s {vowel_category["short"]} t  r ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+
+        {"chord": "7r",
+         "description": "s t _ r",
+         "spelling": "ss?tt?[aeiouy]+rr?",
+         "pronunciation": f' s  t {vowel_category["short"]} r ',
+         "ambiguity": 4,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+
+        {"chord": "7r",
+         "description": "s _ t _ r",
+         "spelling": "ss?[aeiouy]+tt?[aeiouy]+rr?",
+         "pronunciation": f' s {vowel_category["short"]} t {vowel_category["short"]} r ',
+         "ambiguity": 5,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
@@ -1132,8 +1277,9 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
+
 
     "8l": [
         {"chord": "8l",
@@ -1204,6 +1350,15 @@ steno_chords_and_their_meanings = {
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
+
+        {"chord": "7r",
+         "description": "t _ r",
+         "spelling": "tt?[aeiouy]+rr?",
+         "pronunciation": f' t {vowel_category["short"]} r ',
+         "ambiguity": 3,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
     ],
 
 
@@ -1251,7 +1406,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -1825,7 +1980,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,  # feel free to change this prioritisation
          "orthoscore": 0,
          "what must come before": ends_in__,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -2405,7 +2560,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -2638,7 +2793,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": ""}
+         "theory": ""},
     ],  # arbitrage
 
 
@@ -2743,7 +2898,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -2821,7 +2976,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -2842,7 +2997,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -2902,7 +3057,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 2,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -2932,7 +3087,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
-         "theory": ""}
+         "theory": ""},
     ],
 
 
@@ -2953,7 +3108,7 @@ steno_chords_and_their_meanings = {
          "ambiguity": 1,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,  # ".*[AOeu](?!.*(.).*\1)[frblgtsdsz]*\*?"
-         "theory": ""}
+         "theory": ""},
     ],
 
 
