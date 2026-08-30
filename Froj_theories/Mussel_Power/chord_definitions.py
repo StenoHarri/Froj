@@ -104,8 +104,9 @@ steno_chords_and_their_meanings = {
 
         {"chord": "",
          "description": "drop short vowel",
-         "spelling": "[aeiouy]+",
+         "spelling": "[aeiouy]",
          # this may be a mistake adding the +, but my reasoning is ferrous, anxious, that `ou` is a short @
+         # Removed the +, that should get handled by a "drop silent vowel"?
          "pronunciation": vowel_category["short"],
          "ambiguity": 2,
          "orthoscore": 0,
@@ -410,6 +411,15 @@ steno_chords_and_their_meanings = {
          "spelling": "cc?ll?",  # acclimatise
          "pronunciation": " k  l ",
          "ambiguity": 1,
+         "orthoscore": 0,
+         "what must come before": ends_in_slash,
+         "theory": ""},
+
+        {"chord": "2R",
+         "description": "chl",
+         "spelling": "cc?hll?",  # acclimatise
+         "pronunciation": " k  l ",
+         "ambiguity": 2,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
          "theory": ""},
@@ -1085,7 +1095,7 @@ steno_chords_and_their_meanings = {
         {"chord": "7r",
          "description": "st",
          "spelling": "ss?tt?",
-         "pronunciation": " s  t ",  # ( \[y\] )? yeah you can add that
+         "pronunciation": " s  t ( \[y\] )?",  # ( \[y\] )? stupendous
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": ends_in_slash,
@@ -3332,14 +3342,14 @@ steno_chords_and_their_meanings = {
          "what must come before": vowel_or_hyphen,
          "theory": ""},
 
-        {"chord": "-8l",
-         "description": "cket",
-         "spelling": "c[kc]ett?e?",
-         "pronunciation": f' k ( suffix )?({vowel_category["short"]})? t ',
-         "ambiguity": 0,
-         "orthoscore": 0,
-         "what must come before": vowel_or_hyphen,
-         "theory": ""},
+        #{"chord": "-8l",
+        # "description": "cket",
+        # "spelling": "c[kc]ett?e?",
+        # "pronunciation": f' k ( suffix )?({vowel_category["short"]})? t ',
+        # "ambiguity": 0,
+        # "orthoscore": 0,
+        # "what must come before": vowel_or_hyphen,
+        # "theory": ""},
     ],
 
 
