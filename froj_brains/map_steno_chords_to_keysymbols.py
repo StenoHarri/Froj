@@ -7,7 +7,7 @@ Making the right hand lowercase so I don't have to worry about left P vs right P
 """
 
 import re
-
+import time
 
 def custom_sort_key(word, order_map):
     return [order_map[char] for char in word]
@@ -77,7 +77,7 @@ def add_chord_for_entry(entry, preconditions_chord, target_pronunciation, target
     """
     # Add spelling if it's valid
     spelling = add_spelling_to_spelling(entry["spelling"], preconditions_chord["spelling"], target_spelling)
-    if not spelling:
+    if spelling is False: # More falsy, I want empty strings to be valid, such as when picking up on stress
         return None  # No valid spelling found
 
     # Add pronunciation if it's valid
@@ -131,10 +131,25 @@ def process_preconditions_and_chords(entry, preconditions_and_their_chords, targ
 
 
 
-def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciation, target_spelling, never_seen_before_entries=[], every_complete_entry_generated={}, preconditions_and_their_chords={}, order_map={}, valid_final_letter=''):
+def add_a_chord_onto_each_incomplete_entry(
+    initial_dictionary,
+    target_pronunciation,
+    target_spelling,
+    never_seen_before_entries=[],
+    every_complete_entry_generated={},
+    preconditions_and_their_chords={},
+    order_map={},
+    valid_final_letter='',
+    deadline=None,
+):
     """
     Adds a chord to each incomplete entry, with optimized logic.
     """
+
+    #check if too much time has passed
+    if deadline is not None and time.monotonic() > deadline:
+        raise TimeoutError
+
     # List to store entries with added chords
     dictionary_with_a_chord_added_to_each_entry = []
 
@@ -179,7 +194,8 @@ def add_a_chord_onto_each_incomplete_entry(initial_dictionary, target_pronunciat
             every_complete_entry_generated,
             preconditions_and_their_chords=preconditions_and_their_chords,
             order_map=order_map,
-            valid_final_letter=valid_final_letter
+            valid_final_letter=valid_final_letter,
+            deadline=deadline,
         )
 
     return never_seen_before_entries, every_complete_entry_generated
@@ -215,6 +231,8 @@ def filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(
 
 def generate_write_outs(input_word, user_chords, order_map, valid_final_letter):
 
+    deadline = time.monotonic() + 60  # Give each word a minute
+
     list_of_incomplete_entries = [
         {
         "raw steno outline":"/",
@@ -228,10 +246,27 @@ def generate_write_outs(input_word, user_chords, order_map, valid_final_letter):
     #user_chords = filter_user_chords_to_only_the_chords_that_feasibly_can_come_up(input_word, user_chords)
 
     #I actually want to sort chords by their precondition, since things like vowels will all have the same preconditions, I can save on logic by just checking once
-    preconditions_and_their_chords = filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(input_word, user_chords)
 
+    preconditions_and_their_chords = (
+        filter_chords_by_which_can_feasibly_come_up_then_sort_by_their_precondition(
+            input_word,
+            user_chords,
+        )
+    )
     #print(input_word['word'])
-    last_entry_generated ,list_of_incomplete_entries = add_a_chord_onto_each_incomplete_entry(list_of_incomplete_entries, input_word['pronunciation'], input_word['word_boundaries'], every_complete_entry_generated={}, preconditions_and_their_chords=preconditions_and_their_chords, order_map=order_map, valid_final_letter= valid_final_letter)
+
+    last_entry_generated, list_of_incomplete_entries = (
+        add_a_chord_onto_each_incomplete_entry(
+            list_of_incomplete_entries,
+            input_word["pronunciation"],
+            input_word["word_boundaries"],
+            every_complete_entry_generated={},
+            preconditions_and_their_chords=preconditions_and_their_chords,
+            order_map=order_map,
+            valid_final_letter=valid_final_letter,
+            deadline=deadline,
+        )
+    )
 
     if list_of_incomplete_entries==[]:
         return["###########################################################################"]

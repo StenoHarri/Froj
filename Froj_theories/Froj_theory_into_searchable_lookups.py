@@ -1,14 +1,10 @@
 import json
 import tqdm
 
-
-
-
-
 sorted_words = {}
 
 while True:
-    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tgtbot piano theory\n:")
+    selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tMussel Power for Controller\n:")
 
     if selection == "1":
         theory = "Tadpole"
@@ -35,10 +31,22 @@ while True:
             return input
         break
 
+
     elif selection == "3":
-        theory = "gtbot_piano_theory"
+        theory = "Mussel_Power"
         def clean_raw_steno(input):
-            return input
+            return (input.replace("a","1")
+                     .replace("b","2")
+                     .replace("c","3")
+                     .replace("d","4")
+                     .replace("e","5")
+                     .replace("f","6")
+                     .replace("g","7")
+                     .replace("h","8")
+                     .replace("x","l")
+                     .replace("y","r")
+                     .replace("X","L")
+                     .replace("Y","R"))
         break
     else:
         print("try again")
@@ -98,7 +106,7 @@ def create_lookups(spelling, ordered_outlines_for_this_particular_word, all_outl
 
 
         if spelling[0] == spelling[0].capitalize() and not raw_steno[0] == "#":
-            raw_steno = "#"+raw_steno
+            raw_steno = "S/"+raw_steno
             explanation.insert(0, {
                 "theory": "Lapwing",
                 "chord": "#",
@@ -201,15 +209,15 @@ for entry in tqdm.tqdm(all_entries, desc="resolving conflicts", unit="word"):
 #        json.dump(best_outlines, outfile, indent=1)
 
 print('writing Plover entry -> word...')
-with open("Froj_theories/"+theory+"/resolved_entries.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/"+theory+"_base.json", "w") as outfile:
         json.dump(resolved_entries, outfile, indent=1)
 
 print('writing word -> entry lookups...')
-with open("Froj_theories/"+theory+"/all_outlines.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/frojbot_outlines_lookup.json", "w") as outfile:
         json.dump(all_outlines, outfile, indent=1)
 
 print('writing entry -> word lookups...')
-with open("Froj_theories/"+theory+"/all_entries.json", "w") as outfile:
+with open("Froj_theories/"+theory+"/frojbot_entries_lookup.json", "w") as outfile:
         json.dump(all_entries, outfile, indent=1)
 
 

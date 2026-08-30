@@ -10,6 +10,7 @@ except ModuleNotFoundError:
 
 custom_alphabet = "QSTKPWHR-AOeufrpblgtsdz*_1"
 valid_final_letter = r'[AOeufrpblgtsdz]\*?$'
+does_theory_pay_attention_to_stress_markers = False
 
 #Q preinitial schwa
 #_ midway through a briefing technique

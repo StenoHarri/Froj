@@ -3,6 +3,7 @@ import json
 import tqdm
 import time
 
+
 from froj_brains.convert_unilex_into_readable_lists import (
     full_entry_pattern,
     make_boundaries_into_list,
@@ -11,84 +12,113 @@ from froj_brains.convert_unilex_into_readable_lists import (
 
 from froj_brains.map_steno_chords_to_keysymbols import generate_write_outs
 
-def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords, order_map, valid_final_letter):
+USE_MULTIPROCESSING = True  # True for normal runs, False for debugging
+
+def make_unilex_definition_into_dictionary_entry(unilex_definition, user_chords, order_map, valid_final_letter, make_boundaries_into_list, does_theory_pay_attention_to_stress_markers):
     word = full_entry_pattern.fullmatch(unilex_definition).groupdict()
-    word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation']))
+
+    word['pronunciation'] = make_target_pronunciation_into_string(make_boundaries_into_list(word['pronunciation'], does_theory_pay_attention_to_stress_markers))
     word['word_boundaries'] = word["word"].split(":")[0]
     word['number of entries'] = 0
-    word['steno stuff'] = generate_write_outs(word, user_chords, order_map, valid_final_letter)
-    word['number of entries'] = len(word['steno stuff'])
+
+    #This is expensive and recursive, so it can timeout sometimes
+    try:
+        word['steno stuff'] = generate_write_outs(
+            word,
+            user_chords,
+            order_map,
+            valid_final_letter,
+        )
+
+        word['number of entries'] = len(word['steno stuff'])
+
+    except TimeoutError:
+        word['steno stuff'] = {}
+        word['number of entries'] = 'Timeout'
+
+
     word['pronunciation'] = str(word['pronunciation'])
     word['word_boundaries'] = str(word['word_boundaries'])
     return word
 
 
+
+
+# for one at a time (not multiprocessing), uncomment the next two lines
+#for outline in outlines:
+#    results = make_unilex_definition_into_dictionary_entry(outline, steno_chords_and_their_meanings)
+
 def make_unilex_entry_helper(args):
     return make_unilex_definition_into_dictionary_entry(*args)
 
-
 if __name__ == '__main__':
+
     while True:
-        selection = input(
-            "What theory would you like to generate?\n"
-            "1)\tTadpole\n"
-            "2)\tEnglish Michela Phonetic Steno for Piano\n"
-            "3)\tgtbot piano theory\n:"
-        )
+        selection = input("what theory would you like to generate?\n1)\tTadpole\n2)\tEnglish Michela Phonetic Steno for Piano\n3)\tMussel Power for Controller\n:")
 
         if selection == "1":
-            from Froj_theories.Tadpole.chord_definitions import (
-                steno_chords_and_their_meanings,
-                custom_alphabet,
-                valid_final_letter,
-            )
-            theory_path = "Tadpole"
+            from Froj_theories.Tadpole.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter, does_theory_pay_attention_to_stress_markers
             break
+
         elif selection == "2":
-            from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import (
-                steno_chords_and_their_meanings,
-                custom_alphabet,
-                valid_final_letter,
-            )
-            theory_path = "English_Michela_Phonetic_Steno_for_Piano"
+            from Froj_theories.English_Michela_Phonetic_Steno_for_Piano.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter, does_theory_pay_attention_to_stress_markers
             break
+
         elif selection == "3":
-            from Froj_theories.gtbot_piano_theory.chord_definitions import(
-                steno_chords_and_their_meanings,
-                custom_alphabet,
-                valid_final_letter,
-            )
-            theory_path = "gtbot_piano_theory"
+            from Froj_theories.Mussel_Power.chord_definitions import steno_chords_and_their_meanings, custom_alphabet, valid_final_letter, does_theory_pay_attention_to_stress_markers
             break
         else:
-            print("Invalid selection — try again.\n")
+            print("try again")
+
 
     order_map = {char: index for index, char in enumerate(custom_alphabet)}
 
-    with open("pronunciation_data/big.txt", "r", encoding="utf-8") as txt_dictionary:
+    with (open("pronunciation_data/big.txt", "r", encoding="utf-8")) as txt_dictionary:
         outlines = txt_dictionary.readlines()
 
     start_time = time.time()
     print(f"Start Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(start_time))}")
 
-    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
-        tasks = ((outline, steno_chords_and_their_meanings, order_map, valid_final_letter) for outline in outlines)
-        results = list(
-            tqdm.tqdm(
+    tasks = (
+        (
+            outline,
+            steno_chords_and_their_meanings,
+            order_map,
+            valid_final_letter,
+            make_boundaries_into_list,
+            does_theory_pay_attention_to_stress_markers,
+        )
+        for outline in outlines
+    )
+
+    if USE_MULTIPROCESSING:
+        with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+            results = list(tqdm.tqdm(
                 pool.imap(make_unilex_entry_helper, tasks),
                 total=len(outlines),
                 unit="words",
                 smoothing=0,
                 desc="converting words into entries",
+            ))
+    else:
+        results = [
+            make_unilex_entry_helper(task)
+            for task in tqdm.tqdm(
+                tasks,
+                total=len(outlines),
+                unit="words",
+                smoothing=0,
+                desc="converting words into entries",
             )
-        )
+        ]
 
     end_time = time.time()
     print(f"End Time: {time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(end_time))}")
+
     runtime = end_time - start_time
     print(f"Total Runtime: {runtime:.2f} seconds")
 
     print('now writing it to the json file...')
 
-    with open(f"Froj_theories/{theory_path}/complete_output.json", "w") as outfile:
+    with open("Froj_theories/complete_output.json", "w") as outfile:
         json.dump(results, outfile, indent=1)

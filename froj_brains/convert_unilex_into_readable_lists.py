@@ -85,7 +85,22 @@ def make_target_spelling_into_string(target_list):
         string+="Something went wrong".join(morpheme[0])
     return string
 
-def make_boundaries_into_list(full_pronunciation):
+
+if_stress1 = ""
+if_stress1 = " stressed"
+if_stress2 = ""
+if_stress2 = "stressed "
+
+def make_boundaries_into_list(full_pronunciation, does_theory_pay_attention_to_stress_markers):
+
+    if does_theory_pay_attention_to_stress_markers:
+        if_stress1 = " stressed"
+        if_stress2 = "stressed "
+    else:
+        if_stress1 = ""
+        if_stress2 = ""
+
+
     #print (pronunciation_pattern.split(full_pronunciation))
     morphemes = []
 
@@ -135,17 +150,17 @@ def make_boundaries_into_list(full_pronunciation):
 
 
         morphemes.append([morpheme
-                           .replace(" ~/*","")
-                           .replace(" */~","")
-                           .replace(" */-","")
-                           .replace(" -/*","")
+                           .replace(" ~/*",if_stress1)
+                           .replace(" */~",if_stress1)
+                           .replace(" */-",if_stress1)
+                           .replace(" -/*",if_stress1)
                            .replace(" (.","")
                            .replace(" .)","")
-                           .replace(" *","") #remove stress marker
-                           .replace("* ","")#[*  e]
-                           .replace(" ~","") #secondary stress (for compound words)
-                           .replace("~ ","") #[~ a]
-                           .replace(" •","") #stress again
+                           .replace(" *",if_stress1) #remove stress marker
+                           .replace("* ",if_stress2)#[*  e]
+                           .replace(" ~",if_stress1) #secondary stress (for compound words)
+                           .replace("~ ",if_stress2) #[~ a]
+                           .replace(" •",if_stress1) #stress again
                            .replace(" /","")
                            .replace("/ ","")
                            .replace(" -","") #no idea what this does, but I don't want it
@@ -158,10 +173,10 @@ def make_boundaries_into_list(full_pronunciation):
                            .replace("==","") #gotta do this since it's in the spelling section too
                            #.replace("= ","") #morpheme he
                            .replace(" [.1]","")
-                           .replace(" [*]","")
-                           .replace(" [*1]","")
-                           .replace(" [~]","")
-                           .replace(" [~1]","") #accent dependent stress markers
+                           .replace(" [*]",if_stress1)
+                           .replace(" [*1]",if_stress1)
+                           .replace(" [~]",if_stress1)
+                           .replace(" [~1]",if_stress1) #accent dependent stress markers
                            .lower()
                            .strip()
                            .split(" ")       # make it a list of sounds
