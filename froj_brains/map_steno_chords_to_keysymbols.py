@@ -178,7 +178,10 @@ def add_a_chord_onto_each_incomplete_entry(
                 # Add spelling to the output dictionary
                 result = is_entry_complete_answer[0]
                 result["spelling"] = spelling
-                every_complete_entry_generated[raw_steno_outline] = result
+                # first come first serve S/P+O+RT > S+/+P+O+RT 
+                if raw_steno_outline not in every_complete_entry_generated:
+                    every_complete_entry_generated[raw_steno_outline] = result
+
             else:
                 new_never_seen_before_entries.append(entry)
 
