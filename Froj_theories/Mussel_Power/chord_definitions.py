@@ -3080,7 +3080,7 @@ steno_chords_and_their_meanings = {
         {"chord": "-2l",
          "description": "ly",
          "spelling": "ll?(y|ie?)",
-         "pronunciation": "( suffix )? l  iy ",
+         "pronunciation": "( suffix )? l ( suffix )? iy ",
          "ambiguity": 0,
          "orthoscore": 0,
          "what must come before": vowel_or_hyphen,
