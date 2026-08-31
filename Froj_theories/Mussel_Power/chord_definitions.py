@@ -744,7 +744,7 @@ steno_chords_and_their_meanings = {
     ],
 
 
-    "4/1": [
+    "4/5": [
         {"chord": "4/1",
          "description": "p _ l",
          "spelling": "pp?[aeiouy]+ll?",
